@@ -1,0 +1,19 @@
+\documentclass[]{article}
+\usepackage{amsfonts}
+
+
+%opening
+\title{Dynamics of Geodesic Flows on the Infinite Cube Step Surface}
+\author{Pavel Javornik}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The aim of the following paper is to study a non-compact surface built entirely out of square faces that resembles cubes stacked in a cascading step pattern (or perhaps a rhombile tiling). The surface we call the "Cube Step" is non-compact, and is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $3\pi/2$. More specifically, we want to study the geodesic flow on this surface and to prove that properties of the initial trajectory angle do in fact determine whether or not the geodesic closes on itself or drifts periodically. The determining factor is simply whether or not the trajectory angle with slope of the form $a/b$, relative to the bottom and left edges of the square, has integer values $a$,$b$ (such that $a$ and $b$ are coprime, and $b\neq0$) are of the same parity (odd-odd slope) or different parity (even-odd slope). When neglecting a flow that is incident with any vertices, we found that all odd-odd slope geodesics close and all even-odd slope geodesics drift periodically. Behavior at these cone angle vertices are undefined. To prove this is true for all geodesics on the Cube Step, we study the topological properties of the surface and take various covers of surfaces and construct a translation surface cover whose cylindrical decomposition gives rise to a Veech group with symmetric properties. These properties let us observe the effect that any action on the surface might have on the universal cover (and on the Cube Step as a whole). We will show that actions on this group preserve the odd-odd, even-odd property of their associated surfaces, and characterize these slopes according to one of two types of closed paths on the translation surface in an attempt to build up to the Cube Step with $SL_{2}(\mathbb{R})$ matrices.
+\end{abstract}
+
+\section{Introduction}
+
+\end{document}
