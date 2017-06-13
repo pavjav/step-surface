@@ -3,53 +3,74 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amsthm}
-
+\usepackage{svg}
+\graphicspath{{images/}}
+\setsvg{svgpath={./images/}}
 \newtheorem{thm}{Theorem}[subsection]
+\newtheorem*{thm*}{Theorem}
 
 
 %opening
-\title{Dynamics of Geodesic Flows on the Infinite Cube Step Surface}
+\title{Geodesic Flow on the Necker Cube Surface}
+\date{}
 \author{Pavel Javornik}
 
 \begin{document}
 
 \maketitle
 
+\begin{center}
+\includesvg[width=2in]{cubesxyz}
+\end{center}
+
 \begin{abstract}
 
 \end{abstract}
 
 \section{Introduction}
-\subsection{Background}
-The purpose of the following paper is to study the non-compact, infinite surface generated entirely out of the edge-to-edge gluing of square faces, whose final product resembles cubes stacked in a cascading, pyramidal step pattern (or perhaps a rhombile tiling). (See Fig //) The surface we call the "Cube Step" is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $\frac{3\pi}{2}$. We wish to study the surface in the case where we glue only squares with edges of length 1. Specifically, we want to study geodesic flows on this surface and to prove that properties of the initial trajectory angle determine whether or not the geodesic will close or drift periodically. 
 
-The determining factor is simply whether or not the trajectory angle vector direction $(a,b)$, relative to the bottom and left edges of any square face, has integer values $a$,$b$ (where $a$ and $b$ are relatively prime) are of the same parity (odd-odd slope) or different parities (even-odd slope). We choose to neglect cases where paths are incident with vertices, and proceed to treat them as singularities. With these conditions in place we found that any geodesic with an initial odd-odd trajectory closes on the surface, while the even-odd cases drift periodically, tending to infinity.
+\subsection{Background}
+The purpose of the following paper is to study the non-compact, infinite surface generated entirely out of the edge-to-edge gluing of square faces, whose final product resembles cubes stacked in a cascading, pyramidal pattern (or perhaps a rhombile tiling). (See Fig //) M.C. Escher famously adapted Louis Albert Necker's optical illusion known as the Necker Cube in 1937. The cubes appear in Escher's lithograph, "Metamorphosis I," in the form of tessellated rhombi.[CITE METAMORPHOSIS I] The print features a number of various tessellations transforming into simpler ones when traversed from left to right. The term Necker Cube is used interchangeably to refer to Escher's surface and Necker's optical illusion. For the purposes of the following paper, we will be using Necker Cube to refer to the infinite cube tiling that appears in Escher's work, as well as many other places. Those familiar with the arcade game known as Q*bert will most likely recognize the Necker Cube as the board whose colors you were meant to change in order to complete each level.
+
+\begin{center}
+\includegraphics[scale=0.5]{escher.jpg}
+\\ 
+\text{The Necker Cube as it appears briefly in Metamorphosis I}
+\end{center}
+
+The Necker Cube is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $\frac{3\pi}{2}$. We wish to study the surface in the case where we glue only squares with edges of length 1. Specifically, we want to study geodesic flows on this surface and to prove that properties of the initial trajectory angle determine whether or not the geodesic will close or drift periodically. 
+
+The determining factor is simply whether or not the trajectory angle vector direction $(a,b)$, relative to the bottom and left edges of any square face, has integer values $a$,$b$ (where $a$ and $b$ are relatively prime) are of the same parity (odd-odd slope) or different parities (even-odd slope). We choose to neglect cases where paths are incident with vertices, and proceed to treat them as singularities. With these conditions in place we found that any geodesic with an initial odd-odd trajectory closes on the surface, while the even-odd cases drift periodically, tending to infinity. We aim to prove the following:
+
+\begin{thm*}{Theorem}
+\\content...
+\end{thm*}
 
 To better understand this surface, we will adapt methods used in the study of Veech surfaces to suit our needs. These methods have become incredibly valuable to anyone studying rational billiard flows on a variety of compact or (in the case of infinite surfaces) non-compact surfaces. Geodesic flows in these problems are characterized as point masses moving along frictionless surfaces that experience perfectly elastic collisions with the boundaries of the surface. The straight line path is then deformed by a reflection over the boundary in the opposite direction. Translation surfaces constructed in the following manner therefore take on symmetric properties in accordance to these transformations and the types of boundaries the point mass might encounter. That is to say that orienting these flows requires that the translation surface itself be reflected to realign the flow. These translation surfaces are often described as being "unfolded" by some billiard flow, or strung along a laundry line of polygons congruent to the base. In the later sections we will describe how our surface's canonical form deforms geodesic flows by rotation and how we can use these rotations and edge-crossings to determine whether or not a geodesic will close.
 
-What inspired this paper was the work done by Hubert et al. [Hu] on the Ehrenfest-Wind Tree model. Any readers who are familiar with their paper or the Tree model will most likely notice the similarities between the quotient spaces of the two surfaces and the properties that determine whether or not geodesic paths close. While similar, these surfaces are not entirely identical. The effect that a boundary collision has on a geodesic alters the dynamical properties of the surface. Or perhaps they better demonstrate properties of the surface itself. Another fundamental difference between the two is that the Cube Step is a surface with cone angles surrounding an infinite number of singularities on the surface. The problem has to take into careful consideration what it means for a path to cross a saddle connection between these singularities of the translation surface.
+What inspired this paper was the work done by Hubert et al. [Hu] on the Ehrenfest-Wind Tree model. Any readers who are familiar with their paper or the Tree model will most likely notice the similarities between the quotient spaces of the two surfaces and the properties that determine whether or not geodesic paths close. While similar, these surfaces are not entirely identical. The effect that a boundary collision has on a geodesic alters the dynamical properties of the surface. Or perhaps they better demonstrate properties of the surface itself. Another fundamental difference between the two is that the Necker Cube is a surface with cone angles surrounding an infinite number of singularities on the surface. The problem has to take into careful consideration what it means for a path to cross a saddle connection between these singularities of the translation surface.
 
 
 
 \subsection{Procedure}
-The Cube Step surface has an interesting construction process that lets us take each face of the cube and arrange them in any way we choose so long as we do not change how the edges are identified, or glued together. It is preferable to study the flows on this surface as though every cube has been flattened onto the plane. This means that we can consider the cube step to be tiled by infinitely many of L-shaped surfaces whose edges are identified by rotation.
+The Necker Cube surface has an interesting construction process that lets us take each face of the cube and arrange them in any way we choose so long as we do not change how the edges are identified, or glued together. It is preferable to study the flows on this surface as though every cube has been flattened onto the plane. This means that we can consider the cube step to be tiled by infinitely many of L-shaped surfaces whose edges are identified by rotation.
 
-Doing so greatly reduces the number of possible directions that a flow might travel. Since every edge of this L-shaped surface is identified to another either by translation or a 90 degree rotation, any straight line path on this flattened version of the Cube Step can experience only one of four possible directions at any given time, whereas the Cube Step would've had considerably more.
+Doing so greatly reduces the number of possible directions that a flow might travel. Since every edge of this L-shaped surface is identified to another either by translation or a 90 degree rotation, any straight line path on this flattened version of the Necker Cube can experience only one of four possible directions at any given time, whereas the Necker Cube would've had considerably more.
 
-Moreover, every face of this L-shaped surface is given by rotating its associated face on the Cube Step about the x or y axis, affine translations, or a combination of the two. By cutting and gluing every half-cube of the Cube Step in a consistent fashion, we can preserve the areas of the faces and distances between any two points on the surface with the flattening procedure. We describe this procedure as piecewise maps that are comprised of compositions of Euclidean matrices and translations of points relative to the L-shape onto a subset of $\mathbb{R}^{2}$ with square shaped holes cut out. Since rotations and translations of points preserves distance between them, the path lengths and  associated properties of geodesic flows remain invariant.
+Moreover, every face of this L-shaped surface is given by rotating its associated face on the Necker Cube about the x or y axis, affine translations, or a combination of the two. By cutting and gluing every half-cube of the Necker Cube in a consistent fashion, we can preserve the areas of the faces and distances between any two points on the surface with the flattening procedure. We describe this procedure as piecewise maps that are comprised of compositions of Euclidean matrices and translations of points relative to the L-shape onto a subset of $\mathbb{R}^{2}$ with square shaped holes cut out. Since rotations and translations of points preserves distance between them, the path lengths and  associated properties of geodesic flows remain invariant.
 
-The image of this map is a flattened version of the Cube Step. (See FIG [MATLAB MODEL]). From that surface we construct a new one made out of four copies of original, each rotated by some factor of 90 degrees so as to realign the geodesic flows and assure that they can only travel in one possible direction. This four-fold surface is then a cover of the original surface. We consider every possible direction to be a "phase" of the flow, and index the planes accordingly. Any edges in the holes of the surface are identified with an edge on an adjacent phase plane (By rotation of $\pm \frac{\pi}{4}$). Any point on this surface has a coordinate in $\mathbb{R}\times\mathbb{R}\times\mathbb{Z}_{4} $
+The image of this map is a flattened version of the Necker Cube. (See FIG [MATLAB MODEL]). From that surface we construct a new one made out of four copies of original, each rotated by some factor of 90 degrees so as to realign the geodesic flows and assure that they can only travel in one possible direction. This four-fold surface is then a cover of the original surface. We consider every possible direction to be a "phase" of the flow, and index the planes accordingly. Any edges in the holes of the surface are identified with an edge on an adjacent phase plane (By rotation of $\pm \frac{\pi}{4}$). Any point on this surface has a coordinate in $\mathbb{R}\times\mathbb{R}\times\mathbb{Z}_{4} $
 
-Similarly, we take the quotient space of the flat Cube Step centered around each square shaped hole and realign its flows by rotation. The resulting surface is a compact branch cover of the quotient space. Singularities on the translation surface have a total angle that is some multiple of $2\pi$. We consider the translation surface to be a base surface of the four-fold cover, and study its properties to prove our main theorem. In particular, we wish to determine what effect a member of the translation surface's Veech group has on both the surface and geodesic flow in hopes that it would shine some light on odd-odd even-odd phenomenon.
+Similarly, we take the quotient space of the flattened Necker Cube centered around each square shaped hole and realign its flows by rotation. The resulting surface is a compact branch cover of the quotient space. Singularities on the translation surface have a total angle that is some multiple of $2\pi$. We consider the translation surface to be a base surface of the four-fold cover, and study its properties to prove our main theorem. In particular, we wish to determine what effect a member of the translation surface's Veech group has on both the surface and geodesic flow in hopes that it would shine some light on odd-odd even-odd phenomenon.
 
 
 
  $SL_{2}(\mathbb{R})$
 
 \section{Constructing the Surface}
-This section will detail how the Cube Step is constructed out of an infinite number of squares, and explain the process by which we flatten the structure in such a way that preserves the metric, and makes it simpler for us to describe the behavior of geodesics at these edges.
+This section will detail how the Necker Cube is constructed out of an infinite number of squares, and explain the process by which we flatten the structure in such a way that preserves the metric, and makes it simpler for us to describe the behavior of geodesics at these edges.
 
-\subsection{The Cube Step Surface and Isometric Variant }
+\subsection{The Necker Cube Surface and Isometric Variant }
 To build the surface out of infinitely many squares, we take the union of the instances of three squares, each lying on planes orthogonal to the other two and sharing an edge with exactly one other square. The three squares have one vertex in common.
 
 Every instance can be described as cube whose bottom, left, and rear faces have been removed. They will be arranged in such a way that every integer triple $m,n,p\in\mathbb{Z}$ will have this surface associated with it. To each face we ascribe a letter A, B, or C. This will be useful when defining the flattening map.
@@ -59,11 +80,11 @@ Every instance can be described as cube whose bottom, left, and rear faces have 
 \\\cup ([m,m+1]\times\{n+1\}\times[p,p-1])
 \end{gather*}
 
-is the family of these instances based at some integer triple. The surface will be comprised of the union of the members that satisfy the property, $m+n+p=0$. From here on we will refer to the Cube Step surface embedded form in $\mathbb{R}^{3}$ as $\mathbf{C}$. That is to say that
+is the family of these instances based at some integer triple. The surface will be comprised of the union of the members that satisfy the property, $m+n+p=0$. From here on we will refer to the Necker Cube surface embedded form in $\mathbb{R}^{3}$ lying on the plane $z=-(x+y) $ as $\mathbf{C}$. That is to say that
 
 $$\mathbf{C} =\bigcup\big{\{}\chi_{m,n,p}  : m+n+p=0 \big{\}} .$$
 
-$\mathbf{C}$ now resembles the structure in (FIG). Before describing the transformation that takes $\mathbf{C}$ to its flattened form, it would be best to describe the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{C}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See FIG). We will denote the metric preserving map from $\mathbf{C}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$. Later on we will use $\mathbf{U}'$ when taking its quotient space.
+$\mathbf{C}$ now resembles the structure in (FIG). Before describing the transformation that takes $\mathbf{C}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{C}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See FIG). We will denote the metric preserving map from $\mathbf{C}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$. Later on we will use $\mathbf{U}'$ when taking its quotient space.
 
 Now we will describe exactly how to construct $\mathbf{U}'$. Take the subset of the real plane, $\mathbf{P} = \mathbb{R}^{2}-\{(u,v)|2m-\frac{1}{2}<u<2m+\frac{1}{2}, 2n-\frac{1}{2}<v<2n+\frac{1}{2} \}$, with 1$\times$1 open squares cut out at every even integer pair and let $\mathbf{U}'$ represent the flattened structure with the proper edge identifications with the first "hole" centered at the origin. We will describe this surface as a product of the auxiliary plane,$z=0$ and the image of a natural map from $\mathbf{P}$ to its quotient space with the following relation on $\mathbf{P}$:
 
@@ -87,6 +108,14 @@ The relation will either relate every point to itself, or (in the case where any
 \subsection{Flattening $\mathbf{C}$}
 This section will describe the isomorphic map $\Psi:\mathbf{C}\rightarrow\mathbf{U}$, its inverse, $\Psi^{-1}:\mathbf{U}\rightarrow\mathbf{C}$, and prove that $\mathbf{C}$ and $\mathbf{U}$ are isometric.
 
+The flattening procedure can be represented as a series of cuts made along edges parallel to the z-axis. The gluing structure is preserved by the relations defined on $\textbf{U}$ and $\textbf{U}'$. 
+
+\begin{center}
+\includesvg[width=2.3in]{cubesxyzcut}
+\includesvg[width=2.3in]{unfoldcut}
+\text{The images of } $\Psi^{-1}(\mathbf{U})$ \text{ and } $\Psi(\mathbf{C})$, \text{ respectively.}
+\end{center}
+
 $\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the letters $A$, $B$, $C$. We do the same for $\mathbf{U}$ but use instead $A'$, $B'$, $C'$. 
 
 \begin{gather*}
@@ -94,8 +123,11 @@ $\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the let
 	\\A=\bigcup\big\{\mathbf{C}\cap\{(x,y,p)\in\mathbb{R}\}: p\in\mathbb{Z}\big\}
 	\\B=\bigcup\big\{\mathbf{C}\cap\{(x,n,z)\in\mathbb{R}\}: n\in\mathbb{Z}\big\}
 	\\C=\bigcup\big\{\mathbf{C}\cap\{(m,y,z)\in\mathbb{R}\}: m\in\mathbb{Z}\big\}
-	\\\text{are the collection of the faces of cubes that are parallel to eachother.}
+	\\\text{are the collection of the faces of cubes that lie on planes that are parallel to one another.}
+	\\\text{As shown here:}
 \end{gather*}
+
+\includegraphics[]{label.png}\centering
 
 To describe the subsets $A'$, $B'$, and $C'$ properly we will introduce the function $\mu_{n}:\mathbb{R}\rightarrow \left[0,n\right) $ as shorthand for the family of functions that take a real number to its residue class of reals modulo n, for some integer n.
 
@@ -106,6 +138,8 @@ To describe the subsets $A'$, $B'$, and $C'$ properly we will introduce the func
 	\\C'= \{(u,v,0): 0<\mu_{2}(u)\leq 1,\hspace{4mm} 1<\mu_{2}(v)\leq 2\}
 	\\\text{are the collections of the associated faces of the flattened structure.}
 \end{gather*}
+
+
 
 Now we will define $\Psi$ piece-wise.
 
@@ -254,6 +288,18 @@ Proof. Let $(\mathbf{C}, d)$ and $(\mathbf{U}, d')$ be topological spaces with t
 \end{thm}
 
 As a consequence of this theorem, any dynamical properties of geodesic flow on the surface $\mathbf{U}'$ immediately applies to $\mathbf{C}$. ($\mathbf{U}'$ and $\mathbf{U}$ are trivially isometric).
+
+\subsection{Comparing Geodesic Behavior on Both Surfaces}
+Two immediate observations that can be made in regards to geodesic flows on the surface was that any trajectory with slope one closes, and any flows with horizontal or vertical trajectories drift. Observe the path behavior of three different flows on the surface:
+
+\begin{center}
+\includesvg[width=2.3in]{cubesxyzpaths} 
+\includesvg[width=2.3in]{unfoldcutpath}
+\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{C}$,
+\\ \text{where their initial trajectories are (0,1), (1,0), and (1,1) respectively.}
+\end{center}
+
+The figure above shows us some very simple paths on the surfaces. We use the three vectors, (0,1), (1,0), and (1,1), as a sort of basis for proving our theorem. Included in the appendix are a few more simulated flows of various trajectories. We've color coded the trajectories in the image above for path c to represent one of four phases
 
 \section{The Four-Fold Cover and Translation Surface}
 
