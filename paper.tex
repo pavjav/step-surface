@@ -18,25 +18,30 @@
 \begin{document}
 
 \maketitle
+\begin{abstract}
+This paper classifies the periodic and drift-periodic trajectories on the Necker cube surface, a periodic surface built out of squares popular in optical illusions.
+\end{abstract}
 
+\begin{figure}[b!]
 \begin{center}
 \includesvg[width=2in]{cubesxyz}
 \end{center}
+\caption{The Necker cube surface.}
+\label{fig:Necker}
+\end{figure}
 
-\begin{abstract}
-
-\end{abstract}
 
 \section{Introduction}
 
-\subsection{Background}
-The purpose of the following paper is to study the non-compact, infinite surface generated entirely out of the edge-to-edge gluing of square faces, whose final product resembles cubes stacked in a cascading, pyramidal pattern (or perhaps a rhombile tiling). (See Fig //) M.C. Escher famously adapted Louis Albert Necker's optical illusion known as the Necker Cube in 1937. The cubes appear in Escher's lithograph, "Metamorphosis I," in the form of tessellated rhombi.[CITE METAMORPHOSIS I] The print features a number of various tessellations transforming into simpler ones when traversed from left to right. The term Necker Cube is used interchangeably to refer to Escher's surface and Necker's optical illusion. For the purposes of the following paper, we will be using Necker Cube to refer to the infinite cube tiling that appears in Escher's work, as well as many other places. Those familiar with the arcade game known as Q*bert will most likely recognize the Necker Cube as the board whose colors you were meant to change in order to complete each level.
+The purpose of the following paper is to study the non-compact, infinite surface generated entirely out of the edge-to-edge gluing of square faces, whose final product resembles cubes stacked in a cascading, pyramidal pattern (or perhaps a rhombile tiling). (See Figure \ref{fig:Necker}) M.C. Escher famously adapted Louis Albert Necker's optical illusion known as the Necker Cube in 1937. The cubes appear in Escher's lithograph, "Metamorphosis I," in the form of tessellated rhombi.[CITE METAMORPHOSIS I] The print features a number of various tessellations transforming into simpler ones when traversed from left to right. The term Necker Cube is used interchangeably to refer to Escher's surface and Necker's optical illusion. For the purposes of the following paper, we will be using Necker Cube to refer to the infinite cube tiling that appears in Escher's work, as well as many other places. Those familiar with the arcade game known as Q*bert will most likely recognize the Necker Cube as the board whose colors you were meant to change in order to complete each level.
 
+\begin{figure}
 \begin{center}
 \includegraphics[scale=0.5]{escher.jpg}
-\\ 
-\text{The Necker Cube as it appears briefly in Metamorphosis I}
+\caption{The Necker Cube as it appears briefly in Metamorphosis I}
+\label{fig:Escher}
 \end{center}
+\end{figure}
 
 The Necker Cube is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $\frac{3\pi}{2}$. We wish to study the surface in the case where we glue only squares with edges of length 1. Specifically, we want to study geodesic flows on this surface and to prove that properties of the initial trajectory angle determine whether or not the geodesic will close or drift periodically. 
 
@@ -44,7 +49,15 @@ The determining factor is simply whether or not the trajectory angle vector dire
 
 \begin{thm*}{Theorem}
 \\content...
+\begin{enumerate}
+\item Statement 1
+\item Statement 2
+\end{enumerate}
 \end{thm*}
+
+\subsection{Discussion of Proof}
+\subsection{Related work}
+
 
 To better understand this surface, we will adapt methods used in the study of Veech surfaces to suit our needs. These methods have become incredibly valuable to anyone studying rational billiard flows on a variety of compact or (in the case of infinite surfaces) non-compact surfaces. Geodesic flows in these problems are characterized as point masses moving along frictionless surfaces that experience perfectly elastic collisions with the boundaries of the surface. The straight line path is then deformed by a reflection over the boundary in the opposite direction. Translation surfaces constructed in the following manner therefore take on symmetric properties in accordance to these transformations and the types of boundaries the point mass might encounter. That is to say that orienting these flows requires that the translation surface itself be reflected to realign the flow. These translation surfaces are often described as being "unfolded" by some billiard flow, or strung along a laundry line of polygons congruent to the base. In the later sections we will describe how our surface's canonical form deforms geodesic flows by rotation and how we can use these rotations and edge-crossings to determine whether or not a geodesic will close.
 
