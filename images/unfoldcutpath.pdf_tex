@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{610.9199707bp}%
+    \setlength{\unitlength}{431.23491211bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,10 +48,10 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.00000008)%
+  \begin{picture}(1,0.90173756)%
     \put(0,0){\includegraphics[width=\unitlength]{unfoldcutpath.pdf}}%
-    \put(0.62856024,0.2095201){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a}}}%
-    \put(0.19642508,0.39285017){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b}}}%
-    \put(0.53689521,0.45832519){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c}}}%
+    \put(0.67700707,0.04138058){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a}}}%
+    \put(0.06481174,0.30109981){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b}}}%
+    \put(0.54714745,0.39385668){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c}}}%
   \end{picture}%
 \endgroup%

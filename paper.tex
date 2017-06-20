@@ -1,13 +1,26 @@
 \documentclass[]{article}
+
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{svg}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{float}
+
 \graphicspath{{images/}}
 \setsvg{svgpath={./images/}}
+
 \newtheorem{thm}{Theorem}[subsection]
+\newtheorem{Def}{Definition}[subsection]
 \newtheorem*{thm*}{Theorem}
+\newtheorem*{def*}{Definition}
+
+\newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\compat}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\shiftleft}[2]{\makebox[0pt][r]{\makebox[#1][l]{#2}}}
+\newcommand{\tilda}{\big{\char"7E}}
 
 
 %opening
@@ -17,43 +30,68 @@
 
 \begin{document}
 
+
 \maketitle
+
+
+
+\begin{center}
+
+\includesvg[width=4.8in]{cubecoverphoto}\\
+\end{center}
+
 \begin{abstract}
 This paper classifies the periodic and drift-periodic trajectories on the Necker cube surface, a periodic surface built out of squares popular in optical illusions.
 \end{abstract}
 
-\begin{figure}[b!]
-\begin{center}
-\includesvg[width=2in]{cubesxyz}
-\end{center}
-\caption{The Necker cube surface.}
-\label{fig:Necker}
-\end{figure}
 
 
+\newpage
 \section{Introduction}
 
-The purpose of the following paper is to study the non-compact, infinite surface generated entirely out of the edge-to-edge gluing of square faces, whose final product resembles cubes stacked in a cascading, pyramidal pattern (or perhaps a rhombile tiling). (See Figure \ref{fig:Necker}) M.C. Escher famously adapted Louis Albert Necker's optical illusion known as the Necker Cube in 1937. The cubes appear in Escher's lithograph, "Metamorphosis I," in the form of tessellated rhombi.[CITE METAMORPHOSIS I] The print features a number of various tessellations transforming into simpler ones when traversed from left to right. The term Necker Cube is used interchangeably to refer to Escher's surface and Necker's optical illusion. For the purposes of the following paper, we will be using Necker Cube to refer to the infinite cube tiling that appears in Escher's work, as well as many other places. Those familiar with the arcade game known as Q*bert will most likely recognize the Necker Cube as the board whose colors you were meant to change in order to complete each level.
+The purpose of the following paper is to study the geodesic flow on the periodic surface depicted above, which is formed from an infinite collection of unit squares. We call this surface the Necker cube surface after Louis Albert Necker's "Necker Cube$_{1}$," which became a popular optical illusion. M.C. Escher's adaptation of the cube in Metamorphosis I$_{2}$ briefly features the Necker cube surface (See Figure $\ref{fig:Escher}$).The term Necker Cube is used interchangeably to refer to Escher's surface adaptation and Necker's optical illusion. For the purposes of the following paper, we will be using either Necker Cube or $\mathbf{S}$ to refer to the periodic cube tiling that appears in Escher's work.
 
-\begin{figure}
+
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{escher.jpg}
-\caption{The Necker Cube as it appears briefly in Metamorphosis I}
+\caption{The Necker cube as it appears briefly in Metamorphosis I}
 \label{fig:Escher}
 \end{center}
 \end{figure}
+
+The initial (rational) trajectories of any given flow fall into only one of two categories.
+
+\begin{def*}
+A vector, $(x,y)\in\mathbb{Z}^{2}$, is considered \textbf{odd-odd} if x and y are relatively prime and both odd. The \textbf{set of all odd-odd vectors} is given as 
+$$ \mathfrak{O} = \{(x,y)\in\mathbb{Z}^{2} : \gcd(x,y)=1\text{ and x,y are odd} \}.$$
+\end{def*}
+
+\begin{def*}
+A vector, $(x,y)\in\mathbb{Z}^{2}$, is considered \textbf{even-odd} if x and y are relatively prime and, of x and y, exactly one is odd and the other is even. The \textbf{set of all even-odd vectors} is given as 
+$$ \mathfrak{E} = \{(x,y)\in\mathbb{Z}^{2} : \gcd(x,y)=1\text{ and x is odd iff y is even} \}.$$
+\end{def*}
+
+We take every vector on the Necker cube to be relative to the standard basis of the plane of intersection in space. From there we prove the following:
+
+\begin{thm*}{Denote $\phi^{\theta}_{t}$ to be the flow in a vector direction $\theta$ to time t on the Necker cube. Then the following is true:}
+\begin{enumerate}[label=(\roman*)]
+\item If $\theta$ belongs to $\mathfrak{O}$, then $\phi^{\theta}_{t}$ is periodic on $\mathbf{S}$.
+	
+\item If $\theta$ belongs to $\mathfrak{E}$, then $\phi^{\theta}_{t}$ is drift-periodic on $\mathbf{S}$.
+
+\item If $\theta$ is of the form (x,y) such that x or y are irrational, then $\phi^{\theta}_{t}$ is uniquely ergodic on $\mathbf{S}$.
+	
+\end{enumerate}
+\end{thm*}
+
+\compav{Stopped here. Continued in Section 2.}
 
 The Necker Cube is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $\frac{3\pi}{2}$. We wish to study the surface in the case where we glue only squares with edges of length 1. Specifically, we want to study geodesic flows on this surface and to prove that properties of the initial trajectory angle determine whether or not the geodesic will close or drift periodically. 
 
 The determining factor is simply whether or not the trajectory angle vector direction $(a,b)$, relative to the bottom and left edges of any square face, has integer values $a$,$b$ (where $a$ and $b$ are relatively prime) are of the same parity (odd-odd slope) or different parities (even-odd slope). We choose to neglect cases where paths are incident with vertices, and proceed to treat them as singularities. With these conditions in place we found that any geodesic with an initial odd-odd trajectory closes on the surface, while the even-odd cases drift periodically, tending to infinity. We aim to prove the following:
 
-\begin{thm*}{Theorem}
-\\content...
-\begin{enumerate}
-\item Statement 1
-\item Statement 2
-\end{enumerate}
-\end{thm*}
+
 
 \subsection{Discussion of Proof}
 \subsection{Related work}
@@ -80,29 +118,56 @@ Similarly, we take the quotient space of the flattened Necker Cube centered arou
 
  $SL_{2}(\mathbb{R})$
 
-\section{Constructing the Surface}
-This section will detail how the Necker Cube is constructed out of an infinite number of squares, and explain the process by which we flatten the structure in such a way that preserves the metric, and makes it simpler for us to describe the behavior of geodesics at these edges.
+\section{Construction the Surface \& Isometric Variant}
+\compav{Started up here again.}
 
-\subsection{The Necker Cube Surface and Isometric Variant }
+This section will detail how the Necker cube (See Figure \ref{fig:cubexyz}) is constructed out of an infinite set of unit squares, and explain the process by which we flatten the structure in such a way that preserves distances, and makes it simpler for us to describe the behavior of the geodesic flows that come into contact with these edges.
+
+\begin{figure}[H]
+\begin{center}
+\includesvg[width=3in]{cubesxyz}
+\caption{The Necker cube embedded in space.}
+\label{fig:cubexyz}
+\end{center}
+\end{figure}
+
+\subsection{The Necker Cube Surface and its Flattened Form}
 To build the surface out of infinitely many squares, we take the union of the instances of three squares, each lying on planes orthogonal to the other two and sharing an edge with exactly one other square. The three squares have one vertex in common.
 
-Every instance can be described as cube whose bottom, left, and rear faces have been removed. They will be arranged in such a way that every integer triple $m,n,p\in\mathbb{Z}$ will have this surface associated with it. To each face we ascribe a letter A, B, or C. This will be useful when defining the flattening map.
-\begin{gather*}
-\chi_{m,n,p} = ([m, m+1]\times[n,n+1]\times\{p\})
+Every instance can be described as cube whose bottom, left, and rear faces have been removed. They will be arranged in such a way that every integer triple $m,n,p\in\mathbb{Z}$ will have this surface associated with it. To each face we ascribe a letter A, B, or C, and construct an instance as a union of these faces:
+
+\vspace{0.2in}
+\begin{tabular}{p{10cm}c}
+\begin{align*}
+\chi_{m,n,p} = ([m, m+1]\times[n,n+1]\times\{p\}) 
 \\\cup  (\{m+1\}\times[n,n+1]\times[p,p-1]) 
 \\\cup ([m,m+1]\times\{n+1\}\times[p,p-1])
-\end{gather*}
+\end{align*}
+&
+\shiftleft{0.8in}{\raisebox{-1in}{\includegraphics[scale=1]{label.png}}}
+\end{tabular}
+\vspace{0.2in}
 
-is the family of these instances based at some integer triple. The surface will be comprised of the union of the members that satisfy the property, $m+n+p=0$. From here on we will refer to the Necker Cube surface embedded form in $\mathbb{R}^{3}$ lying on the plane $z=-(x+y) $ as $\mathbf{C}$. That is to say that
 
-$$\mathbf{C} =\bigcup\big{\{}\chi_{m,n,p}  : m+n+p=0 \big{\}} .$$
+is the family of these instances based at some integer triple. The surface will be comprised of the members that satisfy the property, $m+n+p=0$. From here on we will refer to the Necker cube surface's embedded form in $\mathbb{R}^{3}$ lying along the plane $z=-(x+y) $ as $\mathbf{S}$. That is to say that
 
-$\mathbf{C}$ now resembles the structure in (FIG). Before describing the transformation that takes $\mathbf{C}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{C}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See FIG). We will denote the metric preserving map from $\mathbf{C}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$. Later on we will use $\mathbf{U}'$ when taking its quotient space.
+$$\mathbf{S} =\bigcup\big{\{}\chi_{m,n,p}  : m+n+p=0 \big{\}}.$$
 
-Now we will describe exactly how to construct $\mathbf{U}'$. Take the subset of the real plane, $\mathbf{P} = \mathbb{R}^{2}-\{(u,v)|2m-\frac{1}{2}<u<2m+\frac{1}{2}, 2n-\frac{1}{2}<v<2n+\frac{1}{2} \}$, with 1$\times$1 open squares cut out at every even integer pair and let $\mathbf{U}'$ represent the flattened structure with the proper edge identifications with the first "hole" centered at the origin. We will describe this surface as a product of the auxiliary plane,$z=0$ and the image of a natural map from $\mathbf{P}$ to its quotient space with the following relation on $\mathbf{P}$:
+$\mathbf{S}$ now resembles the structure in Figure \ref{fig:cubexyz}. Before describing the transformation that takes $\mathbf{S}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{S}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See $\ref{fig:uprimeu}$). We will denote the metric preserving map from $\mathbf{S}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$ due to the nature of the construction of $\mathbf{S}$.
+
+\begin{figure}[H]
+\begin{center}
+\includesvg[width=1.5 in]{u}\hspace{0.6in}\includesvg[width=1.5in]{uprime}
+\end{center}
+\caption{$\mathbf{U}$ (left) and $\mathbf{U}'$ (right) differ only by translation.}
+\label{fig:uprimeu}
+\end{figure}
+
+Now we will describe exactly how to construct $\mathbf{U}'$. Take the subset of the real plane, 
+$$\mathbf{P} = \mathbb{R}^{2}-\{(u,v):2m-\frac{1}{2}<u<2m+\frac{1}{2}, 2n-\frac{1}{2}<v<2n+\frac{1}{2} \},$$ with open unit squares cut out at every even integer pair and let $\mathbf{U}'$ represent the flattened structure with the proper edge identifications with the first "hole" centered at the origin. We will describe this surface as a cross product of the auxiliary plane, $z=0$ and the image of the natural map from $\mathbf{P}$ to its quotient space with the following relation on $\mathbf{P}$:
 
 \begin{gather*}
-\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}. \text{Let } \mathbf{R} \text { be a relation described as } x_{0}\mathbf{R}x_{1} \\ \text{ iff } x_{0}=x_{1}
+\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}. \text{Let } \mathbf{R} \text { be a relation given, } x_{0}\mathbf{R}x_{1} \\ \text{ iff } x_{0}=x_{1}
  \text{ or if }x_{0},x_{1} \in {\partial} \left( \left[2m-\frac{1}{2},2m+\frac{1}{2}\right] \times \left[2n-\frac{1}{2},2n+\frac{1}{2}\right] \right)\\
   \left[\begin{array}{c}
 u_{1} -2m
@@ -114,19 +179,22 @@ u_{1} -2m
 \left[ \begin{array}{c}u_{0}-2m\\
 v_{0}-2n
 \end{array}\right]
-\\\text{For some }m,n\in\mathbb{Z} \end{gather*}
+\\\text{For some }m,n\in\mathbb{Z}. \end{gather*}
 
-The relation will either relate every point to itself, or (in the case where any two points lie on the boundary of the square shaped holes) take the center of each square shaped hole in the plane to the origin and reflect it over the line $y=x$ to match up these points accordingly.  Let $N: \mathbf{P} \rightarrow \mathbf{P}/\mathbf{R}$ denote the natural map from every point on $\mathbf{P}$ to its appropriate equivalence class. Now, let $\mathbf{U}' = Im N \text{ }\times\{0\}$ be the flat representation of the surface that has been translated so as to center the first square cut-out region over the origin. The map $\mathbf{U}\rightarrow\mathbf{U}'$ is given by an affine translation of the surface $(x,y,z) \mapsto (x-\frac{3}{2},y-\frac{3}{2},z)$. (The point at the origin of $\mathbf{C}$ is mapped to $(-\frac{3}{2},-\frac{3}{2},0) \text{ on } \mathbf{U}'$.)
+The relation will either identify every point to itself or, in the case where any two points lie on the boundary of the square shaped holes, take the center of each square hole in the plane to the origin and reflect it over the line $y=x$ to match up these points accordingly.  Let $N: \mathbf{P} \rightarrow \mathbf{P}/\mathbf{R}$ denote the natural map from every point on $\mathbf{P}$ to its appropriate equivalence class. Now, let $\mathbf{U}' = Im N \text{ }\times\{0\}$ be the flat representation of the surface that has been translated so as to center the first square cut-out region over the origin. The map $\mathbf{U}\rightarrow\mathbf{U}'$ is given by an affine translation of the surface $(x,y,z) \mapsto (x-\frac{3}{2},y-\frac{3}{2},z)$. (The point at the origin of $\mathbf{S}$ is mapped to $(-\frac{3}{2},-\frac{3}{2},0) \text{ on } \mathbf{U}'$).
 
-\subsection{Flattening $\mathbf{C}$}
+\compav{Stopped here. Continued in Sec. 3.}
+
+\newpage
+\subsection{Flattening $\mathbf{S}$}
 This section will describe the isomorphic map $\Psi:\mathbf{C}\rightarrow\mathbf{U}$, its inverse, $\Psi^{-1}:\mathbf{U}\rightarrow\mathbf{C}$, and prove that $\mathbf{C}$ and $\mathbf{U}$ are isometric.
 
 The flattening procedure can be represented as a series of cuts made along edges parallel to the z-axis. The gluing structure is preserved by the relations defined on $\textbf{U}$ and $\textbf{U}'$. 
 
 \begin{center}
 \includesvg[width=2.3in]{cubesxyzcut}
-\includesvg[width=2.3in]{unfoldcut}
-\text{The images of } $\Psi^{-1}(\mathbf{U})$ \text{ and } $\Psi(\mathbf{C})$, \text{ respectively.}
+\raisebox{0.4in}{\includesvg[width=2.3in]{u}}
+\text{The images of } $\Psi^{-1}(\mathbf{U})$ (left)\text{ and }$\Psi(\mathbf{S})$ (right)
 \end{center}
 
 $\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the letters $A$, $B$, $C$. We do the same for $\mathbf{U}$ but use instead $A'$, $B'$, $C'$. 
@@ -140,7 +208,7 @@ $\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the let
 	\\\text{As shown here:}
 \end{gather*}
 
-\includegraphics[]{label.png}\centering
+
 
 To describe the subsets $A'$, $B'$, and $C'$ properly we will introduce the function $\mu_{n}:\mathbb{R}\rightarrow \left[0,n\right) $ as shorthand for the family of functions that take a real number to its residue class of reals modulo n, for some integer n.
 
@@ -306,15 +374,57 @@ As a consequence of this theorem, any dynamical properties of geodesic flow on t
 Two immediate observations that can be made in regards to geodesic flows on the surface was that any trajectory with slope one closes, and any flows with horizontal or vertical trajectories drift. Observe the path behavior of three different flows on the surface:
 
 \begin{center}
-\includesvg[width=2.3in]{cubesxyzpaths} 
-\includesvg[width=2.3in]{unfoldcutpath}
-\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{C}$,
+\includesvg[width=2.3in]{cubesxyzpaths}\hspace{0.1in}
+\raisebox{0.5in}{\includesvg[width=2.2in]{unfoldcutpath}}
+\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{S}$,
 \\ \text{where their initial trajectories are (0,1), (1,0), and (1,1) respectively.}
 \end{center}
 
 The figure above shows us some very simple paths on the surfaces. We use the three vectors, (0,1), (1,0), and (1,1), as a sort of basis for proving our theorem. Included in the appendix are a few more simulated flows of various trajectories. We've color coded the trajectories in the image above for path c to represent one of four phases
 
+\newpage
 \section{The Four-Fold Cover and Translation Surface}
+\compav{Started here again.}
+The following section is concerned with defining a quotient space on $\mathbf{U}'$ (See $\ref{fig:quotient}$), and using that space to construct our translation surface. In addition we will describe a cover made from four copies of $\mathbf{U}'$ that aligns geodesic flow and behaves as a cover of our translation surface.
 
+We will call this quotient space $\mathbf{M}$ and define it as such:
+\begin{Def}{$\mathbf{M}$.}\\
+$\mathbf{M}$ is a base surface of $\mathbf{U}'$ given by the quotient $\mathbf{U}'/2\mathbb{Z}\oplus2\mathbb{Z}$, where $2\mathbb{Z}\oplus2\mathbb{Z}\times\mathbf{U}'\rightarrow\mathbf{U}'$ is the group action on $\mathbf{U}'$ defined as $(m,n)\circ(u,v)=(u+m,v+n)$.
+\end{Def}
+
+\begin{figure}[H]
+\begin{center}
+\includesvg[width=2in.]{unfoldcutquotient}\hspace{0.2in}
+\includesvg[width=2in.]{quotient}
+\end{center}
+\caption{$\mathbf{U}'$ equivalence classes under group action (left), and $\mathbf{M}$ with identified edges and vertices (right).}
+\label{fig:quotient}
+\end{figure}
+
+The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these vertices are integral multiples of $2\pi$, so in order to create a translation surface we have to take a minimal number of copies of the quotient space so every vertex has a cone angle that is a multiple of $2\pi$.
+
+\newpage
+\subsection{Translation Surface}
+With $\mathbf{M}$ defined, we can define a branch cover of $\mathbf{M}$ composed of four copies. To each copy we associate a direction of the flow under indices \{0,1,2,3\}. Let $\mathbf{M}_{0} $ denote the quotient space with its vertices removed: 
+
+\begin{center}
+\includesvg[width=2in]{branchvert}
+\end{center}
+
+Now denote the set of singularities of $\mathbf{M}_{0}$ by $\Sigma$, where $\Sigma=\{s_{i}:i=1,...,8\}$. We let $ H_{1} (\mathbf{M}_{0}, \Sigma ; \mathbb{Z} / 4 \mathbb{Z}) =\{\gamma,e\}$ be the homology group 
+
+\compav{Little stuck on how to actually write this out.}
+
+\begin{figure}[H]
+\begin{center}
+\includesvg[width=4in]{branchcover}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includesvg[width=4in]{branchcoverchopped}
+\end{center}
+\end{figure}
 
 \end{document}
