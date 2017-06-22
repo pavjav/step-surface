@@ -135,52 +135,52 @@ First we divide the planes $x,y,z=k$ for some integer $k$ in such a way that the
 \vspace{0.2in}
 \begin{tabular}{p{10cm}c}
 \begin{align*}
-\mathbf{A}_{m,n,p} = [m, m+1]\times[n,n+1]\times\{p\} 
-\\\mathbf{B}_{m,n,p} = \{m+1\}\times[n,n+1]\times[p-1,p]
-\\\mathbf{C}_{m,n,p} [m,m+1]\times\{n+1\}\times[p-1,p]
+\mathbf{A}_{m,n,p} = [m, m+1]\times[n,n+1]\times\{p\}, 
+\\\mathbf{B}_{m,n,p} = \{m+1\}\times[n,n+1]\times[p-1,p],
+\\\mathbf{C}_{m,n,p}= [m,m+1]\times\{n+1\}\times[p-1,p].
 \end{align*}
 &
 \shiftleft{0.8in}{\raisebox{-1in}{\includegraphics[scale=1]{label.png}}}
 \end{tabular}
-\vspace{0.2in}
-\compat{I would define $A_{m,n,p}$, etc.}\\
-\noindent For the sake of convenience, B and C are shifted in order to associate each integer triple that satisfies the linear condition $m+n+p=0$ with an instance of the cube that $\mathbf{S}$ is composed of. Furthermore, we can separate $\mathbf{S}$ into the sets:
-
+\vspace{0.2in}\\
+\noindent For the sake of convenience, B and C are shifted in order to associate each integer triple that satisfies the linear condition $m+n+p=0$ with an instance of the cube that $\mathbf{S}$ is composed of. Furthermore, we  separate $\mathbf{S}$ into the sets:
 \begin{align*}
-\mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}}
-\\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}}
-\\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}
+\mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}},
+\\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}},
+\\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}.
 \end{align*}
 
 \noindent We can now give a formal definition of the Necker Cube.
 
-\begin{Def}{The Necker Cube.} 
-\\ The \textbf{Necker Cube}, denoted by $\mathbf{S}$, is the surface made up of unions of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
+\begin{Def} The \textbf{Necker Cube}, denoted by $\mathbf{S}$, is the surface made up of unions of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
 
 \noindent $\mathbf{S}$ is the surface portrayed in Figure \ref{fig:cubexyz}. 
 
 \subsection{The Flattened Form}
-We will show that $\mathbf S$ is isometric to a a topological quotient of a particular subset of the plane. We call this surface $\mathbf{U}$, and the subset of the plane $\mathbf P$ (See Figure $\ref{fig:uprimeu}$).
+We will show that $\mathbf S$ is isometric to a a topological quotient of a particular subset of the plane. We call this quotient $\mathbf{U}$, and the subset of the plane $\mathbf P$ (See Figure $\ref{fig:uprimeu}$).
+The subset $\mathbf P$ is the region of the plane with unit squares removed:
+\begin{equation}
+\label{eq:P}
+\mathbf{P} = \mathbb{R}^{2}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{}(u,v):u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}.
+\end{equation}
 
-\begin{Def}{$\mathbf{P}$}\\
-$\mathbf P$ is the region of the plane with unit squares removed:
-$$\mathbf{P} = \mathbb{R}^{2}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{}(u,v):u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}$$
-\end{Def}
+\compat{Illustrating refering to equations: Recall $\mathbf{P}$ was defined in \eqref{eq:P}.}
+
 
 \begin{figure}[H]
 \begin{center}
 \includesvg[width=1.5in]{uprime}
 \end{center}
-\caption{$\mathbf P$, the subset of the plane with unit squares removed at every even integer pair.} \compat{Perhaps just use one.}
+\caption{The subset $\mathbf P$ of the plane with unit squares removed at every even integer pair.} \compat{Perhaps just use one.}
 \label{fig:uprimeu}
 \end{figure}
 
-\noindent On $\mathbf P$ we define a relation that identifies the sides of the boundaries of each hole in the plane with another by rotating an edge around the bottom left or top right corners by $\pm\frac{\pi}{2}$. The result is an edge identification as seen here (centered at each even coordinate pair):
+\noindent On $\mathbf P$ we define a relation $\sim$ that identifies the sides of the boundaries of each hole in pairs. Each side is identified with another side of the same hole by rotation about the bottom left or top right corners of the hole by $\pm\frac{\pi}{2}$. The result is an edge identification as seen here (centered at each even coordinate pair): \compat{I think overall this is very good and completely defines the relation. You may want to tweak it to make it even more clear. You expressed some concerns about the vertices.}
 
 \begin{figure}[H]\centering
 \includesvg[width=2in.]{quotient}
 \end{figure}
-\noindent We call this relation $\mathbf{R}$. What $\mathbf{R}$ essentially does is translates every hole to the origin and identifies the edges by reflecting over the line $y=x$. If these points coincide, then they are indeed the same point on the boundary. Otherwise, every point that is not on the boundary belongs to its own class. We can safely assume this wont identify edges improperly, since we translate every boundary so as to situate the unit holes over the origin. For example, if we took two edges that do not belong to the same hole then by that same translation and reflection the two edges couldn't possible coincide. 
+\noindent We call this relation $\mathbf{R}$. \compat{How about $\sim$?} What $\mathbf{R}$ essentially does is translates every hole to the origin and identifies the edges by reflecting over the line $y=x$. If these points coincide, then they are indeed the same point on the boundary. Otherwise, every point that is not on the boundary belongs to its own class. We can safely assume this wont identify edges improperly, since we translate every boundary so as to situate the unit holes over the origin. For example, if we took two edges that do not belong to the same hole then by that same translation and reflection the two edges couldn't possible coincide.  \compat{This paragraph doesn't seem to add much.}
 
 \begin{Def}
 content...
