@@ -64,27 +64,21 @@ The initial (rational) trajectories of any given flow fall into only one of two 
 \compat{The definitions below seem redundant. Perhaps you want ${\mathcal O}$ and ${\mathcal E}$}
 
 \begin{def*}
-A vector, $(x,y)\in\mathbb{Z}^{2}$, is considered \textbf{odd-odd} if x and y are relatively prime and both odd. The \textbf{set of all odd-odd vectors} is given as 
-$$ \mathfrak{O} = \{(x,y)\in\mathbb{Z}^{2} : \gcd(x,y)=1\text{ and x,y are odd} \}.$$
+Let $v$ be a vector of the form $(x,y)\in\mathbb{Z}^{2}$. We call $v$ an \textbf{odd-odd} vector if x and y are relatively prime and both odd. We denote the \textbf{set of all odd-odd vectors} by $\mathcal{O}$. We say that $v$ is an  \textbf{even-odd} vector if x and y are relatively prime, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd vectors} by $\mathcal{E}$.
 \end{def*}
 
-\begin{def*}
-A vector, $(x,y)\in\mathbb{Z}^{2}$, is considered \textbf{even-odd} if x and y are relatively prime and, of x and y, exactly one is odd and the other is even. The \textbf{set of all even-odd vectors} is given as 
-$$ \mathfrak{E} = \{(x,y)\in\mathbb{Z}^{2} : \gcd(x,y)=1\text{ and x is odd iff y is even} \}.$$
-\end{def*}
+We consider every (rational) initial trajectory on the surface to fall into one of the two categories, otherwise it is a positive scalar multiple of some direction. Given some initial point $x_{0}$ on the surface embedded in real space and some vector direction in real space, $\bar{v}$, our initial trajectory,$v$, is taken as an isomorphism from the planar subspace of $\mathbb{R}^{3}$ that contains $\bar{v}$. The three possible cases are the auxiliary planes, $x=0, y=0, z=0$, whose projections onto $\mathbb{R}^{2}$ are given by $(0,y,z)\mapsto(-z,y)$, $(x,0,z)\mapsto(x,-z)$, and $(x,y,0)\mapsto(x,y)$ respectively and relative to the standard bases of $\mathbb{R}^{3}$. We take $-z$ to be positive, and consider vectors that lie outside of these subspaces as degenerate cases. From there we prove the following:
 
-We take every vector on the Necker cube to be relative to the standard basis of the plane of intersection in space. From there we prove the following:
-
-\begin{thm*}{Denote $\phi^{\theta}_{t}$ to be the flow in a vector direction $\theta$ to time t on the Necker cube.
-Then the following is true:} \compat{There is no flow in a fixed direction because when trajectories move to new squares they may be traveling different directions.}
+\begin{thm*}{Given an initial trajectory, $\theta\in\mathbb{R}^{2}$, and geodesic path, $\gamma$, on $\mathbf{S}$ with initial trajectory $\theta$, the following is true:} \compat{There is no flow in a fixed direction because when trajectories move to new squares they may be traveling different directions.}
+\compav{Can I use gamma as a path on S?}
 \begin{enumerate}[label=(\roman*)]
-\item If $\theta$ belongs to $\mathfrak{O}$, then $\phi^{\theta}_{t}$ is periodic on $\mathbf{S}$.
-	
-\item If $\theta$ belongs to $\mathfrak{E}$, then $\phi^{\theta}_{t}$ is drift-periodic on $\mathbf{S}$.
+\item If $\theta$ belongs to $\mathcal{O}$, then $\gamma$ is closed on $\mathbf{S}$ and homeomorphic to $\mathbb{R}/\mathbb{Z}$.
+\item If $\theta$ belongs to $\mathcal{E}$, then $\gamma$ is drift-periodic on $\mathbf{S}$.
 
-\item If $\theta$ is of the form (x,y) such that x or y are irrational, then $\phi^{\theta}_{t}$ is uniquely ergodic on $\mathbf{S}$. \compat{We should move the discussion of ergodicity outside the theorem.}	
 \end{enumerate}
 \end{thm*}
+
+\compav{Archiving for later:\\If $\theta$ is of the form (x,y) such that x or y are irrational, then $\phi^{\theta}_{t}$ is uniquely ergodic on $\mathbf{S}$. \compat{We should move the discussion of ergodicity outside the theorem.}	}
 
 \compav{Stopped here. Continued in Section 2.}
 
@@ -120,7 +114,7 @@ Similarly, we take the quotient space of the flattened Necker Cube centered arou
  $SL_{2}(\mathbb{R})$
 
 \section{Constructing the Surface \& Isometric Variant}
-\compav{Started up here again.}
+\compav{Started up here again 6/21/17}
 
 This section will detail how the Necker cube (See Figure \ref{fig:cubexyz}) is constructed out of an infinite set of unit squares, and explain the process by which we flatten the structure in such a way that preserves distances, and makes it simpler for us to describe the behavior of the geodesic flows that come into contact with these edges.
 
@@ -134,43 +128,78 @@ This section will detail how the Necker cube (See Figure \ref{fig:cubexyz}) is c
 
 \subsection{The Necker Cube Surface}
 
-To build the surface out of infinitely many squares, we take the union of the instances of three squares, each lying on planes orthogonal to the other two and sharing an edge with exactly one other square. The three squares have one vertex in common.
+To build the surface out of infinitely many unit squares, we take the union of the instances of three squares, each lying on planes orthogonal to the other two and sharing an edge with exactly one other square. The three squares have only one vertex in common.
 
-Every instance can be described as cube whose bottom, left, and rear faces have been removed. They will be arranged in such a way that every integer triple $m,n,p\in\mathbb{Z}$ will have this surface associated with it. To each face we ascribe a letter A, B, or C, and construct an instance as a union of these faces:
+First we divide the planes $x,y,z=k$ for some integer $k$ in such a way that they are composed entirely out of unit squares. We want to index each of these squares by integer triples and some label A,B, or C. i.e. squares on planes of the form $z=k$ will have an A label, $x=k$ a B label, and $y=k$ a C label. Let $m,n,p\in\mathbb{Z}$. Then each square based at $(m,n,p)$ is defined as follows:
 
 \vspace{0.2in}
 \begin{tabular}{p{10cm}c}
 \begin{align*}
-\chi_{m,n,p} = ([m, m+1]\times[n,n+1]\times\{p\}) 
-\\\cup  (\{m+1\}\times[n,n+1]\times[p-1,p]) 
-\\\cup ([m,m+1]\times\{n+1\}\times[p-1,p])
+\mathbf{A}_{m,n,p} = [m, m+1]\times[n,n+1]\times\{p\} 
+\\\mathbf{B}_{m,n,p} = \{m+1\}\times[n,n+1]\times[p-1,p]
+\\\mathbf{C}_{m,n,p} [m,m+1]\times\{n+1\}\times[p-1,p]
 \end{align*}
 &
 \shiftleft{0.8in}{\raisebox{-1in}{\includegraphics[scale=1]{label.png}}}
 \end{tabular}
 \vspace{0.2in}
-\compat{I would define $A_{m,n,p}$, etc.}
+\compat{I would define $A_{m,n,p}$, etc.}\\
+\noindent For the sake of convenience, B and C are shifted in order to associate each integer triple that satisfies the linear condition $m+n+p=0$ with an instance of the cube that $\mathbf{S}$ is composed of. Furthermore, we can separate $\mathbf{S}$ into the sets:
 
-\noindent \compat{Inserted noindent}
-is the family of these instances based at some integer triple. The surface will be comprised of the members that satisfy the property, $m+n+p=0$. From here on we will refer to the Necker cube surface's embedded form in $\mathbb{R}^{3}$ lying on the plane $z=-(x+y) $ as $\mathbf{S}$. That is to say that
+\begin{align*}
+\mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}}
+\\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}}
+\\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}
+\end{align*}
 
-$$\mathbf{S} =\bigcup\big{\{}\chi_{m,n,p}  : m+n+p=0 \big{\}}.$$
-$\mathbf{S}$ now resembles the structure in Figure \ref{fig:cubexyz}. \compat{I would be more definitive. Say $S$ {\em is} the structure...}
+\noindent We can now give a formal definition of the Necker Cube.
+
+\begin{Def}{The Necker Cube.} 
+\\ The \textbf{Necker Cube}, denoted by $\mathbf{S}$, is the surface made up of unions of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
+
+\noindent $\mathbf{S}$ is the surface portrayed in Figure \ref{fig:cubexyz}. 
 
 \subsection{The Flattened Form}
-\compat{I would use as an introductory paragraph: ``We will show that $\mathbf S$ is isometric to a topological quotient of a subset of the plane.''}
-Before describing the transformation that takes $\mathbf{S}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{S}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See $\ref{fig:uprimeu}$). We will denote the metric preserving map from $\mathbf{S}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$ due to the nature of the construction of $\mathbf{S}$. \compat{I found this paragraph awkward. I would just go ahead and define the region in the plane.}
+We will show that $\mathbf S$ is isometric to a a topological quotient of a particular subset of the plane. We call this surface $\mathbf{U}$, and the subset of the plane $\mathbf P$ (See Figure $\ref{fig:uprimeu}$).
+
+\begin{Def}{$\mathbf{P}$}\\
+$\mathbf P$ is the region of the plane with unit squares removed:
+$$\mathbf{P} = \mathbb{R}^{2}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{}(u,v):u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}$$
+\end{Def}
 
 \begin{figure}[H]
 \begin{center}
-\includesvg[width=1.5 in]{u}\hspace{0.6in}\includesvg[width=1.5in]{uprime}
+\includesvg[width=1.5in]{uprime}
 \end{center}
-\caption{$\mathbf{U}$ (left) and $\mathbf{U}'$ (right) differ only by translation. \compat{Perhaps just use one.}}
+\caption{$\mathbf P$, the subset of the plane with unit squares removed at every even integer pair.} \compat{Perhaps just use one.}
 \label{fig:uprimeu}
 \end{figure}
 
+\noindent On $\mathbf P$ we define a relation that identifies the sides of the boundaries of each hole in the plane with another by rotating an edge around the bottom left or top right corners by $\pm\frac{\pi}{2}$. The result is an edge identification as seen here (centered at each even coordinate pair):
+
+\begin{figure}[H]\centering
+\includesvg[width=2in.]{quotient}
+\end{figure}
+\noindent We call this relation $\mathbf{R}$. What $\mathbf{R}$ essentially does is translates every hole to the origin and identifies the edges by reflecting over the line $y=x$. If these points coincide, then they are indeed the same point on the boundary. Otherwise, every point that is not on the boundary belongs to its own class. We can safely assume this wont identify edges improperly, since we translate every boundary so as to situate the unit holes over the origin. For example, if we took two edges that do not belong to the same hole then by that same translation and reflection the two edges couldn't possible coincide. 
+
+\begin{Def}
+content...
+\end{Def}
+
+\begin{Def}{$\mathbf U$}\\
+$\mathbf U$ is equal to the quotient space $\mathbf{P}/\mathbf{R}\times\{0\}$
+\end{Def}
+
+\compav{Stopped here. 6/21/17}
+
+\compat{I would use as an introductory paragraph: ``We will show that $\mathbf S$ is isometric to a topological quotient of a subset of the plane.''}
+
+Before describing the transformation that takes $\mathbf{S}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{S}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See $\ref{fig:uprimeu}$). We will denote the metric preserving map from $\mathbf{S}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$ due to the nature of the construction of $\mathbf{S}$. \compat{I found this paragraph awkward. I would just go ahead and define the region in the plane.}
+
+
+
 Now we will describe exactly how to construct $\mathbf{U}'$. Take the subset of the real plane, 
-$$\mathbf{P} = \mathbb{R}^{2}-\bigcup_{m,n \in {\mathbb Z}} \{(u,v):2m-\frac{1}{2}<u<2m+\frac{1}{2}, 2n-\frac{1}{2}<v<2n+\frac{1}{2} \},$$ 
+$$,$$ 
 \compat{I would write $(m-\frac{1}{2},m+\frac{1}{2}) \times (n-\frac{1}{2},n+\frac{1}{2})$.}
 with open unit squares cut out at every even integer pair and let $\mathbf{U}'$ represent the flattened structure with the proper edge identifications with the first "hole" centered at the origin. We will describe this surface as a cross product of the auxiliary plane, $z=0$ and the image of the natural map from $\mathbf{P}$ to its quotient space with the following relation on $\mathbf{P}$:
 
