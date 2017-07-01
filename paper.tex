@@ -425,7 +425,9 @@ The figure above shows us some very simple paths on the surfaces. We use the thr
 The following section is concerned with defining a quotient of $\mathbf{U}'$ (see Figure $\ref{fig:quotient}$), and using that space to construct a translation surface. In addition we will describe a cover made from four copies of $\mathbf{U}'$ that aligns geodesic flow and behaves as a cover of our translation surface. \compat{Revisit to make sure it summarizes the section}
 
 \subsection{The Euclidean cone surface $\mathbf{M}$}
-\compat{I would say: Observe that translations of ${\mathbb R}^2$ by pairs even integers preserves the subset ${\mathbf P}$ and respects the equivalence relation defining ${\mathbf U'}$. Thus this gives an action of $(2{\mathbb Z})^2$ on ${\mathbf U}'$. We define ${\mathbf M}$ to be the quotient. It is depicted in Figure ...}
+\compat{I would say: Observe that translations of ${\mathbb R}^2$ by pairs even integers preserves the subset ${\mathbf P}$ and respects the equivalence relation defining ${\mathbf U}$. Thus this gives an action of $(2{\mathbb Z})^2$ on ${\mathbf U}'$. We define ${\mathbf M}$ to be the quotient. It is depicted in Figure ...}
+
+Observe that the translations by pairs of even integers preserves the subset $\mathbf P$ and respects the equivalence relation on $\mathbf U$
 
 We will call this quotient space $\mathbf{M}$ and define it as such:
 \begin{Def}{$\mathbf{M}$.}\\
@@ -441,31 +443,82 @@ $\mathbf{M}$ is a base surface of $\mathbf{U}'$ given by the quotient $\mathbf{U
 \label{fig:quotient}
 \end{figure}
 
-The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these vertices are integral multiples of $2\pi$, so in order to create a translation surface we have to take a minimal number of copies of the quotient space so every vertex has a cone angle that is a multiple of $2\pi$. \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
+The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
+
+\subsection{Four-Fold Cover of $\mathbf{U}$}
+A geodesic on our surface can travel in one of four possible directions at any given time. To each phase we associate a numeric label I,II,II, or IV, where I contains the initial and terminal points of a closed geodesic. (Similar to [author]'s construction of phases of the Wind-Tree Model). For every even integer pair that is centered around every hole of $\mathbf{P}$, assign an integer pair (m.n). Identify the edges in the following manner:
+
+\begin{center}
+\includesvg[width=4in]{utilda}
+\end{center}
+This is a branched cover of $\mathbf{U}$ of degree four that can be thought of as four copies of $\mathbf{P}$, all stacked on one another with the following identifications:
+\begin{center}
+$([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})$\\
+\vspace{0.2in}$([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})$\\
+\vspace{0.2in}For (m,n,j) $\in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}$
+\end{center}
+There are four distinct vertices for each hole centered at (m,n) on  $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim$ of cone angle $6\pi$. To create  $\mathbf{U}$'s translation surface that still behaves as a proper cover of $\mathbf{U}$, we define a map  $p:(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim) \rightarrow \tilde{\mathbf{U}}$ as
+
+\begin{equation}
+	p\left[\begin{array}{c}
+		u\\v\\z
+	\end{array}\right] =
+		\left[ \hspace{1mm} \begin{matrix}
+				1 & 0 \\
+				0 & -1 \\
+			\end{matrix}\hspace{1mm}\right]^{z}\left[\begin{array}{c}
+					u\\v
+				\end{array}\right]\times\{z\}.
+\end{equation}
+
+\compav{So I'm not sure if I can actually define p on}
+ $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim$
+
+p preserves the edge identification by affine transformations (rotating every phase plane about its origin according to its phase value).  $\tilde{\mathbf{U}}$ as a translation cover:
+
+\begin{figure}[H]
+\centering
+\includesvg[width=4in]{utildaprime}
+\end{figure}
+As one might expect, traveling in the same direction in every phase has a different effect on the integer pair (m,n) relative to first phase. A path in that sense is considered closed if it eventually returns to the exact same point, and periodic should it return to the same phase as well.
 
 \newpage
 \subsection{Translation Surface}
 \compat{You need to build the surface out of pieces rather than out of ``copies of $\mathbf{M}$.''} 
-We will now define a translation which is a four-fold branch cover of $\mathbf{M}$. To each copy we associate a direction of the flow under indices \{0,1,2,3\}. Let $\mathbf{M}_{0} $ denote the quotient space with its vertices removed: 
-
-\begin{center}
-\includesvg[width=2in]{branchvert}
-\end{center}
-
-Now denote the set of singularities of $\mathbf{M}_{0}$ by $\Sigma$, where $\Sigma=\{s_{i}:i=1,...,8\}$. We let $ H_{1} (\mathbf{M}_{0}, \Sigma ; \mathbb{Z} / 4 \mathbb{Z}) =\{\gamma,e\}$ be the homology group 
-
-\compav{Little stuck on how to actually write this out.}
+With $\tilde{\mathbf{U}}$ defined, its topological quotient is given by $\tilde{\mathbf{M}}$ = $\tilde{\mathbf{U}}/(2\mathbb{Z})^{2}$.
 
 \begin{figure}[H]
-\begin{center}
-\includesvg[width=4in]{branchcover}
-\end{center}
+\centering
+\includesvg[width=4in]{mtilda}
+\end{figure}
+$\tilde{\mathbf{M}}$ is also a degree four branched cover of $\mathbf{M}$. A covering map $g:\tilde{\mathbf{M}} \rightarrow \mathbf{M}$ also individually rotates these squares about the centers of their holes according to their labels and maps their points to $\mathbf{M}$.
+
+$\tilde{\mathbf{M}}$ is a genus 5 translation surface with four singularities. 
+
+\begin{figure}[H]
+\centering
+\includesvg[width=4in]{mtildastaircase}
 \end{figure}
 
 \begin{figure}[H]
-\begin{center}
-\includesvg[width=4in]{branchcoverchopped}
-\end{center}
+\centering
+\includegraphics[width=4in]{cylinderdecomp.pdf}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includesvg[width=4in]{cylinderskew}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includesvg[pretex=\tiny, width=4in]{slopeonecylinder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=2in]{commute.pdf}
+\end{figure}
+
 
 \end{document}
