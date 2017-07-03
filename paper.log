@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.12.9)  30 JUN 2017 20:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.12.9)  2 JUL 2017 20:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -495,11 +495,15 @@ Package pdftex.def Info: ./images/utilda.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 269.60622pt.
 )
 [15 <./images/utilda.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
 <./images/utildaprime.pdf, id=98, 518.01341pt x 478.30206pt>
 File: ./images/utildaprime.pdf Graphic file (type pdf)
 
 <use ./images/utildaprime.pdf>
-Package pdftex.def Info: ./images/utildaprime.pdf used on input line 481.
+Package pdftex.def Info: ./images/utildaprime.pdf used on input line 493.
 (pdftex.def)             Requested size: 289.07999pt x 266.92044pt.
  (./images/utildaprime.pdf_tex
 File: ./images/utildaprime.pdf Graphic file (type pdf)
@@ -512,7 +516,7 @@ Package pdftex.def Info: ./images/utildaprime.pdf used on input line 52.
 File: ./images/mtilda.pdf Graphic file (type pdf)
 
 <use ./images/mtilda.pdf>
-Package pdftex.def Info: ./images/mtilda.pdf used on input line 492.
+Package pdftex.def Info: ./images/mtilda.pdf used on input line 512.
 (pdftex.def)             Requested size: 289.07999pt x 266.92044pt.
  (./images/mtilda.pdf_tex
 File: ./images/mtilda.pdf Graphic file (type pdf)
@@ -520,11 +524,18 @@ File: ./images/mtilda.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/mtilda.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 266.92044pt.
 )
-<./images/mtildastaircase.pdf, id=105, 570.7778pt x 489.59322pt>
+<images/commute.pdf, id=105, 170.36696pt x 184.13686pt>
+File: images/commute.pdf Graphic file (type pdf)
+
+<use images/commute.pdf>
+Package pdftex.def Info: images/commute.pdf used on input line 519.
+(pdftex.def)             Requested size: 144.54pt x 156.22766pt.
+ [17 <./images/mtilda.pdf>] [18 <./images/commute.pdf>] <./images/mtildastairca
+se.pdf, id=117, 570.7778pt x 489.59322pt>
 File: ./images/mtildastaircase.pdf Graphic file (type pdf)
 
 <use ./images/mtildastaircase.pdf>
-Package pdftex.def Info: ./images/mtildastaircase.pdf used on input line 500.
+Package pdftex.def Info: ./images/mtildastaircase.pdf used on input line 532.
 (pdftex.def)             Requested size: 289.07999pt x 247.971pt.
  (./images/mtildastaircase.pdf_tex
 File: ./images/mtildastaircase.pdf Graphic file (type pdf)
@@ -532,35 +543,35 @@ File: ./images/mtildastaircase.pdf Graphic file (type pdf)
 <use ./images/mtildastaircase.pdf>
 Package pdftex.def Info: ./images/mtildastaircase.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 247.971pt.
-) [17 <./images/mtilda.pdf>]
-<images/cylinderdecomp.pdf, id=111, 622.97624pt x 499.13217pt>
+)
+<images/cylinderdecomp.pdf, id=118, 622.97624pt x 499.13217pt>
 File: images/cylinderdecomp.pdf Graphic file (type pdf)
 
 <use images/cylinderdecomp.pdf>
-Package pdftex.def Info: images/cylinderdecomp.pdf used on input line 505.
+Package pdftex.def Info: images/cylinderdecomp.pdf used on input line 540.
 (pdftex.def)             Requested size: 289.07999pt x 231.61424pt.
-
-<./images/cylinderskew.pdf, id=112, 577.10883pt x 432.88582pt>
+ [19 <./images/mtildastaircase.pdf>]
+<./images/cylinderskew.pdf, id=125, 577.10883pt x 432.88582pt>
 File: ./images/cylinderskew.pdf Graphic file (type pdf)
 
 <use ./images/cylinderskew.pdf>
-Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 510.
-(pdftex.def)             Requested size: 289.07999pt x 216.83868pt.
+Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 548.
+(pdftex.def)             Requested size: 187.90244pt x 140.94382pt.
  (./images/cylinderskew.pdf_tex
 File: ./images/cylinderskew.pdf Graphic file (type pdf)
 
 <use ./images/cylinderskew.pdf>
 Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 52.
-(pdftex.def)             Requested size: 289.07999pt x 216.83868pt.
-) [18 <./images/mtildastaircase.pdf> <./images/cylinderdecomp.pdf
+(pdftex.def)             Requested size: 187.90244pt x 140.94382pt.
+) [20 <./images/cylinderdecomp.pdf> <./images/cylinderskew.pdf
 
-pdfTeX warning: pdflatex (file ./images/cylinderdecomp.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->] <./images/slopeonecylinder.pdf, id=119, 1093.15898pt x 497.60907pt>
+pdfTeX warning: pdflatex (file ./images/cylinderskew.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [21] <./images/slopeonecylinder.pdf, id=135, 1093.15898pt x 497.60907pt>
 File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
 
 <use ./images/slopeonecylinder.pdf>
-Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 515.
+Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 571.
 (pdftex.def)             Requested size: 289.07999pt x 131.58484pt.
  (./images/slopeonecylinder.pdf_tex
 File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
@@ -568,51 +579,38 @@ File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
 <use ./images/slopeonecylinder.pdf>
 Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 131.58484pt.
-)
-<images/commute.pdf, id=120, 170.36696pt x 184.13686pt>
-File: images/commute.pdf Graphic file (type pdf)
-
-<use images/commute.pdf>
-Package pdftex.def Info: images/commute.pdf used on input line 520.
-(pdftex.def)             Requested size: 144.54pt x 156.22766pt.
- [19 <./images/cylinderskew.pdf> <./images/slopeonecylinder.pdf
-
-pdfTeX warning: pdflatex (file ./images/slopeonecylinder.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./images/commute.pdf
-
-pdfTeX warning: pdflatex (file ./images/commute.pdf): PDF inclusion: multiple p
-dfs with page group included in a single page
->] (./paper.aux) ) 
+) [22 <./images/slopeonecylinder.pdf>]
+(./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4739 strings out of 495028
- 70663 string characters out of 6181497
- 149980 words of memory out of 5000000
- 7815 multiletter control sequences out of 15000+600000
- 14055 words of font info for 53 fonts, out of 8000000 for 9000
+ 4749 strings out of 495028
+ 70790 string characters out of 6181497
+ 149998 words of memory out of 5000000
+ 7824 multiletter control sequences out of 15000+600000
+ 16000 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  68i,16n,98p,1264b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on paper.pdf (19 pages, 427983 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on paper.pdf (22 pages, 444031 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 203 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -446,35 +446,47 @@ $\mathbf{M}$ is a base surface of $\mathbf{U}'$ given by the quotient $\mathbf{U
 The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
 
 \subsection{Four-Fold Cover of $\mathbf{U}$}
-A geodesic on our surface can travel in one of four possible directions at any given time. To each phase we associate a numeric label I,II,II, or IV, where I contains the initial and terminal points of a closed geodesic. (Similar to [author]'s construction of phases of the Wind-Tree Model). For every even integer pair that is centered around every hole of $\mathbf{P}$, assign an integer pair (m.n). Identify the edges in the following manner:
+A geodesic on our surface can travel in one of four possible directions at any given time. To each trajectory phase of we associate a numeric label I,II,II, or IV, where I contains the initial and terminal points of a closed geodesic. (Similar to [author]'s construction of phases of the Wind-Tree Model). For every even integer pair centered around every hole of $\mathbf{P}$, assign a pair of integers (m,n). Identify the edges in the following manner:
 
 \begin{center}
 \includesvg[width=4in]{utilda}
 \end{center}
-This is a branched cover of $\mathbf{U}$ of degree four that can be thought of as four copies of $\mathbf{P}$, all stacked on one another with the following identifications:
-\begin{center}
-$([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})$\\
-\vspace{0.2in}$([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})$\\
-\vspace{0.2in}For (m,n,j) $\in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}$
-\end{center}
-There are four distinct vertices for each hole centered at (m,n) on  $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim$ of cone angle $6\pi$. To create  $\mathbf{U}$'s translation surface that still behaves as a proper cover of $\mathbf{U}$, we define a map  $p:(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim) \rightarrow \tilde{\mathbf{U}}$ as
+This is a branched cover of $\mathbf{U}$ of degree four that can be thought of as four copies of $\mathbf{P}$, all stacked on top of one another with the following identifications made:
+
+
+\begin{multline}
+([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})\\
+([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})\\
+\vspace{0.2in}For (m,n,j) \in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}
+\label{eq:rel2}
+\end{multline}
+
+There are four distinct vertices for each hole centered at $(m,n,\mathbb{Z}/4\mathbb{Z})$ on  $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ of cone angle $6\pi$ once the identifications have been made. Aligning the flow on  $\mathbf{U}$ requires a rotation on phase planes II,III, and IV by $-\frac{\pi}{2}, -\pi,$ and $ -\frac{3\pi}{2}$ in that order, about the origin of each respective plane. The choice in rotations are arbitrary as long as the edges are glued by translation. 
+
+
+We express  $p:(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}) \rightarrow (\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})$ as
 
 \begin{equation}
 	p\left[\begin{array}{c}
-		u\\v\\z
+		u\\v
 	\end{array}\right] =
 		\left[ \hspace{1mm} \begin{matrix}
-				1 & 0 \\
-				0 & -1 \\
+				0 & 1\\
+				-1 & 0
 			\end{matrix}\hspace{1mm}\right]^{z}\left[\begin{array}{c}
 					u\\v
-				\end{array}\right]\times\{z\}.
+				\end{array}\right]\times\{\bar z\}
+\label{eq:p}
 \end{equation}
 
-\compav{So I'm not sure if I can actually define p on}
- $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}/\sim$
+\begin{Def} Let $\sim$ be the equivalence relation given at $\eqref{eq:rel2}$, and p be the automorphism from $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ to itself at $\eqref{eq:p}$. Define the relation obtained from $\sim$ on the image of p by $\sim_{p} = \{(x_1,p(x_2)) : x_1 \sim x_2\}$. Then the $\mathbf{translation\text{ }surface}$  $\tilde{\mathbf{U}}$ = Im p$\slash\sim_{p}$. 
+\end{Def}
 
-p preserves the edge identification by affine transformations (rotating every phase plane about its origin according to its phase value).  $\tilde{\mathbf{U}}$ as a translation cover:
+\begin{thm}{$\tilde{\mathbf{U}}$ is a branched cover of $\mathbf{U}$. }\newline
+
+\end{thm}
+
+p preserves the edge identification by affine transformations.  $\tilde{\mathbf{U}}$ as a translation cover:
 
 \begin{figure}[H]
 \centering
@@ -485,40 +497,83 @@ As one might expect, traveling in the same direction in every phase has a differ
 \newpage
 \subsection{Translation Surface}
 \compat{You need to build the surface out of pieces rather than out of ``copies of $\mathbf{M}$.''} 
-With $\tilde{\mathbf{U}}$ defined, its topological quotient is given by $\tilde{\mathbf{M}}$ = $\tilde{\mathbf{U}}/(2\mathbb{Z})^{2}$.
+With $\tilde{\mathbf{U}}$ defined, its topological quotient is given as a union of phase planes modded out by translations.
+
+
+
+\begin{Def}
+$\tilde{\mathbf{M}}{}={}\left[\bigcup_{i=0}^{3} p(\mathbf{P},i)\slash(2\mathbb{Z})^{2} \right]/\sim_{p\vert_{X}}{}X{}={}(\left[-1,1\right]\times\left[-1,1\right])\times\mathbb{Z}\slash4\mathbb{Z}$
+\end{Def}
+
+$\tilde{\mathbf{M}}$ is also a degree four branched cover of $\mathbf{M}$. A covering map $\tilde{\mathbf{M}} \rightarrow \mathbf{M}$ individually rotates these squares about the centers of their holes according to their labels and maps their points to $\mathbf{M}$. This is a genus five translation surface with four singularities. $\tilde{\mathbf{M}}$ as a quotient of $\tilde{\mathbf{U}}$ can be represented as quotients of each plane:
 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtilda}
 \end{figure}
-$\tilde{\mathbf{M}}$ is also a degree four branched cover of $\mathbf{M}$. A covering map $g:\tilde{\mathbf{M}} \rightarrow \mathbf{M}$ also individually rotates these squares about the centers of their holes according to their labels and maps their points to $\mathbf{M}$.
 
-$\tilde{\mathbf{M}}$ is a genus 5 translation surface with four singularities. 
-
-\begin{figure}[H]
-\centering
-\includesvg[width=4in]{mtildastaircase}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=4in]{cylinderdecomp.pdf}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includesvg[width=4in]{cylinderskew}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includesvg[pretex=\tiny, width=4in]{slopeonecylinder}
-\end{figure}
+All in all, we have the following diagram:
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=2in]{commute.pdf}
 \end{figure}
+
+\newpage
+
+\section{$\tilde{\mathbf{M}}$ as a Veech Surface}
+The following section studies the translation surface's various symmetries and associated Veech group. We use the Veech dichotomy to prove our main theorems that determine whether the geodesic is ultimately periodic or drift periodic.
+
+\subsection{The Staircase Model}
+At first glance, $\tilde{\mathbf{M}}$ does not seem to be a square-tiled surface. However, observe that the surface can be reconstructed by a sequence of cutting and gluing operations and realized in the following way:
+
+\begin{figure}[H]
+\centering
+\includesvg[width=4in]{mtildastaircase}
+\caption{$\tilde{\mathbf{M}}$ as a staircase with vertices and phases identified.}
+\end{figure}
+
+Every edge on the staircase model is glued by translation to another by at most a distance of 2. (Each square is unit). More importantly, the staircase has a very natural cylindrical decomposition.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4in]{cylinderdecomp.pdf}
+\caption{The staircase with edges identified.}
+\end{figure}
+
+The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. The modulus of the cylinder, $\mu$, is given by the ratio of the cylinder's circumference and width, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by Dehn-twists of magnitude equal to that of the lowest common multiple of the inverse moduli, $\mu^{-1}$, of the horizontal and vertical decompositions.
+
+\begin{figure}[H]
+\centering
+\includesvg[width=2.6in]{cylinderskew}
+\caption{Stabilizing Dehn-twists of the horizontal/vertical cylinders}
+\end{figure}
+
+In this case we are lucky and the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$. We can see that any parabolic skews of magnitude 2 preserve the boundaries of the cylinders. Consequently, our surface is stabilized by the following matrices:
+
+\begin{equation}
+\left[ \hspace{1mm} \begin{matrix}
+				1 & \pm 2\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right],
+			\left[ \hspace{1mm} \begin{matrix}
+							1 & 0\\
+							\pm 2 & 1
+						\end{matrix}\hspace{1mm}\right]
+\end{equation}
+
+\newpage
+\subsection{Other symmetries of $\tilde{\mathbf{M}}$}
+
+\subsection{Horizontal, Vertical, and Slope One Cylinders of $\tilde{\mathbf{M}}$}
+\begin{figure}[H]
+\centering
+\includesvg[pretex=\tiny, width=4in]{slopeonecylinder}
+\end{figure}
+
+\subsection{Computing the Veech Group of $\tilde{\mathbf{M}}$}
+\subsection{Slope Normalization Algorithm}
+\subsection{Proof of Theorem}
 
 
 \end{document}
