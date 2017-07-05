@@ -525,15 +525,15 @@ All in all, we have the following diagram:
 The following section studies the translation surface's various symmetries and associated Veech group. We use the Veech dichotomy to prove our main theorems that determine whether the geodesic is ultimately periodic or drift periodic.
 
 \subsection{The Staircase Model}
-At first glance, $\tilde{\mathbf{M}}$ does not seem to be a square-tiled surface. However, observe that the surface can be reconstructed by a sequence of cutting and gluing operations and realized in the following way:
+Observe that $\tilde{\mathbf{M}}$ can be reconstructed by a series of cutting and gluing operations and realized as a square tiled staircase:
 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtildastaircase}
-\caption{$\tilde{\mathbf{M}}$ as a staircase with vertices and phases identified.}
+\caption{$\tilde{\mathbf{M}}$ as a staircase with vertices $x_i$ and phases identified.}
 \end{figure}
 
-Every edge on the staircase model is glued by translation to another by at most a distance of 2. (Each square is unit). More importantly, the staircase has a very natural cylindrical decomposition.
+Every edge pair on the staircase model has an exact distance of two. (Each square is unit). This gives way to a very natural cylindrical decomposition.
 
 \begin{figure}[H]
 \centering
@@ -541,29 +541,43 @@ Every edge on the staircase model is glued by translation to another by at most 
 \caption{The staircase with edges identified.}
 \end{figure}
 
-The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. The modulus of the cylinder, $\mu$, is given by the ratio of the cylinder's circumference and width, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by Dehn-twists of magnitude equal to that of the lowest common multiple of the inverse moduli, $\mu^{-1}$, of the horizontal and vertical decompositions.
+The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. All families of saddle connections on the surface intersect exactly two others.
+
+\begin{Def}
+The \textbf{family of horizontal cylinders} of $\tilde{\mathbf{M}}$, denoted $\Delta_{i}$ where $1\leq i \leq 6$, are cylinders formed by saddle connections made between singularities $((x_3,x_2)\cup(x_2,x_3)$, $(x_3,x_4))$ when i is odd, and $((x_1,x_4)\cup(x_2,x_4)$, $(x_1,x_2))$ when i is even. \newline
+Likewise, the \textbf{family of vertical cylinders}, denoted $\varepsilon_j$ $(1\leq j 
+\leq 6)$, are formed by connections $((x_2,x_3)$, $(x_2,x_1)\cup(x_1,x_2))$ when j is odd, and  $((x_4,x_1)$, $(x_4,x_3)\cup(x_3,x_4))$ when j is even.
+\end{Def}
+
+Horizontal and vertical cylinders of the surface are disjoint within their respective sets, and the union of both sets is the surface $\tilde{\mathbf{M}}$.
+
+  Recall that the modulus of a cylinder, $\mu$, is given by the ratio of the cylinder's width to its circumference, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by parabolic matrices with magnitude $\lambda$ equal to that of lowest common multiple of the inverse moduli, $\mu^{-1}$, of both horizontal and vertical decompositions. [cite Veech 89?]
 
 \begin{figure}[H]
 \centering
 \includesvg[width=2.6in]{cylinderskew}
 \caption{Stabilizing Dehn-twists of the horizontal/vertical cylinders}
+\label{fig:skew}
 \end{figure}
 
-In this case we are lucky and the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$. We can see that any parabolic skews of magnitude 2 preserve the boundaries of the cylinders. Consequently, our surface is stabilized by the following matrices:
+In this case, the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$. We can see that any parabolic skews of magnitude $\lambda=\pm2$, since $\mu^{-1}{}=2$, preserve the boundaries of the cylinders. Figure $\ref{fig:skew}$ showcases how Dehn-twists of this magnitude followed by an Affine transformation matches these boundaries again. Consequently, our surface is stabilized by the matrices
 
 \begin{equation}
 \left[ \hspace{1mm} \begin{matrix}
 				1 & \pm 2\\
 				0 & 1
-			\end{matrix}\hspace{1mm}\right],
+			\end{matrix}\hspace{1mm}\right],\text{ and }
 			\left[ \hspace{1mm} \begin{matrix}
 							1 & 0\\
 							\pm 2 & 1
-						\end{matrix}\hspace{1mm}\right]
+						\end{matrix}\hspace{1mm}\right].
 \end{equation}
 
 \newpage
 \subsection{Other symmetries of $\tilde{\mathbf{M}}$}
+A major benefit of $\tilde{\mathbf{M}}$ being tiled by unit squares is that the surface has all of the same symmetries of the square. The action of $\mathbb{D}_4$ on $\tilde{\mathbf{M}}$ preserves its boundaries up to translation.
+
+\subsection{Computing the Veech Group of $\tilde{\mathbf{M}}$}
 
 \subsection{Horizontal, Vertical, and Slope One Cylinders of $\tilde{\mathbf{M}}$}
 \begin{figure}[H]
@@ -571,7 +585,6 @@ In this case we are lucky and the moduli are easily obtained and uniform through
 \includesvg[pretex=\tiny, width=4in]{slopeonecylinder}
 \end{figure}
 
-\subsection{Computing the Veech Group of $\tilde{\mathbf{M}}$}
 \subsection{Slope Normalization Algorithm}
 \subsection{Proof of Theorem}
 
