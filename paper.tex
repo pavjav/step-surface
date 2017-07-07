@@ -446,63 +446,74 @@ $\mathbf{M}$ is a base surface of $\mathbf{U}'$ given by the quotient $\mathbf{U
 The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
 
 \subsection{Four-Fold Cover of $\mathbf{U}$}
-A geodesic on our surface can travel in one of four possible directions at any given time. To each trajectory phase of we associate a numeric label I,II,II, or IV, where I contains the initial and terminal points of a closed geodesic. (Similar to [author]'s construction of phases of the Wind-Tree Model). For every even integer pair centered around every hole of $\mathbf{P}$, assign a pair of integers (m,n). Identify the edges in the following manner:
+A geodesic as viewed as line segments on $\mathbf{P}$ can travel in one of four possible directions at any given time. On $\mathbf{U}$ a geodesic flow's direction is characterized as an element of the set of all possible directions as equivalence classes of $\mathbb{R}/2\pi\mathbb{Z}$ of the form $\mathbf{V}_{\theta}=\{\theta,\theta+\frac{\pi}{2},\theta+\pi, \theta+\frac{3\pi}{2} : \theta\in[0,\frac{\pi}{2})\}$. To each member of the class we associate an element of $\mathbb{Z}/4\mathbb{Z}$ to signify the current phase of the geodesic flow. We use this construction to create our four-fold cover of $\mathbf{U}$ as a topological quotient of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For every even integer pair centered around every hole of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, assign a pair of integers (m,n). Edge identifications are made on the boundaries of every hole taking one phase plane to the next in the following manner:
 
 \begin{center}
 \includesvg[width=4in]{utilda}
 \end{center}
-This is a branched cover of $\mathbf{U}$ of degree four that can be thought of as four copies of $\mathbf{P}$, all stacked on top of one another with the following identifications made:
+This is a branched cover of $\mathbf{U}$ of degree four,$\tilde{\mathbf{U}}_0$, with the obvious covering map taking every non-singular point and projecting it onto $\mathbf{U}$. We define the edge identifications as a relation on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For $i\in[-\frac{1}{4},\frac{1}{4}]$:
 
 
 \begin{multline}
-([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})\\
-([2m-\frac{1}{4}, 2m+\frac{1}{4}], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n-\frac{1}{4}, 2n+\frac{1}{4}],j+\bar{1})\\
-\vspace{0.2in}For (m,n,j) \in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}
+([2m+t], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n+t],j+1)\\
+([2m+t], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n+t],j+1)\\
+\vspace{0.2in}For (m,n;j) \in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}
 \label{eq:rel2}
 \end{multline}
 
-There are four distinct vertices for each hole centered at $(m,n,\mathbb{Z}/4\mathbb{Z})$ on  $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ of cone angle $6\pi$ once the identifications have been made. Aligning the flow on  $\mathbf{U}$ requires a rotation on phase planes II,III, and IV by $-\frac{\pi}{2}, -\pi,$ and $ -\frac{3\pi}{2}$ in that order, about the origin of each respective plane. The choice in rotations are arbitrary as long as the edges are glued by translation. 
+We define $\tilde{\mathbf{U}}_0$ to be the topological quotient, $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim$. $\tilde{\mathbf{U}}_0$ is a Euclidean cone surface with four distinct vertices for each hole centered at $(m,n;\mathbb{Z}/4\mathbb{Z})$ on  $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ of cone angle $6\pi$ with proper identification. Now we will show that $\tilde{\mathbf{U}}_0$ is isometric to a translation surface via an induced isometry on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$.
 
 
-We express  $p:(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}) \rightarrow (\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})$ as
+We express $\phi:\mathbf{P}\times\mathbb{Z}/4\mathbb{Z} \rightarrow \mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ as $\phi(u,v;j) = (u',v';j)$, where
 
 \begin{equation}
-	p\left[\begin{array}{c}
-		u\\v
+	\left[\begin{array}{c}
+		u'\\v'
 	\end{array}\right] =
 		\left[ \hspace{1mm} \begin{matrix}
 				0 & 1\\
 				-1 & 0
-			\end{matrix}\hspace{1mm}\right]^{z}\left[\begin{array}{c}
+			\end{matrix}\hspace{1mm}\right]^{j}\left[\begin{array}{c}
 					u\\v
-				\end{array}\right]\times\{\bar z\}
-\label{eq:p}
+				\end{array}\right]
+\label{eq:phi}
 \end{equation}
 
-\begin{Def} Let $\sim$ be the equivalence relation given at $\eqref{eq:rel2}$, and p be the automorphism from $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ to itself at $\eqref{eq:p}$. Define the relation obtained from $\sim$ on the image of p by $\sim_{p} = \{(x_1,p(x_2)) : x_1 \sim x_2\}$. Then the $\mathbf{translation\text{ }surface}$  $\tilde{\mathbf{U}}$ = Im p$\slash\sim_{p}$. 
+\begin{Def} Let $\sim$ be the equivalence relation $\eqref{eq:rel2}$, and $\phi$ be the isomorphism on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ $\eqref{eq:phi}$. Define a new relation obtained from $\sim$ as:  $x_1\sim_{\phi}x_2$ if $\phi^{-1}(x_1) = \phi^{-1}(x_2)$ for $x_1,x_2\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. We define $\tilde{\mathbf{U}}$ to be  $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim_{\phi}$.
 \end{Def}
 
-\begin{thm}{$\tilde{\mathbf{U}}$ is a branched cover of $\mathbf{U}$. }\newline
-
+\begin{thm}{The following statements are true:}
+\begin{enumerate}[label=(\roman*)]
+\item $\tilde{\mathbf{U}}$ is a translation surface.
+\item The map $\phi$ induces a well-defined isometry $\bar{\phi}:\tilde{\mathbf{U}}_0 \rightarrow \tilde{\mathbf{U}}$
+\end{enumerate}
+\begin{proof}
+the proof is left as an exercise to the reader.
+\end{proof}
 \end{thm}
 
-p preserves the edge identification by affine transformations.  $\tilde{\mathbf{U}}$ as a translation cover:
+$\phi$ preserves the edge identifications on $\tilde{\mathbf{U}}_0$ by affine transformations. And since $\tilde{\mathbf{U}}_0$ is a cover of $\mathbf{U}$, $\tilde{\mathbf{U}}$ is a translation cover of $\mathbf{U}$. Observe that by rotating each phase plane, the manner in which the holes are indexed undergoes the same transformations from our perspective.
 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{utildaprime}
 \end{figure}
-As one might expect, traveling in the same direction in every phase has a different effect on the integer pair (m,n) relative to first phase. A path in that sense is considered closed if it eventually returns to the exact same point, and periodic should it return to the same phase as well.
+
+Alternatively, the edge identifications made on $\mathbf{U}$ that gave us the set $\mathbf{V}_\theta$ let us define a flow $F^{t}:T_1(\mathbf{U})\rightarrow T_1(\mathbf{U})$ as $F^{t}(p,v)=(p+tv,v)$, where $(p,v)$ is a member of the unit tangent bundle on point $p$ of $\mathbf{U}$ in direction $v$ of $\mathbf{V}_\theta$. Defining a map from $d:T_1(\mathbf{U})\rightarrow \mathbf{V}_\theta$ that returns the direction $v$. $\tilde{\mathbf{U}}$ can be abstractly realized as the preimage of $d$, $d^{-1}(\mathbf{V}_\theta)$.
+
+A geodesic on this translation surface can be realized as a sequence of edge crossings on the phase planes. By taking a quotient of this surface, a closed straight-line path can be lifted from the quotient onto $\tilde{\mathbf{U}}$, and then projected onto $\mathbf{U}$ to study geodesic behavior of any given direction. 
+
+
 
 \newpage
 \subsection{Translation Surface}
 \compat{You need to build the surface out of pieces rather than out of ``copies of $\mathbf{M}$.''} 
-With $\tilde{\mathbf{U}}$ defined, its topological quotient is given as a union of phase planes modded out by translations.
+With $\tilde{\mathbf{U}}$ defined, we can describe its quotient as $\tilde{\mathbf{U}}$ modded out by translations. We use the induced isometry, $\bar\phi$, to respect our original notion of direction on $\mathbf{U}$ as a quotient of $\mathbf{P}$.
 
 
 
 \begin{Def}
-$\tilde{\mathbf{M}}{}={}\left[\bigcup_{i=0}^{3} p(\mathbf{P},i)\slash(2\mathbb{Z})^{2} \right]/\sim_{p\vert_{X}}{}X{}={}(\left[-1,1\right]\times\left[-1,1\right])\times\mathbb{Z}\slash4\mathbb{Z}$
+The translation surface $\tilde{\mathbf{M}}$ is given as the quotient $\tilde{\mathbf{U}}/T$, where $T:(2\mathbb{Z})^2\times\tilde{\mathbf{U}}\rightarrow\tilde{\mathbf{U}}$ is the group action defined as $T_{m,n}(x)=\bar{\phi}\left((m,n)+\bar{\phi}^{-1}(x)\right)$ for $x\in\tilde{\mathbf{U}}$.
 \end{Def}
 
 $\tilde{\mathbf{M}}$ is also a degree four branched cover of $\mathbf{M}$. A covering map $\tilde{\mathbf{M}} \rightarrow \mathbf{M}$ individually rotates these squares about the centers of their holes according to their labels and maps their points to $\mathbf{M}$. This is a genus five translation surface with four singularities. $\tilde{\mathbf{M}}$ as a quotient of $\tilde{\mathbf{U}}$ can be represented as quotients of each plane:
