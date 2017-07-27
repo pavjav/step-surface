@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.12.9)  11 JUL 2017 11:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.12.9)  27 JUL 2017 13:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -6,19 +6,6 @@ entering extended mode
 (./paper.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 j
-     \documentclass[]{article}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no j in font nullfont!
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -30,17 +17,12 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \c@subsubsection=\count82
 \c@paragraph=\count83
 \c@subparagraph=\count84
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--284
-[]
- []
-
 \c@figure=\count85
 \c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
@@ -336,7 +318,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./images/cubecoverphoto.pdf, id=7, 545.05995pt x 279.53874pt>
+<./images/cubecoverphoto.pdf, id=1, 545.05995pt x 279.53874pt>
 File: ./images/cubecoverphoto.pdf Graphic file (type pdf)
 
 <use ./images/cubecoverphoto.pdf>
@@ -353,17 +335,17 @@ Overfull \hbox (1.89621pt too wide) in paragraph at lines 53--42
  [] 
  []
 
-[2
+[1
 
- <./images/cubecoverphoto.pdf>]
-<images/escher.jpg, id=17, 453.695pt x 301.125pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/cubecoverphoto.pd
+f>] <images/escher.jpg, id=14, 453.695pt x 301.125pt>
 File: images/escher.jpg Graphic file (type jpg)
- <use images/escher.jpg>
+
+<use images/escher.jpg>
 Package pdftex.def Info: images/escher.jpg used on input line 59.
 (pdftex.def)             Requested size: 226.84694pt x 150.56212pt.
-
-[3 <./images/escher.jpg>] [4] [5]
-<./images/cubesxyz.pdf, id=36, 404.15028pt x 539.94778pt>
+ [2 <./images/escher.jpg>] [3] [4]
+<./images/cubesxyz.pdf, id=33, 404.15028pt x 539.94778pt>
 File: ./images/cubesxyz.pdf Graphic file (type pdf)
 
 <use ./images/cubesxyz.pdf>
@@ -375,13 +357,13 @@ File: ./images/cubesxyz.pdf Graphic file (type pdf)
 <use ./images/cubesxyz.pdf>
 Package pdftex.def Info: ./images/cubesxyz.pdf used on input line 52.
 (pdftex.def)             Requested size: 216.81pt x 289.66426pt.
-) [6]
-<images/label.png, id=40, 61.028pt x 69.861pt>
+) [5]
+<images/label.png, id=37, 61.028pt x 69.861pt>
 File: images/label.png Graphic file (type png)
  <use images/label.png>
 Package pdftex.def Info: images/label.png used on input line 145.
 (pdftex.def)             Requested size: 61.02785pt x 69.86081pt.
- [7 <./images/cubesxyz.pdf>] <./images/uprime.pdf, id=48, 340.97833pt x 341.057
+ [6 <./images/cubesxyz.pdf>] <./images/uprime.pdf, id=44, 340.97833pt x 341.057
 57pt>
 File: ./images/uprime.pdf Graphic file (type pdf)
 
@@ -394,8 +376,8 @@ File: ./images/uprime.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/uprime.pdf used on input line 52.
 (pdftex.def)             Requested size: 108.405pt x 108.42767pt.
 )
-[8 <./images/label.png> <./images/uprime.pdf>]
-<./images/quotient.pdf, id=57, 159.0476pt x 158.2456pt>
+[7 <./images/label.png> <./images/uprime.pdf>]
+<./images/quotient.pdf, id=54, 159.0476pt x 158.2456pt>
 File: ./images/quotient.pdf Graphic file (type pdf)
 
 <use ./images/quotient.pdf>
@@ -407,8 +389,8 @@ File: ./images/quotient.pdf Graphic file (type pdf)
 <use ./images/quotient.pdf>
 Package pdftex.def Info: ./images/quotient.pdf used on input line 52.
 (pdftex.def)             Requested size: 144.54pt x 143.81055pt.
-) [9 <./images/quotient.pdf>] [10]
-<./images/cubesxyzcut.pdf, id=66, 404.15028pt x 539.94778pt>
+) [8 <./images/quotient.pdf>] [9]
+<./images/cubesxyzcut.pdf, id=63, 404.15028pt x 539.94778pt>
 File: ./images/cubesxyzcut.pdf Graphic file (type pdf)
 
 <use ./images/cubesxyzcut.pdf>
@@ -421,7 +403,7 @@ File: ./images/cubesxyzcut.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/cubesxyzcut.pdf used on input line 52.
 (pdftex.def)             Requested size: 166.2212pt x 222.07208pt.
 )
-<./images/u.pdf, id=67, 400.74498pt x 397.32835pt>
+<./images/u.pdf, id=64, 400.74498pt x 397.32835pt>
 File: ./images/u.pdf Graphic file (type pdf)
  <use ./images/u.pdf>
 Package pdftex.def Info: ./images/u.pdf used on input line 235.
@@ -437,7 +419,7 @@ Overfull \hbox (45.27843pt too wide) in paragraph at lines 248--248
 [] 
  []
 
-[11 <./images/cubesxyzcut.pdf> <./images/u.pdf
+[10 <./images/cubesxyzcut.pdf> <./images/u.pdf
 
 pdfTeX warning: pdflatex (file ./images/u.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
@@ -446,7 +428,7 @@ Overfull \hbox (59.09268pt too wide) detected at line 402
 \OT1/cmr/m/n/10 	[] [] = []
  []
 
-[12] <./images/cubesxyzpaths.pdf, id=77, 406.7412pt x 540.06001pt>
+[11] <./images/cubesxyzpaths.pdf, id=74, 406.7412pt x 540.06001pt>
 File: ./images/cubesxyzpaths.pdf Graphic file (type pdf)
 
 <use ./images/cubesxyzpaths.pdf>
@@ -459,7 +441,7 @@ File: ./images/cubesxyzpaths.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/cubesxyzpaths.pdf used on input line 52.
 (pdftex.def)             Requested size: 166.2212pt x 220.70085pt.
 )
-<./images/unfoldcutpath.pdf, id=78, 432.85205pt x 390.31894pt>
+<./images/unfoldcutpath.pdf, id=75, 432.85205pt x 390.31894pt>
 File: ./images/unfoldcutpath.pdf Graphic file (type pdf)
 
 <use ./images/unfoldcutpath.pdf>
@@ -471,16 +453,16 @@ File: ./images/unfoldcutpath.pdf Graphic file (type pdf)
 <use ./images/unfoldcutpath.pdf>
 Package pdftex.def Info: ./images/unfoldcutpath.pdf used on input line 52.
 (pdftex.def)             Requested size: 158.99377pt x 143.36752pt.
-) [13] [14 <./images/cubesxyzpaths.pdf> <./images/unfoldcutpath.pdf
+) [12] [13 <./images/cubesxyzpaths.pdf> <./images/unfoldcutpath.pdf
 
 pdfTeX warning: pdflatex (file ./images/unfoldcutpath.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Reference `fig:quotient' on page 15 undefined on input line 427.
+LaTeX Warning: Reference `fig:quotient' on page 14 undefined on input line 427.
 
 
-<./images/utilda.pdf, id=89, 512.84567pt x 478.30206pt>
+<./images/utilda.pdf, id=86, 512.84567pt x 478.30206pt>
 File: ./images/utilda.pdf Graphic file (type pdf)
 
 <use ./images/utilda.pdf>
@@ -492,8 +474,8 @@ File: ./images/utilda.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/utilda.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 269.60622pt.
 )
-[15 <./images/utilda.pdf>] [16]
-<./images/utildaprime.pdf, id=99, 518.01341pt x 478.30206pt>
+[14 <./images/utilda.pdf>] [15]
+<./images/utildaprime.pdf, id=96, 518.01341pt x 478.30206pt>
 File: ./images/utildaprime.pdf Graphic file (type pdf)
 
 <use ./images/utildaprime.pdf>
@@ -505,8 +487,8 @@ File: ./images/utildaprime.pdf Graphic file (type pdf)
 <use ./images/utildaprime.pdf>
 Package pdftex.def Info: ./images/utildaprime.pdf used on input line 52.
 (pdftex.def)             Requested size: 238.49121pt x 220.21136pt.
-) [17 <./images/utildaprime.pdf>]
-<./images/mtilda.pdf, id=105, 518.01341pt x 478.30206pt>
+) [16 <./images/utildaprime.pdf>]
+<./images/mtilda.pdf, id=102, 518.01341pt x 478.30206pt>
 File: ./images/mtilda.pdf Graphic file (type pdf)
 
 <use ./images/mtilda.pdf>
@@ -518,7 +500,7 @@ File: ./images/mtilda.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/mtilda.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 266.92044pt.
 )
-[18] <./images/mtildastaircase.pdf, id=109, 570.7778pt x 489.59322pt>
+[17] <./images/mtildastaircase.pdf, id=106, 570.7778pt x 489.59322pt>
 File: ./images/mtildastaircase.pdf Graphic file (type pdf)
 
 <use ./images/mtildastaircase.pdf>
@@ -530,19 +512,19 @@ File: ./images/mtildastaircase.pdf Graphic file (type pdf)
 <use ./images/mtildastaircase.pdf>
 Package pdftex.def Info: ./images/mtildastaircase.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 247.971pt.
-) [19 <./images/mtilda.pdf>] [20 <./images/mtildastaircase.pdf>]
-<images/cylinderdecomp.pdf, id=121, 622.97624pt x 499.13217pt>
+) [18 <./images/mtilda.pdf>] [19 <./images/mtildastaircase.pdf>]
+<images/cylinderdecomp.pdf, id=118, 622.97624pt x 499.13217pt>
 File: images/cylinderdecomp.pdf Graphic file (type pdf)
 
 <use images/cylinderdecomp.pdf>
-Package pdftex.def Info: images/cylinderdecomp.pdf used on input line 648.
+Package pdftex.def Info: images/cylinderdecomp.pdf used on input line 651.
 (pdftex.def)             Requested size: 289.07999pt x 231.61424pt.
- [21 <./images/cylinderdecomp.pdf>]
-<./images/cylinderskew.pdf, id=127, 577.10883pt x 432.88582pt>
+ [20]
+<./images/cylinderskew.pdf, id=122, 577.10883pt x 432.88582pt>
 File: ./images/cylinderskew.pdf Graphic file (type pdf)
 
 <use ./images/cylinderskew.pdf>
-Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 668.
+Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 671.
 (pdftex.def)             Requested size: 187.90244pt x 140.94382pt.
  (./images/cylinderskew.pdf_tex
 File: ./images/cylinderskew.pdf Graphic file (type pdf)
@@ -550,12 +532,19 @@ File: ./images/cylinderskew.pdf Graphic file (type pdf)
 <use ./images/cylinderskew.pdf>
 Package pdftex.def Info: ./images/cylinderskew.pdf used on input line 52.
 (pdftex.def)             Requested size: 187.90244pt x 140.94382pt.
-) [22 <./images/cylinderskew.pdf>] [23]
-<./images/slopeonecylinder.pdf, id=136, 1093.15898pt x 497.60907pt>
+) [21 <./images/cylinderdecomp.pdf>] [22 <./images/cylinderskew.pdf>] <images/h
+omologyclass.png, id=133, 781.2973pt x 722.7pt>
+File: images/homologyclass.png Graphic file (type png)
+
+<use images/homologyclass.png>
+Package pdftex.def Info: images/homologyclass.png used on input line 707.
+(pdftex.def)             Requested size: 216.81pt x 200.5461pt.
+ [23 <./images/homologyclass.png>] [24]
+<./images/slopeonecylinder.pdf, id=141, 1093.15898pt x 497.60907pt>
 File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
 
 <use ./images/slopeonecylinder.pdf>
-Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 706.
+Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 726.
 (pdftex.def)             Requested size: 289.07999pt x 131.58484pt.
  (./images/slopeonecylinder.pdf_tex
 File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
@@ -563,20 +552,17 @@ File: ./images/slopeonecylinder.pdf Graphic file (type pdf)
 <use ./images/slopeonecylinder.pdf>
 Package pdftex.def Info: ./images/slopeonecylinder.pdf used on input line 52.
 (pdftex.def)             Requested size: 289.07999pt x 131.58484pt.
-) [24 <./images/slopeonecylinder.pdf>]
-[25] [26] (./paper.aux)
+) [25 <./images/slopeonecylinder.pdf>]
+[26] [27] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 4736 strings out of 495028
- 70406 string characters out of 6181497
- 150070 words of memory out of 5000000
- 7817 multiletter control sequences out of 15000+600000
+ 4741 strings out of 495028
+ 70538 string characters out of 6181497
+ 150080 words of memory out of 5000000
+ 7821 multiletter control sequences out of 15000+600000
  14753 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  68i,16n,98p,1264b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -598,10 +584,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on paper.pdf (26 pages, 451866 bytes).
+Output written on paper.pdf (27 pages, 478649 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

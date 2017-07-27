@@ -1,0 +1,74 @@
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mtilda.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{516.078125bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.92333915)%
+    \put(0,0){\includegraphics[width=\unitlength]{mtilda.pdf}}%
+    \put(0.43280149,0.46255984){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{II}}}%
+    \put(0.52581066,0.46255984){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
+    \put(0.43280149,0.41605526){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{III}}}%
+    \put(0.51030913,0.41605526){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{IV}}}%
+    \put(0.66213669,0.60345241){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.66435122,0.70642683){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.77396919,0.7042123){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.77507646,0.60013061){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.18145523,0.70368218){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.18366976,0.60038986){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.29328773,0.60290715){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.29439499,0.70688287){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.298385,0.27074668){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.29291575,0.16745431){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.18354002,0.16997161){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.18209971,0.27394737){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.78030785,0.17051687){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.7748386,0.27349134){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.66546284,0.2712768){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.66402254,0.16719507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+  \end{picture}%
+\endgroup%

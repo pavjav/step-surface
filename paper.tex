@@ -1,4 +1,4 @@
-j\documentclass[]{article}
+\documentclass[]{article}
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -560,29 +560,30 @@ Although it is not immediately obvious, $\tilde{\mathbf{M}}$ can be realized as 
 \label{fig:staircase}
 \end{figure}
 
-\subsection{$\tilde{\mathbf{M}}$ as a Veech Surface}
-We use basic properties of $\tilde{\mathbf{M}}$ to show that it is Veech, and its Veech group is a lattice in $SL_2(\mathbb{Z})$. Recall that translation surfaces are equipped with charts, $\omega$, of maps from the surface to $\mathbb{C}$. The Veech group of the surface $\tilde{\mathbf{M}}$ is given as the image of its stabilizer in the projective group $PSL_2(\mathbb{R})$.
 
-\begin{Def}
-Since $\tilde{\mathbf{M}}$ is a translation surface with four singularities, it is a Veech surface that locally behaves like a torus away from these cone singularities. $\tilde{\mathbf{M}}$ has a \textbf{Veech group}, denoted $\Gamma$.
-\end{Def}
-
-We use the following theorem of Gutkin and Judge to show that $\Gamma$ is lattice (and arithemtic) in $SL_2(\mathbb{Z})$:
-
-\begin{thm}(Gutkin-Judge) A translation surface $(S,\omega)$ is squaretiled
-if and only if its Veech group $V(S,\omega)$ shares a finite-index subgroup
-with $SL_2(\mathbb{Z}).$
-\end{thm}
-
-\begin{thm}The following are equivalent:
-\begin{enumerate}[label=(\roman*)]
-\item $\tilde{\mathbf{M}}$ is tiled by squares.
-\item $\Gamma$ is lattice in $SL_2(\mathbb{Z})$.
-\end{enumerate}
-\begin{proof}
-Figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is tiled by squares. The proof then follows as an obvious result of the previous theorem.
-\end{proof}
-\end{thm}
+%\subsection{$\tilde{\mathbf{M}}$ as a Veech Surface}
+%We use basic properties of $\tilde{\mathbf{M}}$ to show that it is Veech, and its Veech group is a lattice in $SL_2(\mathbb{Z})$. Recall that translation surfaces are equipped with charts, $\omega$, of maps from the surface to $\mathbb{C}$. The Veech group of the surface $\tilde{\mathbf{M}}$ is given as the image of its stabilizer in the projective group $PSL_2(\mathbb{R})$.
+%
+%\begin{Def}
+%Since $\tilde{\mathbf{M}}$ is a translation surface with four singularities, it is a Veech surface that locally behaves like a torus away from these cone singularities. $\tilde{\mathbf{M}}$ has a \textbf{Veech group}, denoted $\Gamma$.
+%\end{Def}
+%
+%We use the following theorem of Gutkin and Judge to show that $\Gamma$ is lattice (and arithemtic) in $SL_2(\mathbb{Z})$:
+%
+%\begin{thm}(Gutkin-Judge) A translation surface $(S,\omega)$ is squaretiled
+%if and only if its Veech group $V(S,\omega)$ shares a finite-index subgroup
+%with $SL_2(\mathbb{Z}).$
+%\end{thm}
+%
+%\begin{thm}The following are equivalent:
+%\begin{enumerate}[label=(\roman*)]
+%\item $\tilde{\mathbf{M}}$ is tiled by squares.
+%\item $\Gamma$ is lattice in $SL_2(\mathbb{Z})$.
+%\end{enumerate}
+%\begin{proof}
+%Figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is tiled by squares. The proof then follows as an obvious result of the previous theorem.
+%\end{proof}
+%\end{thm}
 
 
 
@@ -634,14 +635,16 @@ Figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is
 %The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
 
 \section{Proof of Main Theorem}
-The following section studies the translation surface's various symmetries and associated Veech group. We use the Veech dichotomy to prove our main theorems that determine whether the geodesic is ultimately periodic or drift periodic.
+The following section studies the translation surface's various symmetries and associated Veech group. In doing so, we establish what sorts of properties of $\tilde{\mathbf{M}}$ remain invariant when undergoing affine transformations. Since $\tilde{\mathbf{U}}$ is a cover of $\tilde{\mathbf{M}}$, we will study the first homology classes of $\tilde{\mathbf{M}}$ that realize $\tilde{\mathbf{U}}$ as a $\mathbb{Z}^2$ cover. The goal in the end is to construct a basis for the homotopy classes of paths on $\tilde{\mathbf{M}}$ that can be lifted onto $\tilde{\mathbf{U}}$. We generalize how the Veech group of $\tilde{\mathbf{M}}$ acts on homology, and show that closed geodesics on the base surface whose lifts onto the $\mathbb{Z}^2$-cover extend to a homomorphism of $\pi_1(\tilde{\mathbf{M}})$ to $\mathbb{Z}^2$. The kernel of this homomorphism determines the cover, and any element of the Veech group acting on $\tilde{\mathbf{M}}$ will stabilize the surface and extend to an isomorphism of its homology classes.
 
-\subsection{The Staircase Model's Symmetries}
-$\tilde{\mathbf{M}}$ has all the same symmetries of the square, as represented by the dihedral group $\mathbb{D}_4$. This is made obvious by the fact that $\tilde{\mathbf{M}}$ is tiled by squares. We want to only consider elements of $\mathbb{D}_4$ that preserve its orientation. So, let $\mathbb{D}^{+}_4$ be the subgroup of the dihedral group whose matrix representations are determinant one, the rotational matrices. It then isn't surprising that the order four group of rotations of the square is a subgroup of $\Gamma$, given the manner in which $\tilde{\mathbf{U}}$ is constructed. 
+\subsection{Veech Group and Symmetries}
+Observe that $\tilde{\mathbf{M}}$ shares symmetries with the square (up to translation). This is made obvious by the fact that $\tilde{\mathbf{M}}$ is tiled by squares. Any rotations and reflections acting on $\tilde{\mathbf{M}}$ respects its boundaries. We use their matrix representations, and consider only the orientation preserving transformations of determinant one.
 
-Next we show that the group of edge and orientation preserving  affine diffeomorphisms, $\text{Aff}^{+}(\tilde{\mathbf{M}})$, of $\tilde{\mathbf{M}}$ is contained in $\Gamma$
+Theorems of Gutkin and Judge tell us that any Veech surface that is tiled by squares has a Veech group that is a finite-indexed subgroup of $SL_2(\mathbb Z)$. Therefore the group is a lattice in $SL_2(\mathbb R)$. We will call the Veech group of $\tilde{\mathbf{M}}$, $\Gamma$. $\Gamma$ will without a doubt be generated by parabolic elements, such as skew matrices, and $\tilde{\mathbf{M}}$'s various isometries. 
 
-Every pair of edge on the staircase model has an exact distance of two. (Each square is unit). This gives way to a very natural cylindrical decomposition.
+It is easily shown that $SO_2(\mathbb Z)\subset\Gamma$. Consider a rotation about the center of any square. By a series of cutting and gluing operations, $\tilde{\mathbf{M}}$ can be reconstruced as a staircase again, sending one edge to exactly one other.
+
+Each square is unit, and any pair of edges have two squares between them. This gives rise to a very natural cylinder decomposition of $\tilde{\mathbf{M}}$ in both horizontal and vertical directions.
 
 \begin{figure}[H]
 \centering
@@ -650,18 +653,18 @@ Every pair of edge on the staircase model has an exact distance of two. (Each sq
 \label{fig:decomp}
 \end{figure}
 
-The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. All families of geodesics on the horizontal cylinders intersect exactly two other families of geodesics on the vertical cylinders $\tilde{\mathbf{M}}$.
+The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. Any geodesic on the horizontal cylinders are incident with exactly two other geodesics on the vertical cylinders.
 
 \begin{Def}
 The \textbf{set of horizontal cylinders} of $\tilde{\mathbf{M}}$, denoted $\Delta_{i}$ $(1\leq i \leq 6)$, are the cylinders with boundaries formed by saddle connections made between unions of singularities in the horizontal direction. \newline
 Likewise, the \textbf{set of vertical cylinders}, denoted $\varepsilon_j$ $(1\leq j 
 \leq 6)$, are the cylinders with boundaries formed by saddle connections made between unions of singularities in the vertical direction. \newline
-Figure $\ref{fig:decomp}$ shows how $\tilde{\mathbf{M}}$ is decomposed into these cylinders.
+Refer to Figure $\ref{fig:decomp}$ for the decomposition
 \end{Def}
 
-Horizontal and vertical cylinders of the surface are disjoint within their respective sets, and the union of both sets is the surface $\tilde{\mathbf{M}}$.
+Horizontal and vertical cylinders of the surface are disjoint within their respective sets, and their union is the surface $\tilde{\mathbf{M}}$.
 
-  Recall that the modulus of a cylinder, $\mu$, is given by the ratio of the cylinder's width to its circumference, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by parabolic matrices with magnitude $\lambda$ equal to that of lowest common multiple of the inverse moduli, $\mu^{-1}$, of both horizontal and vertical decompositions. [cite Veech 89?]
+  Recall that the modulus of a cylinder, $\mu$, is given by the ratio of the cylinder's width to its circumference, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by Dehn-twists whose derivatives are matrices of magnitude $\lambda$ equal to that of lowest common multiple of the inverse moduli, $\mu^{-1}$. [cite Veech 89?]
 
 \begin{figure}[H]
 \centering
@@ -670,8 +673,7 @@ Horizontal and vertical cylinders of the surface are disjoint within their respe
 \label{fig:skew}
 \end{figure}
 
-In this case, the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$. We can see that any parabolic skews of magnitude $\lambda=\pm2$, since $\mu^{-1}{}=2$, preserve the boundaries of the cylinders. Figure $\ref{fig:skew}$ showcases how Dehn-twists of this magnitude followed by an Affine transformation respects the boundaries of the cylinders that will overlap. Hence, our surface is stabilized by the matrices
-
+In this case, the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$'s cylinders. We can see that any skews of magnitude $\lambda=\pm2$, since $\mu^{-1}{}=2$, are derivatives of Dehn-twists that preserve the boundaries of the cylinders. Figure $\ref{fig:skew}$ demonstrates a Dehn-twist of magnitude 2 acting on both horizontal and vertical cylinders. Hence the derivatives, 
 \begin{equation}
 \left[ \hspace{1mm} \begin{matrix}
 				1 & \pm 2\\
@@ -680,25 +682,43 @@ In this case, the moduli are easily obtained and uniform throughout $\tilde{\mat
 			\left[ \hspace{1mm} \begin{matrix}
 							1 & 0\\
 							\pm 2 & 1
-						\end{matrix}\hspace{1mm}\right].
+						\end{matrix}\hspace{1mm}\right]
 \end{equation}
-
-Therefore, $\left<\left[ \hspace{1mm} \begin{matrix}
-				1 & \pm 2\\
-				0 & 1
-			\end{matrix}\hspace{1mm}\right], 
-			\left[ \hspace{1mm} \begin{matrix}
-							1 & 0\\
-							\pm 2 & 1
-						\end{matrix}\hspace{1mm}\right]\right>=\text{Aff}^{+}(\tilde{\mathbf{M}})\subset\Gamma$.
-						
-\begin{Def}
-We call the \textbf{subgroup of $\Gamma$ containing the groups generated by rotational and skew isometries of $\tilde{\mathbf{M}}$} $(\text{Aff}^{+}(\tilde{\mathbf{M}}),$ and $\mathbb{D}^{+}_4)$ $\Gamma'$.
-\end{Def}
+are the parabolic generators of $\Gamma$. The fact that $\lambda=1$ does \emph{not} stabilize $\tilde{\mathbf{M}}$ is an absolutely integral part of the major proof.
 
 \newpage
-\subsection{Homology classes of $\tilde{\mathbf{M}}$}
+\subsection{Defining Homology Classes of $\tilde{\mathbf{M}}$}
+\compav{TODO:\\
+Construct homotopy class 12-gon\\
+Construct staircase with class intersection\\}
+The cylinder decomposition of $\tilde{\mathbf{M}}$ into 12 vertical and horizontal cylinders naturally produce a set of closed homotopic paths that travel along the cylinder's circumference. Because of $\tilde{\mathbf{M}}$'s translational symmetries, we consider every cylinder to contain a set of homologous paths, characterized by the geodesic running along the cylinder's meridian. 
 
+Since none of these paths can't be contracted into a single point or deformed into another path without crossing over a singularity, they are non-trivial and span the set of homology classes of $\tilde{\mathbf{M}}$. We denote the set of closed paths on the cylinders by $\gamma_{0,..,11}$, where the even-indexed paths are horizontal and the odd-indexed paths are vertical. (see figure)
+
+From these paths we create the following homology classes that determine our $\mathbb{Z}^2$-cover:
+
+\begin{align*}
+u&= \{-\gamma_2, +\gamma_5,\gamma_8,-\gamma_{11}\},\\
+v&= \{+\gamma_0, -\gamma_3,-\gamma_6,+\gamma_{9}\},\\
+z&= \{+\gamma_1, +\gamma_4,-\gamma_7,-\gamma_{10}\}.
+\end{align*}
+
+\begin{figure}[H]
+\includegraphics[width=3in]{homologyclass.png}
+\centering
+\end{figure}
+
+Here $u,v,$ and $z$ belong to $H_1(\tilde{\mathbf{M}},\mathbb Z)$. These classes are generalizations of differential 1-forms, say $dx,dy,dz$, on the four-fold cover whose path integrals on $\tilde{\mathbf{M}}$ map directly to the cover.  In our case, there is translational symmetry and it is understood that any geodesic with rational slope is periodic, so we need only consider $\tilde{\mathbf{M}}$'s homology classes. Let $\alpha$ be a closed path on $\tilde{\mathbf{M}}$ as an element of $\pi_1(\tilde{\mathbf{M}})$. The intersection number of any two homology classes is given as the bilinear form:
+
+\begin{align}
+i:H_1(\tilde{\mathbf{M}},\mathbb Z)\times H_1(\tilde{\mathbf{M}},\mathbb Z)\rightarrow \mathbb Z.
+\end{align}
+
+The $\mathbb{Z}^2$ cover, $\tilde{\mathbf{U}}$, is associated to the kernel of the homomorphism
+\begin{align}
+\Omega_{u,v}:\pi_1(\tilde{\mathbf{M}})\rightarrow \mathbb{Z}^2, \alpha\mapsto(i(u,[\alpha]),i(v,[\alpha])).
+\end{align}
+The classes u and v determine where the lifted geodesic terminates on $\tilde{\mathbf{U}}$. Careful experimentation and observation shows us that these classes correspond to moving along the horizontal and vertical directions relative to $\tilde{\mathbf{U}}_0$'s hole indexing convention. We suspect that the remaining z class is some remnant of how the quotient topology of $\tilde{\mathbf{U}}_0$ identifies a point on the boundary of a hole with another as an element of $\mathbb{Z}/4\mathbb Z$, as these are the cylinders of $\tilde{\mathbf{U}}_0$ that cross from one phase to the next (See Figure $\ref{fig:mtilda}$). Regardless, the classes $u,v$ are enough to determine $\tilde{\mathbf{U}}$'s fundamental group as they already take into consideration the effect that the rotations of $\tilde{\mathbf{U}}_0$ has on $\tilde{\mathbf{U}}$'s translational symmetries.
 \newpage
 \subsection{Horizontal, Vertical, and Slope One Cylinders of $\tilde{\mathbf{M}}$}
 \begin{figure}[H]
@@ -707,7 +727,6 @@ We call the \textbf{subgroup of $\Gamma$ containing the groups generated by rota
 \end{figure}
 \newpage
 \subsection{Slope Normalization Algorithm}
-
 \newpage
 \subsection{Proof of Theorem}
 
