@@ -17,6 +17,7 @@
 \newtheorem{Def}{Definition}[subsection]
 \newtheorem*{thm*}{Theorem}
 \newtheorem*{def*}{Definition}
+\newtheorem{lem}{Lemma}[subsection]
 
 \newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
 \newcommand{\compat}[1]{\textbf{\textcolor{red}{#1}}}
@@ -412,12 +413,7 @@ As a consequence of this theorem, any dynamical properties of geodesic flow on t
 \subsection{Comparing Geodesic Behavior on Both Surfaces}
 Two immediate observations that can be made in regards to geodesic flows on the surface was that any trajectory with slope one closes, and any flows with horizontal or vertical trajectories drift. Observe the path behavior of three different flows on the surface:
 
-\begin{center}
-\includesvg[width=2.3in]{cubesxyzpaths}\hspace{0.1in}
-\raisebox{0.5in}{\includesvg[width=2.2in]{unfoldcutpath}}
-\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{S}$,
-\\ \text{where their initial trajectories are (0,1), (1,0), and (1,1) respectively.}
-\end{center}
+
 
 The figure above shows us some very simple paths on the surfaces. We use the three vectors, (0,1), (1,0), and (1,1), as a sort of basis for proving our theorem. Included in the appendix are a few more simulated flows of various trajectories. We've color coded the trajectories in the image above for path c to represent one of four phases
 
@@ -428,7 +424,7 @@ The following section is concerned with defining a quotient of $\mathbf{U}'$ (se
 
 
 \subsection{Four-Fold Cover of $\mathbf{U}$}
-A geodesic on $\mathbf{U}$ viewed as a sequence of line segments on $\mathbf{P}$ travels in at most four directions which differ by rotation by a multiple of $\frac{\pi}{2}$. This is a consequence of the edge identifications taking the boundary of a hole on $\mathbf{P}$ to its counterpart by rotation of that factor. To each of these directions we associate an element of $\mathbb{Z}/4\mathbb{Z}$ to signify the current phase of the geodesic flow. We use this construction to create our four-fold cover of $\mathbf{U}$ as a topological quotient of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For every integer pair centered around every hole of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, create the edge identifications taking one phase plane to the next in the following manner:
+A geodesic on $\mathbf{U}$ viewed as a sequence of line segments on $\mathbf{P}$ travels in at most four directions which differ by a rotation of a multiple of $\frac{\pi}{2}$. This is a consequence of the edge identifications taking the boundary of a hole on $\mathbf{P}$ to its counterpart by a rotation of ninety degrees. To each of these directions we associate an element of $\mathbb{Z}/4\mathbb{Z}$ to signify one of the four possible directions of the geodesic flow at any given time. Given that, we can create a four-fold cover of $\mathbf{U}$ as a topological quotient of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For every integer pair centered around every hole of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, create the edge identifications that takes one plane to the next in the following manner:
 
 \begin{figure}[H]
 \centering
@@ -437,46 +433,53 @@ A geodesic on $\mathbf{U}$ viewed as a sequence of line segments on $\mathbf{P}$
 \caption{$\tilde{\mathbf{U}}_0$ is a branched cover of $\mathbf{U}$ of degree four.}
 \end{figure}
 
-$\tilde{\mathbf{U}}_0$ has the obvious covering map that takes every point on $\tilde{\mathbf{U}}_0$ and projects it onto $\mathbf{U}$. We define the edge identifications as a relation on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For $i\in[-\frac{1}{4},\frac{1}{4}]$:
+$\tilde{\mathbf{U}}_0$ has the obvious covering map that takes every point on $\tilde{\mathbf{U}}_0$ and projects it onto $\mathbf{U}$. We define the edge identifications as a relation on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. For $i\in[-\frac{1}{2},\frac{1}{2}]$:
 
 
-\begin{multline}
-([2m+i], 2n-\frac{1}{4},j)\sim(2m-\frac{1}{4},[2n+i],j+1)\\
-([2m+i], 2n+\frac{1}{4},j)\sim(2m+\frac{1}{4},[2n+i],j+1)\\
+
+\begin{equation}
+\begin{split}
+(2m+i, 2n-\frac{1}{2};j)\sim(2m-\frac{1}{2},2n+i;j+1)\\
+(2m+i, 2n+\frac{1}{2};j)\sim(2m+\frac{1}{2},2n+i;j+1)\\
 \vspace{0.2in}\text{for } (m,n;j) \in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}.
 \label{eq:rel2}
-\end{multline}
+\end{split}
+\end{equation}
 
-We define $\tilde{\mathbf{U}}_0$ to be the topological quotient, $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim$. $\tilde{\mathbf{U}}_0$ is a Euclidean cone surface with four distinct vertices for each hole centered at $(m,n;\mathbb{Z}/4\mathbb{Z})$ on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ of cone angle $6\pi$ with proper identification.
+We define $\tilde{\mathbf{U}}_0$ to be the topological quotient, $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim$. $\tilde{\mathbf{U}}_0$ is a Euclidean cone surface with four vertices at each hole centered at $(2m,2n;\mathbb{Z}/4\mathbb{Z})$ of cone angle $6\pi$.
 
 \subsection{Symmetries of $\tilde{\mathbf{U}}_0$}
-There are certain translational and rotational symmetries of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ that we use to define isometric maps. These isometries then induce well-defined isometries on $\tilde{\mathbf{U}}_0$ that respect the edge identifications we made earlier.
+There are certain translational and rotational symmetries of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ that we use to define isometries. These isometries are well-defined and induce isometries on $\tilde{\mathbf{U}}_0$ that respect the edge identifications we made earlier.
 
-\begin{Def}Let $m,n\in\mathbb{Z}$. The \textbf{family of translations}, $\mathbf{T}^{m,n}_{0}$ on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, is given as $\mathbf{T}^{m,n}_{0}(u,v;j)=(u+2m,v+2n;j)$.\newline
-The \textbf{family of "rotational" isometries} on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ is given as powers of the automorphism $\mathbf{R}(u,v;j)=(u,v;j+1)$, where $\mathbf{R}$ as an action on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ forms a group of order 4.
+\begin{Def}Let $m,n\in\mathbb{Z}$. The {family of translation maps}, $\mathbf{T}^{m,n}_{0}$ on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, is given as $\mathbf{T}^{m,n}_{0}(u,v;j)=(u+2m,v+2n;j)$.\newline
+The {family of ``rotational" isometries} on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ is given as the automorphism $\mathbf{R}_0(u,v;j)=(u,v;j+1)$, where $\mathbf{R}_0$ is an action on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ of order 4.
 \end{Def}
 
-\begin{thm}$\mathbf{T}^{m,n}_{0}$ induces an isometry on $\tilde{\mathbf{U}}_0$.
+\begin{lem}$\mathbf{T}^{m,n}_{0}$ induces a well-defined isometry on $\tilde{\mathbf{U}}_0$.
 \begin{proof}
-This theorem follows from the fact that $\mathbf{T}^{m,n}_{0}$ preserves the edge identifications defined at $\eqref{eq:rel2}$. Take $\mathbf{T}^{m,n}_{0}(u,v;j)=(u+2m,v+2n;j)$ for arbitrary integers $m,n$, and $(u,v;j)\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. Then, $\mathbf{T}^{m,n}_{0}(u,v;j)$ is trivially isometric for elements not on the boundary of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, since these points lie on a subset of a plane and are identified with themselves. Suppose then that $(u,v;j)\in\partial\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. Then $\mathbf{T}^{m,n}_{0}(u,v;j)$ acting on the boundary gives a new relation:
-\begin{multline*}
-([2(m+m')+i], 2(n+n')-\frac{1}{4},j')\sim(2(m+m')-\frac{1}{4},[2(n+n')+i],j'+1)\\
-([2(m+m')+i], 2(n+n')+\frac{1}{4},j')\sim(2(m+m')+\frac{1}{4},[2(n+n')+i],j'+1)\\
-\vspace{0.2in}\text{for } (m',n';j') \in \mathbb{Z}^{2}\times\mathbb{Z}/4\mathbb{Z}\text{ and }i\in[-\frac{1}{4},\frac{1}{4}],
-\end{multline*}
-which preserves the lengths of the boundary edges and respects the edge identifications as every hole is centered around a unique pair of even integers, $(2(m+m'),2(n+n')$. We denote the induced isometry on $\tilde{\mathbf{U}}_0$ as $\bar{\mathbf{T}}^{m,n}_{0}$.
-\end{proof}
-\end{thm}
+It suffices to show that $\mathbf{T}^{m,n}_{0}$ preserves the edge identifications $\eqref{eq:rel2}$. Let $x,y\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$, where $x=(u_x,v_x;j_x)$ and $y=(u_y,v_y,j_y)$. Clearly, if $x=y$, then $\mathbf{T}^{m,n}_{0}(x)=\mathbf{T}^{m,n}_{0}(y)$. Hence, $T_0$ is bijective. Consider the case where $x\neq y$. Let $x\sim y$ and observe that if $x,y$ lie on any of the edges, then $\mathbf{T}^{m,n}_{0}(x)=(u_x+2m,v_x+2n;j_x)$ and $\mathbf{T}^{m,n}_{0}(y)=(u_y+2m,v_y+2n;j_y)$ for $m,n\in\mathbb{Z}$. Since $x\sim y$, either $j_y=j_x+1$, or $j_x=j_y+1$. Suppose the former is true. Then for $i$ in the interval $[-\frac{1}{2},\frac{1}{2}]$:
 
-\begin{thm}$\mathbf{R}_{0}$ induces an isometry on $\tilde{\mathbf{U}}_0$.
+\begin{equation*}
+\begin{split}
+(2m_x+2m+i, 2n_x+2n-\frac{1}{2};j_x)\sim(2m_x+2m-\frac{1}{2},2n_x+2n+i;j_y)\\\text{ and }\hspace{2in}\\
+(2m_x+2m+i, 2n_x+2n+\frac{1}{2};j_x)\sim(2m_x+2m+\frac{1}{2},2n_x+2n+i;j_y),\\
+\end{split}
+\end{equation*}
+which is the result of $T_0$ acting on the edges, and $m_x,n_x$ are integers that originally ensured that $x\sim y$. Since $m,n$ are arbitrarily chosen integers, $T_0$ maps one edge to exactly one other as the edges surrounding each hole are indexed by a unique pair of even integers and $T_0$  is a bijective map that respects that construction. A similar argument holds for the case where $j_x=j_y+1$. Therefore, $\mathbf{T}^{m,n}_{0}(x)\sim\mathbf{T}^{m,n}_{0}(y)$.
+\end{proof}
+\end{lem}
+
+We will call the induced isometry on $\tilde{\mathbf{U}}_0$, $\bar{\mathbf{T}}^{m,n}$.
+
+\begin{thm}$\mathbf{R}_{0}$ induces an isometry on $\tilde{\mathbf{U}}_0$
 \begin{proof}
-Similar to the previous theorem, consider a point $(u,v;j)\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. Then $\mathbf{R}_{0}(u,v;j)=(u,v;j+1)$ respects edge identifications at $\eqref{eq:rel2}$. since $\mathbf{R}_{0}$ is itself a bijective permutation on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ that takes every pair $(u,v)$ to itself and permutes the $j$ coordinate by a factor of one. Therefore, $\mathbf{R}_{0}$ induces an isometry on $\tilde{\mathbf{U}}_0$. We denote this induced isometry by $\bar{\mathbf{R}}_{0}$.
+\compav{might rethink including $R_0$}.
 \end{proof}
 \end{thm}
 
 \subsection{Four-fold Translation Cover}
 
- Now we will show that $\tilde{\mathbf{U}}_0$ is isometric to a translation surface via another induced isometry on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. We would like this isometry to rotate the individual phase planes of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ about the origin in such a way that edges one the boundaries are identified strictly by translation. Every phase characterized as an element of $\mathbb{Z}/4\mathbb{Z}$ becomes a power of a rotation matrix on the individual phase planes.
+ Now we will show that $\tilde{\mathbf{U}}_0$ is isometric to a translation surface via another induced isometry on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. We would like this map to rotate each individual plane of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ about the origin in such a way that edges one the boundaries are identified strictly by translation. Every plane that is represented as an element of $\mathbb{Z}/4\mathbb{Z}$ is conveniently acted on by a ninety degree rotation matrix, whose power we take to be that very same element.
 
 
 We express $\phi:\mathbf{P}\times\mathbb{Z}/4\mathbb{Z} \rightarrow \mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ as $\phi(u,v;j) = (u',v';j)$, where
@@ -490,77 +493,167 @@ We express $\phi:\mathbf{P}\times\mathbb{Z}/4\mathbb{Z} \rightarrow \mathbf{P}\t
 				-1 & 0
 			\end{matrix}\hspace{1mm}\right]^{j}\left[\begin{array}{c}
 					u\\v
-				\end{array}\right]
+				\end{array}\right].
 \label{eq:phi}
 \end{equation}
+This is clearly an isometry, as rotations preserve distance and $j\mapsto j$.
 
-
-
-\begin{Def} Let $\sim$ be the equivalence relation $\eqref{eq:rel2}$, and $\phi$ be the isometry on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ $\eqref{eq:phi}$. Define a new relation obtained from $\sim$ as:  $x_1\sim_{\phi}x_2$ if $\phi^{-1}(x_1) = \phi^{-1}(x_2)$ for $x_1,x_2\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. We define $\tilde{\mathbf{U}}$ to be  $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim_{\phi}$.\label{eq:simphi}
+\begin{Def} Let $\sim$ be the equivalence relation $\eqref{eq:rel2}$, and $\phi$ be the isometric map on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ $\eqref{eq:phi}$. Define a new relation obtained from $\sim$ as $x_1\sim_{\phi}x_2$ iff $\phi^{-1}(x_1) \sim \phi^{-1}(x_2)$ for $x_1,x_2\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. A new surface is obtained as the topological quotient $\tilde{\mathbf{U}}=$ $(\mathbf{P}\times\mathbb{Z}/4\mathbb{Z})/\sim_{\phi}$.\label{eq:simphi}
 \end{Def}
 
-The map $\phi$ preserves the edge identifications on $\tilde{\mathbf{U}}_0$ by these affine transformations. And since $\tilde{\mathbf{U}}_0$ is a cover of $\mathbf{U}$, $\tilde{\mathbf{U}}$ is a translation cover of $\mathbf{U}$. Observe that by rotating each phase plane about the origin, the manner in which the holes are indexed undergoes a rotation according to the j-coordinate.
 
 \begin{figure}[H]
 \centering
-\includesvg[width=3.3in]{utildaprime}
+\includesvg[width=3.65in]{utildaprime}
+\caption{$\tilde{\mathbf{U}}$ with edges identified, and holes indexed relative to $\mathbf{P}\times\{0\}$.}
+\label{fig:utilda}
 \end{figure}
 
 
 \begin{thm}{The following statements are true:}
 \begin{enumerate}[label=(\roman*)]
-\item The map $\phi$ induces a well-defined isometry $\bar{\phi}:\tilde{\mathbf{U}}_0 \rightarrow \tilde{\mathbf{U}}$
+\item The map $\phi$ induces a well-defined isometry from $\tilde{\mathbf{U}}_0$ to $\tilde{\mathbf{U}}$.
 \item $\tilde{\mathbf{U}}$ is a translation surface.
 \end{enumerate}
 \begin{proof}
-The proof of this theorem also follows from the fact that $\phi \eqref{eq:phi}$ is an isometric map that respects edge identifications. Let $(u,v;j)\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. Then $\phi(u,v;j)=(u',v';j)$. Let $M=\left[\begin{matrix}
-0 & 1\\
--1 & 0
-\end{matrix}\right]$, $U_1=([2m+i],2n-\frac{1}{4})$, $U_2=([2m+i],2n+\frac{1}{4})$, $V_1=(2m-\frac{1}{4},[2n+i])$, and $V_2=(2m+\frac{1}{4},[2n+i])$ for $i\in[-\frac{1}{4},\frac{1}{4}]$ and $m,n\in\mathbb{Z}$. Observe that making the identification $M^{j}(X)\sim' M^{j+1}(X')$ for some set of vectors $X,X'$ is equivalent to $X\sim' M(X')$ since $M$ is an invertible, isometric linear map. Similarly, we can express the relations $\phi(U_1;j)\sim\phi(V_1;j+1)$ and $\phi(U_2;j)\sim\phi(V_2;j+1)$ as $(M^{j}(U_1);j)\sim (M^{j+1}(V_1);j+1)$ and $(M^{j}(U_2);j)\sim (M^{j+1}(V_2);j+1)$, or, more concisely, as
-
-\begin{multline*}
-([2m+i], 2n-\frac{1}{4},0)\sim([2n+i],-2m+\frac{1}{4},1)\\
-([2m+i], 2n+\frac{1}{4},0)\sim([2n+i],-2m-\frac{1}{4},1)\\
-\text{for } (m,n) \in \mathbb{Z}^{2}.
-\end{multline*}
-This is precisely how the relation $\sim_{\phi}$ in Definition $\eqref{eq:simphi}$ is described (taking $\phi^{-1}$ of two points and checking if $\sim$ relates them).  Since $\phi$ respects edge identifications and preserves boundary lengths, there exists an induced map, $\bar{\phi}:\tilde{\mathbf{U}}_0 \rightarrow \tilde{\mathbf{U}}$ and \emph{(i)} is true. Finally, the relation $\sim_{\phi}$ as expressed this way obviously identifies edges from one phase plane to the next by translation, so \emph{(ii)} is true.
+It will again suffice to show that $\phi$ preserves $\tilde{\mathbf{U}}_0$'s edge identifications to prove $(i)$. Let $x_1,x_2\in\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. From $\tilde{\mathbf{U}}$'s definition $\eqref{eq:simphi}$, we see that $x_1\sim_{\phi} x_2$ if and only if $\phi^{-1}(x_1) \sim \phi^{-1}(x_2)$. By taking $\phi^{-1}(x_1)$ and $ \phi^{-1}(x_2)$ to be the pre-images of the quotient map onto $\tilde{\mathbf{U}}_0$, it is clear that $\phi$ preserves identifications. Otherwise, it would contradict the definition. Furthermore, since $\phi$ is a well-defined isometry, there is an induced isometry on the topological quotients, $\tilde{\mathbf{U}}_0$ and $\tilde{\mathbf{U}}$.\newline
+Let $x_1\sim_{\phi} x_2$. Then $\phi^{-1}(x_1) \sim \phi^{-1}(x_2)$. Let $\phi^{-1}(x_1)=(u_1,v_1;j_1)$ and $\phi^{-1}(x_2)=(u_2,v_2;j_2)$. Without loss of generality, suppose that $j_2=j_1+1$. Let $i$ vary over the interval $[-\frac{1}{2},\frac{1}{2}]$, and $m,n$ be integers such that they satisfy the relation $\phi^{-1}(x_1) \sim \phi^{-1}(x_2)$. If $\phi$ acts on these these two points, then $x_1 = (u_1',v_1';j_1)$ and $x_2 = (u_2',v_2';j_1+1)$. But we know that $(u_1',v_1')=M^{j_1}(u_1,v_1)$ and $M^{j_1+1}(u_2',v_2')=(u_2,v_2)$, where $M$ is the rotation matrix as in $\phi$. Thus, $M^{j_1}(u_1,v_1)\times\{j_1\}\sim_\phi M^{j_1+1}(u_2,v_2)\times\{j_1+1\}$. By multiplying through by $M^{-j_1}$ prior to taking the cross-product, we obtain $(u_1,v_1)\times\{j_1\}\sim_\phi M(u_2,v_2)\times\{j_1+1\}$. Since $M(u_2,v_2) = (v_2,-u_2)$, we can express the relation $\sim_\phi$ as
+\begin{equation*}
+\begin{split}
+(2m+i, 2n-\frac{1}{2};j_1)\sim_\phi(2n+i, -(2m-\frac{1}{2});j_1+1),\\
+\text{ and }\hspace{1.2in}\\
+(2m+i, 2n+\frac{1}{2};j_1)\sim_\phi(2n+i, -(2m+\frac{1}{2});j_1+1).\\
+\end{split}
+\end{equation*}
+It is clear from this relation and figure $\ref{fig:utilda}$ that $\tilde{\mathbf{U}}$ is a translation surface.
 \end{proof}
 \end{thm}
+We will denote this induced isometry as $\bar{\phi}$.
 
 %A geodesic on this translation surface can be realized as a sequence of edge crossings on the phase planes. By taking a quotient of this surface, a closed straight-line path can be lifted from the quotient onto $\tilde{\mathbf{U}}$, and then projected onto $\mathbf{U}$ to study geodesic behavior of any given direction.
 
-\subsection{Symmetries of $\tilde{\mathbf{U}}$}
+\subsection{Constructing $\tilde{\mathbf{U}}$'s base surface}
 In this section we use the induced isometries on $\tilde{\mathbf{U}}_0$, and the map $\bar{\phi}:\tilde{\mathbf{U}}_0\rightarrow\tilde{\mathbf{U}}$ to define a set of rotational and translational symmetries of $\tilde{\mathbf{U}}$ such that its quotient over the action of these maps are faithful representations of $\tilde{\mathbf{U}}_0$ in terms of how the holes in $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ are indexed. It is briefly mention after the definition of $\tilde{\mathbf{U}}$ that $\bar{\phi}$ alters this scheme relative to $\tilde{\mathbf{U}}_0$. 
 
-\begin{Def}We call the \textbf{family of faithful Translational symmetries} $\mathbf{T}^{m,n}$ on $\tilde{\mathbf{U}}$ and define it to be the composition of induced isometries, $\mathbf{T}^{m,n}$ = $\bar{\phi}\circ\bar{\mathbf{T}}^{m,n}\circ\bar{\phi^{-1}}$.
+\begin{Def}We call the {family of $\tilde{\mathbf{U}}$'s translational symmetries} $\mathbf{T}^{m,n}$ and define it to be the composition of the induced isometric maps: $\mathbf{T}^{m,n}$ = $\bar{\phi}\circ\bar{\mathbf{T}}^{m,n}\circ\bar{\phi}^{-1}$.
 \end{Def}
 
-We can see that $\mathbf{T}^{m,n}$ is indeed an isometry on $\tilde{\mathbf{U}}$ as it is composed of isometries. We take the quotient over the group generated from these translations, and show that this new surface is Veech. 
+We can see that $\mathbf{T}^{m,n}$ is indeed an isometry on $\tilde{\mathbf{U}}$ as it is composed of the induced isometries, $\bar{\phi}$ and $\bar{\mathbf{T}}^{m,n}$ . We can take the quotient of the translation surface $\tilde{\mathbf{U}}$ over the action of $\mathbf{T}^{m,n}$ to obtain a base surface that realizes $\tilde{\mathbf{U}}$ as an infinite $\mathbb{Z}^2$ cover.
 
 \begin{Def}
-The translation surface $\tilde{\mathbf{M}}$ is given as the quotient  $\tilde{\mathbf{U}}/\mathbf{T}^{m,n}$.
+The translation surface $\mathbf{M}$ is given as the quotient  $\tilde{\mathbf{U}}/\mathbf{T}^{m,n}$.
 \end{Def} 
 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtilda}
-\caption{The surface $\tilde{\mathbf{M}}$ with labeled vertices and identified edges}
+\caption{The surface $\mathbf{M}$ with labeled vertices and identified edges. Labels I, II, III, and IV identify the individual planes indexed by \{0,1,2,3\}, respectively.}
 \label{fig:mtilda}
 \end{figure}
 
-$\tilde{\mathbf{M}}$ is a genus 5 translation surface that is covered by $\tilde{\mathbf{U}}$. Thus we can take a path on $\tilde{\mathbf{M}}$, lift it onto $\tilde{\mathbf{U}}$, take it to $\tilde{\mathbf{U}}_0$, and project it onto $\mathbf U$. And since $\mathbf{U}\simeq\mathbf{S}$, the core of our argument is that geodesics on the translation surface $\tilde{\mathbf{M}}$ equipped with homology classes are representations of geodesics on $\mathbf{S}$ away from the singularities. The labeled vertices in Figure $\ref{fig:mtilda}$ are all cone singularities with total angles of $6\pi$. 
+The new surface, $\mathbf M$, is a genus 5 translation surface with the surjective quotient map $f:\tilde{\mathbf{U}}\rightarrow\mathbf M$ that sends every point of $\tilde{\mathbf{U}}$ to its modular equivalent. $\mathbf M$ is a Euclidean cone surface with four singularites of cone angle $6\pi$ on the corners of the square cut out from each of the squares labeled I,II,III, and IV. Those squares have their opposite edges identified by translation. $\mathbf M$ might be thought of as a collection of four $2\times2$ square tori with a unit square cut out from their centers, and identifications made on these edges so as to associate one torus with exactly two others. Although a single edge only relates two of the tori, the vertices in the centers are the same throughout $\mathbf M$.
+\newpage
 
-Although it is not immediately obvious, $\tilde{\mathbf{M}}$ can be realized as a square-tiled surface in the form of a staircase as in $\ref{fig:staircase}$
-
-
+\subsection{$\mathbf M$ as a Veech Surface}
+By a series of cutting and gluing operations, $\mathbf M$ has this symmetric representation as a square-tiled staircase (Figure $\ref{fig:staircase}$). The vertices of cone angle $2\pi$ can be found on the centers of the squares in the figure below where the black lines intersect. 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtildastaircase}
-\caption{$\tilde{\mathbf{M}}$ as a square-tiled staircase with vertices and phases identified.}
+\caption{$\mathbf{M}$ as a square-tiled staircase with cone singularities identified.}
 \label{fig:staircase}
 \end{figure}
+As a result of Gutkin-Judge [citation], $\mathbf M$ is a Veech surface whose Veech group is commensurable to $SL(2,\mathbb Z)$. In order to determine which elements of orientation preserving automorphisms, denoted Aut$^{+}(\mathbf M)$, have derivatives that belong to the Veech group of $\mathbf M$, SL($\mathbf M$), it is necessary to study $\mathbf M$'s various symmetries and cylinder decompositions.
+
+The derivatives of these automorphisms form the affine group, Aff$^+(\mathbf M)$. One such group contained in Aff$^+(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated by rotations of order 4. Even though the other elements in $\mathbb{D}_4$ are derivatives of automorphisms of $\mathbf M$, we will only consider those of determinant +1.
+
+Observe from the following image that $\mathbf M$ has a uniform cylinder decomposition in both the horizontal and vertical directions:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4in]{cylinderdecomp.pdf}
+\caption{Horizontal and Verical Cylinders overlayed.}
+\label{fig:decomp}
+\end{figure}
+
+Both sets of cylinders are indexed $0\leq i, j \leq 5$. Every cylinder is composed of two unit squares with edges identified by translation. We start counting the cylinders from the bottom-most cylinder and increment the index as the cylinders fill the surface going "up" the staircase. $\small{\mathcal{E}}_0$ is the first cylinder at the bottom whose identifications are \em{not} \normalfont the solid triangles. $\small{\mathcal{E}}_5$ is the cylinder whose edges are paired by the solid triangles. $\Delta_{i}$ has the more standard representation starting from the bottom-most horizontal cylinder. 
+
+We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinders circumference to its width, $\mu^{-1}=\frac{c}{h}$. A \emph{Dehn-twist} of a cylinder is an automorphism of the cylinder of the form  $(x,y)\mapsto(x,y+\mu^{-1} x \mod{h})$, where $x$ and $y$ are points on the cylinder relative to its circumference and height respectively. According to [need to cite something], a translation surface whose finite cylinder decompositions in orthogonal directions form a set of inverse moduli. The lowest (rational) common multiple of the set of all these values match up to give global affine diffeomorphisms of the surface, whose matrix representations are 
+\begin{equation*}
+\left[ \hspace{1mm} \begin{matrix}
+				1 & \pm \lambda\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right] \text{ and }
+			\left[ \hspace{1mm} \begin{matrix}
+							1 & 0\\
+							\pm \lambda & 1
+						\end{matrix}\hspace{1mm}\right],
+\end{equation*}
+where $\lambda$ is the lowest common multiple.
+
+Fortunately, the cylinders $\Delta_{i}$ and $\small{\mathcal{E}}_j$, as i and j vary, all have the same inverse moduli. Therefore, $\lambda=$ l.c.m.($\mu^{-1}_{\Delta_i}\cup\mu^{-1}_{\mathcal{E}_j}$) $=2$.
+
+\begin{figure}[H]
+\centering
+\includesvg[width=2.6in]{cylinderskew}
+\caption{Stabilizing Dehn-twists of the horizontal/vertical cylinders}
+\label{fig:skew}
+\end{figure}
+
+Consequently, 
+\begin{equation}
+\left< \left[ \hspace{1mm} \begin{matrix}
+				1 &  2\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right] \text{ , }
+			\left[ \hspace{1mm} \begin{matrix}
+							1 & 0\\
+							 2 & 1
+						\end{matrix}\hspace{1mm}\right] \right>
+						\subset \text{SL}(\mathbf M).
+\end{equation}
+This group is also known as the \emph{Sanov Subgroup}, a free group of rank 2. We take the group generated by ninety degree rotations and these two elements to be the group $\mathbb{X}\subset \text{SL}(\mathbf M)$.
+\newpage
+\subsection{$\mathbb X$'s Action on $\mathbf M$'s Homology}
+The group $\mathbb X$ consists of the set of all derivatives of Aut$^+(\mathbf M)$, whose action on the absolute homology of $\mathbf{M}$ extends to an action on the homology of $\mathbf{M}$'s $\mathbb{Z}^2$-cover, $\tilde{\mathbf{U}}$. $\mathbf{M}$'s cylinder decomposition gives way to a set of homology classes that serve as a basis for $H_1(\mathbf{M},\mathbb Z)$. For a total of 12 cylinders, there are 12 curves:
+
+\begin{figure}[H]
+\includegraphics[width=3in]{homologyclass.png}
+\centering
+\end{figure}
+Every curve intersects two others. By constructing a $12\times12$ matrix where the rows represent each curve and the columns represent their intersections with other curves, we can see that the rank of said matrix is 10. This is to be expected as the genus of $\mathbf M$ is 5. From these curves we construct homology classes $u,v,$ and $z$. $u$ and $v$ are the curves that were the outermost edges of the tori in $\mathbf{M}$'s original representation (Figure $\ref{fig:mtilda}$). We can see from Figure $\ref{fig:utilda}$ that crossing over one of these edges corresponds to a shift of the even integer index pair that determines exactly which of the square shaped holes a point on the surface is near to. The $z$ class of cylinder curves lie on the cylinders that take a path from one plane to the next in our cover. Since one plane is related to exactly two others, it is impossible to go from the first to the third, or the second to the fourth, and vice versa. 
+
+Regardless, $u$ and $v$ are the most important homology classes that we use to determine whether or not a path properly closes on the four-fold cover. Let $\alpha:[0,1]\rightarrow\mathbf M$ be a curve on the surface such that $\alpha(0)=\alpha(1)=x_0\in\mathbf{M}$. Take $f:\tilde{\mathbf U}\rightarrow\mathbf M$ to be the covering map that takes every point on $\tilde{\mathbf U}$ to its quotient in $\mathbf{M}$. We will fix a point $\tilde{x}_0\in\tilde{\mathbf U}$ such that the lifted path $\tilde\alpha(0)=\tilde{x}_0$ under the function $f$. $\alpha$ is a closed path in $\pi_1(\mathbf M,x_0)$. We denoted the class of paths $\alpha$ as [$\alpha$]$\in H_1(\tilde{\mathbf{M}},\mathbb Z)$, and define the function,
+
+\begin{align}
+i:H_1(\mathbf{M},\mathbb Z)\times H_1(\mathbf{M},\mathbb Z)\rightarrow \mathbb Z,
+\end{align}
+to return the intersection number of two homology classes. Out of convention, we consider a positive intersection to adhere to the right-hand rule and take the crossings to be relative to $u$ and $v$. With that being said, the signed homology classes of gamma curves are
+
+\begin{align*}
+u &= -\gamma_2 +\gamma_5 + \gamma_8 - \gamma_{11},\\
+v &= +\gamma_0 -\gamma_3 -\gamma_6 +\gamma_9,\\
+z &= +\gamma_1 +\gamma_4-\gamma_7-\gamma_{10}.
+\end{align*}
 
 
+The $\mathbb{Z}^2$ cover, $\tilde{\mathbf{U}}$, is associated to the kernel of the homomorphism
+\begin{align}
+\Omega_{u,v}:\pi_1(\mathbf{M},x_0)\rightarrow \mathbb{Z}^2, \text{ such that } \alpha\mapsto(i(u,[\alpha]),i(v,[\alpha])).
+\end{align}
+Suppose that $h:\mathbf{M}\rightarrow\mathbf{M}$ is an automorphism of the surface such that dir $h\in SL(\mathbf M)$. $h$ induces the isomorphism, $h_*:\pi_1(\mathbf{M},x_0)\rightarrow \pi_1(\mathbf{M},x_0)$. Likewise, $f$ induces the inclusion map $f_*:\pi_1(\tilde{\mathbf{U}},\tilde x_0)\hookrightarrow\pi_1(\mathbf{M},x_0)$. If $\pi_1(\tilde{\mathbf{U}},\tilde x_0) = $ Ker $\Omega_{u,v}$, then it must be true that the kernel of such a homomorphism is preserved under $h_*$. 
+
+The actions of $h_*$ are dual to the actions of dir $h$, denoted $h'$, on the sets of odd-odd and even-odd $\mathbb{Z}^2$ vectors, $\mathcal{O}$ and $\mathcal{E}$. In particular, the action of $\mathbb X$ on $\mathcal{O}$ and $\mathcal{E}$ is self-contained and well-defined. This is vital as what we want to show is that $h'(\alpha')$, such that $\alpha'$ is a constant, is dual to $h_*([\alpha])$. In which case, it should also be true that $h_*(\alpha)\mapsto(i(u,h_*([\alpha])),i(v,h_*([\alpha])))$, under $i$. And since intersection number is a non-degenerate bilinear form, 
+
+\begin{align*}
+\alpha\mapsto(i(h_*^{-1}(u),[\alpha]),i(h_*^{-1}(v),[\alpha])).
+\end{align*}
+
+This amounts to finding some such path whose lift belongs to the fundamental group of $\tilde{\mathbf U}$, noting the effect $h_*$ has on $\mathbf M$'s homology, and finding the new intersection number. Let $\beta$ be such a path. Suppose there is some sequence of affine maps $h_1,...,h_n\in$Aff$^+(\mathbf{M})$ such that $h_1' \circ ... \circ h_n'(\alpha')=\beta'$. We will show the following is true:
+
+\begin{align*}
+h_1 \circ ... \circ h_n(\mathbf{M})=\mathbf{M}'&\iff\\
+h_{*_1} \circ ... \circ h_{*_n}([\beta])=[\alpha] &\iff
+\end{align*}
 %\subsection{$\tilde{\mathbf{M}}$ as a Veech Surface}
 %We use basic properties of $\tilde{\mathbf{M}}$ to show that it is Veech, and its Veech group is a lattice in $SL_2(\mathbb{Z})$. Recall that translation surfaces are equipped with charts, $\omega$, of maps from the surface to $\mathbb{C}$. The Veech group of the surface $\tilde{\mathbf{M}}$ is given as the image of its stabilizer in the projective group $PSL_2(\mathbb{R})$.
 %
@@ -646,12 +739,7 @@ It is easily shown that $SO_2(\mathbb Z)\subset\Gamma$. Consider a rotation abou
 
 Each square is unit, and any pair of edges have two squares between them. This gives rise to a very natural cylinder decomposition of $\tilde{\mathbf{M}}$ in both horizontal and vertical directions.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=4in]{cylinderdecomp.pdf}
-\caption{The staircase with edges identified.}
-\label{fig:decomp}
-\end{figure}
+
 
 The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. Any geodesic on the horizontal cylinders are incident with exactly two other geodesics on the vertical cylinders.
 
@@ -666,12 +754,7 @@ Horizontal and vertical cylinders of the surface are disjoint within their respe
 
   Recall that the modulus of a cylinder, $\mu$, is given by the ratio of the cylinder's width to its circumference, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by Dehn-twists whose derivatives are matrices of magnitude $\lambda$ equal to that of lowest common multiple of the inverse moduli, $\mu^{-1}$. [cite Veech 89?]
 
-\begin{figure}[H]
-\centering
-\includesvg[width=2.6in]{cylinderskew}
-\caption{Stabilizing Dehn-twists of the horizontal/vertical cylinders}
-\label{fig:skew}
-\end{figure}
+
 
 In this case, the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$'s cylinders. We can see that any skews of magnitude $\lambda=\pm2$, since $\mu^{-1}{}=2$, are derivatives of Dehn-twists that preserve the boundaries of the cylinders. Figure $\ref{fig:skew}$ demonstrates a Dehn-twist of magnitude 2 acting on both horizontal and vertical cylinders. Hence the derivatives, 
 \begin{equation}
@@ -697,16 +780,7 @@ Since none of these paths can't be contracted into a single point or deformed in
 
 From these paths we create the following homology classes that determine our $\mathbb{Z}^2$-cover:
 
-\begin{align*}
-u&= \{-\gamma_2, +\gamma_5,\gamma_8,-\gamma_{11}\},\\
-v&= \{+\gamma_0, -\gamma_3,-\gamma_6,+\gamma_{9}\},\\
-z&= \{+\gamma_1, +\gamma_4,-\gamma_7,-\gamma_{10}\}.
-\end{align*}
 
-\begin{figure}[H]
-\includegraphics[width=3in]{homologyclass.png}
-\centering
-\end{figure}
 
 Here $u,v,$ and $z$ belong to $H_1(\tilde{\mathbf{M}},\mathbb Z)$. These classes are generalizations of differential 1-forms, say $dx,dy,dz$, on the four-fold cover whose path integrals on $\tilde{\mathbf{M}}$ map directly to the cover.  In our case, there is translational symmetry and it is understood that any geodesic with rational slope is periodic, so we need only consider $\tilde{\mathbf{M}}$'s homology classes. Let $\alpha$ be a closed path on $\tilde{\mathbf{M}}$ as an element of $\pi_1(\tilde{\mathbf{M}})$. The intersection number of any two homology classes is given as the bilinear form:
 
@@ -730,5 +804,11 @@ The classes u and v determine where the lifted geodesic terminates on $\tilde{\m
 \newpage
 \subsection{Proof of Theorem}
 
+\begin{figure}[H]
+\includesvg[width=2.3in]{cubesxyzpaths}\hspace{0.1in}
+\raisebox{0.5in}{\includesvg[width=2.2in]{unfoldcutpath}}
+\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{S}$,
+\\ \text{where their initial trajectories are (0,1), (1,0), and (1,1) respectively.}
+\end{figure}
 
 \end{document}
