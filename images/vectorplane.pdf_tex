@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'utilda.pdf' (pdf, eps, ps)
+%% Accompanies image file 'vectorplane.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{525.1715332bp}%
+    \setlength{\unitlength}{104.17272949bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,19 +48,7 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.90769357)%
-    \put(0,0){\includegraphics[width=\unitlength]{utilda.pdf}}%
-    \put(0.85623744,0.88560257){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2m, 2n, 0)}}}%
-    \put(-0.00121984,0.88560257){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2m, 2n, 1)}}}%
-    \put(-0.00121984,0.02802326){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2m, 2n, 2)}}}%
-    \put(0.85183479,0.02802326){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2m, 2n, 3)}}}%
-    \put(0.85183479,0.67442064){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m+1}}}%
-    \put(0.67330829,0.85922182){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n+1}}}%
-    \put(0.41007436,0.67442064){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m+1}}}%
-    \put(0.41007436,0.22605379){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m+1}}}%
-    \put(0.85183479,0.22605379){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m+1}}}%
-    \put(0.23372401,0.85922182){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n+1}}}%
-    \put(0.67330829,0.40885121){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n+1}}}%
-    \put(0.23372401,0.40885121){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n+1}}}%
+  \begin{picture}(1,0.99124731)%
+    \put(0,0){\includegraphics[width=\unitlength]{vectorplane.pdf}}%
   \end{picture}%
 \endgroup%

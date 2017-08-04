@@ -50,10 +50,10 @@
   \makeatother%
   \begin{picture}(1,0.92333915)%
     \put(0,0){\includegraphics[width=\unitlength]{utildaprime.pdf}}%
-    \put(0.87132453,0.90120708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(m, n, I)}}}%
-    \put(-0.00124133,0.90120708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(n, -m, II)}}}%
-    \put(-0.00124133,0.02851703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(-m, -n, III)}}}%
-    \put(0.8668443,0.02851703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(-n, m, IV)}}}%
+    \put(0.87132453,0.90120708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2m, 2n, 0)}}}%
+    \put(-0.00124133,0.90120708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(2n, -2m, 1)}}}%
+    \put(-0.00124133,0.02851703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(-2m, -2n, 2)}}}%
+    \put(0.8668443,0.02851703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(-2n, 2m, 3)}}}%
     \put(0.42510191,0.68861469){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n+1}}}%
     \put(0.23681789,0.87667211){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m-1}}}%
     \put(0.87575352,0.68861469){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{m+1}}}%

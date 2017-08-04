@@ -18,6 +18,7 @@
 \newtheorem*{thm*}{Theorem}
 \newtheorem*{def*}{Definition}
 \newtheorem{lem}{Lemma}[subsection]
+\newtheorem*{rem}{Remark}
 
 \newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
 \newcommand{\compat}[1]{\textbf{\textcolor{red}{#1}}}
@@ -27,7 +28,7 @@
 
 
 %opening
-\title{Geodesic Flow on the Necker Cube Surface}
+\title{Recurrence of Geodesic Flow on the Necker Cube Surface}
 \date{}
 \author{Pavel Javornik}
 
@@ -44,7 +45,8 @@
 \end{center}
 
 \begin{abstract}
-This paper classifies the periodic and drift-periodic trajectories on the Necker cube surface, a periodic surface built out of squares popular in optical illusions.
+\compav{Still working on the abstract}
+This paper classifies the periodic and drift-periodic rational trajectories on the Necker cube surface, a periodic surface built out of squares popular in optical illusions. By studying the branched cover of the Necker cube with translational and rotational symmetries, we can deduce from the structure of its quotient exactly which conditions of the initial trajectory angles are necessary to close on the Necker surface. The $\mathbb Z^2$-cover of the quotient is a branched cover of the Necker cube. As such, any closed paths lifted onto the cover will close on the surface as well. An affine automorphism of the quotient extends to an isomorphism of its absolute Homology, which is dual to its derivative, an element of the surface's Veech group, acting on a paths rational direction identified with $\mathbb{Z}^2$. 
 \end{abstract}
 
 
@@ -52,88 +54,84 @@ This paper classifies the periodic and drift-periodic trajectories on the Necker
 \newpage
 \section{Introduction}
 
-The purpose of the following paper is to study the geodesic flow on the periodic surface depicted above, which is formed from an infinite collection of unit squares. We call this surface the Necker cube surface after Louis Albert Necker's ``Necker Cube$_{1}$,'' which became a popular optical illusion. M.C. Escher's adaptation of the cube in Metamorphosis I$_{2}$ briefly features the Necker cube surface (See Figure $\ref{fig:Escher}$).The term Necker Cube is used interchangeably to refer to Escher's surface adaptation and Necker's optical illusion. For the purposes of the following paper, we will be using either Necker Cube or $\mathbf{S}$ to refer to the periodic cube tiling that appears in Escher's work.
+\compav{Started here on Aug. 3 (I've made changes all the way until my next blue comment. )}
 
+The Necker cube[citation] has made numerous appearances throughout history. The artist famous for his use of optical illusions in his work, M.C. Escher, has occasionally used tilings of the Necker cube such as in the lithographs ``Metamorphosis I," and ``Convex and Concave." (Pictured below.) The crystallographer Louis Albert Necker was credited for having extensively studied the Necker cube's geometry[citation] and remarked on this simple, yet fascinating, optical illusion that appears to ``simultaneously protrude from and intrude into the page."[citation:wolfram] Those who feel nostalgic might have even realized it is the same board in which ``Q*bert" hops around on in the 1982 arcade game. [cite?]
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{escher.jpg}
-\caption{The Necker cube as it appears briefly in Metamorphosis I}
+\includegraphics[scale=0.4]{escher.jpg}
+\includegraphics[scale=0.55]{escher2.jpg}
+\caption{The Necker cube tiling as it appears briefly in ``Metamorphosis I," and hung on a banner in ``Convex and Concave."[citation]}
 \label{fig:Escher}
 \end{center}
 \end{figure}
 
-The initial (rational) trajectories of any given flow fall into only one of two categories.
-\compat{The definitions below seem redundant. Perhaps you want ${\mathcal O}$ and ${\mathcal E}$}
+The tiling of the Necker cube is what we mean when we refer to the Necker cube surface, denoted $\mathbf S$. There are $\mathbb R^3$ translational symmetries of its embedded form in space that allows it to be tiled periodically. Studying such a surface naturally begs the question of whether or not straight-line paths traveling on the surface are ever periodic. And if so, is there a way to classify all such paths? Could there even be some intrinsic property 
+\begin{figure}[H]
+\centering
+\includesvg[width=1.5in]{cubesxyzpaths2}
+\caption{Some periodic and drift-periodic trajectories show us that the inital direction of a geodesic most likely determines its periodicity.}
+\end{figure}
+
+
+In fact there is a remarkably simple solution to this problem. Let's begin by defining the following subsets of $\mathbb{Z}^2$:
 
 \begin{def*}
 Let $v$ be a vector of the form $(x,y)\in\mathbb{Z}^{2}$. We call $v$ an \textbf{odd-odd} vector if x and y are relatively prime and both odd. We denote the \textbf{set of all odd-odd vectors} by $\mathcal{O}$. We say that $v$ is an  \textbf{even-odd} vector if x and y are relatively prime, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd vectors} by $\mathcal{E}$.
 \end{def*}
 
-We consider every (rational) initial trajectory on the surface to fall into one of the two categories, otherwise it is a positive scalar multiple of some direction. Given some initial point $x_{0}$ on the surface embedded in real space and some vector direction in real space, $\bar{v}$, our initial trajectory,$v$, is taken as an isomorphism from the planar subspace of $\mathbb{R}^{3}$ that contains $\bar{v}$. The three possible cases are the auxiliary planes, $x=0, y=0, z=0$, whose projections onto $\mathbb{R}^{2}$ are given by $(0,y,z)\mapsto(-z,y)$, $(x,0,z)\mapsto(x,-z)$, and $(x,y,0)\mapsto(x,y)$ respectively and relative to the standard bases of $\mathbb{R}^{3}$. We take $-z$ to be positive, and consider vectors that lie outside of these subspaces as degenerate cases. From there we prove the following:
+By a fixing a point on the surface $\mathbf S$ and taking a sufficiently small segment of a geodesic (such that it and the point lie on exactly one face of a cube), we construct classes of directions according to the vector direction that the segment travels. The direction is obtained by projecting the segment onto a plane parallel to the face it lies on.
 
-\begin{thm*}{Given an initial trajectory, $\theta\in\mathbb{R}^{2}$, and geodesic path, $\gamma$, on $\mathbf{S}$ with initial trajectory $\theta$, the following is true:} \compat{There is no flow in a fixed direction because when trajectories move to new squares they may be traveling different directions.}
-\compav{Can I use gamma as a path on S?}
-\begin{enumerate}[label=(\roman*)]
-\item If $\theta$ belongs to $\mathcal{O}$, then $\gamma$ is closed on $\mathbf{S}$ and homeomorphic to $\mathbb{R}/\mathbb{Z}$.
-\item If $\theta$ belongs to $\mathcal{E}$, then $\gamma$ is drift-periodic on $\mathbf{S}$.
+\begin{figure}[H]
+\centering
+\includesvg{vectorplane}
+\end{figure}
 
-\end{enumerate}
+The set of equivalence classes of directions on $\mathbf S$ is $\mathbb R/\frac{\pi}{2}\mathbb Z$ (a consequence of $\mathbf S$'s rotational symmetries), whose rational angles are then identified with the sets $\mathcal{O}$ and $\mathcal{E}$. Now if the geodesic has an initial direction identified with an element of $\mathcal{O}$, it is periodic on $\mathbf S$. But if that direction is identified with an element of $\mathcal{E}$, then the geodesic is drift-periodic. Otherwise, the geodesic has an irrational initial trajectory and is [yet to be decided] on $\mathbf S$. More formally stated, we have the following theorem:
+
+\begin{thm*}
+Yet to be written
 \end{thm*}
 
-\compav{Archiving for later:\\If $\theta$ is of the form (x,y) such that x or y are irrational, then $\phi^{\theta}_{t}$ is uniquely ergodic on $\mathbf{S}$. \compat{We should move the discussion of ergodicity outside the theorem.}	}
+\subsection{Some Background}
+This paper assumes that the reader is familiar with fundamental concepts in algebraic topology, such as covering space theory, and the study of Veech surfaces and their associated Veech groups. In order to prove this theorem, we take a number of covers of a surface isometric to $\mathbf S$. Our goal then is to take a branched cover of the surface as four "copies" of that surface, and rotate these copies so as to align the geodesic flow and identify edges solely by translation. The quotient space obtained by modding out this surface by its translational symmetries is translation and Veech.
 
-\compav{Stopped here. Continued in Section 2.}
+The Veech surface has an $SL(2,\mathbb{R})$-commensurable Veech group characterized as derivatives of affine maps of the translation surface. Such affine diffeomorphisms of the surface induce isomorphisms of its absolute homology (with coefficients in $\mathbb Q$). We obtain the direction of a closed geodesic flow from its holonomy vector and show that the odd-odd directions closing on the translation cover, and consequently $\mathbf S$, remains invariant given that the flow of a geodesic with slope one closes on the cover. This translation cover is considered a $\mathbb{Z}^2$-cover of the veech surface. We associate its fundamental group with the kernel of a homomorphism from the closed paths of its Veech surface quotient to $\mathbb{Z}^2$. There are numerous dualizations to be made between homologies, homology classes, and $SL(2,\mathbb{R})$ action on $\mathbb{Z}^2$ in order to solve this problem.
 
-The Necker Cube is a member of the family of infinite Euclidean cone surfaces built out of rectangles with vertices of cone angle $3\pi$ and $\frac{3\pi}{2}$. We wish to study the surface in the case where we glue only squares with edges of length 1. Specifically, we want to study geodesic flows on this surface and to prove that properties of the initial trajectory angle determine whether or not the geodesic will close or drift periodically. 
+\begin{rem}
+The initial approach of taking four ``copies" of the surface as a branched cover of $\mathbf S$ was in many ways inspired by the method in which [such and such]'s work on the dynamics of geodesic flow on the Ehrenfest-Wind Tree Model.[citation]. In fact the Wind Tree and the Necker cube surface have much in common in terms of which initial trajectory angles determine periodicity. The two differ, however, in regards to whether or not the initial point of the flow has an effect on periodicity. Although the translation surfaces obtained are near identical, the manners in which they are obtain differ greatly. A billiard flow is realigned by a series of reflections of the original surface by stringing copies of polygons along a ``laundry line" until a translation surface is obtained. On the other hand, $\mathbf S$ exhibits rotational symmetries that we exploit to obtain our translation surface.
+\end{rem}
+\subsection{Acknowledgements}
+to do: 
 
-The determining factor is simply whether or not the trajectory angle vector direction $(a,b)$, relative to the bottom and left edges of any square face, has integer values $a$,$b$ (where $a$ and $b$ are relatively prime) are of the same parity (odd-odd slope) or different parities (even-odd slope). We choose to neglect cases where paths are incident with vertices, and proceed to treat them as singularities. With these conditions in place we found that any geodesic with an initial odd-odd trajectory closes on the surface, while the even-odd cases drift periodically, tending to infinity. We aim to prove the following:
+- Hooper
 
+- Artigiani "Exceptional Ergodic Directions" for Notation
 
+- Vincent, Ferran and Pascal if I can get a rough draft of their book
 
-\subsection{Discussion of Proof}
-\subsection{Related work}
+- Hubert, et. al. "Recurrence flow " paper on wind tree
 
+- Ariel Mazur for assistance earlier on
 
-To better understand this surface, we will adapt methods used in the study of Veech surfaces to suit our needs. These methods have become incredibly valuable to anyone studying rational billiard flows on a variety of compact or (in the case of infinite surfaces) non-compact surfaces. Geodesic flows in these problems are characterized as point masses moving along frictionless surfaces that experience perfectly elastic collisions with the boundaries of the surface. The straight line path is then deformed by a reflection over the boundary in the opposite direction. Translation surfaces constructed in the following manner therefore take on symmetric properties in accordance to these transformations and the types of boundaries the point mass might encounter. That is to say that orienting these flows requires that the translation surface itself be reflected to realign the flow. These translation surfaces are often described as being "unfolded" by some billiard flow, or strung along a laundry line of polygons congruent to the base. In the later sections we will describe how our surface's canonical form deforms geodesic flows by rotation and how we can use these rotations and edge-crossings to determine whether or not a geodesic will close.
+- Math dept at CCNY? or research internship? Not sure if apropos.
 
-What inspired this paper was the work done by Hubert et al. [Hu] on the Ehrenfest-Wind Tree model. Any readers who are familiar with their paper or the Tree model will most likely notice the similarities between the quotient spaces of the two surfaces and the properties that determine whether or not geodesic paths close. While similar, these surfaces are not entirely identical. The effect that a boundary collision has on a geodesic alters the dynamical properties of the surface. Or perhaps they better demonstrate properties of the surface itself. Another fundamental difference between the two is that the Necker Cube is a surface with cone angles surrounding an infinite number of singularities on the surface. The problem has to take into careful consideration what it means for a path to cross a saddle connection between these singularities of the translation surface.
+\section{Constructing and Flattening $\mathbf{S}$}
 
-
-
-\subsection{Procedure}
-The Necker Cube surface has an interesting construction process that lets us take each face of the cube and arrange them in any way we choose so long as we do not change how the edges are identified, or glued together. It is preferable to study the flows on this surface as though every cube has been flattened onto the plane. This means that we can consider the cube step to be tiled by infinitely many of L-shaped surfaces whose edges are identified by rotation.
-
-Doing so greatly reduces the number of possible directions that a flow might travel. Since every edge of this L-shaped surface is identified to another either by translation or a 90 degree rotation, any straight line path on this flattened version of the Necker Cube can experience only one of four possible directions at any given time, whereas the Necker Cube would've had considerably more.
-
-Moreover, every face of this L-shaped surface is given by rotating its associated face on the Necker Cube about the x or y axis, affine translations, or a combination of the two. By cutting and gluing every half-cube of the Necker Cube in a consistent fashion, we can preserve the areas of the faces and distances between any two points on the surface with the flattening procedure. We describe this procedure as piecewise maps that are comprised of compositions of Euclidean matrices and translations of points relative to the L-shape onto a subset of $\mathbb{R}^{2}$ with square shaped holes cut out. Since rotations and translations of points preserves distance between them, the path lengths and  associated properties of geodesic flows remain invariant.
-
-The image of this map is a flattened version of the Necker Cube. (See FIG [MATLAB MODEL]). From that surface we construct a new one made out of four copies of original, each rotated by some factor of 90 degrees so as to realign the geodesic flows and assure that they can only travel in one possible direction. This four-fold surface is then a cover of the original surface. We consider every possible direction to be a "phase" of the flow, and index the planes accordingly. Any edges in the holes of the surface are identified with an edge on an adjacent phase plane (By rotation of $\pm \frac{\pi}{4}$). Any point on this surface has a coordinate in $\mathbb{R}\times\mathbb{R}\times\mathbb{Z}_{4} $
-
-Similarly, we take the quotient space of the flattened Necker Cube centered around each square shaped hole and realign its flows by rotation. The resulting surface is a compact branch cover of the quotient space. Singularities on the translation surface have a total angle that is some multiple of $2\pi$. We consider the translation surface to be a base surface of the four-fold cover, and study its properties to prove our main theorem. In particular, we wish to determine what effect a member of the translation surface's Veech group has on both the surface and geodesic flow in hopes that it would shine some light on odd-odd even-odd phenomenon.
-
-
-
- $SL_{2}(\mathbb{R})$
-
-\section{Constructing the Surface \& Isometric Variant}
-\compav{Started up here again 6/21/17}
-
-This section will detail how the Necker cube (See Figure \ref{fig:cubexyz}) is constructed out of an infinite set of unit squares, and explain the process by which we flatten the structure in such a way that preserves distances, and makes it simpler for us to describe the behavior of the geodesic flows that come into contact with these edges.
+This section will detail how the Necker cube surfaces is constructed as the union of infinitely many Necker cubes. Each Necker cube is taken to be the union of unit squares, each belonging to one of three orthogonal auxiliary planes. An isometric variant of $\mathbf{S}$ can be described as a \emph{flattening} of $\mathbf{S}$ such that these unit squares all lie on the $x$-$y$ plane.
 
 \begin{figure}[H]
 \begin{center}
-\includesvg[width=3in]{cubesxyz}
-\caption{The Necker cube embedded in space.}
+\includesvg[width=2in]{cubesxyz}
+\caption{The Necker cube surface embedded in space.}
 \label{fig:cubexyz}
 \end{center}
 \end{figure}
 
 \subsection{The Necker Cube Surface}
 
-To build the surface out of infinitely many unit squares, we take the union of the instances of three squares, each lying on planes orthogonal to the other two and sharing an edge with exactly one other square. The three squares have only one vertex in common.
-
-First we divide the planes $x,y,z=k$ for some integer $k$ in such a way that they are composed entirely out of unit squares. We want to index each of these squares by integer triples and some label A,B, or C. i.e. squares on planes of the form $z=k$ will have an A label, $x=k$ a B label, and $y=k$ a C label. Let $m,n,p\in\mathbb{Z}$. Then each square based at $(m,n,p)$ is defined as follows:
+The set $\mathbf{S}$ is built periodically out of infinitely many Necker cubes (a union of three unit squares). To each square fix a label, A,B, or C. For every integer triple, $(m,n,p)$, in $\mathbb R^3$, we have the following:
 
 \vspace{0.2in}
 \begin{tabular}{p{10cm}c}
@@ -145,70 +143,46 @@ First we divide the planes $x,y,z=k$ for some integer $k$ in such a way that the
 &
 \shiftleft{0.8in}{\raisebox{-1in}{\includegraphics[scale=1]{label.png}}}
 \end{tabular}
-\vspace{0.2in}\\
-\noindent For the sake of convenience, B and C are shifted in order to associate each integer triple that satisfies the linear condition $m+n+p=0$ with an instance of the cube that $\mathbf{S}$ is composed of. Furthermore, we  separate $\mathbf{S}$ into the sets:
+
+The Necker cube surface is obtained as the union of infinitely many Necker cubes that satisfy the condition that $m+n+p=0$. $\mathbf{S}$ can be separated into the following sets:
+
 \begin{align*}
 \mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}},
 \\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}},
 \\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}.
 \end{align*}
 
-\noindent We can now give a formal definition of the Necker Cube.
+\noindent We can now give a set definition of the Necker cube surface.
 
-\begin{Def} The \textbf{Necker Cube}, denoted by $\mathbf{S}$, is the surface made up of unions of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
-
-\noindent $\mathbf{S}$ is the surface portrayed in Figure \ref{fig:cubexyz}. 
+\begin{Def} The \textbf{Necker cube surface}, denoted $\mathbf{S}$, is the surface made up of the union of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
 
 \subsection{The Flattened Form}
-We will show that $\mathbf S$ is isometric to a a topological quotient of a particular subset of the plane. We call this quotient $\mathbf{U}$, and the subset of the plane $\mathbf P$ (See Figure $\ref{fig:uprimeu}$).
+The Necker cube surface is path-isometric to a topological quotient of a particular subset of the plane. We call the flattened form $\mathbf{U}$, and the subset of the plane $\mathbf P$ (See figure $\ref{fig:uprimeu}$).
 The subset $\mathbf P$ is the region of the plane with unit squares removed:
 \begin{equation}
 \label{eq:P}
 \mathbf{P} = \mathbb{R}^{2}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{}(u,v):u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}.
 \end{equation}
 
-\compat{Illustrating refering to equations: Recall $\mathbf{P}$ was defined in \eqref{eq:P}.}
-
-
 \begin{figure}[H]
 \begin{center}
 \includesvg[width=1.5in]{uprime}
 \end{center}
-\caption{The subset $\mathbf P$ of the plane with unit squares removed at every even integer pair.} \compat{Perhaps just use one.}
+\caption{$\mathbf P$ is real plane with unit squares removed at every even integer pair.}
 \label{fig:uprimeu}
 \end{figure}
 
-\noindent On $\mathbf P$ we define a relation $\sim$ that identifies the sides of the boundaries of each hole in pairs. Each side is identified with another side of the same hole by rotation about the bottom left or top right corners of the hole by $\pm\frac{\pi}{2}$. The result is an edge identification as seen here (centered at each even coordinate pair): \compat{I think overall this is very good and completely defines the relation. You may want to tweak it to make it even more clear. You expressed some concerns about the vertices.}
+\noindent We define a relation on $\mathbf P$ that identifies the sides of the boundaries of each hole in pairs. Each side is identified with another side of the same hole by rotation about the bottom left or top right corners of the hole by $\pm\frac{\pi}{2}$. The result is the following edge identifications made on cut out square holes: 
 
 \begin{figure}[H]\centering
 \includesvg[width=2in.]{quotient}
 \end{figure}
-\noindent We call this relation $\mathbf{R}$. \compat{How about $\sim$?} What $\mathbf{R}$ essentially does is translates every hole to the origin and identifies the edges by reflecting over the line $y=x$. If these points coincide, then they are indeed the same point on the boundary. Otherwise, every point that is not on the boundary belongs to its own class. We can safely assume this wont identify edges improperly, since we translate every boundary so as to situate the unit holes over the origin. For example, if we took two edges that do not belong to the same hole then by that same translation and reflection the two edges couldn't possible coincide.  \compat{This paragraph doesn't seem to add much.}
 
-\begin{Def}
-content...
-\end{Def}
-
-\begin{Def}{$\mathbf U$}\\
-$\mathbf U$ is equal to the quotient space $\mathbf{P}/\mathbf{R}\times\{0\}$
-\end{Def}
-
-\compav{Stopped here. 6/21/17}
-
-\compat{I would use as an introductory paragraph: ``We will show that $\mathbf S$ is isometric to a topological quotient of a subset of the plane.''}
-
-Before describing the transformation that takes $\mathbf{S}$ to its flattened form, it would be best to define the relations on a subset of the plane that preserves the identification of edges. We will call this surface $\mathbf{U}'$. However, the flattening of the surface takes $\mathbf{S}$ to a translation of $\mathbf{U}'$, we call $\mathbf{U}$ (See $\ref{fig:uprimeu}$). We will denote the metric preserving map from $\mathbf{S}$ to $\mathbf{U}$, by $\Psi$. Defining these edge identifying relations over $\mathbf{U}'$ is more convenient for us than defining them over $\mathbf{U}$, but defining $\Psi$ is more convenient when the map is taken to $\mathbf{U}$ due to the nature of the construction of $\mathbf{S}$. \compat{I found this paragraph awkward. I would just go ahead and define the region in the plane.}
-
-
-
-Now we will describe exactly how to construct $\mathbf{U}'$. Take the subset of the real plane, 
-$$,$$ 
-\compat{I would write $(m-\frac{1}{2},m+\frac{1}{2}) \times (n-\frac{1}{2},n+\frac{1}{2})$.}
-with open unit squares cut out at every even integer pair and let $\mathbf{U}'$ represent the flattened structure with the proper edge identifications with the first "hole" centered at the origin. We will describe this surface as a cross product of the auxiliary plane, $z=0$ and the image of the natural map from $\mathbf{P}$ to its quotient space with the following relation on $\mathbf{P}$:
-
+\begin{Def}{} $\mathbf U$ is the surface obtained as the topological quotient $\mathbf P/\mathbf R$, where $\mathbf R$ is defined as follows:
 \begin{gather*}
-\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}. \text{Let } \mathbf{R} \text { be a relation given, } x_{0}\mathbf{R}x_{1} \\ \text{ iff } x_{0}=x_{1}
- \text{ or if }x_{0},x_{1} \in {\partial} \left( \left[2m-\frac{1}{2},2m+\frac{1}{2}\right] \times \left[2n-\frac{1}{2},2n+\frac{1}{2}\right] \right)\\
+\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}.  \mathbf{ R} \text { is given as the relation } x_{0}\mathbf{R}x_{1} \\ \text{ iff } x_{0}=x_{1}
+ \text{ or, for }x_{0},x_{1} \in {\partial} \left( \left[2m-\frac{1}{2},2m+\frac{1}{2}\right] \times \left[2n-\frac{1}{2},2n+\frac{1}{2}\right] \right)\\
+ \text{ and }m,n\in\mathbb{Z},
   \left[\begin{array}{c}
 u_{1} -2m
 \\v_{1}-2n
@@ -219,50 +193,24 @@ u_{1} -2m
 \left[ \begin{array}{c}u_{0}-2m\\
 v_{0}-2n
 \end{array}\right]
-\\\text{For some }m,n\in\mathbb{Z}. \end{gather*}
+. \end{gather*}
+\end{Def}
 
-The relation will either identify every point to itself or, in the case where any two points lie on the boundary of the square shaped holes, take the center of each square hole in the plane to the origin and reflect it over the line $y=x$ to match up these points accordingly.  Let $N: \mathbf{P} \rightarrow \mathbf{P}/\mathbf{R}$ denote the natural map from every point on $\mathbf{P}$ to its appropriate equivalence class. Now, let $\mathbf{U}' = Im N \text{ }\times\{0\}$ be the flat representation of the surface that has been translated so as to center the first square cut-out region over the origin. The map $\mathbf{U}\rightarrow\mathbf{U}'$ is given by an affine translation of the surface $(x,y,z) \mapsto (x-\frac{3}{2},y-\frac{3}{2},z)$. (The point at the origin of $\mathbf{S}$ is mapped to $(-\frac{3}{2},-\frac{3}{2},0) \text{ on } \mathbf{U}'$).
+We can see that $\mathbf{U}$ is a Euclidean cone surface with infinitely many singularities of cone angles $\frac{3\pi}{2}$ and $6\pi$. Observe that $\mathbf{S}$ is also a cone surface with as many singularities of the same cone angles.
 
-\compav{Stopped here. Continued in Sec. 3.}
+\subsection{A Path-Isometric Map From $\mathbf S$ to $\mathbf U$}
+A path-isometric map from $\mathbf{S}$ to $\mathbf{P}$ induces an isometry from the Necker cube surface to $\mathbf{U}$. The path isometry $\Psi:\mathbf{S}\rightarrow\mathbf{P}$ is a piece-wise, well-defined map that is given as a linear transformation in which a square labeled $\mathbf{A}$, $\mathbf{B}$, or $\mathbf{C}$ is mapped to its corresponding square on $\mathbf{P}$. $\Psi$ is  essentially a transformation that cuts along the edges parallel with the z-axis. (See figure $\ref{fig:cut}$)
 
-\newpage
-\subsection{Flattening $\mathbf{S}$}
-This section will describe the isomorphic map $\Psi:\mathbf{C}\rightarrow\mathbf{U}$, its inverse, $\Psi^{-1}:\mathbf{U}\rightarrow\mathbf{C}$, and prove that $\mathbf{C}$ and $\mathbf{U}$ are isometric.
+\begin{figure}[H]
+\includesvg[width=2.1in]{cubesxyzcut}
+\raisebox{0.4in}{\includesvg[width=2.3in]{unfoldcut}}
+\caption{The images of $\mathbf S$ and $\Psi(\mathbf{S})$ with edges identified.}
+\label{fig:cut}
+\end{figure}
 
-The flattening procedure can be represented as a series of cuts made along edges parallel to the z-axis. The gluing structure is preserved by the relations defined on $\textbf{U}$ and $\textbf{U}'$. 
-
-\begin{center}
-\includesvg[width=2.3in]{cubesxyzcut}
-\raisebox{0.4in}{\includesvg[width=2.3in]{u}}
-\text{The images of } $\Psi^{-1}(\mathbf{U})$ (left)\text{ and }$\Psi(\mathbf{S})$ (right)
-\end{center}
-
-$\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the letters $A$, $B$, $C$. We do the same for $\mathbf{U}$ but use instead $A'$, $B'$, $C'$. 
-
-\begin{gather*}
-	\text{Let }x,y,z\in\mathbb{R}. \text{ Then}
-	\\A=\bigcup\big\{\mathbf{C}\cap\{(x,y,p)\in\mathbb{R}\}: p\in\mathbb{Z}\big\}
-	\\B=\bigcup\big\{\mathbf{C}\cap\{(x,n,z)\in\mathbb{R}\}: n\in\mathbb{Z}\big\}
-	\\C=\bigcup\big\{\mathbf{C}\cap\{(m,y,z)\in\mathbb{R}\}: m\in\mathbb{Z}\big\}
-	\\\text{are the collection of the faces of cubes that lie on planes that are parallel to one another.}
-	\\\text{As shown here:}
-\end{gather*}
-
-
-
-To describe the subsets $A'$, $B'$, and $C'$ properly we will introduce the function $\mu_{n}:\mathbb{R}\rightarrow \left[0,n\right) $ as shorthand for the family of functions that take a real number to its residue class of reals modulo n, for some integer n.
-
-\begin{gather*}
-	\text{Let }u,v\in\mathbb{R}. \text{Then }
-	\\A'= \{(u,v,0): 0<\mu_{2}(u)\leq 1 ,\hspace{4mm} 0<\mu_{2}(v)\leq 1\}
-	\\B'= \{(u,v,0): 1<\mu_{2}(u)\leq 2,\hspace{4mm} 0<\mu_{2}(v)\leq 1\}
-	\\C'= \{(u,v,0): 0<\mu_{2}(u)\leq 1,\hspace{4mm} 1<\mu_{2}(v)\leq 2\}
-	\\\text{are the collections of the associated faces of the flattened structure.}
-\end{gather*}
-
-
-
-Now we will define $\Psi$ piecewise.
+\begin{Def}
+The bijective function $\Psi$ maps all of $\mathbf{S}$ to $\mathbf P$, and is given as:
+\end{Def}
 
 \begin{equation}
 \Psi\left[\begin{array}{c}
@@ -283,8 +231,8 @@ Now we will define $\Psi$ piecewise.
 	\end{array} \right]
 	+
 	\left[\begin{array}{c}
-		2 \left\lfloor x \right\rfloor
-		\\ 2\left\lfloor y \right\rfloor
+		2 \left\lfloor x \right\rfloor - 1
+		\\ 2\left\lfloor y \right\rfloor - 1
 		\\ z - \left\lfloor z \right\rfloor
 	\end{array} \right]
 		& \text{if } (x,y,z)\in A	\vspace{2mm}
@@ -303,8 +251,8 @@ Now we will define $\Psi$ piecewise.
 		\end{array} \right]
 	+
 		\left[\begin{array}{c}
-			2 \left\lfloor x \right\rfloor
-			\\ 2\left\lfloor y \right\rfloor
+			2 \left\lfloor x \right\rfloor - 1
+			\\ 2\left\lfloor y \right\rfloor - 1
 			\\ x - \left\lfloor x \right\rfloor
 		\end{array} \right]
 			& \text{if } (x,y,z)\in B	\vspace{2mm}
@@ -322,105 +270,132 @@ Now we will define $\Psi$ piecewise.
 			\end{array} \right]
 		+
 			\left[\begin{array}{c}
-				2 \left\lfloor x \right\rfloor
-				\\ 2\left\lfloor y \right\rfloor
+				2 \left\lfloor x \right\rfloor - 1
+				\\ 2\left\lfloor y \right\rfloor - 1
 				\\ y - \left\lfloor y \right\rfloor
 			\end{array} \right]
 				& \text{if } (x,y,z)\in C	\vspace{2mm}
 \end{cases}
 \end{equation}
 
-We chose to preserve the matrix structure in order to emphasize the manner in which every square is taken to $\mathbf{U}$ from $\mathbf{C}$ and vice-versa. The negations of some of these variables are a result of this structure being built so as the integer triples lie on the plane $z=-(x+y)$. Defining the maps this way also makes it possible to generalize it for any surface constructed in a similar manner of taking unions of three faces of rectangular prisms in real space. (i.e. $\chi_{m,n,p}$ belongs to a larger family of rectangular arrangements parameterized by the dimensions of the rectangular prism. In this case, $\chi_{m,n,p}$ is a member of this family whose dimensions are $1\times1\times1$). 
+Clearly, $\Psi$ preserves distances on the faces of each as it consists entirely of rotations and translations. As such, it is path-isometric and induces an isometry between the Necker Cube surface and $\mathbf U$.
 
-Now we will define the inverse map, $\Psi^{-1}$, in a similar manner. 
+\begin{thm}{$\mathbf{S}$ is isometric to  $\mathbf{U}$.}
+\begin{proof}
 
-\begin{equation}
-	\Psi^{-1}\left[\begin{array}{c}
-		x\\y\\z
-	\end{array}\right] 
-	= 
-	\begin{cases}
-		\left[ \hspace{2mm} \begin{matrix}
-			1 & 0 & 0 \\
-			0 & 1 & 0 \\
-			0 & 0 & 1
-		\end{matrix}\hspace{3mm}\right]
-	
-		\left[\begin{array}{c}
-		x - 2\left\lfloor \frac{x}{2} \right\rfloor
-		\\ y- 2\left\lfloor \frac{y}{2} \right\rfloor
-		\\ z
-		\end{array} \right]
-		+
-		\left[\begin{array}{c}
-			\left\lfloor \frac{x}{2} \right\rfloor
-			\\ \left\lfloor \frac{y}{2} \right\rfloor
-			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor )
-		\end{array} \right]
-			& \text{if } (x,y,z)\in A'	\vspace{2mm}
-		\\
-		\left[ \hspace{2mm} \begin{matrix}
-			0 & 0 & -1 \\
-			0 & 1 & 0 \\
-			1 & 0 & 0
-		\end{matrix}\hspace{0mm}\right]
-	
-		\left[\begin{array}{c}
-		-(x - 2\left\lfloor \frac{x}{2} \right\rfloor)
-		\\ y- 2\left\lfloor \frac{y}{2} \right\rfloor
-		\\ z
-		\end{array} \right]
-		+
-		\left[\begin{array}{c}
-			1+\left\lfloor \frac{x}{2} \right\rfloor
-			\\ \left\lfloor \frac{y}{2} \right\rfloor
-			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor -1)
-		\end{array} \right]
-			& \text{if } (x,y,z)\in B'	\vspace{2mm}
-
-	\\
-	
-		\left[ \hspace{2mm} \begin{matrix}
-			1 & 0 & 0 \\
-			0 & 0 & -1 \\
-			0 & 1 & 0
-		\end{matrix}\hspace{0mm}\right]
-	
-		\left[\begin{array}{c}
-		x - 2\left\lfloor \frac{x}{2} \right\rfloor
-		\\ -(y- 2\left\lfloor \frac{y}{2} \right\rfloor)
-		\\ z
-		\end{array} \right]
-		+
-		\left[\begin{array}{c}
-			\left\lfloor \frac{x}{2} \right\rfloor
-			\\1+ \left\lfloor \frac{y}{2} \right\rfloor
-			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor -1)
-		\end{array} \right]
-			& \text{if } (x,y,z)\in B'	\vspace{2mm}
-			
-	\end{cases}
-\end{equation}
-
-By using properties of the floor function, one can show that $\Psi$ is indeed a bijective, invertible map. All that is left to show is that $\Psi$ preserves distance.
-
-\begin{thm}{$\mathbf{C}$ and $\mathbf{U}$ are isometric.}\\
-Proof. Let $(\mathbf{C}, d)$ and $(\mathbf{U}, d')$ be topological spaces with their respective metrics. Let $a,b\in\mathbf{C}$, and let $\Psi(a)=a',\Psi(b)=b'\in\mathbf{U}$. We will denote the distance between $a$ and $b$ by $D=d(a,b)$, and the distance between $a'$ and $b'$ by $D'=d'(a',b')$. Since $\Psi$ and $\Psi^{-1}$ are linear transformations that act on subsets of auxiliary planes in $\mathbb{R}^{3}$, the images of any curves on $\mathbf{C}$ or $\mathbf{U}$ under these maps will not be deformed and retain their lengths. Thus, $D \leq d'(\Psi(a), \Psi(b)) = d'(a',b') = D'$. Likewise, $D' \leq d(\Psi^{-1}(a'),\Psi^{-1}(b')) = d(a,b) = D$. Therefore $D=D'$, and $\Psi$ and $\Psi^{-1}$ are metric preserving maps between $\mathbf{C}$ and $\mathbf{U}$. $\qed$
+Let $(\mathbf{S}, d)$ and $(\mathbf{U}, d')$ be metric spaces with their respective metrics. Let $a,b\in\mathbf{S}$, and suppose that $\Psi(a)=a',\Psi(b)=b'\in\mathbf{U}$. We will denote the distance between $a$ and $b$ by $D=d(a,b)$, and the distance between $a'$ and $b'$ by $D'=d'(a',b')$. Since $\Psi$ and $\Psi^{-1}$ are linear transformations that act on subsets of auxiliary planes in $\mathbb{R}^{3}$, the images of any curves on $\mathbf{S}$ or $\mathbf{U}$ under these maps will not be deformed and retain their lengths. Thus $D \leq d'(\Psi(a), \Psi(b)) = d'(a',b') = D'$. Likewise $D' \leq d(\Psi^{-1}(a'),\Psi^{-1}(b')) = d(a,b) = D$. Therefore $D=D'$, and $\Psi$ and $\Psi^{-1}$ preserves distances between points. And so, $\mathbf{S}\simeq\mathbf{U}$.
+\end{proof} 
 \end{thm}
 
-As a consequence of this theorem, any dynamical properties of geodesic flow on the surface $\mathbf{U}'$ immediately applies to $\mathbf{C}$. ($\mathbf{U}'$ and $\mathbf{U}$ are trivially isometric).
-
-\subsection{Comparing Geodesic Behavior on Both Surfaces}
-Two immediate observations that can be made in regards to geodesic flows on the surface was that any trajectory with slope one closes, and any flows with horizontal or vertical trajectories drift. Observe the path behavior of three different flows on the surface:
-
-
-
-The figure above shows us some very simple paths on the surfaces. We use the three vectors, (0,1), (1,0), and (1,1), as a sort of basis for proving our theorem. Included in the appendix are a few more simulated flows of various trajectories. We've color coded the trajectories in the image above for path c to represent one of four phases
-
 \newpage
+%\subsection{Flattening $\mathbf{S}$}
+%This section will describe the isomorphic map $\Psi:\mathbf{C}\rightarrow\mathbf{U}$, its inverse, $\Psi^{-1}:\mathbf{U}\rightarrow\mathbf{C}$, and prove that $\mathbf{C}$ and $\mathbf{U}$ are isometric.
+%
+%The flattening procedure can be represented as a series of cuts made along edges parallel to the z-axis. The gluing structure is preserved by the relations defined on $\textbf{U}$ and $\textbf{U}'$. 
+%
+%
+%$\Psi$ is defined piecewise, and denote each subset of $\mathbf{C}$ with the letters $A$, $B$, $C$. We do the same for $\mathbf{U}$ but use instead $A'$, $B'$, $C'$. 
+%
+%\begin{gather*}
+%	\text{Let }x,y,z\in\mathbb{R}. \text{ Then}
+%	\\A=\bigcup\big\{\mathbf{C}\cap\{(x,y,p)\in\mathbb{R}\}: p\in\mathbb{Z}\big\}
+%	\\B=\bigcup\big\{\mathbf{C}\cap\{(x,n,z)\in\mathbb{R}\}: n\in\mathbb{Z}\big\}
+%	\\C=\bigcup\big\{\mathbf{C}\cap\{(m,y,z)\in\mathbb{R}\}: m\in\mathbb{Z}\big\}
+%	\\\text{are the collection of the faces of cubes that lie on planes that are parallel to one another.}
+%	\\\text{As shown here:}
+%\end{gather*}
+%
+%
+%
+%To describe the subsets $A'$, $B'$, and $C'$ properly we will introduce the function $\mu_{n}:\mathbb{R}\rightarrow \left[0,n\right) $ as shorthand for the family of functions that take a real number to its residue class of reals modulo n, for some integer n.
+%
+%\begin{gather*}
+%	\text{Let }u,v\in\mathbb{R}. \text{Then }
+%	\\A'= \{(u,v,0): 0<\mu_{2}(u)\leq 1 ,\hspace{4mm} 0<\mu_{2}(v)\leq 1\}
+%	\\B'= \{(u,v,0): 1<\mu_{2}(u)\leq 2,\hspace{4mm} 0<\mu_{2}(v)\leq 1\}
+%	\\C'= \{(u,v,0): 0<\mu_{2}(u)\leq 1,\hspace{4mm} 1<\mu_{2}(v)\leq 2\}
+%	\\\text{are the collections of the associated faces of the flattened structure.}
+%\end{gather*}
+%
+%
+%
+%Now we will define $\Psi$ piecewise.
+%
+%
+%
+%We chose to preserve the matrix structure in order to emphasize the manner in which every square is taken to $\mathbf{U}$ from $\mathbf{C}$ and vice-versa. The negations of some of these variables are a result of this structure being built so as the integer triples lie on the plane $z=-(x+y)$. Defining the maps this way also makes it possible to generalize it for any surface constructed in a similar manner of taking unions of three faces of rectangular prisms in real space. (i.e. $\chi_{m,n,p}$ belongs to a larger family of rectangular arrangements parameterized by the dimensions of the rectangular prism. In this case, $\chi_{m,n,p}$ is a member of this family whose dimensions are $1\times1\times1$). 
+%
+%Now we will define the inverse map, $\Psi^{-1}$, in a similar manner. 
+%
+%\begin{equation}
+%	\Psi^{-1}\left[\begin{array}{c}
+%		x\\y\\z
+%	\end{array}\right] 
+%	= 
+%	\begin{cases}
+%		\left[ \hspace{2mm} \begin{matrix}
+%			1 & 0 & 0 \\
+%			0 & 1 & 0 \\
+%			0 & 0 & 1
+%		\end{matrix}\hspace{3mm}\right]
+%	
+%		\left[\begin{array}{c}
+%		x - 2\left\lfloor \frac{x}{2} \right\rfloor
+%		\\ y- 2\left\lfloor \frac{y}{2} \right\rfloor
+%		\\ z
+%		\end{array} \right]
+%		+
+%		\left[\begin{array}{c}
+%			\left\lfloor \frac{x}{2} \right\rfloor
+%			\\ \left\lfloor \frac{y}{2} \right\rfloor
+%			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor )
+%		\end{array} \right]
+%			& \text{if } (x,y,z)\in A'	\vspace{2mm}
+%		\\
+%		\left[ \hspace{2mm} \begin{matrix}
+%			0 & 0 & -1 \\
+%			0 & 1 & 0 \\
+%			1 & 0 & 0
+%		\end{matrix}\hspace{0mm}\right]
+%	
+%		\left[\begin{array}{c}
+%		-(x - 2\left\lfloor \frac{x}{2} \right\rfloor)
+%		\\ y- 2\left\lfloor \frac{y}{2} \right\rfloor
+%		\\ z
+%		\end{array} \right]
+%		+
+%		\left[\begin{array}{c}
+%			1+\left\lfloor \frac{x}{2} \right\rfloor
+%			\\ \left\lfloor \frac{y}{2} \right\rfloor
+%			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor -1)
+%		\end{array} \right]
+%			& \text{if } (x,y,z)\in B'	\vspace{2mm}
+%
+%	\\
+%	
+%		\left[ \hspace{2mm} \begin{matrix}
+%			1 & 0 & 0 \\
+%			0 & 0 & -1 \\
+%			0 & 1 & 0
+%		\end{matrix}\hspace{0mm}\right]
+%	
+%		\left[\begin{array}{c}
+%		x - 2\left\lfloor \frac{x}{2} \right\rfloor
+%		\\ -(y- 2\left\lfloor \frac{y}{2} \right\rfloor)
+%		\\ z
+%		\end{array} \right]
+%		+
+%		\left[\begin{array}{c}
+%			\left\lfloor \frac{x}{2} \right\rfloor
+%			\\1+ \left\lfloor \frac{y}{2} \right\rfloor
+%			\\ -(\left\lfloor \frac{x}{2} \right\rfloor + \left\lfloor \frac{y}{2} \right\rfloor -1)
+%		\end{array} \right]
+%			& \text{if } (x,y,z)\in B'	\vspace{2mm}
+%			
+%	\end{cases}
+%\end{equation}
 \section{The Four-Fold Cover and Translation Surface}
-\compav{Started here again.}
-The following section is concerned with defining a quotient of $\mathbf{U}'$ (see Figure $\ref{fig:quotient}$), and using that space to construct a translation surface. In addition we will describe a cover made from four copies of $\mathbf{U}'$ that aligns geodesic flow and behaves as a cover of our translation surface. \compat{Revisit to make sure it summarizes the section}
+\compat{Revisit to make sure it summarizes the section}
 
 
 \subsection{Four-Fold Cover of $\mathbf{U}$}
@@ -471,12 +446,6 @@ which is the result of $T_0$ acting on the edges, and $m_x,n_x$ are integers tha
 
 We will call the induced isometry on $\tilde{\mathbf{U}}_0$, $\bar{\mathbf{T}}^{m,n}$.
 
-\begin{thm}$\mathbf{R}_{0}$ induces an isometry on $\tilde{\mathbf{U}}_0$
-\begin{proof}
-\compav{might rethink including $R_0$}.
-\end{proof}
-\end{thm}
-
 \subsection{Four-fold Translation Cover}
 
  Now we will show that $\tilde{\mathbf{U}}_0$ is isometric to a translation surface via another induced isometry on $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$. We would like this map to rotate each individual plane of $\mathbf{P}\times\mathbb{Z}/4\mathbb{Z}$ about the origin in such a way that edges one the boundaries are identified strictly by translation. Every plane that is represented as an element of $\mathbb{Z}/4\mathbb{Z}$ is conveniently acted on by a ninety degree rotation matrix, whose power we take to be that very same element.
@@ -505,7 +474,7 @@ This is clearly an isometry, as rotations preserve distance and $j\mapsto j$.
 \begin{figure}[H]
 \centering
 \includesvg[width=3.65in]{utildaprime}
-\caption{$\tilde{\mathbf{U}}$ with edges identified, and holes indexed relative to $\mathbf{P}\times\{0\}$.}
+\caption{$\tilde{\mathbf{U}}$ with edges identified, and holes indexed relative to $\mathbf{P}\times\{0\mod{4}\}$.}
 \label{fig:utilda}
 \end{figure}
 
@@ -538,7 +507,7 @@ In this section we use the induced isometries on $\tilde{\mathbf{U}}_0$, and the
 \begin{Def}We call the {family of $\tilde{\mathbf{U}}$'s translational symmetries} $\mathbf{T}^{m,n}$ and define it to be the composition of the induced isometric maps: $\mathbf{T}^{m,n}$ = $\bar{\phi}\circ\bar{\mathbf{T}}^{m,n}\circ\bar{\phi}^{-1}$.
 \end{Def}
 
-We can see that $\mathbf{T}^{m,n}$ is indeed an isometry on $\tilde{\mathbf{U}}$ as it is composed of the induced isometries, $\bar{\phi}$ and $\bar{\mathbf{T}}^{m,n}$ . We can take the quotient of the translation surface $\tilde{\mathbf{U}}$ over the action of $\mathbf{T}^{m,n}$ to obtain a base surface that realizes $\tilde{\mathbf{U}}$ as an infinite $\mathbb{Z}^2$ cover.
+We can see that $\mathbf{T}^{m,n}$ is indeed an isometry on $\tilde{\mathbf{U}}$ as it is composed of the induced isometries, $\bar{\phi}$ and $\bar{\mathbf{T}}^{m,n}$ . We can take the quotient of the translation surface $\tilde{\mathbf{U}}$ over the action of $\mathbf{T}^{m,n}$ to obtain a base surface that realizes $\tilde{\mathbf{U}}$ as an infinite $\mathbb{Z}^2$ cover, where $m,n$ is identified with an integer pair.
 
 \begin{Def}
 The translation surface $\mathbf{M}$ is given as the quotient  $\tilde{\mathbf{U}}/\mathbf{T}^{m,n}$.
@@ -555,29 +524,45 @@ The new surface, $\mathbf M$, is a genus 5 translation surface with the surjecti
 \newpage
 
 \subsection{$\mathbf M$ as a Veech Surface}
-By a series of cutting and gluing operations, $\mathbf M$ has this symmetric representation as a square-tiled staircase (Figure $\ref{fig:staircase}$). The vertices of cone angle $2\pi$ can be found on the centers of the squares in the figure below where the black lines intersect. 
+By a series of cutting and gluing operations, $\mathbf M$ has this symmetric representation as a square-tiled staircase (figure $\ref{fig:staircase}$). The vertices of cone angle $2\pi$ can be found on the centers of the squares in the figure below where the black lines intersect. 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtildastaircase}
 \caption{$\mathbf{M}$ as a square-tiled staircase with cone singularities identified.}
 \label{fig:staircase}
 \end{figure}
-As a result of Gutkin-Judge [citation], $\mathbf M$ is a Veech surface whose Veech group is commensurable to $SL(2,\mathbb Z)$. In order to determine which elements of orientation preserving automorphisms, denoted Aut$^{+}(\mathbf M)$, have derivatives that belong to the Veech group of $\mathbf M$, SL($\mathbf M$), it is necessary to study $\mathbf M$'s various symmetries and cylinder decompositions.
+As a result of Gutkin-Judge [citation], $\mathbf M$ is a Veech surface whose Veech group is commensurable to $SL(2,\mathbb Z)$. In order to determine which elements of orientation preserving affine diffeomorphisms, denoted Aff$^{+}(\mathbf M)$, have derivatives that belong to the Veech group, V($\mathbf M$), it is necessary to study $\mathbf M$'s various symmetries and cylinder decompositions.
+\vspace{0.1in}
 
-The derivatives of these automorphisms form the affine group, Aff$^+(\mathbf M)$. One such group contained in Aff$^+(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated by rotations of order 4. Even though the other elements in $\mathbb{D}_4$ are derivatives of automorphisms of $\mathbf M$, we will only consider those of determinant +1.
+\noindent\textbf{Rotational Symmetries}
+
+One group contained in $V(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated by rotations of order 4. Even though the other elements in $\mathbb{D}_4$ are derivatives of automorphisms of $\mathbf M$, we will only consider those of determinant +1. We want the corresponding affine map of these rotation matrices to obey the convention that we \emph{fix} the second square on the bottom with label I. These maps are unique only up to translation and as such assigning this convention makes it easier to keep track of where the edges of $\mathbf M$ end up afterwards. The diffeomorphism with 90 degree counter-clockwise rotation fixed about that point at the center of that square is denoted $\mathbf{R}$. Its derivative, $\mathbf{R}'$, is the matrix $\left[ \hspace{1mm} \begin{matrix}
+							0 & -1\\
+							1 & 0
+						\end{matrix}\hspace{1mm}\right]$.
+
+\vspace{0.1in}
+
+\noindent\textbf{Translation Symmetries}
+
+The translational symmetries have no unique representation as an element of V($\mathbf M$), as their derivatives are represented as the identity. But they do have an important effect on the surface. Shifting the bottom left-most square to the right and reconstructing the rest by pairing edges is an order 2 homeomorphism denoted $\mathbf{H}$, for horizontal. Likewise, $\mathbf{V}$ is an order 2 homeomorphism that shifts that square upwards. Observe that together they satisfy the property $(\mathbf{H}\mathbf{V})^{6}=(\mathbf{V}\mathbf{H})^{6}=id$. This essentially moving the squares up the staircase until they come back to where they started. The group of translation deck transformations of the surface is isomorphic to a permutation group of 12 elements (each square) generated by these two translations that satisfy the relation. It is the group $\mathbb{D}_{12}$ generated by reflections about two adjacent vertices of a 12-gon. Thus it is possible to translate a square to any other on the surface as a composition of these two translations.
+
+\vspace{0.1in}
+
+\noindent\textbf{Skew Symmetries}
 
 Observe from the following image that $\mathbf M$ has a uniform cylinder decomposition in both the horizontal and vertical directions:
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=4in]{cylinderdecomp.pdf}
-\caption{Horizontal and Verical Cylinders overlayed.}
+\caption{Horizontal and vertical cylinder decomposition as they overlay and cover the surface.}
 \label{fig:decomp}
 \end{figure}
 
-Both sets of cylinders are indexed $0\leq i, j \leq 5$. Every cylinder is composed of two unit squares with edges identified by translation. We start counting the cylinders from the bottom-most cylinder and increment the index as the cylinders fill the surface going "up" the staircase. $\small{\mathcal{E}}_0$ is the first cylinder at the bottom whose identifications are \em{not} \normalfont the solid triangles. $\small{\mathcal{E}}_5$ is the cylinder whose edges are paired by the solid triangles. $\Delta_{i}$ has the more standard representation starting from the bottom-most horizontal cylinder. 
+Both sets of cylinders are indexed $0\leq i, j \leq 5$. Every cylinder is composed of two unit squares with edges identified by translation. We start counting the cylinders from the bottom-most cylinder and increment the index as the cylinders fill the surface going ``up" the staircase. $\small{\mathcal{E}}_0$ is the first cylinder at the bottom whose identifications are \em{not} \normalfont the solid triangles. $\small{\mathcal{E}}_5$ is the cylinder whose edges are paired by the solid triangles. $\Delta_{i}$ has the more standard representation starting from the bottom-most horizontal cylinder. 
 
-We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinders circumference to its width, $\mu^{-1}=\frac{c}{h}$. A \emph{Dehn-twist} of a cylinder is an automorphism of the cylinder of the form  $(x,y)\mapsto(x,y+\mu^{-1} x \mod{h})$, where $x$ and $y$ are points on the cylinder relative to its circumference and height respectively. According to [need to cite something], a translation surface whose finite cylinder decompositions in orthogonal directions form a set of inverse moduli. The lowest (rational) common multiple of the set of all these values match up to give global affine diffeomorphisms of the surface, whose matrix representations are 
+We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinders circumference to its width, $\mu^{-1}=\frac{c}{h}$. A \emph{Dehn-twist} of a cylinder is an automorphism of the cylinder of the form  $(x,y)\mapsto(x,y+\mu^{-1} x \mod{h})$, where $x$ and $y$ are points on the cylinder such that x varies along the its circumference. According to [need to cite something], a translation surface whose finite cylinder decompositions in orthogonal directions form a set of inverse moduli. The smallest (rational) common multiple of the set of all these values match up to give a global affine diffeomorphisms of the surface, whose derivatives have the matrix representations
 \begin{equation*}
 \left[ \hspace{1mm} \begin{matrix}
 				1 & \pm \lambda\\
@@ -588,9 +573,9 @@ We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinder
 							\pm \lambda & 1
 						\end{matrix}\hspace{1mm}\right],
 \end{equation*}
-where $\lambda$ is the lowest common multiple.
+such that $\lambda$ is that lowest common multiple.
 
-Fortunately, the cylinders $\Delta_{i}$ and $\small{\mathcal{E}}_j$, as i and j vary, all have the same inverse moduli. Therefore, $\lambda=$ l.c.m.($\mu^{-1}_{\Delta_i}\cup\mu^{-1}_{\mathcal{E}_j}$) $=2$.
+Let $\mu^{-1}_{\Delta_i},\mu^{-1}_{\mathcal{E}_j}$ denote the inverse moduli of the cylinders. The cylinders $\Delta_{i}$ and $\small{\mathcal{E}}_j$, as i and j vary, all have the same inverse moduli since they are all defined as two unit squares with identifications made by translation along the cylinders circumference. Therefore, $\lambda=$ l.c.m.($\mu^{-1}_{\Delta_i}\cup\mu^{-1}_{\mathcal{E}_j}$) $=2$.
 
 \begin{figure}[H]
 \centering
@@ -609,18 +594,100 @@ Consequently,
 							1 & 0\\
 							 2 & 1
 						\end{matrix}\hspace{1mm}\right] \right>
-						\subset \text{SL}(\mathbf M).
+						\subset \text{V}(\mathbf M).
 \end{equation}
-This group is also known as the \emph{Sanov Subgroup}, a free group of rank 2. We take the group generated by ninety degree rotations and these two elements to be the group $\mathbb{X}\subset \text{SL}(\mathbf M)$.
-\newpage
-\subsection{$\mathbb X$'s Action on $\mathbf M$'s Homology}
-The group $\mathbb X$ consists of the set of all derivatives of Aut$^+(\mathbf M)$, whose action on the absolute homology of $\mathbf{M}$ extends to an action on the homology of $\mathbf{M}$'s $\mathbb{Z}^2$-cover, $\tilde{\mathbf{U}}$. $\mathbf{M}$'s cylinder decomposition gives way to a set of homology classes that serve as a basis for $H_1(\mathbf{M},\mathbb Z)$. For a total of 12 cylinders, there are 12 curves:
+This group is also known as the \emph{Sanov Subgroup} [cite], a free group of rank 2 that is commensurable to the Veech group of $\mathbf M$. We denote the \emph{horizontal} Dehn-twist of the surface with derivative $\left[ \hspace{1mm} \begin{matrix}
+				1 &  2\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right]$ by $\textbf{A}$. The \emph{vertical} Dehn-twist is denoted $\mathbf{B}$.
+			
+\vspace{0.1in}
+
+\noindent\textbf{The Orientation-Preserving Symmetry Group of $\textbf{M}$}
+
+It is now possible to generate the \emph{group of symmetries} of $\textbf{M}$ as Deck transformations of the surface. We call this group $\mathbb X$ and say that 
+
+\begin{align}
+\mathbb X= \left< \mathbf{A},\mathbf{B},\mathbf{R},\mathbf{H},\mathbf{V}\vert\mathbf{R}^4 = (\mathbf{H}\mathbf{V})^{6}=(\mathbf{V}\mathbf{H})^{6}=id  \right>.
+\end{align}
+
+The group of derivatives of $\mathbb X$ is $\mathbb X'$, and it is generated by elements of V$(\textbf{M})$. It is not apparent whether or not $\mathbb{X}=$Aff$^+(\mathbf{M})$ or if $\mathbb X'=$ V$(\mathbf{M})$.
+
+
+\subsection{Action of $\mathbb X$ on the Homology of $\mathbf M$}
+The group $\mathbb X$ consists of the set of Deck transformations of $\mathbf{M}$, whose induced isomorphisms of $\pi_1(\mathbf{M})$ acts on the absolute homology of $\mathbf{M}$ and extends to an action on the homology of $\mathbf{M}$'s $\mathbb{Z}^2$-cover, $\tilde{\mathbf{U}}$. $\mathbf{M}$'s cylinder decomposition gives us a natural set of homology classes that serve as a basis for $H_1(\mathbf{M},\mathbb Q)$. For a total of 12 cylinders, there are 12 core curves:
 
 \begin{figure}[H]
 \includegraphics[width=3in]{homologyclass.png}
 \centering
+\caption{Cylinder core curves with u,v, and z homology classes that determines the $\mathbb{Z}^2$-cover.}
 \end{figure}
-Every curve intersects two others. By constructing a $12\times12$ matrix where the rows represent each curve and the columns represent their intersections with other curves, we can see that the rank of said matrix is 10. This is to be expected as the genus of $\mathbf M$ is 5. From these curves we construct homology classes $u,v,$ and $z$. $u$ and $v$ are the curves that were the outermost edges of the tori in $\mathbf{M}$'s original representation (Figure $\ref{fig:mtilda}$). We can see from Figure $\ref{fig:utilda}$ that crossing over one of these edges corresponds to a shift of the even integer index pair that determines exactly which of the quotients of $\tilde{\mathbf{U}}$ a terminal point of a lifted path on the surface belongs to. That point is identified with the triple $(m,n,\mathbb Z/4\mathbb{Z})$, with integers $m,n$. The $z$ class of cylinder curves lie on the cylinders that take a path from one plane to the next in our cover. Since one plane is related to exactly two others, it is impossible to go directly from the first to the third or the second to the fourth, and vice versa. 
+
+\begin{rem}
+Although the genus of $\mathbf{M}$ is 5, we use 12 curves as an overdetermined basis for $H_1(\mathbf{M},\mathbb Q)$. To show that they indeed span all of $H_1(\mathbf{M},\mathbb Q)$, it is possible to construct a $12\times12$ matrix of curve intersections and calculate its rank. The rank of the matrix, as to be expected, is 10. But to use only the linearly independent curves means that many of the same symmetries described in the previous section would not induce isomorphisms of $\pi_1(\mathbf{M})$ that dualize $\mathbf{M}$'s symmetries as the union of 12 identical squares.
+\end{rem}
+
+We will denote the group of isomorphisms of $\mathbf{M}$'s fundamental group we obtain from $\mathbb{X}$ as $\mathbb X_*$. The same notation will be used for the isomorphisms themselves. We denote the \emph{set of cylinder core curves} as $\Gamma$.
+
+\vspace{0.1in}
+
+\noindent\textbf{A 12-gon dualization of the $H_1(\mathbf{M},\mathbb Q)$}
+
+The 12-gon was mentioned in the previous section under the discussion of $\mathbf{M}$'s translational symmetries. $\mathbb X_*$ acting on absolute homology is better represented as a symmetric object.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.7in]{12gon.pdf}
+\end{figure}
+
+This graph's representation also reflects how two core curves are incident with only two others. An element of $\mathbb X_*$ either permutes these curves or, in the case where $\mathbf A_*$ or $\mathbf B_*$ generates the element, adds/subtracts black vertices to/from the red ones. Recall that in the previous section we had certain conventions when it came to the elements $\mathbf{R}$, $\mathbf{H}$, and $\mathbf{V}$. This was so that their induced isomorphisms would \emph{fix} one or more vertices as they act on homology. But because of the translational symmetries, it is possible to rotate about the center of any square and essentially rotating the entire 12-gon with $\mathbf{H}_*$ and $\mathbf{V}_*$.
+
+
+\begin{minipage}{0.5\textwidth}
+\vspace{0.3in}
+\begin{itemize}
+\item[\textbf{\emph{$\mathbf{H}_*$\& $\mathbf{V}_*$}}] The effect that these two have on the 12-gon is a reflection about these lines. Observed by keeping track of the squares and core curves after $\mathbf{H}$ and $\mathbf{V}$ have acted on $\mathbf{M}$.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\begin{figure}[H]
+\hspace{0.2in}\includegraphics[width=1.7in]{12gonHV.pdf}
+\end{figure}
+\end{minipage}
+
+The two preserve the signs of the core curves. It is to be expected as they are induced isomorphisms of translation maps. They are given as the following permutations of $\Gamma$:
+\space
+\begin{align*}
+\mathbf{H}_* &= (\gamma_0)(\gamma_1\hspace{1mm}\gamma_{11})(\gamma_2\hspace{1mm}\gamma_{10})(\gamma_3\hspace{1mm}\gamma_9)(\gamma_4\hspace{1mm}\gamma_8)(\gamma_5\hspace{1mm}\gamma_7)(\gamma_6)\\
+\mathbf{V}_* &=(\gamma_{11})(\gamma_0\hspace{1mm}\gamma_{10})(\gamma_1\hspace{1mm}\gamma_{9})(\gamma_2\hspace{1mm}\gamma_8)(\gamma_3\hspace{1mm}\gamma_7)(\gamma_4\hspace{1mm}\gamma_6)(\gamma_5)
+\end{align*}
+
+Rotation about the center of a square will not only change signs of the core curves, but permute elements in such a way that 4 consecutive rotations of $\mathbf{M}$ is an identity on $\Gamma$.
+
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+\hspace{0}\includegraphics[width=1.7in]{12gonR.pdf}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+\vspace{0in}
+\begin{itemize}
+\item[\textbf{\emph{$\mathbf{R}_*$}}] This action reflects about the line and maps one vertex to another. No vertex is fixed. However it has the additional effect of changing the sign of a curve only if it was originally black (or odd index). The pattern is peculiar, but $\mathbf{R}_*$ is still order four.
+\end{itemize}
+\end{minipage}
+
+\vspace{2mm}
+We can see the effect that it has on homology clearer as a permutation of $\Gamma$:
+\begin{align*}
+\mathbf{R}_*= \hspace{1mm} &(\gamma_{0}\hspace{1mm}\gamma_{1}\hspace{1mm}\text{-}\gamma_{0}\hspace{1mm}\text{-}\gamma_{1})
+(\gamma_{2}\hspace{1mm}\gamma_{11}\hspace{1mm}\text{-}\gamma_{2}\hspace{1mm}\text{-}\gamma_{11})
+(\gamma_{3}\hspace{1mm}\text{-}\gamma_{10}\hspace{1mm}\text{-}\gamma_{3}\hspace{1mm}\gamma_{10})\\
+&(\gamma_{4}\hspace{1mm}\gamma_{9}\hspace{1mm}\text{-}\gamma_{4}\hspace{1mm}\text{-}\gamma_{9})
+(\gamma_{5}\hspace{1mm}\text{-}\gamma_{8}\hspace{1mm}\text{-}\gamma_{5}\hspace{1mm}\gamma_{8})
+(\gamma_{6}\hspace{1mm}\gamma_{7}\hspace{1mm}\text{-}\gamma_{6}\hspace{1mm}\text{-}\gamma_{7}).
+\end{align*}
+
+\compav{Ended here August 3.}
 
 Regardless, $u$ and $v$ are the most important homology classes that we use to determine whether or not a lifted path properly closes on the four-fold cover.  Let $\alpha:[0,1]\rightarrow\mathbf M$ be a curve on the surface such that $\alpha(0)=\alpha(1)=x_0\in\mathbf{M}$. Take $f:\tilde{\mathbf U}\rightarrow\mathbf M$ to be the covering map that takes every point on $\tilde{\mathbf U}$ to its quotient in $\mathbf{M}$. We will fix a point $\tilde{x}_0\in\tilde{\mathbf U}$ such that the lifted path $\tilde\alpha(0)=\tilde{x}_0$ under the function $f$. $\alpha$ is a closed path in $\pi_1(\mathbf M,x_0)$. We denoted the class of abelianized paths $\alpha$ as [$\alpha$]$\in H_1(\tilde{\mathbf{M}},\mathbb Z)$, and define the function,
 
@@ -675,7 +742,7 @@ h_{*_1} \circ ... \circ h_{*_n}([\beta])=[\alpha] &\iff
 %\item $\Gamma$ is lattice in $SL_2(\mathbb{Z})$.
 %\end{enumerate}
 %\begin{proof}
-%Figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is tiled by squares. The proof then follows as an obvious result of the previous theorem.
+%figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is tiled by squares. The proof then follows as an obvious result of the previous theorem.
 %\end{proof}
 %\end{thm}
 
@@ -708,7 +775,7 @@ h_{*_1} \circ ... \circ h_{*_n}([\beta])=[\alpha] &\iff
 %
 %\newpage
 %\subsection{The Euclidean cone surface $\mathbf{M}$}
-%\compat{I would say: Observe that translations of ${\mathbb R}^2$ by pairs even integers preserves the subset ${\mathbf P}$ and respects the equivalence relation defining ${\mathbf U}$. Thus this gives an action of $(2{\mathbb Z})^2$ on ${\mathbf U}'$. We define ${\mathbf M}$ to be the quotient. It is depicted in Figure ...}
+%\compat{I would say: Observe that translations of ${\mathbb R}^2$ by pairs even integers preserves the subset ${\mathbf P}$ and respects the equivalence relation defining ${\mathbf U}$. Thus this gives an action of $(2{\mathbb Z})^2$ on ${\mathbf U}'$. We define ${\mathbf M}$ to be the quotient. It is depicted in figure ...}
 %
 %Observe that the translations by pairs of even integers preserves the subset $\mathbf P$ and respects the equivalence relation on $\mathbf U$
 %
@@ -728,72 +795,6 @@ h_{*_1} \circ ... \circ h_{*_n}([\beta])=[\alpha] &\iff
 %
 %The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
 
-\section{Proof of Main Theorem}
-The following section studies the translation surface's various symmetries and associated Veech group. In doing so, we establish what sorts of properties of $\tilde{\mathbf{M}}$ remain invariant when undergoing affine transformations. Since $\tilde{\mathbf{U}}$ is a cover of $\tilde{\mathbf{M}}$, we will study the first homology classes of $\tilde{\mathbf{M}}$ that realize $\tilde{\mathbf{U}}$ as a $\mathbb{Z}^2$ cover. The goal in the end is to construct a basis for the homotopy classes of paths on $\tilde{\mathbf{M}}$ that can be lifted onto $\tilde{\mathbf{U}}$. We generalize how the Veech group of $\tilde{\mathbf{M}}$ acts on homology, and show that closed geodesics on the base surface whose lifts onto the $\mathbb{Z}^2$-cover extend to a homomorphism of $\pi_1(\tilde{\mathbf{M}})$ to $\mathbb{Z}^2$. The kernel of this homomorphism determines the cover, and any element of the Veech group acting on $\tilde{\mathbf{M}}$ will stabilize the surface and extend to an isomorphism of its homology classes.
-
-\subsection{Veech Group and Symmetries}
-Observe that $\tilde{\mathbf{M}}$ shares symmetries with the square (up to translation). This is made obvious by the fact that $\tilde{\mathbf{M}}$ is tiled by squares. Any rotations and reflections acting on $\tilde{\mathbf{M}}$ respects its boundaries. We use their matrix representations, and consider only the orientation preserving transformations of determinant one.
-
-Theorems of Gutkin and Judge tell us that any Veech surface that is tiled by squares has a Veech group that is a finite-indexed subgroup of $SL_2(\mathbb Z)$. Therefore the group is a lattice in $SL_2(\mathbb R)$. We will call the Veech group of $\tilde{\mathbf{M}}$, $\Gamma$. $\Gamma$ will without a doubt be generated by parabolic elements, such as skew matrices, and $\tilde{\mathbf{M}}$'s various isometries. 
-
-It is easily shown that $SO_2(\mathbb Z)\subset\Gamma$. Consider a rotation about the center of any square. By a series of cutting and gluing operations, $\tilde{\mathbf{M}}$ can be reconstruced as a staircase again, sending one edge to exactly one other.
-
-Each square is unit, and any pair of edges have two squares between them. This gives rise to a very natural cylinder decomposition of $\tilde{\mathbf{M}}$ in both horizontal and vertical directions.
-
-
-
-The staircase is then decomposed into 6 uniform cylinders of moduli $\frac{1}{2}$ in both the vertical and horizontal directions. Any geodesic on the horizontal cylinders are incident with exactly two other geodesics on the vertical cylinders.
-
-\begin{Def}
-The \textbf{set of horizontal cylinders} of $\tilde{\mathbf{M}}$, denoted $\Delta_{i}$ $(1\leq i \leq 6)$, are the cylinders with boundaries formed by saddle connections made between unions of singularities in the horizontal direction. \newline
-Likewise, the \textbf{set of vertical cylinders}, denoted $\varepsilon_j$ $(1\leq j 
-\leq 6)$, are the cylinders with boundaries formed by saddle connections made between unions of singularities in the vertical direction. \newline
-Refer to Figure $\ref{fig:decomp}$ for the decomposition
-\end{Def}
-
-Horizontal and vertical cylinders of the surface are disjoint within their respective sets, and their union is the surface $\tilde{\mathbf{M}}$.
-
-  Recall that the modulus of a cylinder, $\mu$, is given by the ratio of the cylinder's width to its circumference, $\mu{}={}w/c$. A surface that is composed entirely out of similar horizontal and vertical cylinders is stabilized by Dehn-twists whose derivatives are matrices of magnitude $\lambda$ equal to that of lowest common multiple of the inverse moduli, $\mu^{-1}$. [cite Veech 89?]
-
-
-
-In this case, the moduli are easily obtained and uniform throughout $\tilde{\mathbf{M}}$'s cylinders. We can see that any skews of magnitude $\lambda=\pm2$, since $\mu^{-1}{}=2$, are derivatives of Dehn-twists that preserve the boundaries of the cylinders. Figure $\ref{fig:skew}$ demonstrates a Dehn-twist of magnitude 2 acting on both horizontal and vertical cylinders. Hence the derivatives, 
-\begin{equation}
-\left[ \hspace{1mm} \begin{matrix}
-				1 & \pm 2\\
-				0 & 1
-			\end{matrix}\hspace{1mm}\right],\text{ and }
-			\left[ \hspace{1mm} \begin{matrix}
-							1 & 0\\
-							\pm 2 & 1
-						\end{matrix}\hspace{1mm}\right]
-\end{equation}
-are the parabolic generators of $\Gamma$. The fact that $\lambda=1$ does \emph{not} stabilize $\tilde{\mathbf{M}}$ is an absolutely integral part of the major proof.
-
-\newpage
-\subsection{Defining Homology Classes of $\tilde{\mathbf{M}}$}
-\compav{TODO:\\
-Construct homotopy class 12-gon\\
-Construct staircase with class intersection\\}
-The cylinder decomposition of $\tilde{\mathbf{M}}$ into 12 vertical and horizontal cylinders naturally produce a set of closed homotopic paths that travel along the cylinder's circumference. Because of $\tilde{\mathbf{M}}$'s translational symmetries, we consider every cylinder to contain a set of homologous paths, characterized by the geodesic running along the cylinder's meridian. 
-
-Since none of these paths can't be contracted into a single point or deformed into another path without crossing over a singularity, they are non-trivial and span the set of homology classes of $\tilde{\mathbf{M}}$. We denote the set of closed paths on the cylinders by $\gamma_{0,..,11}$, where the even-indexed paths are horizontal and the odd-indexed paths are vertical. (see figure)
-
-From these paths we create the following homology classes that determine our $\mathbb{Z}^2$-cover:
-
-
-
-Here $u,v,$ and $z$ belong to $H_1(\tilde{\mathbf{M}},\mathbb Z)$. These classes are generalizations of differential 1-forms, say $dx,dy,dz$, on the four-fold cover whose path integrals on $\tilde{\mathbf{M}}$ map directly to the cover.  In our case, there is translational symmetry and it is understood that any geodesic with rational slope is periodic, so we need only consider $\tilde{\mathbf{M}}$'s homology classes. Let $\alpha$ be a closed path on $\tilde{\mathbf{M}}$ as an element of $\pi_1(\tilde{\mathbf{M}})$. The intersection number of any two homology classes is given as the bilinear form:
-
-\begin{align}
-i:H_1(\tilde{\mathbf{M}},\mathbb Z)\times H_1(\tilde{\mathbf{M}},\mathbb Z)\rightarrow \mathbb Z.
-\end{align}
-
-The $\mathbb{Z}^2$ cover, $\tilde{\mathbf{U}}$, is associated to the kernel of the homomorphism
-\begin{align}
-\Omega_{u,v}:\pi_1(\tilde{\mathbf{M}})\rightarrow \mathbb{Z}^2, \alpha\mapsto(i(u,[\alpha]),i(v,[\alpha])).
-\end{align}
-The classes u and v determine where the lifted geodesic terminates on $\tilde{\mathbf{U}}$. Careful experimentation and observation shows us that these classes correspond to moving along the horizontal and vertical directions relative to $\tilde{\mathbf{U}}_0$'s hole indexing convention. We suspect that the remaining z class is some remnant of how the quotient topology of $\tilde{\mathbf{U}}_0$ identifies a point on the boundary of a hole with another as an element of $\mathbb{Z}/4\mathbb Z$, as these are the cylinders of $\tilde{\mathbf{U}}_0$ that cross from one phase to the next (See Figure $\ref{fig:mtilda}$). Regardless, the classes $u,v$ are enough to determine $\tilde{\mathbf{U}}$'s fundamental group as they already take into consideration the effect that the rotations of $\tilde{\mathbf{U}}_0$ has on $\tilde{\mathbf{U}}$'s translational symmetries.
 \newpage
 \subsection{Horizontal, Vertical, and Slope One Cylinders of $\tilde{\mathbf{M}}$}
 \begin{figure}[H]
@@ -808,8 +809,6 @@ The classes u and v determine where the lifted geodesic terminates on $\tilde{\m
 \begin{figure}[H]
 \includesvg[width=2.3in]{cubesxyzpaths}\hspace{0.1in}
 \raisebox{0.5in}{\includesvg[width=2.2in]{unfoldcutpath}}
-\\ \text{Here we can see paths a,b, and c on }$\mathbf{U}$\text{ and }$\mathbf{S}$,
-\\ \text{where their initial trajectories are (0,1), (1,0), and (1,1) respectively.}
 \end{figure}
 
 \end{document}

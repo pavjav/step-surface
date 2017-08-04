@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="638.66211"
-   height="595.64392"
+   width="656.46442"
+   height="595.86853"
    id="svg8580"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -180,8 +180,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="377.16181"
-     inkscape:cy="442.79827"
+     inkscape:cx="524.66182"
+     inkscape:cy="357.08398"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -205,7 +205,7 @@
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true"
-       originx="-60.800779px"
+       originx="-60.800778px"
        originy="-161.60373px" />
   </sodipodi:namedview>
   <metadata
@@ -224,7 +224,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-121.83294,-302.6539)">
+     transform="translate(-121.83294,-302.42929)">
     <path
        inkscape:connector-curvature="0"
        id="path7821"
@@ -576,7 +576,7 @@
          sodipodi:role="line"
          id="tspan3774"
          x="525.71429"
-         y="-31.770254">(m, n, I)</tspan></text>
+         y="-31.770254">(2m, 2n, 0)</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3776"
@@ -587,7 +587,7 @@
          y="316.93124"
          x="121.03216"
          id="tspan3778"
-         sodipodi:role="line">(m, n, II)</tspan></text>
+         sodipodi:role="line">(2m, 2n, 1)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -598,7 +598,7 @@
          sodipodi:role="line"
          id="tspan3782"
          x="121.03216"
-         y="879.90155">(m, n, III)</tspan></text>
+         y="879.90155">(2m, 2n, 2)</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3784"
@@ -609,7 +609,7 @@
          y="879.90155"
          x="681.03217"
          id="tspan3786"
-         sodipodi:role="line">(m, n, IV)</tspan></text>
+         sodipodi:role="line">(2m, 2n, 3)</tspan></text>
     <path
        sodipodi:type="arc"
        style="fill:#122500;fill-opacity:1;stroke:none"
@@ -766,11 +766,11 @@
        sodipodi:linespacing="125%"
        id="text8938"
        y="455.56467"
-       x="685.29749"
+       x="681.03217"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="455.56467"
-         x="685.29749"
+         x="681.03217"
          id="tspan8940"
          sodipodi:role="line">m+1</tspan></text>
     <text
@@ -783,6 +783,72 @@
          y="334.24927"
          x="563.83588"
          id="tspan8944"
+         sodipodi:role="line">n+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="391.03217"
+       y="455.56467"
+       id="text3108"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3110"
+         x="391.03217"
+         y="455.56467">m+1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3112"
+       y="749.90155"
+       x="391.03217"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="749.90155"
+         x="391.03217"
+         id="tspan3114"
+         sodipodi:role="line">m+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="681.03217"
+       y="749.90155"
+       id="text3143"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3145"
+         x="681.03217"
+         y="749.90155">m+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="275.26443"
+       y="334.24927"
+       id="text3147"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3149"
+         x="275.26443"
+         y="334.24927">n+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="563.83588"
+       y="629.90155"
+       id="text3155"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3157"
+         x="563.83588"
+         y="629.90155">n+1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3159"
+       y="629.90155"
+       x="275.26443"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="629.90155"
+         x="275.26443"
+         id="tspan3161"
          sodipodi:role="line">n+1</tspan></text>
   </g>
 </svg>

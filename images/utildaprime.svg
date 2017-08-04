@@ -180,8 +180,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="520.01896"
-     inkscape:cy="462.62337"
+     inkscape:cx="378.59039"
+     inkscape:cy="91.194799"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -216,7 +216,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -321,7 +321,7 @@
          sodipodi:role="line"
          id="tspan3774"
          x="525.71429"
-         y="-31.770254">(m, n, I)</tspan></text>
+         y="-31.770254">(2m, 2n, 0)</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3776"
@@ -332,7 +332,7 @@
          y="316.93124"
          x="121.03216"
          id="tspan3778"
-         sodipodi:role="line">(n, -m, II)</tspan></text>
+         sodipodi:role="line">(2n, -2m, 1)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -343,7 +343,7 @@
          sodipodi:role="line"
          id="tspan3782"
          x="121.03216"
-         y="879.90155">(-m, -n, III)</tspan></text>
+         y="879.90155">(-2m, -2n, 2)</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3784"
@@ -354,7 +354,7 @@
          y="879.90155"
          x="681.03217"
          id="tspan3786"
-         sodipodi:role="line">(-n, m, IV)</tspan></text>
+         sodipodi:role="line">(-2n, 2m, 3)</tspan></text>
     <path
        sodipodi:type="arc"
        style="fill:#122500;fill-opacity:1;stroke:none"
