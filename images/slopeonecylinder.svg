@@ -14,7 +14,7 @@
    id="svg5164"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 9">
+   sodipodi:docname="slopeonecylinder.svg">
   <defs
      id="defs5166" />
   <sodipodi:namedview
@@ -24,8 +24,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="744.3125"
+     inkscape:zoom="0.7"
+     inkscape:cx="750.02679"
      inkscape:cy="266.98157"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -34,11 +34,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="455"
-     inkscape:window-height="445"
+     inkscape:window-width="1280"
+     inkscape:window-height="782"
      inkscape:window-x="0"
-     inkscape:window-y="336"
-     inkscape:window-maximized="0" />
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5169">
     <rdf:RDF>
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,13 +85,13 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-193.91888"
+       x="-203.91888"
        y="761.84552"
        id="text4650"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4652"
-         x="-193.91888"
+         x="-203.91888"
          y="761.84552">I</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -108,11 +108,11 @@
        sodipodi:linespacing="125%"
        id="text4658"
        y="663.78235"
-       x="-99.622299"
+       x="-109.6223"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="663.78235"
-         x="-99.622299"
+         x="-109.6223"
          id="tspan4660"
          sodipodi:role="line">II</tspan></text>
     <text
@@ -129,13 +129,13 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="7.7898078"
+       x="-2.2101922"
        y="563.78235"
        id="text4666"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4668"
-         x="7.7898078"
+         x="-2.2101922"
          y="563.78235">III</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -152,11 +152,11 @@
        sodipodi:linespacing="125%"
        id="text4674"
        y="463.78235"
-       x="105.20192"
+       x="95.20192"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="463.78235"
-         x="105.20192"
+         x="95.20192"
          id="tspan4676"
          sodipodi:role="line">IV</tspan></text>
     <text
@@ -173,13 +173,13 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="205.20189"
+       x="195.20189"
        y="363.78235"
        id="text4682"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4684"
-         x="205.20189"
+         x="195.20189"
          y="363.78235">V</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -196,11 +196,11 @@
        sodipodi:linespacing="125%"
        id="text4690"
        y="266.64368"
-       x="305.20187"
+       x="295.20187"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="266.64368"
-         x="305.20187"
+         x="295.20187"
          id="tspan4692"
          sodipodi:role="line">VI</tspan></text>
     <path

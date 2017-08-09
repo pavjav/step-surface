@@ -51,17 +51,17 @@
   \begin{picture}(1,0.45520281)%
     \put(0,0){\includegraphics[width=\unitlength]{slopeonecylinder.pdf}}%
     \put(0.02198688,0.05722607){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
-    \put(0.12883859,0.02754501){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
+    \put(0.12149291,0.02754501){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
     \put(0.09125416,0.12926017){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{II}}}%
-    \put(0.19810588,0.09957911){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{II}}}%
+    \put(0.1907602,0.09957911){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{II}}}%
     \put(0.1701557,0.20271701){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{III}}}%
-    \put(0.27700741,0.17303594){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{III}}}%
+    \put(0.26966173,0.17303594){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{III}}}%
     \put(0.24171155,0.27617384){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{IV}}}%
-    \put(0.34856326,0.24649278){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{IV}}}%
+    \put(0.34121758,0.24649278){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{IV}}}%
     \put(0.31516838,0.34963067){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{V}}}%
-    \put(0.42202007,0.31994961){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{V}}}%
+    \put(0.41467439,0.31994961){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{V}}}%
     \put(0.38862519,0.42098565){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{VI}}}%
-    \put(0.49547689,0.3913046){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{VI}}}%
+    \put(0.48813121,0.3913046){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{VI}}}%
     \put(0.70115614,0.38395892){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
     \put(0.62415548,0.31050209){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{II}}}%
     \put(0.54630845,0.23494341){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{III}}}%

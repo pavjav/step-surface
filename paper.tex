@@ -13,11 +13,11 @@
 \graphicspath{{images/}}
 \setsvg{svgpath={./images/}}
 
-\newtheorem{thm}{Theorem}[subsection]
-\newtheorem{Def}{Definition}[subsection]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{Def}{Definition}[section]
 \newtheorem*{thm*}{Theorem}
 \newtheorem*{def*}{Definition}
-\newtheorem{lem}{Lemma}[subsection]
+\newtheorem{lem}{Lemma}[section]
 \newtheorem*{rem}{Remark}
 
 \newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
@@ -95,7 +95,7 @@ Yet to be written
 \end{thm*}
 
 \subsection{Some Background}
-This paper assumes that the reader is familiar with fundamental concepts in algebraic topology, such as covering space theory, and the study of Veech surfaces and their associated Veech groups. In order to prove this theorem, we take a number of covers of a surface isometric to $\mathbf S$. Our goal then is to take a branched cover of the surface as four "copies" of that surface, and rotate these copies so as to align the geodesic flow and identify edges solely by translation. The quotient space obtained by modding out this surface by its translational symmetries is translation and Veech.
+This paper assumes that the reader is familiar with fundamental concepts in algebraic topology, such as covering space theory and the study of Veech surfaces and associated Veech groups. In order to prove this theorem, we take a number of covers of a surface isometric to $\mathbf S$. Our goal then is to take a branched cover of the surface as four "copies" of that surface, and rotate these copies so as to align the geodesic flow and identify edges solely by translation. The quotient space obtained by modding out this surface by its translational symmetries is translation and Veech.
 
 The Veech surface has an $SL(2,\mathbb{R})$-commensurable Veech group characterized as derivatives of affine maps of the translation surface. Such affine diffeomorphisms of the surface induce isomorphisms of its absolute homology (with coefficients in $\mathbb Q$). We obtain the direction of a closed geodesic flow from its holonomy vector and show that the odd-odd directions closing on the translation cover, and consequently $\mathbf S$, remains invariant given that the flow of a geodesic with slope one closes on the cover. This translation cover is considered a $\mathbb{Z}^2$-cover of the veech surface. We associate its fundamental group with the kernel of a homomorphism from the closed paths of its Veech surface quotient to $\mathbb{Z}^2$. There are numerous dualizations to be made between homologies, homology classes, and $SL(2,\mathbb{R})$ action on $\mathbb{Z}^2$ in order to solve this problem.
 
@@ -198,7 +198,7 @@ v_{0}-2n
 
 We can see that $\mathbf{U}$ is a Euclidean cone surface with infinitely many singularities of cone angles $\frac{3\pi}{2}$ and $6\pi$. Observe that $\mathbf{S}$ is also a cone surface with as many singularities of the same cone angles.
 
-\subsection{A Path-Isometric Map From $\mathbf S$ to $\mathbf U$}
+\subsection{A Path Isometry From $\mathbf S$ to $\mathbf U$}
 A path-isometric map from $\mathbf{S}$ to $\mathbf{P}$ induces an isometry from the Necker cube surface to $\mathbf{U}$. The path isometry $\Psi:\mathbf{S}\rightarrow\mathbf{P}$ is a piece-wise, well-defined map that is given as a linear transformation in which a square labeled $\mathbf{A}$, $\mathbf{B}$, or $\mathbf{C}$ is mapped to its corresponding square on $\mathbf{P}$. $\Psi$ is  essentially a transformation that cuts along the edges parallel with the z-axis. (See figure $\ref{fig:cut}$)
 
 \begin{figure}[H]
@@ -510,7 +510,7 @@ In this section we use the induced isometries on $\tilde{\mathbf{U}}_0$, and the
 We can see that $\mathbf{T}^{m,n}$ is indeed an isometry on $\tilde{\mathbf{U}}$ as it is composed of the induced isometries, $\bar{\phi}$ and $\bar{\mathbf{T}}^{m,n}$ . We can take the quotient of the translation surface $\tilde{\mathbf{U}}$ over the action of $\mathbf{T}^{m,n}$ to obtain a base surface that realizes $\tilde{\mathbf{U}}$ as an infinite $\mathbb{Z}^2$ cover, where $m,n$ is identified with an integer pair.
 
 \begin{Def}
-The translation surface $\mathbf{M}$ is given as the quotient  $\tilde{\mathbf{U}}/\mathbf{T}^{m,n}$.
+The translation surface $\mathbf{M}$ is given as a quotient of $\tilde{\mathbf{U}}$ equipped with a  holomorphic 1-form, $(\tilde{\mathbf{U}}/\mathbf{T}^{m,n},\omega)$.
 \end{Def} 
 
 \begin{figure}[H]
@@ -524,19 +524,19 @@ The new surface, $\mathbf M$, is a genus 5 translation surface with the surjecti
 \newpage
 
 \subsection{$\mathbf M$ as a Veech Surface}
-By a series of cutting and gluing operations, $\mathbf M$ has this symmetric representation as a square-tiled staircase (figure $\ref{fig:staircase}$). The vertices of cone angle $2\pi$ can be found on the centers of the squares in the figure below where the black lines intersect. 
+By a series of cutting and gluing operations, $\mathbf M$ has this symmetric representation as a square-tiled staircase (figure $\ref{fig:staircase}$). This is a compact surface with an infinite $\mathbb Z$-cover as the Infinite Staircase. [cite] It shares many of the same symmetries, as well. The vertices of cone angle $2\pi$ can be found on the centers of the squares in the figure below where the black lines intersect. 
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{mtildastaircase}
 \caption{$\mathbf{M}$ as a square-tiled staircase with cone singularities identified.}
 \label{fig:staircase}
 \end{figure}
-As a result of Gutkin-Judge [citation], $\mathbf M$ is a Veech surface whose Veech group is commensurable to $SL(2,\mathbb Z)$. In order to determine which elements of orientation preserving affine diffeomorphisms, denoted Aff$^{+}(\mathbf M)$, have derivatives that belong to the Veech group, V($\mathbf M$), it is necessary to study $\mathbf M$'s various symmetries and cylinder decompositions.
+As a result of Gutkin-Judge [citation], $\mathbf M$ is a Veech surface whose Veech group is commensurable to $SL(2,\mathbb Z)$. In order to determine which elements of orientation preserving affine diffeomorphisms, denoted Aff$^{+}(\mathbf M)$, have derivatives that belong to the Veech group, V($\mathbf M$), it is necessary to study $\mathbf M$'s various symmetries, as well as its cylinder decomposition.
 \vspace{0.1in}
 
 \noindent\textbf{Rotational Symmetries}
 
-One group contained in $V(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated by rotations of order 4. Even though the other elements in $\mathbb{D}_4$ are derivatives of automorphisms of $\mathbf M$, we will only consider those of determinant +1. We want the corresponding affine map of these rotation matrices to obey the convention that we \emph{fix} the second square on the bottom with label I. These maps are unique only up to translation and as such assigning this convention makes it easier to keep track of where the edges of $\mathbf M$ end up afterwards. The diffeomorphism with 90 degree counter-clockwise rotation fixed about that point at the center of that square is denoted $\mathbf{R}$. Its derivative, $\mathbf{R}'$, is the matrix $\left[ \hspace{1mm} \begin{matrix}
+One group contained in $V(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated by rotations of the square. We want the corresponding affine map of these rotation matrices to obey the convention that we \emph{fix} the second square on the bottom with label I. These maps are unique only up to a translation of the surface and assigning this convention makes it easier to keep track of where the edges of $\mathbf M$ end up. The 90 degree counter-clockwise rotation fixed about the point in the center of that square is denoted $\mathbf{R}$. Its derivative, $\mathbf{R}'$, is the matrix $\left[ \hspace{1mm} \begin{matrix}
 							0 & -1\\
 							1 & 0
 						\end{matrix}\hspace{1mm}\right]$.
@@ -545,7 +545,7 @@ One group contained in $V(\mathbf M)$ is SO$(2,\mathbb{Z})$, the group generated
 
 \noindent\textbf{Translation Symmetries}
 
-The translational symmetries have no unique representation as an element of V($\mathbf M$), as their derivatives are represented as the identity. But they do have an important effect on the surface. Shifting the bottom left-most square to the right and reconstructing the rest by pairing edges is an order 2 homeomorphism denoted $\mathbf{H}$, for horizontal. Likewise, $\mathbf{V}$ is an order 2 homeomorphism that shifts that square upwards. Observe that together they satisfy the property $(\mathbf{H}\mathbf{V})^{6}=(\mathbf{V}\mathbf{H})^{6}=id$. This essentially moving the squares up the staircase until they come back to where they started. The group of translation deck transformations of the surface is isomorphic to a permutation group of 12 elements (each square) generated by these two translations that satisfy the relation. It is the group $\mathbb{D}_{12}$ generated by reflections about two adjacent vertices of a 12-gon. Thus it is possible to translate a square to any other on the surface as a composition of these two translations.
+The translational symmetries have no unique representation as an element of V($\mathbf M$), as their derivatives are represented as the identity. But they do have an important effect on the surface. Shifting the bottom left-most square to the right and reconstructing the rest by pairing edges is an order 2 homeomorphism denoted $\mathbf{H}$, for horizontal. Likewise, $\mathbf{V}$ is an order 2 homeomorphism that shifts that square upwards. Observe that together they satisfy the property $(\mathbf{H}\mathbf{V})^{6}=(\mathbf{V}\mathbf{H})^{6}=id$. This is essentially moving the squares up the staircase until they come back to where they started, unlike the the group of diagonal translations of the Infinite Staircase that is isomorphic to $\mathbb Z$. The group Trans($\mathbf M$) is isomorphic to the group generated by reflections of a 12-gon, $\mathbb{D}_{12}$.
 
 \vspace{0.1in}
 
@@ -560,7 +560,7 @@ Observe from the following image that $\mathbf M$ has a uniform cylinder decompo
 \label{fig:decomp}
 \end{figure}
 
-Both sets of cylinders are indexed $0\leq i, j \leq 5$. Every cylinder is composed of two unit squares with edges identified by translation. We start counting the cylinders from the bottom-most cylinder and increment the index as the cylinders fill the surface going ``up" the staircase. $\small{\mathcal{E}}_0$ is the first cylinder at the bottom whose identifications are \em{not} \normalfont the solid triangles. $\small{\mathcal{E}}_5$ is the cylinder whose edges are paired by the solid triangles. $\Delta_{i}$ has the more standard representation starting from the bottom-most horizontal cylinder. 
+Both sets of maximal cylinders are indexed $0\leq i, j \leq 5$. Every cylinder is composed of two unit squares with edges identified by translation. Each cylinder is obtained as a ramified cover of the square torus. We start counting the cylinders from the bottom-most cylinder and increment the index as the cylinders fill the surface going ``up" the staircase. $\small{\mathcal{E}}_0$ is the first cylinder at the bottom whose identifications are \em{not} \normalfont the solid triangles. Travel up the staircase until the laste one, $\small{\mathcal{E}}_5$, the cylinder whose edges are paired by the solid triangles and glue the 12th square with the 1st. $\Delta_{i}$ has the more standard representation starting from the bottom-most horizontal cylinder and going all the way up to the top. 
 
 We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinders circumference to its width, $\mu^{-1}=\frac{c}{h}$. A \emph{Dehn-twist} of a cylinder is an automorphism of the cylinder of the form  $(x,y)\mapsto(x,y+\mu^{-1} x \mod{h})$, where $x$ and $y$ are points on the cylinder such that x varies along the its circumference. According to [need to cite something], a translation surface whose finite cylinder decompositions in orthogonal directions form a set of inverse moduli. The smallest (rational) common multiple of the set of all these values match up to give a global affine diffeomorphisms of the surface, whose derivatives have the matrix representations
 \begin{equation*}
@@ -573,9 +573,9 @@ We define the \emph{inverse modulus} of a cylinder to be the ratio of a cylinder
 							\pm \lambda & 1
 						\end{matrix}\hspace{1mm}\right],
 \end{equation*}
-such that $\lambda$ is that lowest common multiple.
+such that $\lambda$ is that lowest common multiple. [cite]
 
-Let $\mu^{-1}_{\Delta_i},\mu^{-1}_{\mathcal{E}_j}$ denote the inverse moduli of the cylinders. The cylinders $\Delta_{i}$ and $\small{\mathcal{E}}_j$, as i and j vary, all have the same inverse moduli since they are all defined as two unit squares with identifications made by translation along the cylinders circumference. Therefore, $\lambda=$ l.c.m.($\mu^{-1}_{\Delta_i}\cup\mu^{-1}_{\mathcal{E}_j}$) $=2$.
+Let $\mu^{-1}_{\Delta_i},\mu^{-1}_{\mathcal{E}_j}$ denote the inverse moduli of the cylinders. The cylinders $\Delta_{i}$ and $\small{\mathcal{E}}_j$, as i and j vary, all have the same inverse moduli since they are all defined as two unit squares with identifications made by translation. Therefore, $\lambda=$ l.c.m.($\mu^{-1}_{\Delta_i}\cup\mu^{-1}_{\mathcal{E}_j}$) $=2$.
 
 \begin{figure}[H]
 \centering
@@ -605,42 +605,44 @@ This group is also known as the \emph{Sanov Subgroup} [cite], a free group of ra
 
 \noindent\textbf{The Orientation-Preserving Symmetry Group of $\textbf{M}$}
 
-It is now possible to generate the \emph{group of symmetries} of $\textbf{M}$ as Deck transformations of the surface. We call this group $\mathbb X$ and say that 
+It is now possible to generate the \emph{group of symmetries} of $\textbf{M}$ with the elements of these affine transformations. We call this group $\mathbb X$ and say that 
 
 \begin{align}
 \mathbb X= \left< \mathbf{A},\mathbf{B},\mathbf{R},\mathbf{H},\mathbf{V}\vert\mathbf{R}^4 = (\mathbf{H}\mathbf{V})^{6}=(\mathbf{V}\mathbf{H})^{6}=id  \right>.
 \end{align}
 
-The group of derivatives of $\mathbb X$ is $\mathbb X'$, and it is generated by elements of V$(\textbf{M})$. It is not apparent whether or not $\mathbb{X}=$Aff$^+(\mathbf{M})$ or if $\mathbb X'=$ V$(\mathbf{M})$.
-
+The group of derivatives of $\mathbb X$ is the image of the map D: $\mathbb X\rightarrow SL(2,\mathbb{R})$, denoted $\mathbb X'$. We know that $\mathbb{X}\subset$Aff$^+(\mathbf{M})$ and $\mathbb X'\subset$ V$(\mathbf{M})$. The corresponding elements of $\mathbb X'$ will use the same prime notation.
 
 \subsection{Action of $\mathbb X$ on the Homology of $\mathbf M$}
-The group $\mathbb X$ consists of the set of Deck transformations of $\mathbf{M}$, whose induced isomorphisms of $\pi_1(\mathbf{M})$ acts on the absolute homology of $\mathbf{M}$ and extends to an action on the homology of $\mathbf{M}$'s $\mathbb{Z}^2$-cover, $\tilde{\mathbf{U}}$. $\mathbf{M}$'s cylinder decomposition gives us a natural set of homology classes that serve as a basis for $H_1(\mathbf{M},\mathbb Q)$. For a total of 12 cylinders, there are 12 core curves:
+The elements of $\mathbb X$ induces isomorphisms of $\pi_1(\mathbf{M})$ and extends to an action on the homology of $\mathbf{M}$'s $\mathbf{T}^{m,n}$-cover, $\tilde{\mathbf{U}}$.
+
+$\mathbf{M}$'s cylinder decomposition gives us a natural set of homology classes that serve as a basis for $H_1(\mathbf{M},\mathbb Q)$. For a total of 12 cylinders, there are 12 core curves:
 
 \begin{figure}[H]
 \includegraphics[width=3in]{homologyclass.png}
 \centering
-\caption{Cylinder core curves with u,v, and z homology classes that determines the $\mathbb{Z}^2$-cover.}
+\caption{Cylinder core curves with u,v, and z homology classes that determines the $\mathbf{T}^{m,n}$-cover.}
+\label{fig:homology}
 \end{figure}
 
 \begin{rem}
 Although the genus of $\mathbf{M}$ is 5, we use 12 curves as an overdetermined basis for $H_1(\mathbf{M},\mathbb Q)$. To show that they indeed span all of $H_1(\mathbf{M},\mathbb Q)$, it is possible to construct a $12\times12$ matrix of curve intersections and calculate its rank. The rank of the matrix, as to be expected, is 10. But to use only the linearly independent curves means that many of the same symmetries described in the previous section would not induce isomorphisms of $\pi_1(\mathbf{M})$ that dualize $\mathbf{M}$'s symmetries as the union of 12 identical squares.
 \end{rem}
 
-We will denote the group of isomorphisms of $\mathbf{M}$'s fundamental group we obtain from $\mathbb{X}$ as $\mathbb X_*$. The same notation will be used for the isomorphisms themselves. We denote the \emph{set of cylinder core curves} as $\Gamma$.
+We will denote the group of isomorphisms of $\mathbf{M}$'s fundamental group we obtain from $\mathbb{X}$ as $\mathbb X_*$. The same notation will be used for the isomorphisms themselves. We denote the \emph{set of cylinder core curves} as $\Gamma\subset H_1(\mathbf{M},\mathbb Q)$.
 
 \vspace{0.1in}
 
 \noindent\textbf{A 12-gon dualization of the $H_1(\mathbf{M},\mathbb Q)$}
 
-The 12-gon was mentioned in the previous section under the discussion of $\mathbf{M}$'s translational symmetries. $\mathbb X_*$ acting on absolute homology is better represented as a symmetric object.
+The 12-gon was mentioned in the previous section under the discussion of $\mathbf{M}$'s translational symmetries. $\mathbb X_*$ acting on absolute homology is better represented as this symmetric object.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.7in]{12gon.pdf}
 \end{figure}
 
-This graph's representation also reflects how two core curves are incident with only two others. An element of $\mathbb X_*$ either permutes these curves or, in the case where $\mathbf A_*$ or $\mathbf B_*$ generates the element, adds/subtracts black vertices to/from the red ones. Recall that in the previous section we had certain conventions when it came to the elements $\mathbf{R}$, $\mathbf{H}$, and $\mathbf{V}$. This was so that their induced isomorphisms would \emph{fix} one or more vertices as they act on homology. But because of the translational symmetries, it is possible to rotate about the center of any square and essentially rotating the entire 12-gon with $\mathbf{H}_*$ and $\mathbf{V}_*$.
+This graph's representation also reflects how two core curves are incident with only two others. An element of $\mathbb X_*$ either permutes these curves or, in the case where $\mathbf A_*$ or $\mathbf B_*$ generates the element, adds/subtracts black vertices to/from the red ones. Recall that in the previous section we had certain conventions when it came to the elements $\mathbf{R}$, $\mathbf{H}$, and $\mathbf{V}$. This was so that their induced isomorphisms would \emph{fix} one or more vertices as they act on homology. Because of the translational symmetries, it is possible to rotate or reflect entire 12-gon with $\mathbf{H}_*$ and $\mathbf{V}_*$. These permutations of $\Gamma$ generate a group isometric to $\mathbb{D}_{12}$.
 
 
 \begin{minipage}{0.5\textwidth}
@@ -655,29 +657,28 @@ This graph's representation also reflects how two core curves are incident with 
 \end{figure}
 \end{minipage}
 
-The two preserve the signs of the core curves. It is to be expected as they are induced isomorphisms of translation maps. They are given as the following permutations of $\Gamma$:
+The two preserve the signs of the core curves. It is to be expected as they are induced isomorphisms of translations. They are expressed as:
 \space
 \begin{align*}
 \mathbf{H}_* &= (\gamma_0)(\gamma_1\hspace{1mm}\gamma_{11})(\gamma_2\hspace{1mm}\gamma_{10})(\gamma_3\hspace{1mm}\gamma_9)(\gamma_4\hspace{1mm}\gamma_8)(\gamma_5\hspace{1mm}\gamma_7)(\gamma_6)\\
 \mathbf{V}_* &=(\gamma_{11})(\gamma_0\hspace{1mm}\gamma_{10})(\gamma_1\hspace{1mm}\gamma_{9})(\gamma_2\hspace{1mm}\gamma_8)(\gamma_3\hspace{1mm}\gamma_7)(\gamma_4\hspace{1mm}\gamma_6)(\gamma_5)
 \end{align*}
 
-Rotation about the center of a square will not only change signs of the core curves, but permute elements in such a way that 4 consecutive rotations of $\mathbf{M}$ is an identity on $\Gamma$.
+Rotation about the center of a square will not only change signs of the core curves, but permute elements in such a way that the rotation element is order four.
 
 \begin{minipage}{0.4\textwidth}
-\begin{figure}[H]
-\hspace{0}\includegraphics[width=1.7in]{12gonR.pdf}
+\begin{figure}[H]\includegraphics[width=1.7in]{12gonR.pdf}
 \end{figure}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
 \vspace{0in}
 \begin{itemize}
-\item[\textbf{\emph{$\mathbf{R}_*$}}] This action reflects about the line and maps one vertex to another. No vertex is fixed. However it has the additional effect of changing the sign of a curve only if it was originally black (or odd index). The pattern is peculiar, but $\mathbf{R}_*$ is still order four.
+\item[\textbf{\emph{$\mathbf{R}_*$}}] This action reflects the 12-gon about that line and maps one vertex to another. No vertex is fixed. However it has the additional effect of changing the sign of a curve only if it was originally black (or odd index).
 \end{itemize}
 \end{minipage}
 
 \vspace{2mm}
-We can see the effect that it has on homology clearer as a permutation of $\Gamma$:
+We can see the effect that it has on homology clearer as a permutation group on $\Gamma$:
 \begin{align*}
 \mathbf{R}_*= \hspace{1mm} &(\gamma_{0}\hspace{1mm}\gamma_{1}\hspace{1mm}\text{-}\gamma_{0}\hspace{1mm}\text{-}\gamma_{1})
 (\gamma_{2}\hspace{1mm}\gamma_{11}\hspace{1mm}\text{-}\gamma_{2}\hspace{1mm}\text{-}\gamma_{11})
@@ -687,15 +688,31 @@ We can see the effect that it has on homology clearer as a permutation of $\Gamm
 (\gamma_{6}\hspace{1mm}\gamma_{7}\hspace{1mm}\text{-}\gamma_{6}\hspace{1mm}\text{-}\gamma_{7}).
 \end{align*}
 
+\compav{TODO: Make the parabolic 12-gon image.}
+
+\begin{figure}[H]
+\centering
+\includesvg{12gonA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includesvg{12gonABexample}
+\end{figure}
 \compav{Ended here August 3.}
 
-Regardless, $u$ and $v$ are the most important homology classes that we use to determine whether or not a lifted path properly closes on the four-fold cover.  Let $\alpha:[0,1]\rightarrow\mathbf M$ be a curve on the surface such that $\alpha(0)=\alpha(1)=x_0\in\mathbf{M}$. Take $f:\tilde{\mathbf U}\rightarrow\mathbf M$ to be the covering map that takes every point on $\tilde{\mathbf U}$ to its quotient in $\mathbf{M}$. We will fix a point $\tilde{x}_0\in\tilde{\mathbf U}$ such that the lifted path $\tilde\alpha(0)=\tilde{x}_0$ under the function $f$. $\alpha$ is a closed path in $\pi_1(\mathbf M,x_0)$. We denoted the class of abelianized paths $\alpha$ as [$\alpha$]$\in H_1(\tilde{\mathbf{M}},\mathbb Z)$, and define the function,
+\subsection{$\mathbf{T}^{m,n}$-Cover of $\mathbf M$}
+When defining $\mathbf{M}$ as a quotient over the action of $\mathbf{T}^{m,n}$, the result was a finite-type translation surface whose cover indexes these four "cut-open tori" by the integer pair $(m,n)$. For this reason it is easy to consider $\tilde{\mathbf{U}}$ to be a kind of $\mathbb{Z}^2$-esque covering space of $\mathbf{M}$.
 
-\begin{align}
-i:H_1(\mathbf{M},\mathbb Z)\times H_1(\mathbf{M},\mathbb Z)\rightarrow \mathbb Z,
-\end{align}
 
-to return the intersection number of two homology classes. Out of convention, we consider a positive intersection to adhere to the right-hand rule and take the crossings to be relative to $u$ and $v$. With that being said, the signed homology classes of gamma curves are
+\begin{lem}
+The family of translational symmetries $\mathbf{T}^{m,n}$ is isomorphic to $\mathbb Z^2$.
+\begin{proof}
+$\mathbf{T}^{m,n}$ is induced by rotational and translational symmetries of the fundamental domain of $\tilde{\mathbf{U}}$, $\mathbf P \times \mathbb{Z}/4\mathbb{Z}$. It's clear that the rotations themselves are bijective maps. By definition, $\mathbf{T}_0^{m,n}=(x+2m,y+2n;j)$. As a group action, observe that the points $(x,y;j)$ are stabilized. The orbit of this triple is the set of infinitely many points in its domain parametrized by integers $m,n$. The obvious isomorphism identifies an element of $\mathbb{Z}^2$ with $(m,n)$. The orbit of any point is itself given as $\mathbf{T}_0^{\mathbb Z^2}$. Therefore, the induced map on $\tilde{\mathbf{U}}$, $\mathbf{T}^{m,n}$, is isomorphic to $\mathbb Z^2$ as well.
+\end{proof}
+\end{lem}
+
+From figure $\ref{fig:mtilda}$ we construct homology classes $u,v$ according to the outer edges of the tori. In addition, there is a class $z$ that doesn't play a role in determining the cover $\tilde{\mathbf U}$. This is because $z$ is the set of core curves that lie on cylinders that go from one plane to the next. Figure $\ref{fig:homology}$ labels them on the staircase model.
 
 \begin{align*}
 u &= -\gamma_2 +\gamma_5 + \gamma_8 - \gamma_{11},\\
@@ -703,112 +720,76 @@ v &= +\gamma_0 -\gamma_3 -\gamma_6 +\gamma_9,\\
 z &= +\gamma_1 +\gamma_4-\gamma_7-\gamma_{10}.
 \end{align*}
 
+Let i be a bilinear, non-degenerate form given as
 
-The $\mathbb{Z}^2$ cover, $\tilde{\mathbf{U}}$, is associated to the kernel of the homomorphism
 \begin{align}
-\Omega_{u,v}:\pi_1(\mathbf{M},x_0)\rightarrow \mathbb{Z}^2, \text{ such that } \alpha\mapsto(i(u,[\alpha]),i(v,[\alpha])).
+i:H_1(\mathbf{M},\mathbb Q)\times H_1(\mathbf{M},\mathbb Q)\rightarrow \mathbb Z.
 \end{align}
-Suppose that $h:\mathbf{M}\rightarrow\mathbf{M}$ is an automorphism of the surface such that dir $h\in SL(\mathbf M)$. $h$ induces the isomorphism, $h_*:\pi_1(\mathbf{M},x_0)\rightarrow \pi_1(\mathbf{M},x_0)$. Likewise, $f$ induces the inclusion map $f_*:\pi_1(\tilde{\mathbf{U}},\tilde x_0)\hookrightarrow\pi_1(\mathbf{M},x_0)$. If $\pi_1(\tilde{\mathbf{U}},\tilde x_0)$ is associated with the Ker $\Omega_{u,v}$, then it must be true that the kernel of such a homomorphism is preserved under $h_*$ and there exists a map from  $\pi_1(\mathbf M, x_0)$ to $\pi_1(\tilde{\mathbf{U}},\tilde x_0)$.
 
-The actions of $h_*$ are dual to the actions of dir $h$, denoted $h'$, on the sets of odd-odd and even-odd $\mathbb{Z}^2$ vectors, $\mathcal{O}$ and $\mathcal{E}$. In particular, the action of $\mathbb X$ on $\mathcal{O}$ and $\mathcal{E}$ is self-contained and well-defined. This is vital as what we want to show is that $h'(\alpha')$, where $\alpha'$ is a constant and $\alpha$ is a closed geodesic, is dual to $h_*([\alpha])$. In which case, it should also be true that $h_*(\alpha)\mapsto(i(u,h_*([\alpha])),i(v,h_*([\alpha])))$, under $i$. And since intersection number is a non-degenerate bilinear form, 
+Let $\beta\in \pi_1(\mathbf{M}, x_0)$, and $[\beta]$ be its abelianization in $H_1(\mathbf{M},\mathbb{Q})$.
+The function returns an \emph{intersection number} between two elements in $H_1(\mathbf{M},\mathbb Q)$. Assuming that $[\beta]$ is the second argument of i, a positive crossing occurs when $[\beta]$'s angle of intersection with the first homology class is positive. Fix a point $x_0\in\mathbf{M}$. $x_0$ lifts to $\tilde{x}_0\in\tilde{\mathbf{U}}$ by the covering map $f$, such that $\tilde{x}_0$ belongs to the quotient of $\tilde{\mathbf{U}}$ indexed $\mathbf{T}^{0,0}$.
 
-\begin{align*}
-\alpha\mapsto(i(h_*^{-1}(u),[\alpha]),i(h_*^{-1}(v),[\alpha])).
-\end{align*}
+$\tilde{\mathbf{U}}$ is associated to the kernel of the group homomorphism,
+\begin{align}
+\Omega_{u,v}:\pi_1(\mathbf{M},x_0)\rightarrow \mathbb{Z}^2 \text{; } \beta\mapsto(i(u,[\beta]),i(v,[\beta])).
+\end{align}
+Since $\mathbf{T}^{m,n}$ is isomorphic to $\mathbb{Z}^2$, the lift of $\beta\in \text{Ker } \Omega_{u,v}$ is the closed path, $\tilde{\beta}$. Let $F^t_\theta$ be a \emph{non-singular} geodesic flow on $\mathbf{M}\backslash$Sing$(\mathbf M)$ with initial point $x_0$. By [some theorem], $F^t_\theta$ is closed for for every rational direction $\theta$. The image of $F^t_\theta$ is an element of $\pi_1(\mathbf M, x_0)$, and homotopic to closed path $\beta$. 
 
-This amounts to finding some such path whose lift belongs to the fundamental group of $\tilde{\mathbf U}$, noting the effect $h_*$ has on $\mathbf M$'s homology, and finding the new intersection number. Let $\beta$ be such a path. Suppose there is some sequence of affine maps $h_1,...,h_n\in$Aff$^+(\mathbf{M})$ such that $h_1' \circ ... \circ h_n'(\alpha')=\beta'$. We will show the following is true:
+\begin{Def} Identify $\mathbb C$ with $\mathbb{R}^2$ in the usual way. The closed path $\alpha\in\pi_1(\mathbf M, x_0)$ is the path contained in the maximal cylinder decomposition in direction $(1,1)$.
+\end{Def}
 
-\begin{align*}
-h_1 \circ ... \circ h_n(\mathbf{M})=\mathbf{M}'&\iff\\
-h_{*_1} \circ ... \circ h_{*_n}([\beta])=[\alpha] &\iff
-\end{align*}
-%\subsection{$\tilde{\mathbf{M}}$ as a Veech Surface}
-%We use basic properties of $\tilde{\mathbf{M}}$ to show that it is Veech, and its Veech group is a lattice in $SL_2(\mathbb{Z})$. Recall that translation surfaces are equipped with charts, $\omega$, of maps from the surface to $\mathbb{C}$. The Veech group of the surface $\tilde{\mathbf{M}}$ is given as the image of its stabilizer in the projective group $PSL_2(\mathbb{R})$.
-%
-%\begin{Def}
-%Since $\tilde{\mathbf{M}}$ is a translation surface with four singularities, it is a Veech surface that locally behaves like a torus away from these cone singularities. $\tilde{\mathbf{M}}$ has a \textbf{Veech group}, denoted $\Gamma$.
-%\end{Def}
-%
-%We use the following theorem of Gutkin and Judge to show that $\Gamma$ is lattice (and arithemtic) in $SL_2(\mathbb{Z})$:
-%
-%\begin{thm}(Gutkin-Judge) A translation surface $(S,\omega)$ is squaretiled
-%if and only if its Veech group $V(S,\omega)$ shares a finite-index subgroup
-%with $SL_2(\mathbb{Z}).$
-%\end{thm}
-%
-%\begin{thm}The following are equivalent:
-%\begin{enumerate}[label=(\roman*)]
-%\item $\tilde{\mathbf{M}}$ is tiled by squares.
-%\item $\Gamma$ is lattice in $SL_2(\mathbb{Z})$.
-%\end{enumerate}
-%\begin{proof}
-%figure $\ref{fig:staircase}$ explicitly demonstrates how $\tilde{\mathbf{M}}$ is tiled by squares. The proof then follows as an obvious result of the previous theorem.
-%\end{proof}
-%\end{thm}
-
-
-
-\newpage
-%\subsection{Translation Surface}
-%\compat{You need to build the surface out of pieces rather than out of ``copies of $\mathbf{M}$.''} 
-%With $\tilde{\mathbf{U}}$ defined, we can describe its quotient as $\tilde{\mathbf{U}}$ modded out by translations. We use the induced isometry, $\bar\phi$, to respect our original notion of direction on $\mathbf{U}$ as a quotient of $\mathbf{P}$.
-%
-%
-%
-%\begin{Def}
-%The translation surface $\tilde{\mathbf{M}}$ is given as the quotient $\tilde{\mathbf{U}}/T$, where $T:(2\mathbb{Z})^2\times\tilde{\mathbf{U}}\rightarrow\tilde{\mathbf{U}}$ is the group action defined as $T_{m,n}(x)=\bar{\phi}\left((m,n)+\bar{\phi}^{-1}(x)\right)$ for $x\in\tilde{\mathbf{U}}$.
-%\end{Def}
-%
-%$\tilde{\mathbf{M}}$ is also a degree four branched cover of $\mathbf{M}$. A covering map $\tilde{\mathbf{M}} \rightarrow \mathbf{M}$ individually rotates these squares about the centers of their holes according to their labels and maps their points to $\mathbf{M}$. This is a genus five translation surface with four singularities. $\tilde{\mathbf{M}}$ as a quotient of $\tilde{\mathbf{U}}$ can be represented as quotients of each plane:
-%
-%\begin{figure}[H]
-%\centering
-%\includesvg[width=4in]{mtilda}
-%\end{figure}
-%
-%All in all, we have the following diagram:
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=2in]{commute.pdf}
-%\end{figure}
-%
-%\newpage
-%\subsection{The Euclidean cone surface $\mathbf{M}$}
-%\compat{I would say: Observe that translations of ${\mathbb R}^2$ by pairs even integers preserves the subset ${\mathbf P}$ and respects the equivalence relation defining ${\mathbf U}$. Thus this gives an action of $(2{\mathbb Z})^2$ on ${\mathbf U}'$. We define ${\mathbf M}$ to be the quotient. It is depicted in figure ...}
-%
-%Observe that the translations by pairs of even integers preserves the subset $\mathbf P$ and respects the equivalence relation on $\mathbf U$
-%
-%We will call this quotient space $\mathbf{M}$ and define it as such:
-%\begin{Def}{$\mathbf{M}$.}\\
-%$\mathbf{M}$ is a base surface of $\mathbf{U}'$ given by the quotient $\mathbf{U}'/2\mathbb{Z}\oplus2\mathbb{Z}$, where $2\mathbb{Z}\oplus2\mathbb{Z}\times\mathbf{U}'\rightarrow\mathbf{U}'$ is the group action on $\mathbf{U}'$ defined as $(m,n)\circ(u,v)=(u+m,v+n)$.
-%\end{Def}
-%
-%\begin{figure}[H]
-%\begin{center}
-%\includesvg[width=2in.]{unfoldcutquotient}\hspace{0.2in}
-%\includesvg[width=2in.]{quotient}
-%\end{center}
-%\caption{$\mathbf{U}'$ equivalence classes under group action (left), and $\mathbf{M}$ with identified edges and vertices (right).}
-%\label{fig:quotient}
-%\end{figure}
-%
-%The quotient space is a genus 1 surface that resembles a $2\times2$ torus with a unit square removed from it. Near the outer vertex it behaves as a torus might. The inner vertices $c_{1},c_{3}$ have cone angle $\frac{3\pi}{2}$, and $c_{2}$ has a cone angle of $3\pi$. None of these inner vertices have cone angles that are integral multiples of $2\pi$, so in order to create the necessary translation surfaces we require the minimal number of copies of both $\mathbf{U}$ and $\mathbf{M}$ to construct their associated phase spaces.  \compat{Move the discussion of building the translation surface to the next section. Otherwise this paragraph is good.}
-
-\newpage
-\subsection{Horizontal, Vertical, and Slope One Cylinders of $\tilde{\mathbf{M}}$}
 \begin{figure}[H]
 \centering
-\includesvg[pretex=\tiny, width=4in]{slopeonecylinder}
+\includesvg[pretex=\tiny, width=4.5in]{slopeonecylinder}
+\caption{In the slope one direction, $\mathbf M$ decomposes into two cylinders.}
 \end{figure}
-\newpage
-\subsection{Slope Normalization Algorithm}
-\newpage
-\subsection{Proof of Theorem}
+
+We can see that $hol(\alpha)=6+6i$ is the holonomy vector of the closed loop $\alpha$ contained in one of these cylinders. Call the unlabeled cylinder $C_1$(right), and the labeled one $C_2$(left).
+
+
+\begin{lem}
+$\alpha$ is homotopic to the image of the closed geodesic in direction $(1,1)$ on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$.
+\begin{proof}
+Let $\chi$ be a separatrix contained in either $C_1$ or $C_2$. Since a separatrix does not admit singularities, it is the image of a closed geodesic on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$ with initial point $x_0$ on the strips of $C_1$ and $C_2$ with boundaries removed, denoted $C_1',$ $C_2'$. Express $[\alpha]$ as $\Sigma^{11}_{j=0}$ $\frac{1}{2}\gamma_j$ (a closed path climbing up the staircase). We show that the intersection numbers of $[\alpha]$ and $[\chi]$ are the same for every core cylinder curve $\gamma$, i.e. $i([\gamma_k], \Sigma^{11}_{j=0} \text{ } \frac{1}{2}[\gamma_j])=i([\gamma_k],[\chi])\text{ } \forall k=0,\dots,11$. And since $x_0$ is in either $C_1'$ or $C_2'$, $\alpha$ cannot climb up the staircase without intersecting the core curves. Thus, the sum of $\frac{1}{2}$ core curves of $[\alpha]$ have to have to intersect at least one other core curve.   \\
+\textbf{Case one:} k is even. If k is even, then every curve $\gamma_k$ is oriented to the right. Since $\chi$ intersects every curve once, $i([\gamma_k],[\chi])=1$. No even indexed curves intersect eachother, so we need only consider when $j$ is odd. Now if $j$ is odd, it is incident (positively crossing) with only two horizontal curves, namely $\gamma_{j+1},\gamma_{j-1}$. Therefore $i([\gamma_k],[\alpha])=i([\gamma_{j-1}],\frac{1}{2}[\gamma_{j}])+i([\gamma_{j+1}],\frac{1}{2}[\gamma_{j}])=\frac{1}{2}(i([\gamma_{j-1}],[\gamma_{j}])+i([\gamma_{j+1}],[\gamma_{j}]))=\frac{1}{2}(1+1)=1.$\\
+\textbf{Case two:} k is odd. If k is odd, then $[\chi]$ will have an intersection number of $-1$ with $[\gamma_k]$ since odd-indexed core curves are oriented upwards. Now since k is odd, we only consider when $j$ is even. Similarly, this means that $\gamma_j$ negatively intersects the two vertical core curves with adjacent indices. Hence, $i([\gamma_k],[\alpha])=i([\gamma_{j-1}],\frac{1}{2}[\gamma_{j}])+i([\gamma_{j+1}],\frac{1}{2}[\gamma_{j}])=\frac{1}{2}(i([\gamma_{j-1}],[\gamma_{j}])+i([\gamma_{j+1}],[\gamma_{j}]))=\frac{1}{2}(-1-1)=-1.$\\
+We know intersection number to be a non-degenerate bilinear form, and if $\alpha$ and $\chi$'s abelianizations admit the same intersection numbers for every curve in the basis set of $H_1(\textbf M, \mathbb{Q})$, then $\alpha\sim\chi$.
+\end{proof}
+\end{lem}
+
+We will abuse notation occasionally and refer to $\alpha$ as the geodesic of slope one. In the horizontal direction, (1,0), $\mathbf{M}$ has the 6 cylinder decomposition shown in figure $\ref{fig:decomp}$. A similar argument shows that any horizontal cylinder curve is homotopic to a curve with holonomy vector 2 on the cylinder. The core curves themselves are geodesics on the surface that intersect only two other curves, which is a property used in the previous theorem. Their intersection numbers are therefore zero everywhere except for the curves with adjacent indices. This is unlike $\alpha$, which intersects every curve exactly once. Oftentimes we consider $\alpha$ to travel around the 12-gon counterclockwise, intersecting negatively with odd-indexed $\gamma$ (black nodes), and positively with even-indexed $\gamma$ (red nodes).
+
+The translational and rotational symmetries allows one $\gamma$-curve to end up in the place of any other curve, with positive or negative orientation. For that reason we default to using $\gamma_0$
+
+\begin{rem}
+The Infinite Staircase that covers $\mathbf{M}$ has the same shear automorphisms as $\mathbf{M}$, and similar cylinder decompositions as well. In these odd-odd directions, it decomposes into two cylinders of infinite area. In even-odd directions, it will decompose into countably many cylinders of finite area. [cite]
+\end{rem}
+
+\begin{thm}
+$\alpha\in\pi_1(\mathbf{M}, x_0)$ lifts to a closed path $\tilde{\alpha}\in\pi_1(\tilde{\mathbf{U}},\tilde{x}_0)$.
+\end{thm}
+\begin{proof}
+As a result of the previous theorem, $i([\gamma_i],[\alpha])=1$ when i is even and $i([\gamma_i],[\alpha])=-1$ when i is odd. Therefore $i([u],[\alpha])=-i([\gamma_2],[\alpha] +i([\gamma_5],[\alpha]) + i([\gamma_8],[\alpha]) - i([\gamma_{11}],[\alpha])=-1+(-1)+1-(-1)=0$, and $i([v],[\alpha])=1-(-1)-1+(-1)=0$. So $\Omega_{u,v}(\alpha)=(0,0)\simeq \mathbf{T}^{0,0}$, by Lemma 3.2. As such $\alpha\in$ Ker $\Omega_{u,v}$, and lifts to a closed path on $\tilde{\mathbf{U}}$.
+\end{proof}
+
+\begin{thm}
+The lift of core curves $\Gamma$ on $\tilde{\mathbf{U}}$ are drift-periodic.
+\end{thm}
+\begin{proof}
+\compav{show that intersection with u,v will only get one of 1, 0, or -1. therefore i(x,y) is never (0,0)}
+\end{proof}
 
 \begin{figure}[H]
-\includesvg[width=2.3in]{cubesxyzpaths}\hspace{0.1in}
-\raisebox{0.5in}{\includesvg[width=2.2in]{unfoldcutpath}}
+\centering
+\includesvg[width=1.8in]{cubesxyzpaths}
+\includesvg[width=2.8in]{unfoldcutpath}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics{z2cover.pdf}
+\caption{\compav{Fix this!}}
+\end{figure}
+
 
 \end{document}
