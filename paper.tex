@@ -19,6 +19,7 @@
 \newtheorem*{def*}{Definition}
 \newtheorem{lem}{Lemma}[section]
 \newtheorem*{rem}{Remark}
+\newtheorem*{conj}{Conjecture}
 
 \newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
 \newcommand{\compat}[1]{\textbf{\textcolor{red}{#1}}}
@@ -735,7 +736,7 @@ $\tilde{\mathbf{U}}$ is associated to the kernel of the group homomorphism,
 \end{align}
 Since $\mathbf{T}^{m,n}$ is isomorphic to $\mathbb{Z}^2$, the lift of $\beta\in \text{Ker } \Omega_{u,v}$ is the closed path, $\tilde{\beta}$. Let $F^t_\theta$ be a \emph{non-singular} geodesic flow on $\mathbf{M}\backslash$Sing$(\mathbf M)$ with initial point $x_0$. By [some theorem], $F^t_\theta$ is closed for for every rational direction $\theta$. The image of $F^t_\theta$ is an element of $\pi_1(\mathbf M, x_0)$, and homotopic to closed path $\beta$. 
 
-\begin{Def} Identify $\mathbb C$ with $\mathbb{R}^2$ in the usual way. The closed path $\alpha\in\pi_1(\mathbf M, x_0)$ is the path contained in the maximal cylinder decomposition in direction $(1,1)$.
+\begin{Def} Identify $\mathbb C$ with $\mathbb{R}^2$ in the usual way. The closed path $\alpha\in\pi_1(\mathbf M, x_0)$ is the path contained in the maximal cylinder decomposition of $\mathbf M$ in direction $(1,1)$ with hol$(\alpha)=6+6i$.
 \end{Def}
 
 \begin{figure}[H]
@@ -748,12 +749,12 @@ We can see that $hol(\alpha)=6+6i$ is the holonomy vector of the closed loop $\a
 
 
 \begin{lem}
-$\alpha$ is homotopic to the image of the closed geodesic in direction $(1,1)$ on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$.
+$\alpha$ is homologous to the image of the closed geodesic in direction $(1,1)$ on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$.
 \begin{proof}
-Let $\chi$ be a separatrix contained in either $C_1$ or $C_2$. Since a separatrix does not admit singularities, it is the image of a closed geodesic on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$ with initial point $x_0$ on the strips of $C_1$ and $C_2$ with boundaries removed, denoted $C_1',$ $C_2'$. Express $[\alpha]$ as $\Sigma^{11}_{j=0}$ $\frac{1}{2}\gamma_j$ (a closed path climbing up the staircase). We show that the intersection numbers of $[\alpha]$ and $[\chi]$ are the same for every core cylinder curve $\gamma$, i.e. $i([\gamma_k], \Sigma^{11}_{j=0} \text{ } \frac{1}{2}[\gamma_j])=i([\gamma_k],[\chi])\text{ } \forall k=0,\dots,11$. And since $x_0$ is in either $C_1'$ or $C_2'$, $\alpha$ cannot climb up the staircase without intersecting the core curves. Thus, the sum of $\frac{1}{2}$ core curves of $[\alpha]$ have to have to intersect at least one other core curve.   \\
+Let $\chi$ be a separatrix contained in either $C_1$ or $C_2$. Since a separatrix does not admit singularities, it is the image of a closed geodesic on $\mathbf{M}\backslash\text{Sing}(\mathbf M)$ with initial point $x_0$ on the strips of $C_1$ and $C_2$ with boundaries removed, denoted $C_1',$ $C_2'$. Express $[\alpha]$ as $\Sigma^{11}_{j=0}$ $\frac{1}{2}\gamma_j$ (a closed path climbing up the staircase). We show that the intersection numbers of $[\alpha]$ and $[\chi]$ are the same for every core cylinder curve $\gamma$, i.e. $i([\gamma_k], \Sigma^{11}_{j=0} \text{ } \frac{1}{2}[\gamma_j])=i([\gamma_k],[\chi])\text{ } \forall k=0,\dots,11$.    \\
 \textbf{Case one:} k is even. If k is even, then every curve $\gamma_k$ is oriented to the right. Since $\chi$ intersects every curve once, $i([\gamma_k],[\chi])=1$. No even indexed curves intersect eachother, so we need only consider when $j$ is odd. Now if $j$ is odd, it is incident (positively crossing) with only two horizontal curves, namely $\gamma_{j+1},\gamma_{j-1}$. Therefore $i([\gamma_k],[\alpha])=i([\gamma_{j-1}],\frac{1}{2}[\gamma_{j}])+i([\gamma_{j+1}],\frac{1}{2}[\gamma_{j}])=\frac{1}{2}(i([\gamma_{j-1}],[\gamma_{j}])+i([\gamma_{j+1}],[\gamma_{j}]))=\frac{1}{2}(1+1)=1.$\\
 \textbf{Case two:} k is odd. If k is odd, then $[\chi]$ will have an intersection number of $-1$ with $[\gamma_k]$ since odd-indexed core curves are oriented upwards. Now since k is odd, we only consider when $j$ is even. Similarly, this means that $\gamma_j$ negatively intersects the two vertical core curves with adjacent indices. Hence, $i([\gamma_k],[\alpha])=i([\gamma_{j-1}],\frac{1}{2}[\gamma_{j}])+i([\gamma_{j+1}],\frac{1}{2}[\gamma_{j}])=\frac{1}{2}(i([\gamma_{j-1}],[\gamma_{j}])+i([\gamma_{j+1}],[\gamma_{j}]))=\frac{1}{2}(-1-1)=-1.$\\
-We know intersection number to be a non-degenerate bilinear form, and if $\alpha$ and $\chi$'s abelianizations admit the same intersection numbers for every curve in the basis set of $H_1(\textbf M, \mathbb{Q})$, then $\alpha\sim\chi$.
+We know intersection number to be non-degenerate, and since $\alpha$ and $\chi$'s abelianizations admit the same intersection numbers for every curve in the spanning set of $H_1(\textbf M, \mathbb{Q})$,  $[\alpha]=[\chi]$.
 \end{proof}
 \end{lem}
 
@@ -779,17 +780,29 @@ The lift of core curves $\Gamma$ on $\tilde{\mathbf{U}}$ are drift-periodic.
 \compav{show that intersection with u,v will only get one of 1, 0, or -1. therefore i(x,y) is never (0,0)}
 \end{proof}
 
-\begin{figure}[H]
-\centering
-\includesvg[width=1.8in]{cubesxyzpaths}
-\includesvg[width=2.8in]{unfoldcutpath}
-\end{figure}
+
 
 \begin{figure}[H]
 \centering
 \includegraphics{z2cover.pdf}
 \caption{\compav{Fix this!}}
 \end{figure}
+
+\begin{conj}{\textbf{Periodicity of Geodesic Flow on the Necker cube surface.}}\\ Let $\theta$ be a direction obtained described as in Definition 3. Denote the geodesic flow on $\mathbf{S}$ by $F^t_{[\theta]}:T^1_{\bar{\Psi}(s)}(\mathbf{U}\backslash Sing(\mathbf U))\times\mathbb{R}_0^+\rightarrow\mathbf{S}$, where $F^t_{[\theta]}=\bar{\Psi}^{-1}(\bar{\Psi}(s)+t[\theta])$ for initial point $s\in\mathbf{S}$. Then the following is true:
+\begin{enumerate}[label=(\roman*)]
+\item If $\theta$ is rational and identified with an element in $\mathcal{O}$, then $F^t_{[\theta]}$ is periodic.
+\item If $\theta$ is rational and identified with an element in $\mathcal{E}$, then $F^t_{[\theta]}$ is drift-periodic.
+\end{enumerate}
+\end{conj}
+
+\newpage
+\begin{lem}
+The group $\mathbb{X}'$ acting on $\mathbb{Z}^2$ sends $\mathcal{O}$ to $\mathcal{O}$, and $\mathcal{E}$ to $\mathcal{E}$.
+\begin{proof}
+Since $\mathbb{X}'$ is generated by the elements $\mathbf{A}'$, $\mathbf{B}'$, and $\mathbf{R}'$, any matrix $G'\in\mathbb{X}'$ is of the form $G' = (\mathbf{A}')^{1_1}\circ(\mathbf{B}')^{1_2}\circ(\mathbf{R}')^{1_3}\circ(\mathbf{A}')^{2_1}\circ\dots(\mathbf{A}')^{n_1}\circ(\mathbf{B}')^{n_2}\circ(\mathbf{R}')^{n_3}$, where $i_k\in\mathbb{Z}$ for $i=1,\dots,n$ and $k=1,2,3.$ Let $x=\left(\begin{matrix}p \\ q  \end{matrix}\right),y\in\mathcal{O}$, and consider the equation $G'x=y$. Observe that $\left(\begin{matrix}1 && 2 \\ 0 && 1\end{matrix}\right)^l x=\left(\begin{matrix}p+2jq \\ q  \end{matrix}\right),$ and $ \left(\begin{matrix}1 && 0 \\ 2 && 1\end{matrix}\right)^m x=\left(\begin{matrix}p \\ q+2mp  \end{matrix}\right)$ for any $l,m\in\mathbb{Z}$. Also note that for any $j\in\mathbb{Z}$, $(\mathbf{R}')^{m}x=\left(\begin{matrix}p \\ q  \end{matrix}\right),\left(\begin{matrix}-q\\ p  \end{matrix}\right),\left(\begin{matrix}-p \\ -q  \end{matrix}\right),\left(\begin{matrix}q \\ -p  \end{matrix}\right)$ when $j \mod{4}\equiv0,1,2,3$, respectively. In any case, the product of any power of a generator of $\mathbb{X}'$ and any $x\in\mathcal{O}$ is an element of $\mathcal{O}$ . By letting $l=i_1,m=i_2,$ and $j=i_3$, we first consider the base case when $i=n$. Let $G'=G'_1\circ\dots\circ G'_n$, such that $G'_i=(\mathbf{A}')^{i_1}\circ(\mathbf{B}')^{i_2}\circ(\mathbf{R}')^{i_3}$. Since $n_1,n_2,n_3$ are arbitrary integers, $G'_n x \in\mathcal{O}$. Suppose for some $b< n-1$, $G'_{n-b}\circ\dots\circ G'_n x =y'\in\mathcal{O}$. Therefore $y'=(G'_1\circ\dots\circ G'_{b})^{-1}y$, which implies that $(G'_1\circ\dots\circ G'_{b})^{-1}$ preserves the set $\mathcal{O}$. Otherwise, if $y\in\mathcal{E}$, there exists at least one $G'_i$ for $1< i< b$ and $\tau\in\mathcal{E}$ such that $G'^{-1}_i \tau = (\mathbf{R}')^{-i_3}\circ(\mathbf{B}')^{-i_2}\circ(\mathbf{A}')^{-i_1} \tau \in \mathcal{O}$, a contradiction. Since elements in $\mathbb{X}'$ are invertible, $G'_1\circ\dots\circ G'_{b}$ must also preserve $\mathcal{O}$. By inductive reasoning, we conclude that  $G'_1\circ\dots\circ G'_n x = G' x = y$. $x\in\mathcal{O}$ if and only if $y\in\mathcal{O}$ since $G'$ is invertible.\\
+Proving that $G'(\mathcal{E})=\mathcal{E}$ is done in the same way.
+\end{proof}
+\end{lem}
 
 
 \end{document}
