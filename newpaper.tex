@@ -9,6 +9,32 @@
 \usepackage{float}
 \usepackage[utf8]{inputenc}
 
+%%%%% Alphabets %%%%% 
+\def\cA{\mathcal{A}}\def\cB{\mathcal{B}}\def\cC{\mathcal{C}}\def\cD{\mathcal{D}}\def\cE{\mathcal{E}}\def\cF{\mathcal{F}}\def\cG{\mathcal{G}}\def\cH{\mathcal{H}}\def\cI{\mathcal{I}}\def\cJ{\mathcal{J}}\def\cK{\mathcal{K}}\def\cL{\mathcal{L}}\def\cM{\mathcal{M}}\def\cN{\mathcal{N}}\def\cO{\mathcal{O}}\def\cP{\mathcal{P}}\def\cQ{\mathcal{Q}}\def\cR{\mathcal{R}}\def\cS{\mathcal{S}}\def\cT{\mathcal{T}}\def\cU{\mathcal{U}}\def\cV{\mathcal{V}}\def\cW{\mathcal{W}}\def\cX{\mathcal{X}}\def\cY{\mathcal{Y}}\def\cZ{\mathcal{Z}}
+
+\def\AA{\mathbb{A}} \def\BB{\mathbb{B}} \def\CC{\mathbb{C}} \def\DD{\mathbb{D}} \def\EE{\mathbb{E}} \def\FF{\mathbb{F}} \def\GG{\mathbb{G}} \def\HH{\mathbb{H}} \def\II{\mathbb{I}} \def\JJ{\mathbb{J}} \def\KK{\mathbb{K}} \def\LL{\mathbb{L}} \def\MM{\mathbb{M}} \def\NN{\mathbb{N}} \def\OO{\mathbb{O}} \def\PP{\mathbb{P}} \def\QQ{\mathbb{Q}} \def\RR{\mathbb{R}} \def\SS{\mathbb{S}} \def\TT{\mathbb{T}} \def\UU{\mathbb{U}} \def\VV{\mathbb{V}} \def\WW{\mathbb{W}} \def\XX{\mathbb{X}} \def\YY{\mathbb{Y}} \def\ZZ{\mathbb{Z}}  
+
+\def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
+\def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
+\def\GL{\mathrm{GL}} \def\SL{\mathrm{SL}}  \def\SP{\mathrm{SL}}
+
+\def\<{\langle} \def\>{\rangle}
+\def\ad{\mathrm{ad}} 
+\def\Aut{\mathrm{Aut}}
+\def\dim{\mathrm{dim}} 
+\def\End{\mathrm{End}} 
+\def\ev{\mathrm{ev}} 
+\def\half{\hbox{$\frac12$}}
+\def\Hom{\mathrm{Hom}} 
+\def\qtr{\mathrm{qtr}} 
+\def\tr{\mathrm{tr}} 
+\def\Tr{\mathrm{Tr}} 
+\def\vep{\varepsilon}
+
+\def\ZZn{\ZZ/n\ZZ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 \newtheorem{thm}{Theorem}[]
@@ -27,8 +53,6 @@
 \setsvg{svgpath={./images/}}
 
 % Title Page
-\title{Summer Report 2017}
-\author{Pavel Javornik}
 
 
 \title{Dynamical Properties of Geodesic Flows on the Necker Cube Surface}
@@ -50,7 +74,7 @@
 %\end{center}
 
 \begin{abstract}
-The Necker cube surface, $\mathbf{S}$, is an infinite topological surface obtained by the periodic tiling of unit cubes by $\mathbb{R}^3$ translational symmetries along a 2-dimensional subspace realized as a Euclidean cone surface with a discrete set of singularities of cone angle $3\pi$ and $\frac{3\pi}{2}$. An isometric ``flattening" of $\mathbf{S}$ is obtained by injective piecewise-linear maps onto the planar subspace. The fundamental domain of the surface admits infinitely unit square \emph{holes} centered on the  $(2\mathbb{Z})^2$ lattice in $\mathbb{C}$. The flat surface, $\mathbf{U}$, has rotational and translation symmetries and a unit tangent bundle, $UT(\mathbf{U})$, that is isomorphic to $\mathbb{Z}/\frac{\pi}{2}\mathbb{Z}$ as a consequence of the edge identifications. A \emph{flat} branched cover, $\tilde{\mathbf{U}}$, of the surface is obtained by a quotient topology defined on four copies of $\mathbf{U}$'s fundamental domain and indexed by elements in $\mathbb{Z}/4\mathbb{Z}$ for the purpose of aligning geodesic flows. It is a \emph{formally étale} cover of $\mathbf{U}$ whose unit tangent bundle is $\mathbb{Z}/2\pi\mathbb{Z}$ and obtained by the monodromy group of the covering map. $\tilde{\mathbf{U}}$ is a translation surface whose quotient by its translational symmetries is a \emph{Veech} surface whose \emph{Veech group} is $SL(2,\mathbb{Z})$-commensurable. This paper's aim is to study the relations between geodesic flows on base surfaces, Deck transformations of their covers, the orbit of rational directions in $\mathbb{Z}^2$ under Veech group action, and use group theoretic results to prove theorems about rational trajectories on the Necker cube surface.
+The Necker cube surface is an infinite topological surface obtained by the periodic edge-to-edge tiling of unit cubes in $\RR^3$ along a 2-dimensional subspace realized as a Euclidean cone surface with a discrete, countable set of singularities of cone angles $3\pi$ and $\frac{3\pi}{2}$. Its various symmetries allow for the categorization of periodic and drift-periodic straight line trajectories in terms of their initial trajectory angles. Results are obtained from studying the Teichmuller geodesic flow on a branched four-fold cover of the surface, where the group of deck transformations of the cover preserves the trajectory angle properties, which we use to determine periodicity on what is an infinite translation surface. The initial rational angle is obtained by the ratio of relatively prime integer vectors of the form $(a,b)$. When $a,b$ are both odd the flow is periodic, and whenever $a$ or $b$ is even, the flow is drift-periodic. \\
 \end{abstract}
 
 
@@ -58,9 +82,12 @@ The Necker cube surface, $\mathbf{S}$, is an infinite topological surface obtain
 \newpage
 \section{Introduction}
 
-Put your Problem statement here! Example of a Citation\cite[p.219]{Robotics}. Here's Another Citation\cite{Flueck}
+\compav{ignore:}
+The Necker cube surface, $\mathbf{S}$, is an infinite topological surface obtained by the periodic tiling of unit cubes by $\mathbb{R}^3$ translational symmetries along a 2-dimensional subspace realized as a Euclidean cone surface with a discrete set of singularities of cone angle $3\pi$ and $\frac{3\pi}{2}$. An isometric ``flattening" of $\mathbf{S}$ is obtained by injective piecewise-linear maps onto the planar subspace. The fundamental domain of the surface admits infinitely unit square \emph{holes} centered on the  $(2\mathbb{Z})^2$ lattice in $\mathbb{C}$. The flat surface, $\mathbf{U}$, has rotational and translation symmetries and a unit tangent bundle, $UT(\mathbf{U})$, that is isomorphic to $\mathbb{Z}/\frac{\pi}{2}\mathbb{Z}$ as a consequence of the edge identifications. A \emph{flat} branched cover, $\tilde{\mathbf{U}}$, of the surface is obtained by a quotient topology defined on four copies of $\mathbf{U}$'s fundamental domain and indexed by elements in $\mathbb{Z}/4\mathbb{Z}$ for the purpose of aligning geodesic flows. It is a \emph{formally étale} cover of $\mathbf{U}$ whose unit tangent bundle is $\mathbb{Z}/2\pi\mathbb{Z}$ and obtained by the monodromy group of the covering map. $\tilde{\mathbf{U}}$ is a translation surface whose quotient by its translational symmetries is a \emph{Veech} surface whose \emph{Veech group} is $SL(2,\mathbb{Z})$-commensurable. This paper's aim is to study the relations between geodesic flows on base surfaces, Deck transformations of their covers, the orbit of rational directions in $\mathbb{Z}^2$ under Veech group action, and use group theoretic results to prove theorems about rational trajectories on the Necker cube surface.
+\compav{ignore$\uparrow$}\\
+Put your Problem statement here! Example of a Citation\cite[p.219]{Robotics}. Here's Another Citation \cite{Flueck}
 
-The Necker cube[citation] has made numerous appearances throughout history. The artist famous for his use of optical illusions in his work, M.C. Escher, has occasionally used tilings of the Necker cube such as in the lithographs ``Metamorphosis I," and ``Convex and Concave." (Pictured below.) The crystallographer Louis Albert Necker was credited for having extensively studied the Necker cube's geometry[citation] and remarked on this simple, yet fascinating, optical illusion that appears to ``simultaneously protrude from and intrude into the page."[citation:wolfram] Some might even recognize it as the same surface in which ``Q*bert" hops around on in the 1982 arcade game. [cite?]
+The Necker cube[citation] has made numerous appearances throughout history. The artist famous for his use of optical illusions in his work, M.C. Escher, has occasionally used tilings of the Necker cube such as in the lithographs ``Metamorphosis I," and ``Convex and Concave." (Pictured below.) The crystallographer Louis Albert Necker was credited for having extensively studied the Necker cube's geometry[citation] and remarked on this simple, yet fascinating, optical illusion that appears to ``simultaneously protrude from and intrude into the page."[citation:wolfram]\compav{Find new citation} Some might even recognize it as the same surface in which ``Q*bert" hops around on in the 1982 arcade game published by Gottlieb.
 
 \begin{figure}[H]
 \begin{center}
@@ -71,13 +98,13 @@ The Necker cube[citation] has made numerous appearances throughout history. The 
 \end{center}
 \end{figure}
 
-This paper assumes the reader is familiar with fundamental concepts in algebraic topology such as covering space theory, induced homomorphisms on surface homologies of their symmetries, as well as some background in Veech structures of compact translation surfaces. 
+This paper assumes the reader is familiar with fundamental concepts in algebraic topology such as covering space theory, induced homomorphisms on surface homologies of their symmetries, as well as some background in Veech structures of compact translation surfaces. \compav{cite something}
 \newpage
 
 \subsection{Background}
 We will introduce some objects, definitions, and theorems to be used later in the paper. First and foremost, we need to describe the construction of the Necker cube surface and give it a concrete structure as a subset of $\mathbb{R}^3$.
 
-\noindent Take the following compact subsets of auxiliary planes:
+\noindent Take the following unit squares in $\RR^3$:
 
 \vspace{0.2in}
 \begin{tabular}{p{10cm}c}
@@ -103,16 +130,15 @@ We will introduce some objects, definitions, and theorems to be used later in th
 
 \begin{Def} We denote the \textbf{Necker cube surface} by $\mathbf{S}$, and define it to be the surface of the union of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
 
-The structure is then \emph{flattened} onto x-y plane by piece-wise isometric maps onto a subset of $\mathbb C$ with unit squares removed at every even integer pair in the complex plane: 
-
+The structure can be \emph{flattened} onto plane by piecewise isometric maps onto a subset of $\mathbb C$ with unit squares removed at every even integer pair in the complex plane: 
 \begin{figure}[H]
 \centering
 \includesvg[width=1.1in]{cubesxyzcut} \hspace{0.1in}\raisebox{1.0in}{\text{$\rightarrow$}}\hspace{0.1in}
 \raisebox{0.4in}{\includesvg[width=1.5in]{unfoldcut}}
-\caption{A piecewise-linear map from $\mathbf{S}$ to $\mathbb{C}$. }
+\caption{A piecewise isometry from $\mathbf{S}$ to $\mathbb{C}$. }
 \label{fig:Psi}
 \end{figure}
-\noindent The red/blue dotted lines are meant to show how the edge identifications are preserved after the transformation. We call the flattened version of the Necker cube surface $\mathbf U$. The map from one fundamental domain to the other is composed of piecewise-linear maps, $\Psi:\mathbf{S}\rightarrow\mathbb{C}$. We obtain an induced isometry between $\mathbf{S}$ and $\mathbf{U}$ from $\Psi$. Identify $\mathbb{C}$ with $\mathbb{R}^2$, and $\Psi$ is given as: 
+\noindent The red/blue dotted lines represent the edges that are split on the plane. The map from one surface to the other is composed of piecewise isometries, $\Psi:\mathbf{S}\rightarrow\RR^3$.
 
 \begin{equation}
 \Psi\left[\begin{array}{c}
@@ -180,21 +206,19 @@ The structure is then \emph{flattened} onto x-y plane by piece-wise isometric ma
 \end{cases}
 \end{equation}
 
-
-\noindent The fundamental domain of $\mathbf{U}$ is
+The flattened surface is contained entirely in $\{(x,y,z)\in\RR~|~z=0\}$, which is isometric to $\CC$. $\mathbf{S}$ is recovered as a topological quotient on the domain
 
 \begin{equation}
 \label{eq:P}
-\mathbf{P} = \mathbb{C}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{} u+vi:u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}},
+\mathbf{P} = \mathbb{C}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{} u+vi:u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}.
 \end{equation}
 
-\noindent and it is defined as follows (identify $\mathbf{P}$ with $\mathbb{R}^2$):
+\noindent We denote the relation by $\sim_{\mathbf{P}}$, and the isometric
 
-\begin{Def} $\mathbf U$ is the surface obtained as the topological quotient $\mathbf P/\mathbf{E}$, where $\mathbf E$ is a minimal relation on $\mathbf{P}$ defined as follows:
+\begin{Def} $\mathbf U$ is the surface obtained as the topological quotient $\mathbf{P}/\sim_{\mathbf{P}}$, where $\sim_{\mathbf{P}}$ is a minimal relation on $\mathbf{P}$ defined as follows:
 \begin{gather*}
-\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}.  \text{ }\mathbf{E} \text { is given as the relation } x_{0}\mathbf{E}x_{1} \\ \text{ iff } x_{0}=x_{1}
- \text{ or, for }x_{0},x_{1} \in {\partial} \left( \left[2m-\frac{1}{2},2m+\frac{1}{2}\right] \times \left[2n-\frac{1}{2},2n+\frac{1}{2}\right] \right)\\
- \text{ and }m,n\in\mathbb{Z},
+\text{Let } x_{0}=(u_{0},v_{0}),x_{1}=(u_{1},v_{1}) \in \mathbf{P}.  \text{ }\sim_{\mathbf{P}} \text { is given as the relation }\\ x_{0}\sim_{\mathbf{P}}x_{1}  \text{ iff } x_{0}=x_{1}
+ \\\text{ or, for some }m,n\in\ZZ~x_{0},x_{1} \in {\partial} \left( \left[2m-\frac{1}{2},2m+\frac{1}{2}\right] \times \left[2n-\frac{1}{2},2n+\frac{1}{2}\right] \right)\\
   \left[\begin{array}{c}
 u_{1} -2m
 \\v_{1}-2n
@@ -217,13 +241,11 @@ For $0\leq i\leq 1$, Let $S_1=\{(m+1,n,p-i)\}, S_2=\{(m+1,n+1,p-i)\}, S_3=\{(m,n
 \end{proof}
 \end{thm}
 
-\noindent We use $\mathbf{U}$ from here on, since it is a far simpler surface to work with. Below are representations of simple geodesics on $\mathbf{S}$ and $\mathbf{U}$.
-
 \begin{figure}[H]
 \centering
 \includesvg[width=1.8in]{cubesxyzpaths}
 \includesvg[width=2.8in]{unfoldcutpath}
-\caption{Periodic(c) and drift-periodic (a,b) trajectories.}
+\caption{Simple periodic (c) and drift-periodic (a,b) trajectories represented as line segments on $\mathbf{S}$ and $\mathbf{U}$.}
 \end{figure}
 
 We see from the figure above that a geodesic flow in what would appear to be the $\frac{\pi}{4}$ direction closes up on the surface. The edges of $\mathbf{U}$ are identified by a $\pm\frac{\pi}{2}$ rotation about a corner of one of these squares. It is a Euclidean cone surface with countably many conic singularities of angle $\frac{3\pi}{2}$ and $3\pi$ (3 singularities per hole). The set of singularities is denoted $Sing(\mathbf{U})$.
@@ -237,21 +259,13 @@ We see from the figure above that a geodesic flow in what would appear to be the
 
 The surface $\mathbf{U}^0=\mathbf{U}\backslash Sing(\mathbf{U})$ is the surface with these cone singularities \textbf{removed}.
 
-\begin{lem}
-The unit tangent bundle of $\mathbf{U}^0$, $UT(\mathbf{U}^0)$, is isomorphic to $\mathbf{U} \times\mathbb{R}/\frac{\pi}{2}\mathbb{Z}$.
-\begin{proof}
-Let $T_x(\mathbf{U}^0)$ be the unit tangent fiber at a point $x\in\mathbf{U}^0$. If $x$ is not on an identified edge around a hole of $\mathbf{P}$, then $T_x\simeq\mathbb{R}/2\pi\mathbb{Z}$. Suppose that it lies on an edge of this unit square cut-out. Any vector $v\in\mathbb{C}$ is simultaneously in the direction $Arg(z)$ and $Arg(z)+\frac{\pi}{2}$. It follows then that for unit vectors of $\mathbb{C}$ $\frac{z}{|z|}\sim(-i)^n\frac{z}{|z|}$ for $n\in\mathbb{Z}$, and $UT(\mathbf{U}^0)\simeq\mathbb{R}/\frac{\pi}{2}\mathbb{Z}$.
-\end{proof}
-\end{lem}
-
-
-
 
 \subsection{Discussion of Results}
 This section will detail how an initial trajectory angle is obtained from $\mathbf{S}$, and how it relates to the periodicity of geodesic flow as a statement of the main theorem.
 
 \begin{Def}
-Take a sufficiently small straight-line segment in $\mathbb{R}^3$, $\ell:[0,1]\times\mathbf{S}\rightarrow\mathbb{R}^3$ such that $\ell(t,s)\subset \{X_{m,n,p}: X=\mathbf{A}, \mathbf{B}, \text{or }\mathbf{C}, \text{ and } m,n,p\in\mathbb{Z}\}$ for all $t\in[0,1]$ ($\ell$ is contained in one, and only one, face of $\mathbf{S}$). The \textbf{initial trajectory angle} of a geodesic on $\mathbf{S}$ is given as $\theta=Arg(\Psi(\ell(1,s))-\Psi(\ell(0,s)))$, where Arg is the principal argument of a vector in $\mathbb{C}$. The \textbf{initial trajectory} is the vector $\dot{v}=(\cos(\theta),\sin(\theta))\in\mathbb{R}^2$.
+Take a trivial straight-line path in $S\subset\mathbb{R}^3$, $\ell:[0,1]\rightarrow\mathbf{S}$ such that for some $m,n,p\in\mathbb{Z},~ \ell(t)$ is contained in exactly one of $\mathbf{A}_{m,n,p},\mathbf{B}_{m,n,p},~or~\mathbf{C}_{m,n,p}$ for all $t\in[0,1]$. The \textbf{initial trajectory angle} of a geodesic on $\mathbf{S}$ is given as $\theta=Arg(\Psi(\ell(1,s))-\Psi(\ell(0,s)))$, where Arg is the principal argument of a vector in $\mathbb{C}$. The \textbf{initial trajectory} is the vector $\dot{v}=(\cos(\theta),\sin(\theta))\in\mathbb{R}^2$.\\
+\compav{Not sure if I should proceed with derivative or map}
 \begin{figure}[H]
 \centering
 \includesvg{vectorplane}
@@ -260,7 +274,7 @@ Take a sufficiently small straight-line segment in $\mathbb{R}^3$, $\ell:[0,1]\t
 
 \noindent We have two subsets of $\mathbb Z^2$ directions that partition the set of possible rational directions $\theta$.
 \begin{Def}
-Let $v$ be a unit vector of the form $\frac{1}{k}(x,y)\simeq\mathbb{R}/2\pi\mathbb{R}$ for $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$.  We call $v$ an \textbf{odd-odd} vector if x and y are relatively prime integers and both odd. We denote the \textbf{set of all odd-odd slopes} $(x,y)\in\mathcal{O}$. We say that $v$ is an \textbf{even-odd} vector if x and y are relatively prime integers, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd slopes} $(x,y)\in\mathcal{E}$.
+Let $v$ be a unit vector of the form $\frac{1}{k}(x,y)\simeq\mathbb{R}/2\pi\mathbb{Z}$ for $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$.  We call $v$ an \textbf{odd-odd} vector if x and y are relatively prime integers and both odd. We denote the \textbf{set of all odd-odd directions} $(x,y)\in\mathcal{O}$. We say that $v$ is an \textbf{even-odd} vector if x and y are relatively prime integers, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd directions} $(x,y)\in\mathcal{E}$.
 \end{Def}
 
 If $v$ is rational, that is $v=k(x,y)$ for integers x,y, then we commonly refer to the pair $(x,y)$ as the \emph{slope} of a given initial trajectory. For example, the following trajectory modeled on the surface is a closed geodesic on $\mathbf{U}$ with initial trajectory (51,31):
