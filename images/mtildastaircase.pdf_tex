@@ -66,5 +66,31 @@
     \put(0.60516629,0.13512885){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
     \put(0.60305846,0.09552077){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
     \put(0.60408093,0.05468822){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(-0.03418211,0.06956733){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
+    \put(0.30346243,0.06956733){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
+    \put(0.10650311,0.21025256){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{C}}}%
+    \put(0.44414765,0.21025256){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{C}}}%
+    \put(0.24718834,0.35093778){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{E}}}%
+    \put(0.58483288,0.35093778){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{E}}}%
+    \put(0.38787357,0.491623){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.7255181,0.491623){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.52855879,0.63230823){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
+    \put(0.86620333,0.63230823){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{I}}}%
+    \put(0.66924401,0.77299345){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{K}}}%
+    \put(1.00688855,0.77299345){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{K}}}%
+    \put(0.20192589,0.31366444){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{B}}}%
+    \put(0.20192589,-0.0240214){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{B}}}%
+    \put(0.06953203,0.16816377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.06701782,-0.0240214){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.34838828,0.45434966){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.34838828,0.11666391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.4890735,0.59021944){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F}}}%
+    \put(0.4890735,0.25253369){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F}}}%
+    \put(0.62975873,0.73572011){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{H}}}%
+    \put(0.62975873,0.39803436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{H}}}%
+    \put(0.77044395,0.87640534){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{J}}}%
+    \put(0.77044395,0.53871958){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{J}}}%
+    \put(0.91112917,0.88084296){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.91112917,0.67458936){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L}}}%
   \end{picture}%
 \endgroup%

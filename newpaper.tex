@@ -18,6 +18,8 @@
 \def\bU{\mathbf{U}} \def\btU{\tilde{\bU}} \def\bUs{\bU^\circ}
 \def\btUos{\btU_0^\circ}
 \def\bG{\mathbf{G}} \def\bGs{\mathbf{G}^\circ}
+\def\hol{\mathbf{hol}}
+\def\bM{\mathbf{M}}
 
 \def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
 \def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
@@ -37,6 +39,7 @@
 \def\vep{\varepsilon}
 
 \def\ZZn{\ZZ/n\ZZ}
+\def\acts{\rotatebox[origin=c]{-90}{$\circlearrowright$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -71,7 +74,7 @@
 %\end{center}
 
 \begin{abstract}
-The Necker cube surface is an infinite topological surface obtained by the periodic tiling of unit cubes in $\RR^3$ along a 2-dimensional subspace realized as a Euclidean cone surface with a discrete, countable set of singularities of cone angles $3\pi$ and $\frac{3\pi}{2}$. When punctured at these points it is an infinite genus flat surface equipped with a flat metric with nontrivial holonomy. We employ techniques most commonly used in studying geodesic flow on finite flat surfaces and adapt them to this one.     \\
+We study dynamical properties of geodesic flows on a flat, periodically constructed Euclidean cone surface by obtaining an infinite-type translation cover branched over conical singularities, of which admits a flat induced metric and a connection between any two points in the tangent vector bundle of the surface has trivial holonomy. A unit vector flow on the unit tangent bundle of such a surface is well-defined with a canonical vector representation in $\RR^2$. We study this infinite-type surface as a $\ZZ^2$ cover of a compact Veech surface belonging to the stratum of $\cH(2,2,2,2)$ translation surfaces, and use its $SL(2,\RR)-$commensurable Veech group to prove results that relate directions of flows to the periodicity and ergodicity of their lifts in the cover.
 \end{abstract}
 \begin{figure}[H]
 \centering
@@ -86,20 +89,21 @@ The Necker cube surface is an infinite topological surface obtained by the perio
 
 Put your Problem statement here! Example of a Citation\cite[p.219]{Robotics}. Here's Another Citation \cite{Flueck}
 
-The Necker cube[citation] has made numerous appearances throughout history. For example, M.C. Escher, the artist most famously known for his use of optical illusions in his artwork, has occasionally used tilings of the Necker cube such as in the lithographs ``Metamorphosis I," and ``Convex and Concave." (Pictured below.) The crystallographer Louis Albert Necker was credited for having extensively studied the lone Necker cube's geometry[citation] and remarked on this simple, optical illusion. Some might even recognize it as the same surface in which ``Q*bert" hops around on in the 1982 arcade game published by Gottlieb.
+Historically, the Necker cube[citation] has made numerous appearances in the work of mathematicians, crystallographers, and scientists interested in human visual systems prior to it being popularized in the works of illusionary artist M.C. Escher (pictured below). The crystallographer Louis Albert Necker was credited for having discovered the optical illusion, and studying its geometry[cite]. The solid presentation of the cube, when rendered as a flat surface with its back faces removed, achieves a similar effect when its three visible faces are shaded in a particular way. We are interested in the infinite tiling of this structure (figure $\ref{fig:front}$), which has the appearance of a rhombile tiling of the Euclidean plane, and refer to it as the Necker cube surface.  Video game fans might even recognize it as the same surface that appears in the 1982 arcade game by Gottlieb, ``Q*bert." 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{escher.jpg}
 \includegraphics[scale=0.55]{escher2.jpg}
-\caption{The Necker cube tiling as it appears briefly in ``Metamorphosis I," and hung on a banner in ``Convex and Concave."[citation]}
+\caption{The Necker cube tiling as it appears briefly in ``Metamorphosis I," and impressed into a banner in ``Convex and Concave."[citation]}
 \label{fig:Escher}
 \end{center}
 \end{figure}
 
+Flat, periodic surfaces such as the Necker cube surface are of much interest to differential geometers for two reasons in particular. The first is that, locally, neighborhoods are isometric to the plane, making it remarkably easy to describe parallel transports between two points in tangent vector bundles over the surface by linear group actions. The second is that Riemann surfaces constructed out of infinitely many polyhedra can be \emph{flattened} and contained in the plane in such a way that the metric is preserved. The advantage in this case is that one obtains something akin to infinite billiard tables where a geodesic flows are represented by series of straight line segments in the plane. This paper will use such methods to prove dynamical results about Geodesic flows on the Necker cube surface.
 
 \begin{rem}
-Familiarity is assumed on the part of the reader with covering space theory, translation (Veech) surfaces, and their associated Veech groups. For a general take on these topics check [cite] and [cite].
+Familiarity is assumed on the part of the reader with covering space theory, translation (Veech) surfaces, and their associated Veech groups. For general surveys on these topics: [cite], [cite].
 \end{rem}
 
 \subsection{Discussion of Results}
@@ -109,23 +113,23 @@ Initial experiments suggested there was a correlation between choice of trajecto
 \begin{wrapfigure}{l}{2.2in.}
 \includesvg{vectorplane}
 \end{wrapfigure}
-We consider classes of directions obtained from unit vectors in $\RR^3$ by projecting one of these line segments onto a plane parallel to some face. These vectors retain all necessary information about their directions and let us consider rational and irrational angles relative to a choice of basis in $\RR^2$. This is what we refer to as an \emph{initial trajectory angle}.
+We consider classes of directions obtained from unit vectors in $\RR^3$ by projecting a sufficiently small segment of a flow contained onto a parallel plane. These vectors retain all necessary information about their directions and let us consider rational and irrational angles relative to a choice of basis in $\RR^2$. This is what we refer to as the \emph{initial trajectory angle}.
 \\\\
-Rational angle trajectories are categorized according to the parities of their components.
+Rational component trajectory angles are then further categorized according to the parities of their components.
 \begin{Def}
-Let $v$ be a unit vector of the form $\frac{1}{k}(x,y)\simeq\mathbb{R}/2\pi\mathbb{Z}$ for $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$.  We call $v$ an \textbf{odd-odd} vector if x and y are relatively prime integers and both odd. We denote the \textbf{set of all odd-odd directions} $(x,y)\in\mathcal{O}$. We say that $v$ is an \textbf{even-odd} vector if x and y are relatively prime integers, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd directions} $(x,y)\in\mathcal{E}$.
+Let $v$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ for $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$.  We call $v$ an \textbf{odd-odd} vector if x,y are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v$ is an \textbf{even-odd} vector if x and y are relatively prime, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
 \end{Def}
-If $v$ does not fall into one of these two categories, it is an \emph{irrational} direction. We prove the following is true of all rational trajectory angles:
+We prove the following is true of all rational directions:
 
-\begin{thm}
-Let $\Phi_t$ be the unit tangent flow on the Necker cube surface, and $\Phi_0=(x_0,v')$ be its initial point in direction $v'\in\RR^3$.  Let $v$ be a unit tangent vector in $\RR^2$ identified with $v'$. Then the following is true:
+\begin{thm*}
+Let $\Phi_t$ be the geodesic flow defined on the unit tangent bundle of the Necker cube surface for $t\in\RR$, and initial point $p=(x_0,v_0)$ with $v_0\in\RR$. Then the following is true:
 \begin{enumerate}[label=(\roman*)]
 \item $\Phi$ is periodic with period $T\in\RR$ if and only if $v\in\cO$.
 \item $\Phi$ is drift-periodic with period $T\in\RR$ if and only if $v\in\cE$.
 \end{enumerate}
-\end{thm}
+\end{thm*}
 
-The proof of this theorem is in section X.
+The proof for this theorem can be found in XXX and follows from Theorems YYYY and ZZZZZ.
 \\
 \compav{theorem about most directions being recurrent?}
 
@@ -137,15 +141,15 @@ The proof of this theorem is in section X.
 \newpage
 
 \section{Construction}
-This section details the construction of the Necker cube surface and how two different interpretations of the surface are one and the same.
+This section details how we construct the Necker cube surface as an infinite cover of a compact Riemann surface.
 \subsection{Geometric Interpretation}
-Consider the following surface embedded in $\RR^3$:
+Consider the following surface:
 \begin{figure}[H]
 \centering
 \includesvg[width=2in.]{neckercube}
 \end{figure}
 
-We call this surface $\bG$, the \emph{Necker cube}. $\bG$ is obtained by taking three copies of the unit square and identifying the edges so as to resemble a cube when viewed from the front. $\bG$ has a total of three vertices. Every vertex has a cone angle of either $3\pi$ or $\frac{3\pi}{2}$ and is therefore a conical point/singularity. It is apparent that $\bG$ has an induced flat metric and non-trivial linear holonomy, so geodesic flows on its unit tangent bundle are well-defined via parallel transports over the edges. We denote the surface without singularities by $\bGs$. The periodic tiling of $\bG$ will take infinitely many copies of $\bG$ and glue them translationally along the solid triangles and create our Necker cube surface, denoted $\mathbf{S}$.\\
+We call this surface $\bG$, the \emph{Necker cube}. $\bG$ is obtained by taking three copies of the unit square and identifying the edges in order to resemble the visible portion of a cube. $\bG$ has a total of three vertices. Every vertex has a cone angle of either $3\pi$ or $\frac{3\pi}{2}$ and are \emph{conical points} (or \emph{singularities}) of the surface. We denote the surface without singularities by $\bGs$. The periodic tiling of $\bG$ will take infinitely many copies of $\bG$ and tile them along the edges labeled with solid triangles. This cover of $\bG$ is the Necker cube surface we denote by $\mathbf{S}$. Likewise, the surface tiled by $\bGs$ we denote by $\mathbf{S}^\circ$\\
 
 \noindent Take the following unit squares in $\RR^3$:\\
 \vspace{0.2in}
@@ -166,7 +170,7 @@ We call this surface $\bG$, the \emph{Necker cube}. $\bG$ is obtained by taking 
 \\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}},
 \\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}.
 \end{align*}\\
-The sets $\mathbf{A},\mathbf{B},\mathbf{C}$ are contained in $\mathbf{S}$ their union is the Necker cube surface. 
+The sets $\mathbf{A},\mathbf{B},\mathbf{C}$ are contained in $\mathbf{S}$. Their union is also the Necker cube surface. 
 
 \begin{figure}[H]
 \centering
@@ -175,40 +179,40 @@ The sets $\mathbf{A},\mathbf{B},\mathbf{C}$ are contained in $\mathbf{S}$ their 
 \end{figure}
 
 \subsection{Algebraic Interpretation}
-Rigid motions of the faces of $\bGs$ allow us to use a series of cutting and gluing operations to obtain an L-shaped surface homeomorphic to the two-torus with three points removed,\\
+We use a series of cutting and gluing operations to obtain an L-shaped surface homeomorphic to the torus branched at three points:\\
 \begin{figure}[H]
 \centering
 \includesvg[width=3in]{LTorus}
 \end{figure}
-which is then cut along the dotted lines to obtain a surface that resembles a torus with a unit square shaped hole cut out:\\
+\noindent Which is then cut along these dotted lines and pieced together to resemble the torus with a unit-square removed from the center:\\
 \begin{figure}[H]
 \centering
 \includesvg[width=3in]{BranchTorus}
-\caption{$\bGs$ with 4 closed paths labeled identified}
+\caption{$\bGs$ with 4 independent, closed paths labeled identified}
 \end{figure}
-We assert that $\pi_1(\bGs)\cong \<a,b,c,d\>$ since it is homeomorphic to the thrice-branched torus. We tile this surface so that the associated deck group, $\Delta_{\bGs}$, of the cover is isomorphic to $\ZZ^2$. 
+The labeled paths are independent from eachother, and a quick calculation shows us that its fundamental group $\pi_1(\bGs)\cong \<a,b,c,d\>$, the free group of four generators (denote identity by $\mathbf{1}$). We describe an infinite cover of $\bGs$ such that the associated deck group is isomorphic to $\ZZ^2$
 \begin{Def}
-Let $\varphi:\pi_1(\bGs)\rightarrow \ZZ^2$ be the map between groups such that \\$\varphi(1)=\varphi(c)=\varphi(d)=(0,0)$\\ $\varphi(a)=(1,0)$\\$\varphi(b)=(0,1)$\\ $\varphi(ab)=(1,1)=\varphi(ba)$.
+We define $\varphi_1:\pi_1(\bGs)\rightarrow \ZZ^2$ as the group homomorphism on generators $a,b,c,d$: \\$c,d\mapsto(0,0)$\\ $a\mapsto(1,0)$\\$b\mapsto(0,1)$\\ $ab,ba\mapsto(1,1)$.
 \end{Def}
-
-\begin{lem}
-$\varphi$ is a group homomorphism.
-\begin{proof}
-$\varphi$ preserves identities and is well defined on the generators of $\pi_1(\bGs)$, and is therefore a homomorphism.
-\end{proof}
-\end{lem}
 
 \begin{Def}
 $\bUs$ is the cover of $\bGs$ such that $\pi_1(\bUs)=\ker\varphi$.
 \end{Def}
 
-The kernel of the homomorphism is the free product of the commutator subgroup $[a,b]$ and free group $\<c,d\>$, so $\Delta_{\bGs}=\pi_1(\bGs)/\pi_1(\bUs)=\<a,b,c,d\>/\<c,d\>\otimes [a,b]\cong\ZZ^2$. The covering map that induces the inclusion $k_{\varphi*}:\pi_1(\bUs)\hookrightarrow\pi_1(\bGs)$ is the function $k_{\varphi}:\bUs\hookrightarrow\bGs$ that takes every point on $\bUs$ to its modular equivalent under these translational symmetries. $\bUs$ is realized as an infinite $\ZZ^2$-tiling of $\bGs$ in $\CC$:
+Our cover of $\bGs$ has the fundamental group, $\pi_1(\bUs)=\<\<a^{-1}b^{-1}ab, c, d\>\>$, the conjugate subgroup of elements that map trivially under $\varphi_1$. The covering map $k_{\varphi_1}:\bUs\hookrightarrow\bGs$ takes every point on $\bUs$ to its modular equivalent under these translational symmetries. $\bUs$ is realized as an infinite $\ZZ^2$-tiling of $\bGs$ in $\CC$:
 \begin{figure}[H]
 \centering
 \includesvg[width=2in]{uprime}
 \caption{The infinite surface $\bUs$ embedded in $\CC$ with edges identified.}
-\end{figure} 
+\end{figure}
 
+\begin{Def}
+$\bU$ is the completion of $\bUs$ that includes the branched vertices. 
+\end{Def}
+
+\begin{rem}
+The surface $\bG$ is homeomorphic to the torus, and its cover $\bU$ is its universal cover as the paths labeled $c,d$ are only non-trivial when $\bG$ is branched at its three conical points.
+\end{rem}
 
 \subsection{Isometry From $\mathbf{S}$ to $\bU$}
 The Necker cube surface can be \emph{flattened} onto the plane by piecewise isometric maps onto a subspace of $\RR^3$ with (open) unit squares removed at every even integer pair in the plane, what we claim to be $\bU$.
@@ -264,7 +268,7 @@ The Necker cube surface can be \emph{flattened} onto the plane by piecewise isom
 			\\ 2\left\lfloor y \right\rfloor - \frac{3}{2}
 			\\ x - \left\lfloor x \right\rfloor
 		\end{array} \right]
-			& \text{if } (x,y,z)\in \mathbf{B}	\vspace{2mm}
+			& \text{if } (x,y,z)\in \mathbf{B}\backslash(\mathbf{A}\cup\mathbf{C})	\vspace{2mm}
 	\\
 	
 		\left[ \begin{matrix}
@@ -283,7 +287,7 @@ The Necker cube surface can be \emph{flattened} onto the plane by piecewise isom
 				\\ 2\left\lfloor y \right\rfloor - \frac{3}{2}
 				\\ y - \left\lfloor y \right\rfloor
 			\end{array} \right]
-				& \text{if } (x,y,z)\in \mathbf{C}	\vspace{2mm}
+				& \text{if } (x,y,z)\in \mathbf{C}\backslash(\mathbf{A}\cup\mathbf{B})	\vspace{2mm}
 \end{cases}
 \end{equation}
 
@@ -308,23 +312,23 @@ u_{1} -2m
 \left[ \begin{array}{c}u_{0}-2m\\
 v_{0}-2n
 \end{array}\right]
-. \end{gather*}
-\end{Def}
+.\end{gather*}\end{Def}
 
 \begin{rem}
-While $\Psi$ does send edges and vertices to different line segments and points $(x,y,0)\sim\mathbf{P}$ depending on the choice of subset of $\mathbf{S}$, the surface $\bU$ is recovered as a topological quotient. This being an isometry follows from $\Psi$ being composed of Euclidean matrices 
+Our map $\Psi$ induces an isometry between $\mathbf{S}$ and $\bU$, and its restriction to the branched surfaces induces an isometry between $\mathbf{S}^\circ$ and $\bUs$. This follows from these piecewise Euclidean transformations that preserves our induced flat metric.
 \end{rem}
+From here on we use $\bUs$ and $\bU$ instead of $\mathbf{S}$ and $\mathbf{S}^\circ$.
 
 \subsection{Four-Fold Cover}
-We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $UT(\bUs)=\bUs\times\RR^2$, and describe a lift by $SO(2,\ZZ)$ action on the fibers of $\bUs$. Initial experiments have shown us that geodesics viewed as discontinuous line segments on $\mathbf{P}$ flow in any one of four directions at a time.
+We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $T^1\bUs$, and construct a cover with trivial holonomy. Initial experiments have shown us that geodesics viewed as discontinuous line segments on $\mathbf{P}$ flow in any one of four directions at a time.
 \begin{figure}[H]
 \centering
 \includesvg[width=1.8in]{cubesxyzpaths}
 \includesvg[width=2.8in]{unfoldcutpath}
-\caption{Simple periodic (c) and drift-periodic (a,b) trajectories represented as line segments on $\mathbf{S}$ and $\mathbf{U}$.}
+\caption{Simple periodic (c) and drift-periodic (a,b) trajectories represented as line segments on $\mathbf{S}$ and $\mathbf{U}$.\compav{RELABEL THESE}}
 \label{fig:holonomypath}
 \end{figure}
-Observe that a closed loop on $\bUs$ will act on the vectors by a rotation of $\pm\frac{\pi}{2}$ radians. Let $\eta:UT(\bUs)\rightarrow\bUs$ be the projection map onto $\bUs$, and $\gamma:[0,1]\rightarrow\bUs$ be a closed path based at $x_0\in\bUs$. We lift $\gamma$ to $\tilde{\gamma}$ under $\eta$ such that $\tilde{\gamma}(0)=p=(x_0,v_0)$, where $v_0$ is an arbitrary vector in $\RR^2$. A holonomy map $\tau:\pi_1(\bUs)\rightarrow$ Hol$_{p}$ takes $c\mapsto \begin{pmatrix}0 & -1\\ 1 & 0\end{pmatrix}=R$, $d\mapsto \begin{pmatrix}0 & 1\\ -1 & 0\end{pmatrix}=R^3$, and maps $a,b$ trivially. Then $\tau(\pi_1(\bUs))=\tau([a,b]\otimes\<c,d\>)=[I_2,I_2]\otimes\<R,R^3\>\cong SO(2,\ZZ)$. $A\in SO(2,\ZZ)$ acts on $(x,v)\in UT(\bUs)$ by the left action: $A\cdot(x,v)=(x,Av)$ that corresponds to the effect that looping around these cone singularities has on a vector. The corresponding lifted path thus returns as $\tilde{\gamma}(1)=\tau([\gamma])\cdot(x_0,v_0)=(x_0,\tau([\gamma])v_0)$.
+Observe that a closed loop on $\bUs$ will act on vectors tangent to the surface by a rotation of $\pm\frac{\pi}{2}$ radians (since the surface is flat and embedded in $\CC$, we work with vectors in $\RR^2$).
 
 \begin{figure}[H]
 \centering
@@ -332,33 +336,26 @@ Observe that a closed loop on $\bUs$ will act on the vectors by a rotation of $\
 \caption{Effect a nontrivial loop has on arbitrary basis (i,j).}
 \label{fig:loop}
 \end{figure}
-Thus, $\tilde{\gamma}$ is closed if and only if $\gamma$ has trivial linear holonomy. 
+
+Let $\omega$ be a flat, Riemannian metric connection on $T^1\bUs$. This is allowable since $\bUs$ is obtained as the cover of a flat Riemann surface. We say that $p=(x_0,v_0)\in T^1\bUs$ is a fixed point in the fiber over $x_0$ in the unit tangent bundle of the surface, with $x_0\in\bUs$ and $v_0\in\RR^2$ being unit. Denote the \emph{holonomy group} of the connection with base point p by $Hol_p(\omega)=\{A\in SO(2,\RR)~:~ p \equiv A\cdot p\}$ where $p$ differs from $A\cdot p$ by some rotation of $v_0$, and the \emph{holonomy bundle}  by $H(p)$, the set of points $p'\in T^1\bUs$ where a closed loop on $\gamma:[0,1]\rightarrow\bUs$ lifts to $\gamma^*:[0,1]\rightarrow T^1\bUs$ such that $p=\gamma^*(0)$ and $p'=\gamma^*(1)$.
+
 \begin{Def}
-The four-fold cover $\btUos$ is the surface with fundamental group $\pi_1(\btUos)=\ker\tau$.
+Define $\varphi_2:\pi_1(\bGs)\rightarrow SO(2,\ZZ)$ as the group homomorphism on generators $a,b,c,d$ such that:
+\begin{align*}
+a,b\mapsto \begin{pmatrix}1 && 0 \\ 0 && 1\end{pmatrix}=I_2,~~~
+c\mapsto \begin{pmatrix}0 && -1 \\ 1 && 0\end{pmatrix}=R,~~~
+d\mapsto \begin{pmatrix}0 && 1 \\ -1 && 0\end{pmatrix}=R^3
+\end{align*}
 \end{Def}
-
-We consider this to be a four-fold cover, as this is a cyclic cover whose sole purpose is to have a trivial holonomy on all \emph{closed} paths in order to lift closed geodesics to closed geodesics. Arbitrary paths do \emph{not} have trivial holonomy by parallel transport over the edges:
-\begin{figure}[H]
-\centering
-\includegraphics[width=3in]{monogroup.png}
-\label{fig:arbitrarylift}
-\caption{Arbitrary lifts to fibers }
-\end{figure}
-The inclusion map $k_{\tau*}:\pi_1(\btUos)\hookrightarrow\pi(\bUs)$ is induced by the projection $k_{\tau}:\btUos\hookrightarrow\bUs$.
-A simple calculation also shows us that $\ker\tau=[a,b]\otimes\<c^4,d^4\>$. Naturally, this also extends to a monodromy map from the fundamental group to the cyclic group of permutations of elements in the fiber $k^{-1}_{\tau}(x_0)$.
-\begin{thm}
-A periodic geodesic on $\bUs$ lifts to a periodic geodesic on $\btUos$.
+The homomorphism restricted to $\pi_1(\bUs)$ factors through $\pi_1(\bGs)$ and we show that:
+\begin{lem}
+The group $\varphi_2(\pi_1(\bUs,x_0))=Hol_p(\omega)$.
 \begin{proof}
-Let $\gamma:[0,1]\rightarrow \bUs$ be a closed, periodic geodeisc in unit direction $\gamma'$. Suppose that $\gamma$ does not lift to a closed path on $\btUos$. Then $[\gamma]\notin\ker\tau$, which implies that $\tau([\gamma])\neq I_2$. Now lift $\gamma$ to $UT(\bUs)$ under $\eta$ as $\tilde{\gamma}:[0,1]\rightarrow UT(\bUs)$ with base point $(\gamma(0),\gamma')$. Since $\gamma$ is periodic it must be true that the parallel transport of a vector on the unit tangent bundle returns unaltered. But because $\bUs$ has nontrivial linear holonomy, $\tilde{\gamma}(1)=\tau([\gamma])\cdot(\gamma(1),\gamma')=(\gamma(1),\tau([\gamma])\gamma')\neq (\gamma(1),\gamma')$ since $\tau([\gamma])\neq I_2$. Hence $[\gamma]\in\ker\tau=\pi_1(\btUos)$ and $\gamma$ lifts to a closed geodesic on $\btUos$.
+Since $c\mapsto R$ and $d\mapsto R^3$, the image of $\varphi_2$ is generated by $R,R^3$ and isomorphic to $SO(2,\ZZ)$. We see from figure $\ref{fig:holonomypath}$ that parallel transports of vectors by non-trivial paths produce clockwise/counter-clockwise rotations equal to that of of the cone angles of the singularities they loop around, all integer multiples of $\frac{\pi}{2}$ that coincide with paths generated by elements $c,d$. Further, if there is an element in $\pi_1(\bUs,x_0)$ conjugated by $[a,b]$, the effect this would have on holonomy would be trivial as the total cone angle sum around each cut out square is an integer multiple of $2\pi$, which agrees with $a$ and $b$'s trivial images under $\phi_2$.
 \end{proof}
-\end{thm}
+\end{lem}
 
-\begin{figure}[H]
-\centering
-\includesvg[width=1.5in.]{quotient}
-\caption{A $2\times2$ cut out section centered at each missing square. Edges and vertices identified.}
-\label{fig:quotient}
-\end{figure}
+Hence, we obtain a natural monodromy representation with the map $m:\pi_1(\bUs,x_0)\rightarrow SO(2,\ZZ)\cong Hol_p(\omega)$, where for $[\gamma]\in\pi_1(\bUs,x_0)$ we have that $\gamma^*(1)=(x_0,m([\gamma])v_0)$. It follows that since $\omega$ is a flat connection, trivial loops have trivial holonomy and $Hol_p(\omega)$ acts on $H(p)$.
 
 \begin{figure}[H]
 \centering
@@ -367,9 +364,44 @@ Let $\gamma:[0,1]\rightarrow \bUs$ be a closed, periodic geodeisc in unit direct
 \label{fig:complicated}
 \end{figure}
 
+\begin{Def}
+Let $\btUos$ be the cover of $\bUs$ with fundamental group $\pi_1(\btUos)=\ker\varphi_2|_{\pi_1(\bUs)}\trianglelefteq \pi_1(\bUs)$.
+\end{Def}
+
+\begin{lem}
+Let $\Phi_t:\bUs\times\RR\rightarrow \bUs$ be a unit-speed geodesic flow on $\bUs$, with a parallel transport map induced by $\omega$. Then the following is true:
+\begin{enumerate}[label=(\roman*)]
+\item $\Phi$ is periodic if and only if its lift to $\btUos$ is.
+\item $\Phi$ is drift-periodic if and only if its lift to $\btUos$ is. 
+\end{enumerate}
+\begin{proof}
+Let $x_0=\Phi(0)$ be an initial point in $\bUs$, and let $v_0=\frac{d}{dt}\Phi|_{t=0}\in\RR^2$ be its initial direction. Then $\Phi^*:T^1\bUs\times\RR\rightarrow T^1\bUs$ is a well-defined lift to the unit tangent bundle with initial point $p=(x_0,v_0)$.
+\\\emph{(i)}. Suppose $\Phi$ is periodic with period $T\in\RR$. Then $\Phi$ is reparameterized as $\alpha:[0,1]\rightarrow \bUs$, where $[\alpha]\in\pi_1(\bUs,x_0)$. It follows then that if $\alpha$ does not lift to a closed path, then $\alpha$ must have non-trivial holonomy since $[\alpha]\notin\ker\varphi_2$. That is when lifted to the unit tangent bundle with base point $p$, $\alpha^*(1)\neq p$ since $m([\alpha])\neq I_2$. But this implies that $\Phi^*(T)\neq p$, which is impossible. Hence $[\alpha]\in\ker\varphi_2=\pi_1(\btUos,\tilde{x}_0)$, where $\tilde{x}_0$ belongs to the fiber over $x_0$ under the covering map $\btUos\hookrightarrow\bUs$. The converse holds trivially.
+\\\emph{(ii)}. Suppose $\Phi$ is drift-periodic with period $T\in\RR$ and non-trivial $f:\bUs\rightarrow\bUs \in Trans(\bUs)\cong\pi_1(\bGs)/\pi_1(\bUs)\cong \ZZ^2$ such that $\Phi(T)=f(x_0)$. Re-parameterize this as $\alpha:[0,1]\rightarrow\bUs$ with $[\alpha]\in\pi_1(\bGs)$.  When lifted to $T^1\bUs$, $\Phi^*(0)=p$ and $\Phi^*(T)=(f(x_0),v_0)$. Let $\alpha:[0,1]\rightarrow \bUs$ be its reparameterization up to time $T$. Thus $[\alpha]\notin \pi_1(\bUs,x_0),\pi_1(\btUos,\tilde{x}_0)$. Further, $f$ has a unique, lift to $\tilde{f}\in Trans(\btUos)$ because the space is connected. (a bit stuck here). \\
+Conversely, ...
+\end{proof}
+\end{lem}
+
+
+A visual representation of $\btUos$ is as a four-fold cover of $\bUs$ with trivial holonomy on all closed paths. Arbitrary paths do \emph{not} have trivial holonomy:
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{monogroup.png}
+\label{fig:arbitrarylift}
+\caption{Arbitrary lifts to fibers }
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includesvg[width=1.5in.]{quotient}
+\caption{A $2\times2$ cut out section centered at each missing square. Edges and vertices identified.}
+\label{fig:quotient}
+\end{figure}
+
 \subsection{Translation Surface}
 
-A better picture of $\btUos$ is obtained by making the following edge identifications on $\mathbf{P'}=\mathbf{P}\times\ZZ/4\ZZ$:
+A better picture of $\btUos$ is obtained by making cyclic edge identifications on $\mathbf{P'}=\mathbf{P}\times\ZZ/4\ZZ$. This comes from $\btUos$ inheriting the topological properties of $\bUs\times \pi_1(\bUs)/\pi_1(\btUos)\cong \bUs\times SO(2,\ZZ)$.
 
 
 \begin{figure}[H]
@@ -380,7 +412,7 @@ A better picture of $\btUos$ is obtained by making the following edge identifica
 \end{figure}
 
 \begin{Def}
-$\btUos$ is the surface obtained as the quotient $\mathbf{P}'/\sim_{\mathbf{P}'}$. Denote paths $\zeta$ and $\eta$  on $\mathbf{P}$, parameterized by integers $m,n\in\ZZ$ and $t\in[-\frac{1}{4},\frac{1}{4}]$, and defined:\\ $\zeta(t)=(2m+t)+i(2n-\frac{1}{2})$,\\
+$\btU_0$ is the surface obtained as the quotient $\mathbf{P}'/\sim_{\mathbf{P}'}$. Denote paths $\zeta$ and $\eta$  on $\mathbf{P}$, parameterized by integers $m,n\in\ZZ$ and $t\in[-\frac{1}{4},\frac{1}{4}]$, and defined:\\ $\zeta(t)=(2m+t)+i(2n-\frac{1}{2})$,\\
 $\eta(t)=(2m+t)+i(2n+\frac{1}{2})$.\\ Let $\aleph=2m+i2n\in\CC$. The minimal relation $\sim_{\mathbf{P}'}$ is given as:
 \begin{equation}
 \begin{split}
@@ -390,7 +422,7 @@ $\eta(t)=(2m+t)+i(2n+\frac{1}{2})$.\\ Let $\aleph=2m+i2n\in\CC$. The minimal rel
 \end{split}
 \end{equation}
 \end{Def}
-This relation is similar to $\sim_\mathbf{P}$ in that it translates line segments of squares surrounding even integer pairs to the origin and relates points on one edge of a square to points on an adjacent edge. Where it differs is that these adjacent edges now belong to a different copy of $\mathbf{P}$. It is in this cyclic manner that edges are glued that allows for trivial linear holonomy on arbitrary paths by rotating each copy of $\mathbf{P}$ accordingly. For example, here is a path on a section of the surface in the neighborhood of $P=2m+i2n\in\CC$ $(m,n\in\ZZ)$ after rotation:
+This relation is similar to $\sim_\mathbf{P}$ in that it translates line segments of squares surrounding even integer pairs to the origin and relates points on one edge of a square to points on an adjacent edge. Where it differs is that these adjacent edges now belong to a different ``copy" of $\mathbf{P}$. It is in this cyclic manner that edges are glued that allows for trivial linear holonomy on arbitrary paths by rotating each copy of $\mathbf{P}$ accordingly. For example, here is a path on a section of the surface in the neighborhood of $P=2m+i2n\in\CC$ $(m,n\in\ZZ)$ after rotation:
 
 \begin{figure}[H]
 \centering
@@ -404,162 +436,143 @@ This relation is similar to $\sim_\mathbf{P}$ in that it translates line segment
 \includegraphics[width=2in]{overlay.png}
 \end{figure}
 
-\section{Construction}
+\begin{Def}
+Let $r:\mathbf{P}'\rightarrow\mathbf{P}'$ be the isometric map of $\btU_0$'s domain given  $r(z;\bar{j})=(e^{(-j)i\frac{\pi}{2}}z;\bar{j})$.
+\end{Def}
 
-The surface itself has a variety of constructions. One interpretation is the periodic tiling of ``\emph{half-cubes}," or sets of three squares sharing a single vertex.
+Observe that when $r$ acts on the relations defined on $\ref{eq:rel2}$ we get a new relation:
 
-We will introduce some objects and definitions to be used later in the paper. We give the Necker cube surface a concrete structure as a subset of $\mathbb{R}^3$. Take the following unit squares in $\RR^3$:
+\begin{equation}
+\begin{split}
+(e^{(-j)i\frac{\pi}{2}}\zeta(t);j)\sim_{r(\mathbf{P'})}(e^{(-j)i\frac{\pi}{2}}~{\zeta(t)-\aleph};j+1)\\
+(e^{(-j)i\frac{\pi}{2}}\eta(t);j)\sim_{r(\mathbf{P'})}(e^{(-j)i\frac{\pi}{2}}~{\eta(t)-\aleph};j+1)
+\end{split}
+\end{equation}
 
+$\btU$ is then recovered as $r\cdot(\btU_0)=\mathbf{P'}/\sim_{r(\mathbf{P}')}$, where all identifications are translations made on copies of $\mathbf{P}$.
 
+\subsection{Translation Surfaces and $\ZZ^2$-Covers}
+We recall some definitions and properties of translation surfaces and their translation covers. A \emph{translation surface}, $S$, is a compact, flat surface that admits a discrete number of conical singularities and has trivial linear holonomy on arbitrary paths. We denote the surface without singularities by $S^\circ$. Translation surfaces belong to a stratum or family of surfaces characterized by the number of conical points and their degrees $(\text{cone angle}-2\pi)$. A $Z^2$-cover is a cover of $S$ given by a map $f:\tilde{S}\rightarrow S$, such that the associated deck group of the cover, $\Delta=\pi_1(S)/\pi_1(\tilde{S})=\pi_1(S^\circ)/\pi_1(\tilde{S}^\circ)$, is isomorphic to $\ZZ^2$.
 
-\noindent If we take the integer triple $(m,n,p)$ and require that the individual faces based around them  has the triple lie on the plane $x+y+z=0$, we obtain the sets 
-
+\begin{Def}
+Intersection number is a non-degenerate bilinear form:
 \begin{align*}
-\mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}},
-\\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}},
-\\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}.
+i:H_1(S,\mathbf{R})\times H_1(S,\mathbf{R})\rightarrow\mathbf{R},
 \end{align*}
+where $\mathbf{R}$ is abelian and for $[\gamma],[\beta]\in H_1(S,\mathbf{R})$, $i([\beta],[\gamma])$ returns the intersection number as an element of $\mathbf{R}$, where a positive crossing has $[\gamma]$ make a positive angle relative to $[\beta]$.
+\end{Def}
 
+\begin{Def}
+Let $u,v\in H_1(S,\mathbf{R})$ be homology classes of curves on $S$ that span $H_1(\tilde{S},\mathbf{R})$. Then there is a group homomorphism from $\pi_1(S)$ to $\mathbf{R}^2$ defined as:
+\begin{align*}
+\Omega_{u,v}:\pi_1(S)\rightarrow \mathbf{R}^2 \text{; } \beta\mapsto(i(u,[\beta]),i(v,[\beta])).
+\end{align*}
+\end{Def}
 
-\begin{Def} We denote the \textbf{Necker cube surface} by $\mathbf{S}$, and define it to be the surface of the union of unit squares of the form $\mathbf{S} = \mathbf{A}\cup\mathbf{B}\cup\mathbf{C}$.\end{Def}
+The set of all orientation-preserving affine diffeomorphisms of $S$ forms the group Aff$^+(S)$. The corresponding \emph{Veech group}, $V(S)$ of $S$ is the image of the group morphism $D:\text{Aff}^+(S)\rightarrow SL(2,\mathbb{R})$ that takes an affine map to its derivative. A surface is said to be \emph{Veech} if its Veech group is commensurable to $SL(2,\mathbb{R})$. It is well known that origami, or square-tiled, surfaces have Veech groups commensurable to $SL(2,\ZZ)$. [cite] When $\mathbf{R}=\ZZ$, $\Omega_{u,v}$ takes an element of $\pi_1(S)$ to $\Delta$. Thus, $\gamma\in\pi_1(S)$ lifts to $\tilde{\gamma}\in\pi_1(\tilde{S})$ if and only if $\gamma\in\ker\Omega_{u,v}$.
 
-
-
-%\begin{thm}
-%The Necker cube surface $\mathbf{S}$ is isometric to $\mathbf{U}$.
-%\begin{proof}
-%To show that $\Psi$ is an isometry of the two surfaces, consider $(x,y,z)\in\mathbf{S}$. $\Psi$ is a bijection between sets $\mathbf{P}$ and $\mathbf{S}$ outside of the edges of each cube parallel to the z-axis (Figure $\ref{fig:Psi}$). These edges split into two edges in $\mathbf{P}$, but are identified to be one and the same in $\mathbf{U}$.\\
-%For $0\leq i\leq 1$, Let $S_1=\{(m+1,n,p-i)\}, S_2=\{(m+1,n+1,p-i)\}, S_3=\{(m,n+1,p-i)\}$ be these edges.
-%\compav{come back to this.}
-%\end{proof}
-%\end{thm}
-
-\subsection{Four-Fold Cover}
-This section describes how a branched translation cover of $\bU$ is obtained by winding around cone singularities of the surface.
-
-We denote the surface $\bU$ with its countably many cone singularities removed by $\bUs$. $\bUs$ is an infinite-genus surface obtainable as a translation cover of a thrice-punctured torus (figure $\ref{fig:quotient}$).
-
-There is a nontrivial linear holonomy as can be seen in figure $\ref{fig:holonomypath}$. The reader is encouraged to check that the total angle around each singularity is either $\frac{3\pi}{2}$ or $3\pi$ radians.
-
-
-
-As to be expected, a parallel transport of a geodesic flow over an edge will act on the unit tangent bundle by a rotation of $\pm\frac{\pi}{2}$ radians. This is best exemplified by the periodic flow labeled $c$ in figure $\ref{fig:holonomypath}$, where the geodesic flowing in the $\frac{1}{\sqrt{2}}(1,1)$ can be seen as line segments on $\mathbf{P}$. When a unit direction is fixed, it is mapped to its equivalence class of directions in the orbit under $SO(2,\ZZ)$ action.
-
-
-
-If we begin flowing a unit vector in some direction there are only one of four possible directions in the ambient space of the surface (See figure $\ref{fig:complicated}$ for further convincing). This is primarily what motivated taking four copies of the surface so as to lift a flow to a surface whose rotational symmetries could align the flow by associating every one of the four possible directions with its own ``copy" of $\mathbf{P}$. $\btU$ will become what is known as an infinite translation surface, equipped with a flat metric and trivial linear holonomy.
-
-
-
-Surrounding each pair of even integers in $(2\ZZ+2\ZZ i)^2\subset \CC$, there is an open unit square removed. Four copies of the domain $\mathbf{P}$ are indexed by elements in $\ZZ/4\ZZ$, and we consider the set of points $\mathbf{P}'=\mathbf{P}\times\ZZ/4\ZZ$.  It is on $\mathbf{P}'$ that we define a minimal relation $\sim_{\mathbf{P}'}$ that is used to identify edges in the following manner:
-
-
-
-
-We call this surface $\btU_0$. It is another infinite surface constructed in a cyclic manner that complements $\bUs$'s holonomy. Winding around each cone singularity shows us that there are 4 distinct vertices for each removed square centered at $(2\ZZ+2\ZZ i)^2\times \ZZ/4\ZZ$, each of cone angle $6\pi$. The surface with these singularities removed is denoted $\btU_0^\circ$. The obvious covering map $p:\btU_0^\circ\rightarrow\bUs$ is taken to be a projection map onto $\bUs$ induced by the map $\mathbf{P}'\hookrightarrow \mathbf{P}$, where $(z;j)\mapsto(z)$.
-
-
-
-\subsection{Monodromy Action on Fibers of $\bUs$}
-Let $x_0$ be a point on $\bU^\circ$, and fix a point $\tilde{x}_0\in\btU_0^\circ$ in the fiber $p^{-1}(x_0)=\{\tilde{x}_0,\tilde{x}_1,\tilde{x}_2,\tilde{x}_3\}$. Consider the closed paths around a hole in $\bUs$ in figure $\ref{fig:loop}$, and their subsequent lifts onto $\btU_0^\circ$:
-
-
-The kernel of the associated monodromy map $m:\pi_1(\bUs,x_0)\times p^{-1}(x_0)\rightarrow p^{-1}(x_0)$ of the cover $p$ is a cyclic permutation of 4 elements isomorphic to $SO(2,\ZZ)$. The lifted kernel of this map is equal to $\pi_1(\btU_0^\circ,\tilde{x}_0)$. 
-
-\subsection{Translation Surface}
-Now we consider rotating each plane about their origins so that the parallel transport of a unit vector over an edge acts trivially on that vector. We consider \emph{North} on this new surface, call it $\btU$, obtained in this way to respect $\bU$'s notion of vertical direction (relative to the first plane). Let $P=2m+i2n\in \CC$ for some $m,n\in\ZZ$. Then the following diagrams illustrate the rotational relationships between directions in $\btU$ and $\bU$:
-
+\begin{Def}
+Let $\alpha:[0,1]\rightarrow S$ be a closed, non-singular geodesic path on $S$. The holonomy map $\mathbf{hol}:H_1(S, \mathbf{R})\rightarrow\CC$ returns the holonomy vector of a closed path as a difference of the starting and endpoints of a flow by\\
+\begin{align*}
+\mathbf{hol}([\alpha])=\int_{\alpha}dz.
+\end{align*}
+Since $\alpha$ is non-singular, it can be mapped to $S^\circ$ which admits a flat holomorphic one-form $dz$. Let $\theta=Arg(\mathbf{hol}([\alpha]))$. We say that $\phi_t^\theta:[0,\infty)\rightarrow S^\circ$ is the unit-speed geodesic flow on $S^\circ$ given by $[\alpha]$ such that $\phi^\theta_0=\alpha(0)$.
+\end{Def}
 
 \begin{lem}
-A geodesic on $\bU$ is periodic if and only if it's lifted to a closed geodesic on $\btU_0$.
+$\phi_t^\theta$ has a period of $T=|\mathbf{hol}([\alpha])|$
 \begin{proof}
+This just follows from the fact that $\phi_t^\theta$ flows at unit-speed in the direction of $\frac{\mathbf{hol}([\alpha])}{|\mathbf{hol}([\alpha])|}$. 
+\end{proof}
+\end{lem}
+And so the length of a vector determines the period of a flow on $S$. More importantly, we have the following:
 
-\compav{Redo this maybe define the cover by monodromy map}
-Since a geodesic is undefined at conical singularities, it suffices to work with $\bUs$ and $\btU_0^\circ$. Let $\gamma:[0,1]\rightarrow UT(\bUs)$ be a closed geodesic defined on the unit tangent bundle of $\bUs$ such that $\gamma(0)=\gamma(1)=(x_0,v_0)$ for constant unit vector $v_0\in\RR^3$. The covering map $p$ induces a map $p_*:UT(\btUos)\hookrightarrow UT(\bUs)$. The fiber $p_*^{-1}(x_0,v_0)=\{(\tilde{x}_0,V),(\tilde{x}_1,V),(\tilde{x}_2,V),(\tilde{x}_3,V)\}$ with $v_0\in V$. Suppose that the lift $\tilde{\gamma}$ with $\tilde{\gamma}(0)=\tilde{x_0}$ does not close, then $\tilde{\gamma}(1)\in\{\tilde{x}_1,\tilde{x}_2,\tilde{x}_3\}$ Then $[\gamma]\notin\ker m$ and $m[\gamma]\neq \mathbf{I}_2$. Since $\btUos$ is simply connected, there is some $\tilde{\alpha}:[0,1]\rightarrow \btUos$ lifted from $\alpha\in\bUs$ such that $\tilde{x}_i\mapsto\tilde{x_0}$ for $i=1,2,3$. Then $m[\alpha\circ\gamma]=m[\alpha]\cdot m[\gamma]\neq m[\alpha]\neq \mathbf{I}_2$ implies that $[\alpha]\in \ker m$, which is a contradiction since then $\tilde{\alpha}$ does not lift to a closed path.\\
-Conversely let $\tilde{\gamma}$ be a closed geodesic on 
+\begin{lem}
+Denote the lifted flow of $\phi_t^\theta$ on $\tilde{S}$ by $\tilde{\phi}_t^\theta$. Then $\tilde{\phi}_t^\theta$ is periodic on $\tilde{S}$ and $\tilde{S}^\circ$ if and only if $[\alpha]\in\ker\Omega_{u,v}$. Further, $\tilde{\phi}_t^\theta$ has period $T=|\mathbf{hol}([\alpha])|$.
+\begin{proof}
+Suppose that $[\alpha]\notin\ker\Omega_{u,v}$. Since $\alpha([0,1])=\phi^\theta_{[0,\hol([\alpha])]}$, their homology classes are equivalent. Hence $\tilde{\phi}_t^\theta$ could not close on $\tilde{S}$ or $\tilde{S}^\circ$, or else $\Omega_{u,v}(k[\alpha])=k(i(u,[\alpha]),i(v,[\alpha]))=(0,0)$ for some non-zero $k\in\ZZ$. Conversely, suppose $[\alpha]\in\ker\Omega_{u,v}$. Then 
 \end{proof}
 \end{lem}
 
+\begin{cor}
+If $[\alpha]\notin\ker\Omega_{u,v}$, then $\tilde{\phi}_t^\theta$ is drift-periodic with period $T=\hol([\alpha])$.
+\begin{proof}
+This follows immediately from the previous lemma since $\tilde{S},\tilde{S}^\circ$ have translational $\ZZ^2$ symmetries and a well-defined $\ZZ^2$ action on an element in the fiber of a basepoint in $S$ under $f$. The period is $T$ since a geodesic closes on $S$ with period $T$.
+\end{proof}
+\end{cor}
 
+\begin{lem}
+Let $h\in\text{Aff}^+(S)$. If $h(\beta)=\alpha$ for closed geodesics $\alpha,\beta$ on $S$ and $\beta$ lifts to a closed path on $\tilde{S}$, then so does $\alpha$. (not sure about this)
+\begin{proof}
+If the premise is true, then $[\beta]\in\ker\Omega_{u,v}$. Denote the group automorphism induced by $h$ as $h_*$. Then $\Omega_{u,v}([\alpha])=\Omega_{u,v}([h(\beta)])=\Omega_{u,v}(h_*\cdot[\beta])=(i([\beta],h_*^{-1}\cdot u),i([\beta],h_*^{-1}\cdot v))=(0,0)$ as automorphisms .
+\end{proof}
+\end{lem}
 
-\newpage
+\begin{lem}
+Let $\beta=h(\alpha)$ as before. If $D(h)=h'\in V(S)$ and $S$ is Veech, then $\tilde{\phi}^\theta_t$ has period $T=h'\cdot\hol([\beta])$. (also not sure)
+\begin{proof}
 
-\begin{Def}
-Take a trivial straight-line path in $S\subset\mathbb{R}^3$, $\ell:[0,1]\rightarrow\mathbf{S}$ such that for some $m,n,p\in\mathbb{Z},~ \ell(t)$ is contained in exactly one of $\mathbf{A}_{m,n,p},\mathbf{B}_{m,n,p},~or~\mathbf{C}_{m,n,p}$ for all $t\in[0,1]$. The \textbf{initial trajectory angle} of a geodesic on $\mathbf{S}$ is given as $\theta=Arg(\Psi(\ell(1,s))-\Psi(\ell(0,s)))$, where Arg is the principal argument of a vector in $\mathbb{C}$. The \textbf{initial trajectory} is the vector $\dot{v}=(\cos(\theta),\sin(\theta))\in\mathbb{R}^2$.\\
-\compav{Not sure if I should proceed with derivative or map}
+\end{proof}
+\end{lem}
+
+\subsection{Veech Staircase Model}
+Let $f:\btU\rightarrow\mathbf{M}$ be a projection onto the quotient surface that takes every point to its modular equivalent by its $\ZZ^2$ symmetries, and what we obtain is the following compact translation surface belonging to the stratum $\cH(2,2,2,2):$
+
 \begin{figure}[H]
 \centering
-\includesvg{vectorplane}
+\includesvg[width=2.6in]{mtilda}
+\caption{Compact translation surface, $\mathbf{M}$, covered by the infinite surface with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify each quotient with a plane in the cover, $\mathbf{\tilde{\mathbf{U}}}$.}
+\label{fig:mtilda}
 \end{figure}
-\end{Def}
 
-\noindent We have two subsets of $\mathbb Z^2$ directions that partition the set of possible rational directions $\theta$.
+It is clear that this is a square-tiled Veech surface when realized as a finite staircase:
 
+\begin{figure}[H]
+\centering
+\includesvg[width=3.4in]{mtildastaircase}
+\caption{The staircase Veech surface with directional planes and vertices identified. All edges are paired by translation. Two adjacent squares have opposite edges identified. The top edge of the bottom-left square is glued to the bottom edge of the top-right square (both labeled I). Likewise, the bottom edge of the bottom-left square is identified with the top edge of the top-right square.}
+\label{fig:staircase}
+\end{figure}
 
-If $v$ is rational, that is $v=k(x,y)$ for integers x,y, then we commonly refer to the pair $(x,y)$ as the \emph{slope} of a given initial trajectory. For example, the following trajectory modeled on the surface is a closed geodesic on $\mathbf{U}$ with initial trajectory (51,31):
+Since $\pi_1(\bM)\leq\pi_1(\bM^\circ)$, we may work with the absolute homology of $\bM$ to prove results on $M^\circ$. Consider the following cylinder curves on $\bM$:
 
-
+\begin{figure}[H]
+\includegraphics[width=3in]{homologyclass.png}
+\centering
+\caption{$\bM$'s cylinder core curves with u,v, and z homology class labels.}
+\label{fig:homology}
+\end{figure}
 
 \begin{Def}
-A \textbf{geodesic flow} on a topological surface, $X$, is a function $\Phi^{v}_t:UT(X)\times\mathbb{R}\rightarrow UT(X)$ such that $\frac{d\Phi}{dt}=v\in UT(X)$. 
+The set of abelianized cylinder core curves is $\Gamma=\{\gamma_i~: ~0\leq i\leq11\}\subset H_1(\bM,\ZZ)\subset H_1(\mathbf{M},\mathbb{Q})$.
 \end{Def}
 
-\noindent Experimental evidence indicates that geodesics in the odd-odd directions are periodic, while geodesics in the even-odd directions are drift-periodic. We will prove the theorem below.
+It can be shown that $\Gamma$ spans $H_1(\bM,\QQ)$ by constructing a $12\times12$ matrix $M$ such that $M_{j,k}=i(\gamma_k,\gamma_j)$. Every row has two entries that alternate between $1$ when $j$ is odd and $-1$ when $j$ is even. Such a matrix is rank 10, precisely the dimension needed for a genus 5 surface. 
 
-\begin{thm}{\textbf{Dynamics of Geodesic Flow on the Necker cube surface.}}\\ Obtain $\theta$ and $v$ as described in Definition 3. Denote the non-singular unit-speed geodesic flow with initial point $s\in\mathbf{U}^0$ in direction $(\theta\mod{\frac{\pi}{2}})\sim\phi\in UT(\mathbf{U}^0)$ by $\Phi^{\phi}_t:UT(\mathbf{U}^0)\times\mathbb{R}\rightarrow UT(\mathbf{U}^0)$ such that $\frac{d\Phi}{dt}=\phi\in UT(X)$  Then the following is true:
-\begin{enumerate}[label=(\roman*)]
-\item (Periodic) There exists a $t_0 > 0$ such that $\Phi^{\phi}_{t+t_{0}}(s)=\Phi^{\phi}_{t}(s)$ if and only if $v\in\mathcal{O}$.
-\item (Drift-Periodic) There exists a $t_0 > 0$ such that $\Phi^{\phi}_{t+t_{0}}(s)= \Phi^{\phi}_{t}\circ\Phi^{\phi}_{t_0}(s)\neq\Phi^{\phi}_t(s)$ if and only if $v\in\mathcal{E}$.
-\end{enumerate}
+\begin{Def}
+The homology classes $u,v,z$ are given as the following sums of core curves:
+\begin{align*}
+u &= -[\gamma_2] +[\gamma_5] + [\gamma_8] - [\gamma_{11}],\\
+v &= +[\gamma_0] -[\gamma_3] -[\gamma_6] +[\gamma_9],\\
+z &= +[\gamma_1] +[\gamma_4]-[\gamma_7]-[\gamma_{10}].
+\end{align*}
+\end{Def}
+
+\begin{Def}
+Define the group homomorphism $\Omega_{u,v}:\pi_1(\bM)\rightarrow \QQ^2$, where $\beta\mapsto(i(u,[\beta]),i(v,[\beta]))$.
+\end{Def}
+
+\begin{thm}
+
 \end{thm}
 
-\subsection{Translation Surfaces}
-We recall some common definitions, theorems, and properties of translation surfaces and their $\mathbb{Z}^d$-covers.
 
+\subsection{Symmetries of $\bM$}
+\begin{figure}[H]
+\centering
+\includesvg[width=2in]{skew}
+\end{figure}
 
-\begin{Def}
-A translation surface is a pair $M=(S,\omega)$ formed of a connected
-Riemann surface X and a holomorphic 1-form $\omega$ on $S$ which is not identically zero and satisfies:
-\begin{enumerate}
-\item $\Sigma\subset S$ is a discrete subset of cone singularities of $S$.
-\item $\omega=z^kdz$ at points in $\Sigma$ of cone angle $2(k+1)\pi$.
-\item $S\backslash\Sigma$ admits a translation surface $M^0=(S\backslash\Sigma,dz)$, where dz is a flat metric on $S\backslash\Sigma$.
-\end{enumerate}
-\end{Def}
-
-The set of all orientation-preserving affine automorphisms of $M$ forms the group Aff$^+(M)$. The corresponding \emph{Veech group} of M is the image of the group morphism $D:\text{Aff}^+(M)\rightarrow SL(2,\mathbb{R})$, where $D$ is the derivative map of an element of Aff$^+(M)$, and denote it by $V(M)$. A surface is said to by \emph{Veech} if its Veech group is commensurable to $SL(2,\mathbb{R})$. The unit tangent bundle on $M\backslash\Sigma$, denoted $UT(M)$, is isomorphic to $M\times\mathbb{R}/2\pi\mathbb{Z}$. Let $\phi,\psi$ be two compatible charts between $M$ and $\mathbb{C}$ such that $\phi(x_0)\in\mathbb{C}$ for $x_0\in M\backslash\Sigma$, and let $F^t_\theta:z\mapsto z+te^{i\theta}$ be a translation flow on $\mathbb{C}$. The non-singular geodesic flow on the unit tangent bundle of $M$, $G^t:UT(M)\times\mathbb{R}\rightarrow UT(M)$, is well defined on and given by $G^t(x_0,\theta)=(\psi^{-1}\circ F^t_\theta\circ\phi(x_0),\theta)$. \\
-A \emph{maximal geodesic} on $M$ is a re-parameterized closed geodesic $\gamma:[0,1]\rightarrow M$ obtained from $G_t$, and we consider $\gamma\in\pi_1(M,x_0)$. A normal subgroup $N\triangleleft\pi_1(M,x_0)$ is associated with the quotient group $\Delta=\pi_1(M,x_0)/N$. $\tilde{M}$ is called the $\Delta$-cover of $M$ if $p:\tilde{M}\rightarrow M$ is a cover of $M$ and for some fixed $\tilde{x}_0\in p^{-1}(x_0)$, $\pi_1(M,x_0)/\Delta=\pi_1(\tilde{M},\tilde{x}_0)$. $\Delta$ has a unique lift to the group of Deck transformations acting on $\tilde{x}_0\in\tilde{M}$, or its orbit under Aut$(p)$. Compact translation surfaces are oriented, hence why their fundamental groups are isomorphic to $\mathbb{Z}^{2g}$ (g is the genus of $M$). Therefore $\Delta\simeq \mathbb{Z}^d$, and $\tilde{M}$ is called a $\mathbb{Z}^d$ \emph{translation cover} of $M$. Translation covers have Deck transformation groups isomorphic to $\mathbb{Z}^d$. \\
-When $\gamma\in\pi_1(M,x_0)$ is a closed curve, we denote its abelianization as $[\gamma]\in H_1(M,R)$, with coefficients in unit ring $R$, and its unique lift to $\tilde{M}$ under the covering map $p$ as $\tilde{\gamma}$. Suppose you have some set of homology classes, $\{a_1,\dots,a_n\}=\Gamma\subset H_1(M,R)$, such that span$(\Gamma)=H_1(M,R).$ We call $\Gamma$ the \emph{spanning set}, and express an element $[\beta]\in H_1(M,R)$ as $[\beta]=\Sigma_{j=1}^{n}x_j a_j$, where $x_1,\dots x_n\in R$.
-
-\begin{Def}
-Denote the non-degenerate, bi-linear \textbf{intersection number} between two homology classes $[\alpha],[\beta]$ as $i([\alpha],[\beta])$, where 
-\begin{align*}
-i:H_1(M,R)\times H_1(M, R)\rightarrow \mathbb{Z}.
-\end{align*}
-returns the total number of intersections and its sign corresponds to the sign of the angle that $[\beta]$ makes relative to $[\alpha]$.
-\end{Def}
-
-We mainly concern ourselves with $\mathbb{Z}^2$ covers for the purposes of this paper. Consider the set $Q\subset N\subset \pi_1(M,x_0)$ to be the spanning set of N. 
-
-\begin{Def}
-Consider two sets, $q,r\subset\Gamma$, such that span$(q,r)$ is the abelianization of $N$. There exists a group morphism $s:N\rightarrow Aut(p)$ that takes a generator of $N$ to a generator of $Aut(p)$, a translational symmetry of $\tilde{M}$ isometric to $(m,n)\in\mathbb{Z}^2$, call it $T^{m,n}$. Note that dim$(N)=2g-2$, and $s$ is an epimorphism when $g>2$. Obtain $q$ as the abelianization of elements in $Q$ that are mapped to $T^{0,\pm 1}$, the vertical translations. Likewise, take $r$ to be the set of abelianized elements of $Q$ that are mapped to  $T^{\pm 1, 0}$, the horizontal translations. A path non-trivially intersecting with a curve in q corresponds to a horizontal translation, while an intersection with r corresponds to a translation in the vertical direction. This is because an intersection of a closed path $\beta$ with an element $a \in s^{-1}(T^{0,\pm 1})$ implies that $\beta$ at the time of intersection would have had to have been homotopic to $b\in s^{-1}(T^{\pm 1,0})$ instead (assuming that $a,b$ intersect).\\
-For example, let $t$ be the time of that intersection, and $t_0$ be the time of the previous one. Then $\tilde{\beta}(t)=T^{\pm 1,0}(\tilde{\beta}(t_0))$ would have moved horizontally, and not vertically.\\
-Since intersection number is bi-linear and non-degenerate, we   obtain the \textbf{group homomorphism as a representation of a lifted path} on $\tilde{M}$:
-
-\begin{align*}
-\Omega_{q,r}:\pi_1(M,x_0)\rightarrow \mathbb{Z}^2 \text{; } \beta\mapsto(i(q,[\beta]),i(r,[\beta])).
-\end{align*}
-\end{Def} 
-
-\begin{lem}
-Let $\beta\in\pi_1(M,x_0)$. Then $\beta$ lifts to $\tilde{\beta}\in\pi_1(\tilde{M},\tilde{x}_0)$ if and only if $\beta\in\text{Ker }\Omega_{q,r}$.
-\begin{proof}
-do this later
-\end{proof}
-\end{lem}
-
-This lemma becomes an integral part of the proof of the main theorem, and allows us to show how induced homomorphisms of a surface's homology by its affine automorphisms allows for us to generalize whenever a geodesic on the base surface lifts to a closed geodesic on the cover. 
-\subsection{Acknowledgements}
 
 \section{Four-fold Cover of $\mathbf{U}$}
 
@@ -599,23 +612,7 @@ The automorphism $T^{m,n}:\tilde{\mathbf{U}}\rightarrow\tilde{\mathbf{U}}$ is an
 \end{Def}
 
 
-We take the quotient of $\mathbf{\tilde{\mathbf{U}}}$ by the action of the induced isometry of $T^{m,n}$, to get a translation base surface, $\mathbf{M}$.
 
-\begin{figure}[H]
-\centering
-\includesvg[width=2.6in]{mtilda}
-\caption{Compact translation surface, $\mathbf{M}$, covered by the infinite surface with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify each quotient with a plane in the cover, $\mathbf{\tilde{\mathbf{U}}}$.}
-\label{fig:mtilda}
-\end{figure}
-
-It is clear that this is a square-tiled Veech surface when realized as a finite staircase:
-
-\begin{figure}[H]
-\centering
-\includesvg[width=3.4in]{mtildastaircase}
-\caption{The staircase Veech surface with directional planes and vertices identified. All edges are paired by translations. Two adjacent squares have opposite edges identified. The top edge of the bottom-left square is glued to the bottom edge of the top-right square (both labeled I). Likewise, the bottom edge of the bottom-left square is identified with the top edge of the top-right square.}
-\label{fig:staircase}
-\end{figure}
 
 This surface is obtained as a ramified cover of the unit square torus. It is a translation surface and is therefore equipped with a \textbf{holomorphic one-form}, a collection of charts from neighborhoods of $\mathbf{M}$ to $\mathbb{C}$ such that any neighborhood away from Sing$(\mathbf{M})$ has a \emph{flat} induced Euclidean metric. A theorem of Gutkin and Judge tells us that its Veech group is commensurable to SL$(2,\mathbb{Z})$ and is therefore a Veech surface. We look at some of its affine maps, and generate a subgroup $\mathbb{X}\subset$ Aff$^+(\mathbf{M})$  by the following transformations:
 
@@ -905,15 +902,14 @@ In addition, I would also like to find a formula for the arc-length of a geodesi
 \end{align*}
 \noindent where $h'\in V(\mathbf{M})$ is the derivative of h, and $\beta=h(\alpha)$. We know that is true on the translation surface, but it's a matter of then showing the translation quotient, branch-cover, and the Necker cube surface have the same induced Euclidean metric of these non-singular geodesics. (It would not be surprising considering that the surface is built out of subsets of planes.) Even more of a problem is finding a way to solve for a matrix in the Sanov subgroup that brings (1,1) to the desired odd-odd slope.
 
-Even though the main theorem remains unproven for now, it is an enjoyable property of the surface and venturing in its understanding involves exploring some fascinating niches in algebraic topology and dynamical systems.
-
-Needless to say, it has been a very busy summer for me. I am grateful for the opportunity to really take some time to delve deep into numerous topics that I have been very interested in for a while. I sincerely doubt it would have been possible without the summer internship, and I have the Rich scholarship committee to thank for that. I would also like to extend my gratitude to Dr. Hooper. He has been incredibly patient and kind throughout these last few months, and I would not have come this far in so short a time without his help. 
 
 
 \newpage
 \begin{thebibliography}{9}
-\bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
-\bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
-August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+\bibitem{Necker} 
+\bibitem{Albert} Necker, L.A., \emph{Observations on some remarkable optical phaenomena seen in Switzerland; and on an optical phaenomenon which occurs on viewing a figure of a crystal or geometrical solid.} London and Edinburgh Philosophical Magazine and Journal of Science. 1832. doi:10.1080/14786443208647909
+\bibitem{Qbert} Gottlieb., \emph{Q*bert} [Arcade], Gottlieb, 1982.
+\bibitem{Escher1} Escher, M.C., \emph{Metamorphosis I}, 1937.
+\bibitem{Escher2} Escher, M.C., \emph{Convex and Concave}, 1955.
 \end{thebibliography}
 \end{document}          
