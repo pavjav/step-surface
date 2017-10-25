@@ -1,6 +1,7 @@
 \documentclass[]{article}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{svg}
@@ -320,7 +321,7 @@ Our map $\Psi$ induces an isometry between $\mathbf{S}$ and $\bU$, and its restr
 From here on we use $\bUs$ and $\bU$ instead of $\mathbf{S}$ and $\mathbf{S}^\circ$.
 
 \subsection{Four-Fold Cover}
-We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $T^1\bUs$, and construct a cover with trivial holonomy. Initial experiments have shown us that geodesics viewed as discontinuous line segments on $\mathbf{P}$ flow in any one of four directions at a time.
+We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $T^1\bUs$, and construct a cover with trivial holonomy. Initial experiments have shown us that any geodesic viewed as discontinuous line segments on $\mathbf{P}$ moves in at most four directions.
 \begin{figure}[H]
 \centering
 \includesvg[width=1.8in]{cubesxyzpaths}
@@ -328,7 +329,7 @@ We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $T^1\bUs$, and
 \caption{Simple periodic (c) and drift-periodic (a,b) trajectories represented as line segments on $\mathbf{S}$ and $\mathbf{U}$.\compav{RELABEL THESE}}
 \label{fig:holonomypath}
 \end{figure}
-Observe that a closed loop on $\bUs$ will act on vectors tangent to the surface by a rotation of $\pm\frac{\pi}{2}$ radians (since the surface is flat and embedded in $\CC$, we work with vectors in $\RR^2$).
+Observe that the parallel transport of a vector around a closed loop on $\bUs$ will act on vectors tangent to the surface by a rotation of an integer multiple of $\frac{\pi}{2}$ radians (since the surface is flat and embedded in $\CC$, we work with vectors in $\RR^2$).
 
 \begin{figure}[H]
 \centering
@@ -337,7 +338,7 @@ Observe that a closed loop on $\bUs$ will act on vectors tangent to the surface 
 \label{fig:loop}
 \end{figure}
 
-Let $\omega$ be a flat, Riemannian metric connection on $T^1\bUs$. This is allowable since $\bUs$ is obtained as the cover of a flat Riemann surface. We say that $p=(x_0,v_0)\in T^1\bUs$ is a fixed point in the fiber over $x_0$ in the unit tangent bundle of the surface, with $x_0\in\bUs$ and $v_0\in\RR^2$ being unit. Denote the \emph{holonomy group} of the connection with base point p by $Hol_p(\omega)=\{A\in SO(2,\RR)~:~ p \equiv A\cdot p\}$ where $p$ differs from $A\cdot p$ by some rotation of $v_0$, and the \emph{holonomy bundle}  by $H(p)$, the set of points $p'\in T^1\bUs$ where a closed loop on $\gamma:[0,1]\rightarrow\bUs$ lifts to $\gamma^*:[0,1]\rightarrow T^1\bUs$ such that $p=\gamma^*(0)$ and $p'=\gamma^*(1)$.
+Let $\triangledown$ be a flat, Riemannian metric connection on $T^1\bUs$. This is allowable since $\bUs$ is obtained as the cover of a flat Riemann surface (\compav{you said of a translation surface?}). Let $p=(x_0,v_0)\in E_{x_0}\subset T^1\bUs$ be an element in the fiber over $x_0$ the usual projection from the tangent bundle to the surface, with $x_0\in\bUs$ and $v_0\in\RR^2$. Denote the \emph{holonomy group} of the connection with base point $p$ by $Hol_p(\triangledown)=\{A\in SO(E_{x_0})~:~ p \equiv A\cdot p\}$ where $p$ differs from $A\cdot p$ by some rotation of $v_0$. That is, $p\equiv p'$ if $p'=(x_0,A v_0)$ for $A\in Hol_p(\triangledown)$. Denote the \emph{holonomy bundle} based at $p$ by $H(p)$, the set of points $p'\in E_{x_0}$ where a closed loop $\gamma:[0,1]\rightarrow\bUs$ describes a horizontal lift to $\gamma^*:[0,1]\rightarrow T^1\bUs$ such that $p=\gamma^*(0)$ and $p'=\gamma^*(1)$.
 
 \begin{Def}
 Define $\varphi_2:\pi_1(\bGs)\rightarrow SO(2,\ZZ)$ as the group homomorphism on generators $a,b,c,d$ such that:
@@ -440,7 +441,7 @@ This relation is similar to $\sim_\mathbf{P}$ in that it translates line segment
 Let $r:\mathbf{P}'\rightarrow\mathbf{P}'$ be the isometric map of $\btU_0$'s domain given  $r(z;\bar{j})=(e^{(-j)i\frac{\pi}{2}}z;\bar{j})$.
 \end{Def}
 
-Observe that when $r$ acts on the relations defined on $\ref{eq:rel2}$ we get a new relation:
+Observe that when $r$ acts on the relations $\eqref{eq:rel2}$ we get the following:
 
 \begin{equation}
 \begin{split}
@@ -450,24 +451,126 @@ Observe that when $r$ acts on the relations defined on $\ref{eq:rel2}$ we get a 
 \end{equation}
 
 $\btU$ is then recovered as $r\cdot(\btU_0)=\mathbf{P'}/\sim_{r(\mathbf{P}')}$, where all identifications are translations made on copies of $\mathbf{P}$.
+\subsection{Veech Staircase Model}
+Let $f:\btU\rightarrow\mathbf{M}$ be a projection onto the quotient surface that takes every point to its modular equivalent by its $\ZZ^2$ symmetries, and what we obtain is the following compact translation surface belonging to the stratum $\cH(2,2,2,2):$
 
-\subsection{Translation Surfaces and $\ZZ^2$-Covers}
-We recall some definitions and properties of translation surfaces and their translation covers. A \emph{translation surface}, $S$, is a compact, flat surface that admits a discrete number of conical singularities and has trivial linear holonomy on arbitrary paths. We denote the surface without singularities by $S^\circ$. Translation surfaces belong to a stratum or family of surfaces characterized by the number of conical points and their degrees $(\text{cone angle}-2\pi)$. A $Z^2$-cover is a cover of $S$ given by a map $f:\tilde{S}\rightarrow S$, such that the associated deck group of the cover, $\Delta=\pi_1(S)/\pi_1(\tilde{S})=\pi_1(S^\circ)/\pi_1(\tilde{S}^\circ)$, is isomorphic to $\ZZ^2$.
+\begin{figure}[H]
+\centering
+\includesvg[width=2.6in]{mtilda}
+\caption{Compact translation surface, $\mathbf{M}$, covered by the infinite surface with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify each quotient with a plane in the cover, $\mathbf{\tilde{\mathbf{U}}}$.}
+\label{fig:mtilda}
+\end{figure}
+
+We rearrange $\bM$ as such:
+
+\begin{figure}[H]
+\centering
+\includesvg[width=3.4in]{mtildastaircase}
+\caption{The staircase Veech surface with directional planes and vertices identified. All edges are paired by translation. Two adjacent squares have opposite edges identified. The top edge of the bottom-left square is glued to the bottom edge of the top-right square (both labeled I). Likewise, the bottom edge of the bottom-left square is identified with the top edge of the top-right square.}
+\label{fig:staircase}
+\end{figure}
+
+\noindent We recall some basic definitions and theorems about $\ZZ^2-$covers of translation surfaces as they apply to $\bM$. 
 
 \begin{Def}
-Intersection number is a non-degenerate bilinear form:
+Algebraic intersection number is a non-degenerate bilinear form:
 \begin{align*}
-i:H_1(S,\mathbf{R})\times H_1(S,\mathbf{R})\rightarrow\mathbf{R},
+i:H_1(\bM,\QQ)\times H_1(\bM,\QQ)\rightarrow\QQ,
 \end{align*}
-where $\mathbf{R}$ is abelian and for $[\gamma],[\beta]\in H_1(S,\mathbf{R})$, $i([\beta],[\gamma])$ returns the intersection number as an element of $\mathbf{R}$, where a positive crossing has $[\gamma]$ make a positive angle relative to $[\beta]$.
+for $[\gamma],[\beta]\in H_1(\mathbf{M},\QQ)$, $i([\beta],[\gamma])$ returns the signed intersection number of two homology classes. We say a crossing at the instance of an intersection is positive if $\gamma$ makes a positive angle relative to $\beta$. 
+\end{Def}
+The set of all affine diffeomorphisms of $\bM$ form the group $\text{Aff}^+(\bM)$. The $\emph{Veech group}$ of $\bM$ is the image in the co-domain of the homomorphism $D:\text{Aff}^+(\bM)\rightarrow SL(2,\RR)$ that takes every affine map to its derivative, which we denote $V(\bM)$. $\bM$ is a square-tiled translation surface whose Veech group is a finite index subgroup of $SL(2,\ZZ)$. We use automorphisms of the fundamental group in $\text{Aut}(\pi_1(\bM))$ induced by affine maps to prove our main results. But first, we define a group homomorphism from $\pi_1(\bM)$ to $\pi_1(\bM)/\pi_1(\btU)$ by algebraic intersection numbers pver a sum of linearly independent homology classes. Consider the following cylinder core curves on $\bM$ labeled $\gamma_i$ for $0\leq i\leq 11$:
+\begin{figure}[H]
+\includegraphics[width=3in]{homologyclass.png}
+\centering
+\caption{$\bM$'s cylinder core curves with u,v, and z homology class labels.}
+\label{fig:homology}
+\end{figure}
+
+Every curve intersects two others and if we take $i(\Sigma_{i=0}^{11}[\gamma_i])$
+\compav{show that $\gamma_0,\dots,\gamma_{11}$ form a basis for $H(\bM,\QQ)$}\\
+\compav{show that u,v linearly independent}
+
+
+\begin{Def}
+The homology classes $u,v,z$ are given as the following sums of core curves:
+\begin{align*}
+u &= -[\gamma_2] +[\gamma_5] + [\gamma_8] - [\gamma_{11}],\\
+v &= +[\gamma_0] -[\gamma_3] -[\gamma_6] +[\gamma_9],\\
+z &= +[\gamma_1] +[\gamma_4]-[\gamma_7]-[\gamma_{10}].
+\end{align*}
 \end{Def}
 
 \begin{Def}
-Let $u,v\in H_1(S,\mathbf{R})$ be homology classes of curves on $S$ that span $H_1(\tilde{S},\mathbf{R})$. Then there is a group homomorphism from $\pi_1(S)$ to $\mathbf{R}^2$ defined as:
+Define the group homomorphism $\Omega_{u,v}:\pi_1(\bM)\rightarrow \QQ^2$, where $\beta\mapsto(i(u,[\beta]),i(v,[\beta]))$.
+\end{Def}
+
+\begin{lem} $\Omega_{u,v}(\pi_1(\bM))=\ZZ^2$.
+\end{lem}
+\begin{lem}
+\compav{show somehow that u,v determine the cover}
+\end{lem}
+
+\subsection{Induced Automorphisms of $H_1(\bM,\QQ)$}
+We look at some important automorphisms induced by Affine maps on $\bM$. Observe that $\bM$ has a uniform cylinder decomposition in both horizontal and vertical directions as in figure $15$. We define the \emph{modulus}, $\mu$, of a cylinder to be the ratio of the cylinder's width to its circumference, $\frac{w}{c}$. The $\emph{Dehn-twist}$ of a cylinder is an affine diffeomorphism that skews the cylinder and sends every vertex to itself.
+
+\begin{figure}[H]
+\centering
+\includesvg[width=3in]{cylinderskew}
+\label{fig:skew}
+\caption{Dehn-twist of a cylinder in $\bM$'s cylinder decomposition.}
+\end{figure}
+
+Such a map would have derivative $\left[~\begin{matrix}1 && \pm\mu^{-1}\\0 && 1\end{matrix}~\right]$. On $\bM$ every cylinder in both vertical and horizontal decompositions has a modulus of $\frac{1}{2}$. These give way to global diffeomorphisms as $\emph{multi-twists}$ of $\bM$.
+
+\begin{Def}
+We call the global affine diffeomorphisms in $\text{Aff}^+(\bM)$ obtained as \textbf{multi-twists of the surface in horizontal and vertical directions} $\mathbf{A}$ and $\mathbf{B}$, respectively.
+\\We define the \textbf{derivatives of} $\mathbf{A},\mathbf{B}$ as the matrices 
+$D(\mathbf{A})=\mathbf{A}'=\left[ \hspace{1mm} \begin{matrix}
+				1 &   2\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right] \text{ , and }
+			D(\mathbf{B})=\mathbf{B}'=\left[ \hspace{1mm} \begin{matrix}
+							1 & 0\\
+							 2 & 1
+						\end{matrix}\hspace{1mm}\right]$, where $D:\text{Aff}^+(\bM)\rightarrow V(\bM)$.
+\end{Def}
+These are parabolic elements of $V(\bM)$ that are directly related to the periodic/drift-periodic dichotomy of rational trajectories on the Necker cube surface. To show this directly, we look at how skewing the surface affects our core cylinder curves:
+
+\begin{figure}[H]
+\centering
+\includesvg[width=2in]{skew}
+\end{figure}
+
+When skewing the surface in the horizontal direction, the horizontal curves are preserved, but the vertical curves obtain two additional positive intersections with adjacent horizontal curves. We work out the $\mathbf{A}, \mathbf{B}$ induced automorphisms of $H_1(\bM,\QQ)$ to be:
+
+\begin{align*}
+\mathbf{A}^k_*([\gamma_i])=&[\gamma_i] + \frac{k}{2}(1-(-1)^i)([\gamma_{i-1}]+[\gamma_{i+1}])\\
+\mathbf{B}^k_*([\gamma_i])=&[\gamma_i] + \frac{k}{2}(1+(-1)^i)([\gamma_{i-1}]+[\gamma_{i+1}])\\
+\end{align*}
+
+\section{Proof of Main Theorem}
+
+\subsection{Translation Surfaces and $\ZZ^2$-Covers}
+We recall some definitions and properties of translation surfaces and their translation covers. A \emph{translation surface}, $S$, is a compact, flat surface that admits a discrete number of conical singularities and has trivial linear holonomy on arbitrary paths. We denote the surface without singularities by $S^\circ$. Translation surfaces belong to a stratum or family of surfaces characterized according to the number of conical points and their degrees. If the total angle of a closed loop around the singularity is given as the quantity $2\pi(d+1)$, we say the \emph{degree} of the singularity is $d$. A $\ZZ^2$-cover is a normal cover of $S$ given by the map $f:\tilde{S}\rightarrow S$, such that the associated deck group of the cover, $\Delta=\pi_1(S)/\pi_1(\tilde{S})$, is isomorphic to $\ZZ^2$.
+
+\begin{Def}
+Algebraic intersection number is a non-degenerate bilinear form:
+\begin{align*}
+i:H_1(S,\mathbf{R})\times H_1(S,\mathbf{R})\rightarrow\mathbf{R},
+\end{align*}
+where $\mathbf{R}$ is a ring and for $[\gamma],[\beta]\in H_1(S,\mathbf{R})$, $i([\beta],[\gamma])$ returns the intersection number of two homology classes.
+\end{Def}
+Algebraic intersections are signed and follow some convention such as the right-hand rule.
+
+\begin{Def}
+Let $u,v\in H_1(S,\QQ)$ be linearly independent homology classes of curves on $S$. Then the group homomorphism from $\pi_1(S)$ to $\QQ^2$ is given as:
 \begin{align*}
 \Omega_{u,v}:\pi_1(S)\rightarrow \mathbf{R}^2 \text{; } \beta\mapsto(i(u,[\beta]),i(v,[\beta])).
 \end{align*}
 \end{Def}
+
+
 
 The set of all orientation-preserving affine diffeomorphisms of $S$ forms the group Aff$^+(S)$. The corresponding \emph{Veech group}, $V(S)$ of $S$ is the image of the group morphism $D:\text{Aff}^+(S)\rightarrow SL(2,\mathbb{R})$ that takes an affine map to its derivative. A surface is said to be \emph{Veech} if its Veech group is commensurable to $SL(2,\mathbb{R})$. It is well known that origami, or square-tiled, surfaces have Veech groups commensurable to $SL(2,\ZZ)$. [cite] When $\mathbf{R}=\ZZ$, $\Omega_{u,v}$ takes an element of $\pi_1(S)$ to $\Delta$. Thus, $\gamma\in\pi_1(S)$ lifts to $\tilde{\gamma}\in\pi_1(\tilde{S})$ if and only if $\gamma\in\ker\Omega_{u,v}$.
 
@@ -476,8 +579,8 @@ Let $\alpha:[0,1]\rightarrow S$ be a closed, non-singular geodesic path on $S$. 
 \begin{align*}
 \mathbf{hol}([\alpha])=\int_{\alpha}dz.
 \end{align*}
-Since $\alpha$ is non-singular, it can be mapped to $S^\circ$ which admits a flat holomorphic one-form $dz$. Let $\theta=Arg(\mathbf{hol}([\alpha]))$. We say that $\phi_t^\theta:[0,\infty)\rightarrow S^\circ$ is the unit-speed geodesic flow on $S^\circ$ given by $[\alpha]$ such that $\phi^\theta_0=\alpha(0)$.
 \end{Def}
+Since $\alpha$ is non-singular, it can be mapped to $S^\circ$ which admits a flat holomorphic one-form $dz$. Let $\theta=Arg(\mathbf{hol}([\alpha]))$. We say that $\phi_t^\theta:\RR\times S^\circ \rightarrow S^\circ$ is the unit-speed geodesic flow on $S^\circ$ in direction $\theta$ given by the  $[\alpha]$ such that $\phi^\theta_0=\alpha(0)$. In local coordinates this corresponds to $z+te^{i\theta}\in \CC$.
 
 \begin{lem}
 $\phi_t^\theta$ has a period of $T=|\mathbf{hol}([\alpha])|$
@@ -515,63 +618,10 @@ Let $\beta=h(\alpha)$ as before. If $D(h)=h'\in V(S)$ and $S$ is Veech, then $\t
 \end{proof}
 \end{lem}
 
-\subsection{Veech Staircase Model}
-Let $f:\btU\rightarrow\mathbf{M}$ be a projection onto the quotient surface that takes every point to its modular equivalent by its $\ZZ^2$ symmetries, and what we obtain is the following compact translation surface belonging to the stratum $\cH(2,2,2,2):$
-
-\begin{figure}[H]
-\centering
-\includesvg[width=2.6in]{mtilda}
-\caption{Compact translation surface, $\mathbf{M}$, covered by the infinite surface with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify each quotient with a plane in the cover, $\mathbf{\tilde{\mathbf{U}}}$.}
-\label{fig:mtilda}
-\end{figure}
-
-It is clear that this is a square-tiled Veech surface when realized as a finite staircase:
-
-\begin{figure}[H]
-\centering
-\includesvg[width=3.4in]{mtildastaircase}
-\caption{The staircase Veech surface with directional planes and vertices identified. All edges are paired by translation. Two adjacent squares have opposite edges identified. The top edge of the bottom-left square is glued to the bottom edge of the top-right square (both labeled I). Likewise, the bottom edge of the bottom-left square is identified with the top edge of the top-right square.}
-\label{fig:staircase}
-\end{figure}
-
-Since $\pi_1(\bM)\leq\pi_1(\bM^\circ)$, we may work with the absolute homology of $\bM$ to prove results on $M^\circ$. Consider the following cylinder curves on $\bM$:
-
-\begin{figure}[H]
-\includegraphics[width=3in]{homologyclass.png}
-\centering
-\caption{$\bM$'s cylinder core curves with u,v, and z homology class labels.}
-\label{fig:homology}
-\end{figure}
-
-\begin{Def}
-The set of abelianized cylinder core curves is $\Gamma=\{\gamma_i~: ~0\leq i\leq11\}\subset H_1(\bM,\ZZ)\subset H_1(\mathbf{M},\mathbb{Q})$.
-\end{Def}
-
-It can be shown that $\Gamma$ spans $H_1(\bM,\QQ)$ by constructing a $12\times12$ matrix $M$ such that $M_{j,k}=i(\gamma_k,\gamma_j)$. Every row has two entries that alternate between $1$ when $j$ is odd and $-1$ when $j$ is even. Such a matrix is rank 10, precisely the dimension needed for a genus 5 surface. 
-
-\begin{Def}
-The homology classes $u,v,z$ are given as the following sums of core curves:
-\begin{align*}
-u &= -[\gamma_2] +[\gamma_5] + [\gamma_8] - [\gamma_{11}],\\
-v &= +[\gamma_0] -[\gamma_3] -[\gamma_6] +[\gamma_9],\\
-z &= +[\gamma_1] +[\gamma_4]-[\gamma_7]-[\gamma_{10}].
-\end{align*}
-\end{Def}
-
-\begin{Def}
-Define the group homomorphism $\Omega_{u,v}:\pi_1(\bM)\rightarrow \QQ^2$, where $\beta\mapsto(i(u,[\beta]),i(v,[\beta]))$.
-\end{Def}
-
-\begin{thm}
-
-\end{thm}
 
 
 \subsection{Symmetries of $\bM$}
-\begin{figure}[H]
-\centering
-\includesvg[width=2in]{skew}
-\end{figure}
+
 
 
 \section{Four-fold Cover of $\mathbf{U}$}
@@ -631,11 +681,7 @@ This surface is obtained as a ramified cover of the unit square torus. It is a t
 \end{equation*}
 we call $\mathbf{A}^{\pm 1}$, $\mathbf{B}^{\pm 1}$, respectively.\\
 A Dehn-twist on each cylinder in the cylinder decomposition of $\mathbf{M}$ in horizontal and vertical directions gives way to these global affine diffeomorphisms:
-\begin{figure}[H]
-\centering
-\includesvg[width=1.5in]{cylinderskew}
-\label{fig:skew}
-\end{figure}
+
 
 \item Rotation group generated by a $+\frac{\pi}{2}$ rotation of the surface fixed about the center of the second square on the bottom of the staircase, an order four isometry on $\mathbf{M}$ denoted $\mathbf{R}$.
 
