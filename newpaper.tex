@@ -21,10 +21,12 @@
 \def\bG{\mathbf{G}} \def\bGs{\mathbf{G}^\circ}
 \def\hol{\mathbf{hol}}
 \def\bM{\mathbf{M}}
+\def\bMs{\mathbf{M}^\circ}
 
 \def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
 \def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
 \def\GL{\mathrm{GL}} \def\SL{\mathrm{SL}}  \def\SP{\mathrm{SL}}
+\def\SO{\mathrm{SO}}
 
 \def\<{\langle} \def\>{\rangle}
 \def\ad{\mathrm{ad}} 
@@ -108,25 +110,24 @@ Familiarity is assumed on the part of the reader with covering space theory, tra
 \end{rem}
 
 \subsection{Discussion of Results}
-Initial experiments suggested there was a correlation between choice of trajectory angle and periodicity. On a surface composed of infinitely many cubes, there is certainly a flat metric endowed on smaller neighborhoods of the surface that are locally isometric to the plane. Via parallel transports of tangent vectors over the edges of the cubes connecting one face to the next, it is possible to describe geodesic behavior on the Necker cube surface as a series of straight line segments that traverse faces and continuously flow in a fixed direction (see figure $\ref{fig:front}$).
-\\\\
+Our initial experiments strongly supported the theory that there would be a correlation between a choice of trajectory angle and dynamical properties of a geodesic on such a symmetric object. Rightfully so, a surface composed of infinitely many cubes an induced flat metric where every neighborhood is locally isometric to the Euclidean plane. Via the parallel transport of a unit tangent vector over the sharp edges of the surface, it becomes obvious to think of the geodesic as a sequence of line segments contained in the faces of each cube on the surface's embedded form in $\RR^3$. $\ref{fig:front}$.
 
 \begin{wrapfigure}{l}{2.2in.}
 \includesvg{vectorplane}
 \end{wrapfigure}
-We consider classes of directions obtained from unit vectors in $\RR^3$ by projecting a sufficiently small segment of a flow contained onto a parallel plane. These vectors retain all necessary information about their directions and let us consider rational and irrational angles relative to a choice of basis in $\RR^2$. This is what we refer to as the \emph{initial trajectory angle}.
+\noindent Let $x_0$ be a point on the surface that is contained in an open neighborhood of a smooth section of the surface and consider a tangent unit vector $v\in\RR^3$ protruding from $x_0$. Assuming the faces are parallel to every $2$-dimensional subspace of $\RR^3$ spanned by standard basis vectors, exactly one component of $v$ would be 0. Projecting this vector to a parallel plane retains all necessary information about direction. Call this vector $v_0\in\RR^2$.
 \\\\
-Rational component trajectory angles are then further categorized according to the parities of their components.
+We say that $v_0$ is the \emph{initial trajectory} of the geodesic and the angle it makes relative to our choice of basis is its \emph{initial trajectory angle}. We consider a rational direction to fall into one of two categories.
 \begin{Def}
-Let $v$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ for $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$.  We call $v$ an \textbf{odd-odd} vector if x,y are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v$ is an \textbf{even-odd} vector if x and y are relatively prime, and x is even if and only if y is odd. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
+Let $v_0$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $v_0$ is an \textbf{odd-odd} vector if its components are relatively prime and odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v_0$ is an \textbf{even-odd} vector if its components are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
 \end{Def}
-We prove the following is true of all rational directions:
+\noindent This paper will demonstrate how one reaches the following conclusion about the relationship between parity and periodicity of geodesic behavior on the Necker cube surface, denoted $\mathbf{S}$:
 
 \begin{thm*}
-Let $\Phi_t$ be the geodesic flow defined on the unit tangent bundle of the Necker cube surface for $t\in\RR$, and initial point $p=(x_0,v_0)$ with $v_0\in\RR$. Then the following is true:
+(Directional Dichotomy of Periodic Geodesics on $\mathbf{S}$) Let $\Phi_t$ be a unit-speed geodesic flowing on the unit tangent bundle of $\mathbf{S}$ for $t\in\RR$ with initial point and vector $\Phi_0=(x_0,v)$. Then the following is true:
 \begin{enumerate}[label=(\roman*)]
-\item $\Phi$ is periodic with period $T\in\RR$ if and only if $v\in\cO$.
-\item $\Phi$ is drift-periodic with period $T\in\RR$ if and only if $v\in\cE$.
+\item $\Phi$ is periodic with period $T\in\RR$ if and only if $v_0\in\cO$.
+\item $\Phi$ is drift-periodic with period $T\in\RR$ if and only if $v_0\in\cE$.
 \end{enumerate}
 \end{thm*}
 
@@ -141,18 +142,22 @@ The proof for this theorem can be found in XXX and follows from Theorems YYYY an
 
 \newpage
 
-\section{Construction}
-This section details how we construct the Necker cube surface as an infinite cover of a compact Riemann surface.
-\subsection{Geometric Interpretation}
-Consider the following surface:
+\section{Periodic Tiling of Necker Cubes}
+This section will detail how the Necker Cube surface is obtained as an infinite regular cover of a branched torus. Consider the Necker cube with the following identifications:
 \begin{figure}[H]
 \centering
 \includesvg[width=2in.]{neckercube}
 \end{figure}
 
-We call this surface $\bG$, the \emph{Necker cube}. $\bG$ is obtained by taking three copies of the unit square and identifying the edges in order to resemble the visible portion of a cube. $\bG$ has a total of three vertices. Every vertex has a cone angle of either $3\pi$ or $\frac{3\pi}{2}$ and are \emph{conical points} (or \emph{singularities}) of the surface. We denote the surface without singularities by $\bGs$. The periodic tiling of $\bG$ will take infinitely many copies of $\bG$ and tile them along the edges labeled with solid triangles. This cover of $\bG$ is the Necker cube surface we denote by $\mathbf{S}$. Likewise, the surface tiled by $\bGs$ we denote by $\mathbf{S}^\circ$\\
+We denote this surface $\bG$. $\bG$ is obtained by taking three copies of the unit square and identifying the edges in order to resemble the visible portion of a unit cube. $\bG$ is a genus one surface with three vertices homeomorphic to $\TT^2$. Check that every vertex has a cone angle of either $3\pi$ or $\frac{3\pi}{2}$. These are the conical singularities of the surface, $\Sigma$. We denote the surface without its singularities $\bG\backslash\Sigma = \bGs$. Thus, $\pi_1(\bGs)\cong\pi_1((thrice\text{-}branched~torus))\cong\pi_1(S^1\vee S^1\vee S^1\vee S^1)\cong\FF_4$, the free group of four generators.
+\begin{Def}
+The \textbf{Necker cube surface} $\mathbf{S}$ is obtained as the regular cover of $\bG$ by periodically tiling along the edges with solid triangles.\\
+The \textbf{branched Necker cube surface} $\mathbf{S}^\circ$ is obtained similarly by tiling $\bGs$.
+\end{Def}
 
-\noindent Take the following unit squares in $\RR^3$:\\
+
+
+\noindent Consider the following families of unit squares in $\RR^3$:\\
 \vspace{0.2in}
 \begin{tabular}{p{10cm}c}
 \begin{align*}
@@ -164,68 +169,24 @@ We call this surface $\bG$, the \emph{Necker cube}. $\bG$ is obtained by taking 
 \shiftleft{0.8in}{\raisebox{-1in}{\includegraphics[scale=1]{label.png}}}
 \end{tabular}
 
-\noindent If we take the integer triple $(m,n,p)$ and require that the individual faces based around them  has the triple lie on the plane $x+y+z=0$, $\mathbf{S}$ is broken down into the following sets:
+With the proper identifications on  $\mathbf{A}_{0,0,0}\cup\mathbf{B}_{0,0,0}\cup\mathbf{C}_{0,0,0}$, we have $\bG$'s embedded form in $\RR^3$ and a map $s:\bG\hookrightarrow\RR^3$. Similarly, removing the integer points from this set is an embedding of $\bGs$. Check that tiling along the edges as previously described determines a set of points in $\RR^3$ that coincides with points on $\mathbf{S}$ with $s^*$ as an extension of $s$ to the cover. That is, $s(\mathbf{S})=\bigcup\left\{\mathbf{A}_{m,n,p}\cup\mathbf{B}_{m,n,p}\cup\mathbf{C}_{m,n,p}~:~m+n+p=0\right\}$. Thus a point $x_0\in\mathbf{S}$ is in one-to-one correspondence with this set. To avoid ambiguity we say $U$ is a \emph{neighborhood} of $s(x_0)$ if it is contained in exactly one of $\mathbf{A}_{m,n,p}, \mathbf{B}_{m,n,p}, \mathbf{C}_{m,n,p}$. As $U$ must contain an open ball contained on a single square there cannot be a neighborhood where $s(x_0)\in\ZZ^3$ and $x_0$ is a conical point. It follows then that a neighborhood in $\mathbf{S}$ is a neighborhood in $\mathbf{S}^\circ$ as well. 
 
+\begin{figure}[H]
+\centering
+\includesvg[width=1in]{cubesxyzcut}
+\caption{A section of $\mathbf{S}$}
+\end{figure}
+
+\subsection{Flattening $\mathbf{S}$}
+At the moment it is difficult to describe how the parallel transport of a vector tangent to the surface along an arbitrary path on the surface acts on the vector in $\RR^3$. To simplify this problem we take $\mathbf{S}$ to an isometric variant embedded in $\RR^2$ by piecewise linear transformations on the sets 
 \begin{align*}
 \mathbf{A}=\bigcup\big{\{}\mathbf{A}_{m,n,p}: m+n+p=0\big{\}},
 \\\mathbf{B}=\bigcup\big{\{}\mathbf{B}_{m,n,p}: m+n+p=0\big{\}},
 \\\mathbf{C}=\bigcup\big{\{}\mathbf{C}_{m,n,p}: m+n+p=0\big{\}}.
-\end{align*}\\
-The sets $\mathbf{A},\mathbf{B},\mathbf{C}$ are contained in $\mathbf{S}$. Their union is also the Necker cube surface. 
-
-\begin{figure}[H]
-\centering
-\includesvg[width=2in]{cubesxyzcut}
-\caption{The tiling of $\bG$ where the $\mathbf{A}$ faces are copies of copies of the front-facing square of $\bG$.(Edges that were not used in the tiling are labeled).}
-\end{figure}
-
-\subsection{Algebraic Interpretation}
-We use a series of cutting and gluing operations to obtain an L-shaped surface homeomorphic to the torus branched at three points:\\
-\begin{figure}[H]
-\centering
-\includesvg[width=3in]{LTorus}
-\end{figure}
-\noindent Which is then cut along these dotted lines and pieced together to resemble the torus with a unit-square removed from the center:\\
-\begin{figure}[H]
-\centering
-\includesvg[width=3in]{BranchTorus}
-\caption{$\bGs$ with 4 independent, closed paths labeled identified}
-\end{figure}
-The labeled paths are independent from eachother, and a quick calculation shows us that its fundamental group $\pi_1(\bGs)\cong \<a,b,c,d\>$, the free group of four generators (denote identity by $\mathbf{1}$). We describe an infinite cover of $\bGs$ such that the associated deck group is isomorphic to $\ZZ^2$
-\begin{Def}
-We define $\varphi_1:\pi_1(\bGs)\rightarrow \ZZ^2$ as the group homomorphism on generators $a,b,c,d$: \\$c,d\mapsto(0,0)$\\ $a\mapsto(1,0)$\\$b\mapsto(0,1)$\\ $ab,ba\mapsto(1,1)$.
-\end{Def}
+\end{align*}
 
 \begin{Def}
-$\bUs$ is the cover of $\bGs$ such that $\pi_1(\bUs)=\ker\varphi$.
-\end{Def}
-
-Our cover of $\bGs$ has the fundamental group, $\pi_1(\bUs)=\<\<a^{-1}b^{-1}ab, c, d\>\>$, the conjugate subgroup of elements that map trivially under $\varphi_1$. The covering map $k_{\varphi_1}:\bUs\hookrightarrow\bGs$ takes every point on $\bUs$ to its modular equivalent under these translational symmetries. $\bUs$ is realized as an infinite $\ZZ^2$-tiling of $\bGs$ in $\CC$:
-\begin{figure}[H]
-\centering
-\includesvg[width=2in]{uprime}
-\caption{The infinite surface $\bUs$ embedded in $\CC$ with edges identified.}
-\end{figure}
-
-\begin{Def}
-$\bU$ is the completion of $\bUs$ that includes the branched vertices. 
-\end{Def}
-
-\begin{rem}
-The surface $\bG$ is homeomorphic to the torus, and its cover $\bU$ is its universal cover as the paths labeled $c,d$ are only non-trivial when $\bG$ is branched at its three conical points.
-\end{rem}
-
-\subsection{Isometry From $\mathbf{S}$ to $\bU$}
-The Necker cube surface can be \emph{flattened} onto the plane by piecewise isometric maps onto a subspace of $\RR^3$ with (open) unit squares removed at every even integer pair in the plane, what we claim to be $\bU$.
-\begin{figure}[H]
-\centering
-\includesvg[width=1.1in]{cubesxyzcut} \hspace{0.1in}\raisebox{1.0in}{\text{$\rightarrow$}}\hspace{0.1in}
-\raisebox{0.4in}{\includesvg[width=1.5in]{unfoldcut}}
-\caption{A piecewise isometry from $\mathbf{S}$ to $\bU$. }
-\label{fig:Psi}
-\end{figure}
-\noindent The red/blue dotted lines represent the edges that are split on the plane. The map from one surface to the other is composed of piecewise isometries, $\Psi:\mathbf{S}\rightarrow\RR^3$.
-
+Let $\Psi:s^*(\mathbf{S})\rightarrow\RR^3$ be given as
 \begin{equation}
 \Psi\left[\begin{array}{c}
 	x\\y\\z
@@ -291,6 +252,124 @@ The Necker cube surface can be \emph{flattened} onto the plane by piecewise isom
 				& \text{if } (x,y,z)\in \mathbf{C}\backslash(\mathbf{A}\cup\mathbf{B})	\vspace{2mm}
 \end{cases}
 \end{equation}
+\end{Def}
+\noindent This map behaves as such:
+\begin{figure}[H]
+\centering
+\includesvg[width=1.1in]{cubesxyzcut} \hspace{0.1in}\raisebox{1.0in}{\text{$\rightarrow$}}\hspace{0.1in}
+\raisebox{0.4in}{\includesvg[width=1.5in]{unfoldcut}}
+\caption{An isometry of the surface $\mathbf{S}$.}
+\label{fig:Psi}
+\end{figure}
+
+\begin{lem}
+$\Psi\circ s^*$ is an isometry of the surface $\mathbf{S}$
+\begin{proof}
+$\Psi$ is well-defined on its domain $s^*(\mathbf{S})$, and $s^*$ is an embedding of the surface that is a bijection when restricting its co-domain to its image. Since $\Psi$ is a linear transformation composed of Euclidean matrices and translations it is also invertible and bijective. 
+\end{proof}
+\end{lem}
+
+\subsection{Translation Surface Cover of $\bGs$}
+Reconstruct $\bG$ and $\bGs$ to resemble a quotient of the flattened Necker cube surface by a series of cutting and gluing operations: \\
+\begin{figure}[H]
+\centering
+\includesvg[width=3in]{LTorus}
+\end{figure}
+\noindent This L-shaped torus is then cut along the dotted lines and pieced together to look like a $2\times2$ torus with a unit square removed from the center:\\
+\begin{figure}[H]
+\centering
+\includesvg[width=2in]{BranchTorus}
+\caption{$\bGs$ with 4 independent, closed paths labeled identified}
+\end{figure}
+The paths labeled $a,b,c,d$ are independent. Let $\pi_1(\bGs)=\<a,b,c,d\>$. $\bGs$ has a $\ZZ^2$ tiling by traversing along paths $a,b$ and attaching infinitely many copies of the surface. It's apparent that this $\ZZ^2$ tiling is the flattened Necker cube surface. We use group homomorphisms on this free group to construct translation surfaces and $\ZZ^2$-covers to better understand geodesic behavior on the Necker cube surface.
+
+\begin{Def}
+Let $\varphi_1:\pi_1(\bGs)\rightarrow \ZZ^2$ be the group homomorphism defined on generators $a,b,c,d$: \\$c,d\mapsto(0,0)$\\ $a\mapsto(1,0)$\\$b\mapsto(0,1)$\\ $ab,ba\mapsto(1,1)$
+\end{Def}
+
+\begin{Def}
+Let $\varphi_2:\pi_1(\bGs)\rightarrow SO(2,\ZZ)$ be the group homomorphism defined on the generators $a,b,c,d$:
+\begin{align*}
+a,b & \mapsto \begin{pmatrix}
+1 && 0 \\ 0 && 1\end{pmatrix}=I_2\\
+c & \mapsto\begin{pmatrix}0 && -1\\1 && 0\end{pmatrix}=R\\ d & \mapsto\begin{pmatrix}0 && 1\\-1 && 0\end{pmatrix}=R^3
+\end{align*}
+\end{Def}
+
+Recall that a \emph{translation surface} is a compact, locally flat surface that admits a discrete number of conical singularities and has trivial linear holonomy on any arbitrary path. If the total cone angle of the singularity is some integer multiple of $2\pi$, $2\pi(d+1)$ for $d\geq 0$, we say that singularity has degree $d$. Two translation surfaces belong to the same stratum, or family, of surfaces characterized by the number and degree of conical singularities. Consider the effect that paths $c,d$ have on holonomy: 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=2.5in]{monodromy.png}
+\caption{Effect a nontrivial loop has on arbitrary basis vectors (i,j).}
+\label{fig:loop}
+\end{figure}
+
+We construct a cover of $\bGs$ by taking four copies of it and cyclically pairing edges, and show that this cover has trivial holonomy. Denote the unit tangent bundle of $\bGs$ by $T^1\bGs$. Because $\bGs$ can be contained in the plane, we consider vectors tangent to $\bGs$ to be in $\RR^2$. Let $x_0\in\bGs$. The fiber over $x_0$ under the projection $T^1\bGs\twoheadrightarrow\bGs$ is the set $E_{x_0}$. Let $\triangledown$ be a flat metric connection on $T^1\bGs$ and $p=(x_0,v_0)\in E_{x_0}$ be a single element in the fiber over $x_0$ with $v_0\in\RR^2$. We denote the \emph{holonomy group} of the connection with base point $p$ by $Hol_p(\triangledown)=\{A\in SO(E_{x_0})~:~ p = A\cdot p\}$ where $p$ differs from $A\cdot p$ by some rotation of $v_0$. An element in $SO(E_{x_0})$ acts on $p$ by rotation of the vector $v_0$. Denote the \emph{holonomy bundle} based at $p$ by $H(p)=\{p'\in E_{x_0}~:~ p'= A\cdot p \}$, the set of elements in the orbit of $p$ where a closed loop $\gamma:[0,1]\rightarrow\bGs$ defines a horizontal lift to $\gamma^*:[0,1]\rightarrow T^1\bGs$ by parallel transport of $v_0$ along the path such that $p=\gamma^*(0)$, and $p'=\gamma^*(1)$. Since $\bGs$ is flat and trivial paths have trivial holonomy, $Hol_p(\triangledown)$ acts on $H(p)$ the monodromy group is discrete and well-defined on $\bGs$.
+
+\begin{lem}
+$\varphi_2:\pi_1(\bGs)\rightarrow \mathrm{SO}(2,\ZZ)$ is a monodromy representation of the surface.
+\begin{proof}
+It is clear from Figure 6 that this is the case as concatenating a closed loop with paths $c$ or $d$ would rotate a vector exactly by the cone angles of the singularities that they loops around: $\pm \frac{3\pi}{2}$.
+\end{proof}
+\end{lem}
+
+\begin{Def}
+Let $\bMs$ be the regular cover of $\bGs$ with fundamental group $\pi_1(\bMs)=\ker\varphi_2$.
+\end{Def}
+Showing that $\bMs$ is a degree four cover of $\bGs$ with trivial holonomy and deck group $\SO(2,\ZZ)$ follows immediately from its construction.
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{monogroup.png}
+\label{fig:arbitrarylift}
+\caption{Lift of paths $c,d$ to $\bMs$ (\compav{RELABEL EDGES})}
+\end{figure}
+
+\begin{Def}
+The surface $\bUs$ is the regular cover of $\bGs$ such that $\pi_1(\bUs)=\ker\varphi_1$. 
+\end{Def}
+
+The deck group of this cover is isomorphic to $\ZZ^2$. By reversing the cutting and gluing done previously to $\bGs$ and $\bG$, one can easily see that a cover defined as the kernel of this homomorphism is identical to the tiling of Necker cubes along two of its edges. For this reason, $\bU\cong\mathbf{S}$. 
+
+
+
+\subsection{A Four-Fold Cover of $\bUs$}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{coverdirection.png}
+\end{figure}
+
+
+\newpage
+\begin{Def}
+$\bUs$ is the cover of $\bGs$ such that $\pi_1(\bUs)=\ker\varphi$.
+\end{Def}
+
+Our cover of $\bGs$ has the fundamental group, $\pi_1(\bUs)=\<\<a^{-1}b^{-1}ab, c, d\>\>$, the conjugate subgroup of elements that map trivially under $\varphi_1$. The covering map $k_{\varphi_1}:\bUs\hookrightarrow\bGs$ takes every point on $\bUs$ to its modular equivalent under these translational symmetries. $\bUs$ is realized as an infinite $\ZZ^2$-tiling of $\bGs$ in $\CC$:
+\begin{figure}[H]
+\centering
+\includesvg[width=2in]{uprime}
+\caption{The infinite surface $\bUs$ embedded in $\CC$ with edges identified.}
+\end{figure}
+
+\begin{Def}
+$\bU$ is the completion of $\bUs$ that includes the branched vertices. 
+\end{Def}
+
+\begin{rem}
+The surface $\bG$ is homeomorphic to the torus, and its cover $\bU$ is its universal cover as the paths labeled $c,d$ are only non-trivial when $\bG$ is branched at its three conical points.
+\end{rem}
+
+\subsection{}
+
+\subsection{Isometry From $\mathbf{S}$ to $\bU$}
+The Necker cube surface can be \emph{flattened} onto the plane by piecewise isometric maps onto a subspace of $\RR^3$ with (open) unit squares removed at every even integer pair in the plane, what we claim to be $\bU$.
+
+\noindent The red/blue dotted lines represent the edges that are split on the plane. The map from one surface to the other is composed of piecewise isometries, $\Psi:\mathbf{S}\rightarrow\RR^3$.
+
+
 
 The flattened surface is contained entirely in $(x,y,0)\in\RR^3$, which is isometric to $\CC$. $\bU$ is recovered as a topological quotient on the domain
 
@@ -331,14 +410,7 @@ We denote the \emph{unit tangent bundle} on the surface $\bUs$ by $T^1\bUs$, and
 \end{figure}
 Observe that the parallel transport of a vector around a closed loop on $\bUs$ will act on vectors tangent to the surface by a rotation of an integer multiple of $\frac{\pi}{2}$ radians (since the surface is flat and embedded in $\CC$, we work with vectors in $\RR^2$).
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=2.5in]{monodromy.png}
-\caption{Effect a nontrivial loop has on arbitrary basis (i,j).}
-\label{fig:loop}
-\end{figure}
 
-Let $\triangledown$ be a flat, Riemannian metric connection on $T^1\bUs$. This is allowable since $\bUs$ is obtained as the cover of a flat Riemann surface (\compav{you said of a translation surface?}). Let $p=(x_0,v_0)\in E_{x_0}\subset T^1\bUs$ be an element in the fiber over $x_0$ the usual projection from the tangent bundle to the surface, with $x_0\in\bUs$ and $v_0\in\RR^2$. Denote the \emph{holonomy group} of the connection with base point $p$ by $Hol_p(\triangledown)=\{A\in SO(E_{x_0})~:~ p \equiv A\cdot p\}$ where $p$ differs from $A\cdot p$ by some rotation of $v_0$. That is, $p\equiv p'$ if $p'=(x_0,A v_0)$ for $A\in Hol_p(\triangledown)$. Denote the \emph{holonomy bundle} based at $p$ by $H(p)$, the set of points $p'\in E_{x_0}$ where a closed loop $\gamma:[0,1]\rightarrow\bUs$ describes a horizontal lift to $\gamma^*:[0,1]\rightarrow T^1\bUs$ such that $p=\gamma^*(0)$ and $p'=\gamma^*(1)$.
 
 \begin{Def}
 Define $\varphi_2:\pi_1(\bGs)\rightarrow SO(2,\ZZ)$ as the group homomorphism on generators $a,b,c,d$ such that:
@@ -385,12 +457,7 @@ Conversely, ...
 
 
 A visual representation of $\btUos$ is as a four-fold cover of $\bUs$ with trivial holonomy on all closed paths. Arbitrary paths do \emph{not} have trivial holonomy:
-\begin{figure}[H]
-\centering
-\includegraphics[width=3in]{monogroup.png}
-\label{fig:arbitrarylift}
-\caption{Arbitrary lifts to fibers }
-\end{figure}
+
 
 
 \begin{figure}[H]
@@ -425,10 +492,7 @@ $\eta(t)=(2m+t)+i(2n+\frac{1}{2})$.\\ Let $\aleph=2m+i2n\in\CC$. The minimal rel
 \end{Def}
 This relation is similar to $\sim_\mathbf{P}$ in that it translates line segments of squares surrounding even integer pairs to the origin and relates points on one edge of a square to points on an adjacent edge. Where it differs is that these adjacent edges now belong to a different ``copy" of $\mathbf{P}$. It is in this cyclic manner that edges are glued that allows for trivial linear holonomy on arbitrary paths by rotating each copy of $\mathbf{P}$ accordingly. For example, here is a path on a section of the surface in the neighborhood of $P=2m+i2n\in\CC$ $(m,n\in\ZZ)$ after rotation:
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=4.2in]{coverdirection.png}
-\end{figure}
+
 
 \noindent and its subsequent projection onto $\bUs:$
 
@@ -565,7 +629,7 @@ The induced automorphisms of $\XX$ contained in $Aut(H_1(\bM,\QQ))$ is the subgr
 \section{Proof of Main Theorem}
 
 \subsection{Translation Surfaces and $\ZZ^2$-Covers}
-We recall some definitions and properties of translation surfaces and their translation covers. A \emph{translation surface}, $S$, is a compact, flat surface that admits a discrete number of conical singularities and has trivial linear holonomy on arbitrary paths. We denote the surface without singularities by $S^\circ$. Translation surfaces belong to a stratum or family of surfaces characterized according to the number of conical points and their degrees. If the total angle of a closed loop around the singularity is given as the quantity $2\pi(d+1)$, we say the \emph{degree} of the singularity is $d$. A $\ZZ^2$-cover is a normal cover of $S$ given by the map $f:\tilde{S}\rightarrow S$, such that the associated deck group of the cover, $\Delta=\pi_1(S)/\pi_1(\tilde{S})$, is isomorphic to $\ZZ^2$.
+
 
 \begin{Def}
 Algebraic intersection number is a non-degenerate bilinear form:
