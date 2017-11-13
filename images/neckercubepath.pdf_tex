@@ -50,9 +50,9 @@
   \makeatother%
   \begin{picture}(1,0.88364983)%
     \put(0,0){\includegraphics[width=\unitlength]{neckercubepath.pdf}}%
-    \put(0.95639659,0.46470759){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a}}}%
+    \put(0.94628396,0.57763211){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a}}}%
     \put(0.609416,0.81816121){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b}}}%
-    \put(0.75507785,0.56630827){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c}}}%
-    \put(0.95395978,0.61350063){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{d}}}%
+    \put(0.64900881,0.56392475){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c}}}%
+    \put(0.94384729,0.68428918){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{d}}}%
   \end{picture}%
 \endgroup%
