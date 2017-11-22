@@ -30,6 +30,8 @@
 \def\xtild{\tilde{x}_0}
 \def\utild{\tilde{u}_0}
 \def\gamtild{\tilde{\gamma}}
+\def\phitild{\tilde{\Phi}}
+\def\tildphi{\tilde{\phi}}
 
 \def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
 \def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
@@ -118,24 +120,25 @@ Familiarity is assumed on the part of the reader with covering space theory, tra
 \end{rem}
 
 \subsection{Discussion of Results}
-Our initial experiments strongly supported the theory that there would be a correlation between a choice of trajectory angle and dynamical properties of a geodesic on such a symmetric object. Rightfully so, a surface composed of infinitely many cubes an induced flat metric where every neighborhood is locally isometric to the Euclidean plane. Via the parallel transport of a unit tangent vector over the sharp edges of the surface, it becomes obvious to think of the geodesic as a sequence of line segments contained in the faces of each cube on the surface's embedded form in $\RR^3$. $\ref{fig:front}$.
+Our initial experiments strongly supported the theory that there would be a correlation between a choice of trajectory angle and dynamical properties of a geodesic on such a symmetric object. Rightfully so, a surface composed of infinitely many cubes an induced flat metric where every neighborhood is locally isometric to the Euclidean plane. Via the parallel transport of a unit tangent vector over the sharp edges of the surface denoted $\bUs$, it becomes necessary to think of the geodesic as a sequence of line segments contained in the faces of each cube on the surface's embedded form in $\RR^3$. $\ref{fig:front}$.
 
 \begin{wrapfigure}{l}{2.2in.}
 \includesvg{vectorplane}
 \end{wrapfigure}
-\noindent Let $x_0$ be a point on the surface that is contained in an open neighborhood of a smooth section of the surface and consider a tangent unit vector $v\in\RR^3$ protruding from $x_0$. Assuming the faces are parallel to every $2$-dimensional subspace of $\RR^3$ spanned by standard basis vectors, exactly one component of $v$ would be 0. Projecting this vector to a parallel plane retains all necessary information about direction. Call this vector $v_0\in\RR^2$.
+\noindent Let $x_0$ be a point on the surface that is contained in the interior of a face and consider a tangent unit vector $v\in\RR^3$ based at a point $u_0$. Each face is parallel to a $2$-dimensional subspace of $\RR^3$ spanned by exactly two basis vectors, so one component of $v$ is 0. Call this projected vector $v_0\in\RR^2$.
 \\\\
-We say that $v_0$ is the \emph{initial trajectory} of the geodesic and the angle it makes relative to our choice of basis is its \emph{initial trajectory angle}. We consider a rational direction to fall into one of two categories.
+The angle $v_0$ makes relative to a choice of basis is the \emph{initial trajectory angle} of the unit-speed geodesic on the surface which we denote by $\Phi_t:\RR\rightarrow\bUs$. A rational initial trajectory in $\RR^2$ falls into one of two categories:
 \begin{Def}
-Let $v_0$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $v_0$ is an \textbf{odd-odd} vector if its components are relatively prime and odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v_0$ is an \textbf{even-odd} vector if its components are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
+Let $v_0$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $v_0$ is an \textbf{odd-odd} vector if its components are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v_0$ is an \textbf{even-odd} vector if its components are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
 \end{Def}
-\noindent This paper will demonstrate how one reaches the following conclusion about the relationship between parity and periodicity of geodesic behavior on the Necker cube surface, denoted $\mathbf{S}$:
+\noindent This paper aims to depict the relationship between initial trajectory angles and dynamical properties of a geodesic on the surface. Denote $\bUs$'s translational symmetries by $\text{Trans}(\bUs)$. Recall that a geodesic on the surface is \emph{periodic} if there exists some $T>0$ such that $\Phi(t+T)=\Phi(t)$ for all $t\in\RR$ and a geodesic is \emph{drift-periodic} if there exists some $T>0$ and non-trivial $p\in \text{Trans}(\bUs)$ such that $\Phi(t+T)=p(\Phi(t))$ for all $t\in\RR$. In either case we call $T$ the \emph{period} of $\Phi$ if it is the \emph{smallest} possible value that satisfies these criteria. We additionally require that at no point does $\Phi$ encounter a cone singularity of the surface, for which geodesic behavior is non-deterministic.
+
 
 \begin{thm*}
-(Directional Dichotomy of Periodic Geodesics on $\mathbf{S}$) Let $\Phi_t$ be a unit-speed geodesic flowing on the unit tangent bundle of $\mathbf{S}$ for $t\in\RR$ with initial point and vector $\Phi_0=(x_0,v)$. Then the following is true:
+(Dynamical Properties of a Geodesic on $\bUs$) Let $\Phi_t:\RR\rightarrow\bUs$ be a non-singular unit-speed geodesic on the Necker cube surface such that $\Phi(0)=u_0$ and $\Phi'(0)=v v_0\in\RR^2$. Then the following is true:
 \begin{enumerate}[label=(\roman*)]
-\item $\Phi$ is periodic with period $T\in\RR$ if and only if $v_0\in\cO$.
-\item $\Phi$ is drift-periodic with period $T\in\RR$ if and only if $v_0\in\cE$.
+\item $\Phi$ is periodic with period $T\in\RR$ if  $v_0\in\cO$.
+\item $\Phi$ is drift-periodic with period $T\in\RR$ if $v_0\in\cE$.
 \end{enumerate}
 \end{thm*}
 
@@ -181,6 +184,36 @@ The punctured \textbf{Necker Cube Surface} is a regular cover of $\bGs$, and is 
 
 Thus $\Delta_{\varphi_1}=\pi_1(\bGs)/\pi_1(\bUs)\cong \varphi_1(\pi_1(\bGs))=\ZZ^2$ is the associated \emph{deck group} of the cover. $\bUs$ is the primary object of study.
 
+\subsection{Deck Transformations of the $\ZZ^2$ Cover}
+The set of Deck transformations of the covering map $\bUs\twoheadrightarrow\bGs$ is isomorphic to the deck group $\ZZ^2$ that we induce from $\text{Trans}(\CC)$. First we remove open unit squares on an even integer lattice in the plane:\\
+
+\noindent  Let $m,n\in\ZZ$.
+\begin{equation}
+\label{eq:P}
+\mathbf{P} = \mathbb{C}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{} u+vi:~|u-2m|<\frac{1}{2},~|v-2n|<\frac{1}{2},~u=2m\pm\frac{1}{2}~v=2n\pm\frac{1}{2} \big{\}}.
+\end{equation}
+
+\noindent Now make the following identifications on $\mathbf{P}:$
+\\ Let $\aleph_{m,n}=2m+i2n\in\CC$ be the center of a removed square. Now let $\zeta_{m,n}(t)=(2m+t)+i(2n-\frac{1}{2})$ and 
+$\xi_{m,n}(t)=(2m+t)+i(2n+\frac{1}{2})$ be families of paths on $\mathbf{P}$ that run along the edges of the squares, parameterized by $t\in (\frac{-1}{2},\frac{1}{2})$. $\bUs$ is recovered as a topological quotient by making the following edge identifications:
+
+\begin{equation}
+\begin{split}
+(\zeta(t))\sim(e^{i\frac{\pi}{2}}~\overline{\zeta(t)-\aleph})\\
+(\eta(t))\sim_(e^{i\frac{\pi}{2}}~\overline{\eta(t)-\aleph})
+\label{eq:rel2}
+\end{split}
+\end{equation}
+
+These spaces and identifications could be adapted to recover $\bGs$ by restricting $\mathbf{P}$ to a $2\times2$ square about the origin, only allowing $m=n=0$, and identifying the outer edges of the square much like a 2-torus. The translations $+2,+2i\in \text{Trans}(\CC)$ induce horizontal and vertical maps $f_h,f_v\in\text{Trans}(\bUs)$. The group $\<f_h,f_v\>$ is isomorphic to $\ZZ^2$.
+
+\begin{figure}[H]
+\centering
+\includesvg[width=2.3in]{tiling}
+\end{figure}
+
+
+
 \subsection{Monodromy Group Representation}
 In this section we describe a translation cover of $\bGs$ which and $\bUs$ which is factored through as the kernel of a homomorphism from $\pi_1(\bGs)\rightarrow \SO(2,\ZZ)$. This homomorphism represents the monodromy group as the fundamental group acting on the unit tangent bundles $T^1\bGs$ and $T^1\bUs$. 
 
@@ -225,6 +258,8 @@ Showing that $\bMs$ is a degree four cover of $\bGs$ with trivial holonomy and d
 \caption{Lift of paths $c,d$ to $\bMs$ (\compav{RELABEL EDGES})}
 \end{figure}
 
+\subsection{A Four-Fold Cover}
+
 \begin{Def}
 Let $\btUs$ be the cover of $\bUs$ with fundamental group $\pi_1(\btUs)=\ker\varphi_2\big\vert_{\pi_1(\bUs)}$.
 \end{Def}
@@ -247,7 +282,7 @@ $\btUs$ is also a cover of $\bMs$ with fundamental group $\ker\varphi_1\big\vert
 
 
 \subsection{Geodesics on $\bUs$}
-The key connection made between surfaces $\bUs$ and $\btUs$ is that geodesics on $\bUs$ and $\btUs$ are identical in the sense that their images are in a one-to-one correspondence. Unless stated otherwise, a \emph{geodesic} is a \emph{unit-speed} locally distance minimizing curve on a smooth topological surface $\gamma:[0,\infty)\rightarrow S$ such that $\gamma'(0)=v_0\in\RR^2$ and $|| v_0||=1$. A geodesic is \emph{periodic} if for some $T\in\RR^+$ $\gamma(t)=\gamma(t+T)$ for all $t$. A geodesic is \emph{drift-periodic} if for some $T\in\RR^+$, there is some non-trivial translation of the surface that takes $\gamma(t)\mapsto \gamma(t+T)$ for all $t$. In either case we say that $T$ is the \emph{period} or \emph{length} of a segment; in the case where a geodesic does have a period, we restrict $\gamma$ to the closed interval $[0,T]$ and call this a \emph{geodesic segment}. In this paper we do not consider cases where a geodesic hits a cone singularity. For example, the following is a periodic geodesic on the surface with initial direction $kv_0\in\cO$:
+The key connection made between surfaces $\bUs$ and $\btUs$ is that geodesics on $\bUs$ and $\btUs$ are identical in the sense that their images are in a one-to-one correspondence. Unless stated otherwise, a \emph{geodesic} is a \emph{unit-speed} locally distance minimizing curve on a smooth topological surface as a function parameterized by an element in $\RR$. A \emph{geodesic segment} is a restriction of the geodesic to some closed interval in $\RR$. A geodesic has an initial trajectory defined at 0, represented by a unit vector $v_0\in\RR^2$. If the vector can be scaled by $k\in\RR$ such that $kv_0\in\cO\cup\cE$, the geodesic has a \emph{rational} initial trajectory. For example, the following is a periodic geodesic on the surface with initial direction $kv_0\in\cO$:
 
 \begin{figure}[H]
 \centering
@@ -268,49 +303,41 @@ We refer later to the following commuting diagram of branched covering maps and 
 
 
 
-Let $x_0\in G^\circ$ and fix $u_0\in q^{\circ-1}(x_0)$ Let $\alpha:[0,b]\rightarrow\bGs$ be a closed geodesic segment on $\bGs$ with initial and terminal point $x_0$, and $\alpha'(0)=v_0$. Denote $\alpha$'s unique lift to $\bUs$ under $q^\circ$ as $\gamma:[0,b]$, where $\gamma(0)=u_0$, $\gamma'(0)=\gamma'(b)=v_0$, and $\gamma(b)\in q^{\circ-1}(x_0)$. Fix an arbitrary point $\utild\in r^{\circ -1}(u_0)$. We define the unique lift of $\gamma$ under $r$ as the curve $\tilde{\gamma}:[0,b]\rightarrow\btUs$ with $\tilde{\gamma}(0)=\utild$ and $\tilde{\gamma}'(0)=\tilde{\gamma}'(b)=v_0$. Denote their homotopy class representatives as $[\alpha],[\gamma],$ and $[\tilde{\gamma}]$.
+Let $x_0\in G^\circ$ and fix $u_0\in\bUs$, an element in the fiber of the covering map. A \emph{geodesic} on $G^\circ$ is a closed unit-speed straight-line path given as $\eta:\RR\rightarrow\bGs$. The \emph{period}/\emph{length} of the geodesic is some strictly positive $b\in\RR$. Let $\eta|_{[0,b]}=\alpha:[0,b]\rightarrow\bGs$ be a closed geodesic segment on $\bGs$ with initial and terminal point $x_0$. Denote $\alpha$'s unique lift to $\bUs$ by $\gamma:[0,b]\rightarrow\bUs$, where $\gamma(0)=u_0$, and $\gamma(b)$ in the fiber over $x_0$. Fix a point $\utild\in\btUs$ in the fiber over $u_0$. We define the unique lift of $\gamma$ to be the curve $\tilde{\gamma}:[0,b]\rightarrow\btUs$ with $\tilde{\gamma}(0)=\utild$. Denote their homotopy class representatives by $[\alpha]$ and (if they exist) $[\gamma],~[\tilde{\gamma}]$.
 
-A geodesic must have trivial holonomy upon returning to its initial point on $\bGs$. If a geodesic segment does not lift to a closed curve on $\bUs$, then $\gamma(b)$ would be a translation of $u_0$ by some element of the deck group of the cover, i.e. $\varphi_1([\alpha])\in\ZZ^2$ is non-trivial, but $\varphi_2( [ \alpha] ) =I_2$ as $\varphi_2$ is a monodromy map whose image acts on $Hol_p (\triangledown)$ of $\bUs$. Therefore $\gamma'(b)=v_0$ as well. We can naturally extend these segments to the domain $[0,\infty)$ by continuously concatenating the segments.
-
-\begin{Def}
-Let $m\in\NN$. The concatenation of a geodesic segment lifted from $\alpha$ onto $\bUs$ is done in the following manner:\\
-\begin{equation}
-\gamma^m=
-\begin{cases}
-\gamma(t)  & ~~~~~~~~~~0\leq  t\leq b\\
-\varphi_1([\alpha])\cdot \gamma(t)  & ~~~~~~~~~~b\leq  t\leq 2b\\
-\vdots\\
-\varphi_1([\alpha]^{m-1})\cdot \gamma(t)  & (m-1)b\leq t\leq mb\\
-\end{cases}
-\label{eq:concat}
-\end{equation}
- \\
-The new segment is a map $\gamma^m:[0,mb]\rightarrow\bUs$ that is well-defined on the interval. Let $\Phi=\lim\limits_{m\to\infty} \gamma^m$. We call $\Phi_t:[0,\infty)\rightarrow\bUs$ a \textbf{geodesic} on the Necker cube surface.
-\end{Def}
+The geodesic segment on $\bGs$ has the property that it returns to $x_0$ with a trivial effect on the holonomy of the curve. On the other hand, the lifted paths will close only if their homotopy classes belong in their fundamental groups, i.e. the kernel of homomorphisms $\varphi_1$, $\varphi_2|_{\ker\varphi_1}$. Otherwise they are mapped non-trivially to $\ZZ^2$ or $\ZZ^2\times\SO(2,\ZZ)$. Let $v_0\in\RR^2$ be a unit vector such that $\alpha's$ image under the derivative map, $\alpha'$, is $v_0$ at times $0$ and $b$. The derivatives of the lifts $\gamma', \gamtild'$ are also $v_0$ at their endpoints.
 
 \begin{Def}
-The geodesic $\tilde{\Phi}_t:[0,\infty)\rightarrow\btUs$ is a geodesic obtained in a similar manner to $\eqref{eq:concat}$ by lifting $\gamma$ under $r^\circ$ and continuously concatenating $\tilde{\gamma}$ with the exception that the element of the deck group acting after every iteration is $(\varphi_2([\alpha]),\varphi_1([\alpha]))\in\SO(2,\ZZ)\times \ZZ^2$. 
+Let $\Phi_t:\RR\rightarrow\bUs$ be a unit-speed geodesic on the \emph{Necker cube surface} with $\Phi(0)=u_0$ and $\Phi'(0)=v_0$. \\Similarly, let $\tilde{\Phi}_t:\RR\rightarrow\btUs$ be a unit-speed geodesic on $\bUs$'s four-fold cover with $\phitild(0)=\utild$ and $\phitild'(0)=v_0$.
 \end{Def}
 
-The geodesic $\Phi$ obtained in this manner has a period that depends entirely on the length of the closed segment on $\bGs$. In addition, $\Phi(t+mb)=m\varphi_1([\alpha])\cdot\Phi(t)$ and $tilde{\Phi}(t+mb)=(m\varphi_1([\alpha]),I_2)\cdot\tilde{\Phi}(t)$  for all $t,m\geq 0$. The second statement holds since $\alpha$ and $\gamma$ must have trivial holonomy at their terminal points. We make the following observations about these lifts:
+On the Necker cube surface, a horizontal translation, $f_h$, is induced by $2\in\text{Trans}(\CC)$, and a vertical translation, $f_v$, is induced by $2i\in\text{Trans}(\CC)$. The group of deck transformations of the surface given by the cover $\bUs\rightarrow\bGs$ is isomorphic to the group $\Delta_{\varphi_1}=\pi_1(\bGs)/\pi_(\bUs)\cong\ZZ^2$. Take $\ZZ^2$ to the deck group by sending $(1,0)$ to $f_h$ and $(0,1)$ to $f_v$. Similarly, $\btUs$ has deck transformations given by the cover $\btUs\rightarrow\bGs$ induced by elements in $\text{Trans}(\CC\times\SO(2,\ZZ))$. These are isomorphic to the deck group given by the cover $\btUs\rightarrow\bUs\rightarrow\bGs$ containing elements of the form $((m,n),M)\in\ZZ^2\rtimes_{\eta}\SO(2,\ZZ)$, where $\eta:\SO(2,\ZZ)\rightarrow \Aut(\ZZ^2)$. $\SO(2,\ZZ)$ already belongs in $\Aut(\ZZ^2)$ so $\eta$ is an inclusion endomorphism, and the binary operation of this group is defined as  $((m,n),M)\cdot((m',n'),M')=((m,n)+M(m',n'),MM')$.\\
+\\
+Let $\varphi:\pi_1(\bGs)\rightarrow \ZZ^2\rtimes_{\eta}\SO(2,\ZZ)$ be given by $[g]\mapsto(\varphi_1([g]),\varphi_2([g]))$. $\varphi$ is a
 
 \begin{thm}
-$\Phi$ is periodic if and only if $\tilde{\Phi}$ is periodic. Further, both geodesics have period $||\alpha||$.
-\begin{proof}
-Suppose $\Phi$ is periodic. Then $\gamma(0)=\gamma(b)=u_0$. Since $\gamma$ has trivial holonomy, $\varphi_2\big\vert_{\ker\varphi_1}([\gamma])=I_2$, and so $[\tilde{\gamma}]\in\pi_1(\btUs)$. Hence $\gamtild(0)=\gamtild(b)=\utild$. Since $\tilde{\Phi}$ is obtained by concatenating $\gamtild$ under the action of the trivial deck group element of $[\alpha]$, $\gamtild^m=\gamtild(t)$ for all $t\in[0,mb]$. It follows that $\tilde{\Phi}$ is periodic as well. Conversely, the proof is trivial since $\btUs$ is a finite degree cover of $\bUs.$ Since $||\alpha||=b$, there can be no smaller period for its lifted paths as that would imply either $\alpha$ has non-trivial holonomy or does not lift to a closed segment on $\bUs$.
-\end{proof}
+Let $\delta=\varphi_1([\alpha])\in\ZZ^2$ be an element of $\Delta_{\varphi_2}$ and $\tilde{\delta}=\varphi([\alpha])\in\ZZ^2\rtimes_{\eta}\SO(2,\ZZ)$ be an element of $\Delta_{\varphi_{2}\vert_{\pi_1(\bUs)}}$. Then:\\
+$\Phi(t+b)=\delta\cdot\Phi(t)$ for all $t\in\RR$, and \\
+$\phitild(t+b)=\tilde{\delta}\cdot\phitild(t)$ for all $t\in\RR$.
 \end{thm}
 
-\begin{thm}
-$\Phi$ is drift-periodic if and only if $\tilde{\Phi}$ is drift-periodic. Both geodesics have period $||\alpha||$.
-\begin{proof}
-Suppose $\Phi$ is drift-periodic. Then $\varphi_1([\alpha])=(x,y)$ is non-trivial, but $\varphi_2([\alpha])=I_2$ is. The element of the deck group acting on $\gamtild^m(t)$ for $m>1$ is $(I_2,n(x,y))$ for $1<n<m$. As $t\to mb$ and $m\to\infty$, $d(\tilde\Phi(t),\utild)=d((I_2,m(x,y))\cdot \utild, \utild)\to\infty$, and $\tilde{\Phi}(t+b)=(I_2,(x,y))\cdot \tilde{\Phi}(t)$ is periodically translated by some element in $\ZZ^2$. Conversely, if $\tilde{\Phi}$ is drift-periodic there are three cases:\\
-Case one: $\varphi_2([\alpha])$ is trivial, but $\varphi_1([\alpha])$ is not. Then $\Phi$ must be drift-periodic as well since $\gamma$ would terminate on $\varphi_1([\alpha])\cdot u_0\neq u_0$.\\
-Case two: $\varphi_1([\alpha])$ is trivial, but $\varphi_2([\alpha])$ is not. This is a contradiction since that would imply $\alpha$ has non-trivial holonomy.
-Case three:$\varphi_1([\alpha]),\varphi([\alpha])$ are both non-trivial. Again this is not possible since $\alpha,\gamma$ must both have non-trivial holonomy.\\
-Now both geodesics must have the same period since they are obtained by concatenating unique lifts of $\alpha$.
-\end{proof}
-\end{thm}
+\begin{cor}
+The following are equivalent:
+\begin{enumerate}
+\item $\Phi$ is periodic.
+\item $\phitild$ is periodic.
+\item $\delta=(0,0)$.
+\end{enumerate}
+\end{cor}
+
+\begin{cor}
+The following are equivalent:
+\begin{enumerate}
+\item $\Phi$ is drift-periodic.
+\item $\phitild$ is drift-periodic.
+\item $\delta\neq(0,0)$.
+\end{enumerate}
+\end{cor}
 
 These theorems essentially tell us that these kinds of geodesics behave identically on the Necker cube surface and its cover. Now we show that this is true for $\btUs$ and $\btU$. For these proofs we will refer to the induced homomorphisms from ($\ref{eq:commute}$):
 
@@ -323,11 +350,12 @@ These theorems essentially tell us that these kinds of geodesics behave identica
 \end{equation}
 
 \begin{Def}
-Let $\tilde{\phi}:[0,\infty)\rightarrow\btUs$ be a geodesic with initial direction $v_\in$ 
+Let $\tildphi:\RR\rightarrow\btU$ be a geodesic on the unpunctured four-fold surface such that $\tildphi(0)=\utild$ and $\tildphi'(0)=v_0$.
 \end{Def}
 
 \begin{thm}
-content...
+$\tildphi$ is periodic if and only if $\phitild$ is periodic.\\
+$\tildphi$ is drift-periodic if and only if $\phitild$ is drift-periodic.
 \end{thm}
 
 \subsection{Translation Surface}
@@ -615,10 +643,7 @@ The Necker cube surface can be \emph{flattened} onto the plane by piecewise isom
 
 The flattened surface is contained entirely in $(x,y,0)\in\RR^3$, which is isometric to $\CC$. $\bU$ is recovered as a topological quotient on the domain
 
-\begin{equation}
-\label{eq:P}
-\mathbf{P} = \mathbb{C}\text{ }\backslash\bigcup_{m,n \in {\mathbb Z}} \big{\{} u+vi:u\in(2m-\frac{1}{2},2m+\frac{1}{2}),\text{ } v\in(2n-\frac{1}{2},2n+\frac{1}{2})\big{\}}.
-\end{equation}
+
 
 \begin{Def} $\mathbf U$ is the surface obtained as the topological quotient $\mathbf{P}/\sim_{\mathbf{P}}$, where $\CC$ is identified with $\RR^2$ in the usual way and $\sim_{\mathbf{P}}$ is a minimal relation on $\mathbf{P}$ defined as follows:
 \begin{gather*}
@@ -718,12 +743,13 @@ A better picture of $\btUos$ is obtained by making cyclic edge identifications o
 
 \begin{Def}
 $\btU_0$ is the surface obtained as the quotient $\mathbf{P}'/\sim_{\mathbf{P}'}$. Denote paths $\zeta$ and $\eta$  on $\mathbf{P}$, parameterized by integers $m,n\in\ZZ$ and $t\in[-\frac{1}{4},\frac{1}{4}]$, and defined:\\ $\zeta(t)=(2m+t)+i(2n-\frac{1}{2})$,\\
-$\eta(t)=(2m+t)+i(2n+\frac{1}{2})$.\\ Let $\aleph=2m+i2n\in\CC$. The minimal relation $\sim_{\mathbf{P}'}$ is given as:
+$\eta(t)=(2m+t)+i(2n+\frac{1}{2})$.\\
+
+Let $\aleph=2m+i2n\in\CC$. The minimal relation $\sim_{\mathbf{P}'}$ is given as:
 \begin{equation}
 \begin{split}
 (\zeta(t);j)\sim_{\mathbf{P'}}(e^{i\frac{\pi}{2}}~\overline{\zeta(t)-\aleph};j+1)\\
 (\eta(t);j)\sim_{\mathbf{P'}}(e^{i\frac{\pi}{2}}~\overline{\eta(t)-\aleph};j+1)
-\label{eq:rel2}
 \end{split}
 \end{equation}
 \end{Def}
