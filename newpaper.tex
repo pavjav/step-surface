@@ -29,6 +29,7 @@
 \def\btUs{\btU^\circ} 
 \def\xtild{\tilde{x}_0}
 \def\utild{\tilde{u}_0}
+\def\mtild{\tilde{m}_0}
 \def\gamtild{\tilde{\gamma}}
 \def\phitild{\tilde{\Phi}}
 \def\tildphi{\tilde{\phi}}
@@ -87,43 +88,37 @@
 %\end{center}
 
 \begin{abstract}
-\noindent Although it is most recognizable as M.C. Escher's adaptation of an optical illusion popularized by Louis Albert Necker, the Necker cube surface has a complex structure and is, in analaytic language, described as an infinite, flat (locally isometric to $\RR^2$ on smooth sections), $\RR^3$-embeddable Euclidean cone surface with countably many singularities of cone angles $3\pi$ and $\frac{3\pi}{2}$. Its geometric construction is described as the gluing of infinitely many unit cubes along their edges so that every face shares an edge with exactly four others. A unit-speed geodesic on this surface has an initial trajectory angle $\theta\in\RR/2\pi\ZZ$ given up by the surface's local plane isometry. Given a rational vector direction in $\RR^2$ (components are relatively prime integers) obtained from $\theta$, one can classify every periodic/drift-periodic rational geodesic on the surface. In addition its total period/length and, in the case where it is drift-periodic, translational drift as Euclidean distance in its ambient space is given by solving a system of simple linear Diophantine equations. 
+\noindent Although it is most recognizable as M.C. Escher's adaptation of an optical illusion popularized by Louis Albert Necker, the Necker cube surface has a complex structure and is, in analaytic language, described as an infinite, flat (locally isometric to $\RR^2$ on smooth sections), $\RR^3$-embeddable Euclidean cone surface with countably many singularities of cone angles $3\pi$ and $\frac{3\pi}{2}$. Its geometric construction is described as the gluing of infinitely many unit cubes along their edges so that every face shares an edge with exactly four others. A unit-speed geodesic on this surface has an initial trajectory angle $\theta\in\RR/2\pi\ZZ$ given up by the surface's local plane isometry. Given a rational vector direction in $\RR^2$ (components are relatively prime integers) obtained from $\theta$, one can classify every periodic/drift-periodic rational geodesic on the surface. In addition its total period/length and, in the case where it is drift-periodic, translational drift as Euclidean distance in its ambient space is given by solving a system of Diophantine equations seemingly related to Farey sequences.
 \end{abstract}
 \begin{figure}[H]
 \centering
 \includesvg[width=4in]{cubesxyzpaths2bwv2b}
 \label{fig:front}
-\caption{Periodic and drift-periodic flows on the Necker cube surface}
+\caption{Periodic and drift-periodic geodesics on the Necker cube surface}
 \end{figure}
-
-
-\newpage
 \section{Introduction}
-
-Put your Problem statement here! Example of a Citation\cite[p.219]{Robotics}. Here's Another Citation \cite{Flueck}
-
-The Necker cube has made numerous appearances in the work of mathematicians, crystallographers, and scientists interested in human visual systems before and after appearing in the works of M.C. Escher [cite]. Louis Albert Necker was credited for having discovered the optical illusion, and studying its geometric properties [cite]. The solid presentation of the cube, when rendered as a flat surface with three rear faces removed, achieves a similar effect when its three visible faces are shaded in a particular way. The Necker cube surface is then obtained by gluing infinitely many copies along its outer edges as in Figure 1.
+The Necker cube has made numerous appearances in the work of mathematicians, crystallographers, and scientists interested in human visual systems even before appearing in the works of M.C. Escher [cite]. Louis Albert Necker was credited for having discovered this optical illusion and studying its various properties [cite]. The solid presentation of the cube, when rendered as a flat surface with three rear faces removed, achieves a similar effect when its three visible faces are shaded in a particular way not unlike the illusion given off by the ``wire-frame" cube.[cite] The Necker cube surface is then obtained by gluing infinitely many copies of the semi-cube surface along its outer edges (Fig 1).
 
 
-Dynamical classification of geodesics on flat, periodic surfaces such as the Necker cube surface ultimately boils down to  studying the surface's various symmetries and how the rotational holonomy group acts on the unit tangent bundle of the surface as the unit vector (derivative of the geodesic) is parallel transported along its path. Loops on polyhedra punctured at its cone singularities tend to have discrete holonomy groups as its relative holonomy (holonomy of contractible loops) is trivial. 
+Dynamical classification of geodesics on flat, infinite surfaces admitting cone singularities such as the Necker cube surface ultimately boils down to studying the surface's and, if it exists, base surface's various symmetries. The rotational holonomy group acts on the unit tangent bundle of the surface as a unit vector (derivative of the geodesic at any given time) undergoes parallel transport along the geodesic path. If a surface is periodically constructed and obtained as a normal cover of some elementary base surface (like a polygon with edge identifications), this holonomy group might be given up by observing how the push-forward of elements in the group of deck transformations acts on tangent spaces. In particular, loops on polyhedral surfaces punctured at its  cone singularities (cone angles that are rational multiples of $\pi$) tend to have discrete holonomy groups as its relative holonomy (holonomy of contractible loops) is trivial.
 
 \begin{rem}
-Familiarity is assumed on the part of the reader with covering space theory, translation (Veech) surfaces, and their associated Veech groups. For general surveys on these topics: [cite], [cite].
+Familiarity is assumed on the part of the reader with covering space theory, translation (particularly Veech) surfaces, and their associated Veech groups. For general surveys on these topics we refer readers to: [cite], [cite].
 \end{rem}
 
 \subsection{Discussion of Results}
-Our initial experiments strongly supported the theory that there would be a correlation between a choice of trajectory angle and dynamical properties of a geodesic on such a symmetric object. Rightfully so, a surface composed of infinitely many cubes an induced flat metric where every neighborhood is locally isometric to the Euclidean plane. Via the parallel transport of a unit tangent vector over the sharp edges of the surface denoted $\bUs$, it becomes necessary to think of the geodesic as a sequence of line segments contained in the faces of each cube on the surface's embedded form in $\RR^3$. $\ref{fig:front}$.
+Our initial experiments supported the theory that there would be a strong correlation between a choice of initial trajectory angle and the dynamical properties of a geodesic traveling on the surface. [throw in some trajectories in the appendix] A surface composed of infinitely many cubes is endowed with a flat metric, i.e. every neighborhood is locally isometric to $\RR^2$. Via the parallel transport of a unit vector tangent to the surface in the direction of the geodesic, we view its image as a sequence of straight lines on the (smooth) faces of the surface that tightly wrap around its sharp edges (Fig 1).
 \\
 \begin{wrapfigure}{l}{2in.}
 \includesvg{vectorplane}
 \end{wrapfigure}
-\noindent Let $u_0$ be a point on the surface that is contained in the interior of a face and consider a tangent unit vector $v\in\RR^3$ based at point $u_0$. Each face is parallel to a $2$-dimensional subspace of $\RR^3$ spanned by exactly two basis vectors, so one component of $v$ is 0. Call this projected vector $v_0\in\RR^2$.
+\noindent Let $u_0$ be a point on the surface that is contained in the interior of a face and consider a tangent unit vector $v\in\RR^3$ based at point $u_0$. Each face is parallel to a $2$-dimensional subspace of $\RR^3$ spanned by exactly two basis vectors, so one component of $v$ is always 0. Thus $v$ is is isometric to $v_0\in\RR^2$.
 \\\\\\
-The angle $v_0$ makes relative to a choice of basis is the \emph{initial trajectory angle} of the unit-speed geodesic on the surface, $\Phi_t:\RR\rightarrow\bUs$. A rational initial trajectory angle in $\RR^2$ falls into one of two categories:
+Denote the Necker cube surface $\bUs$. The angle $v_0$ makes relative to a choice of basis is the \emph{initial trajectory angle} of a \emph{unit-speed geodesic} based at $u_0$ on the surface, $\Phi_t:\RR\rightarrow\bUs$. The initial trajectory angle is said to be $\emph{rational}$ if there is some $k\in\RR$ such that $kv_0$'s components are relatively prime integers. A rational initial trajectory angle in $\RR^2$ falls into one of two categories:
 \begin{Def}
-Let $v_0$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $v_0$ is an \textbf{odd-odd} vector if its components are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $v_0$ is an \textbf{even-odd} vector if its components are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
+Let $v_0$ be a rational unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $kv_0$ is an \textbf{odd-odd} vector if $x,y$ are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} by $\mathcal{O}$. We say that $kv_0$ is an \textbf{even-odd} vector if $x,y$ are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} by $\mathcal{E}$.
 \end{Def}
-\noindent For convenience we call the disjoint union of these sets $\cS$. This paper aims to depict the relationship between initial trajectory angles and dynamical properties of a geodesic on the surface. Denote $\bUs$'s translational isometries by $\text{Trans}(\bUs)$. Recall that a geodesic on the surface is \emph{periodic} if there exists some $T>0$ such that $\Phi(t+T)=\Phi(t)$ for all $t\in\RR$ and a geodesic is \emph{drift-periodic} if there exists some $T'>0$ and non-trivial $p\in \text{Trans}(\bUs)$ such that $\Phi(t+T')=p(\Phi(t))$ for all $t\in\RR$. In either case we call this value the \emph{period} of $\Phi$ if it is the \emph{smallest} possible value that satisfies our definition. We additionally require that at no point does $\Phi$ encounter a cone singularity of the surface, in which case the geodesic behavior is non-deterministic.
+\noindent Let $\cS=\cO\sqcup\cE$ be the disjoint union of the two. This paper aims to depict the relationship between initial trajectory angles and dynamical properties of a geodesic on the surface. Denote $\bUs$'s translational isometries by $\text{Trans}(\bUs)$. Recall that a geodesic on the surface is \emph{periodic} if there exists some $T>0$ such that $\Phi(t+T)=\Phi(t)$ for all $t\in\RR$ and a geodesic is \emph{drift-periodic} if there exists some $T'>0$ and non-trivial $p\in \text{Trans}(\bUs)$ such that $\Phi(t+T')=p(\Phi(t))$ for all $t\in\RR$. In either case we call this value the \emph{period} of $\Phi$ if it is the \emph{smallest} possible value that satisfies this definition. We additionally require that at no point does $\Phi$ encounter a cone singularity of the surface. Otherwise the geodesic behavior is indeterminable. We call $\Phi$ \emph{non-singular} if this holds. 
 
 \begin{align}
 \text{Let }\XX'=\left\< \left[ \hspace{1mm} \begin{matrix}
@@ -136,19 +131,16 @@ Let $v_0$ be a unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\m
 						\end{matrix}\hspace{1mm}\right]\right\>
 \end{align}
 
-\noindent Section [blank] explains the significance of this group. Let $M=\left[ \hspace{1mm} \begin{matrix}
-							s & u\\
-							 w & z
-						\end{matrix}\hspace{1mm}\right]\in\XX'$.
+\noindent Section [blank] explains the significance of this group. Let $M\in\XX'$.
 
 
 \begin{thm*}
-(Dynamical Properties of a Geodesic on $\bUs$) \\Let $\Phi_t:\RR\rightarrow\bUs$ be a non-singular unit-speed geodesic on the Necker cube surface such that $\Phi(0)=u_0$ and $\Phi'(0)=v\in\RR^3$, isometric to $v_0\in\RR^2$. Let $\overline{u}_t\in\RR^3$ be $\Phi_t$'s coordinate in $\bUs$'s ambient space at time $t$. Then the following is true:
+(Dynamical Classification of Geodesics on the Necker Cube Surface) \\Let $\Phi_t:\RR\rightarrow\bUs$ be a non-singular unit-speed geodesic on the Necker cube surface such that $\Phi(0)=u_0$ and $\Phi'(0)=v\in\RR^3$, isometric to $v_0\in\RR^2$. Let $\overline{u}_t\in\RR^3$ be $\Phi_t$'s coordinate in $\bUs$'s ambient space at time $t$. Let $k\in\RR$ such that $kv_0\in\cS$. Then the following is true:
 \begin{enumerate}[label=(\roman*)]
-\item $\Phi$ is periodic if $v_0\in\cO$.
-\item Suppose $(i)$ is true. If $M (kv_0)=(1,1)$ then $\Phi$ has period $T=6\sqrt{2}||kv_0||$.
+\item $\Phi$ is periodic if $kv_0\in\cO$.
+\item Suppose $\Phi$ is periodic. If $M (kv_0)=(1,1)$ then $\Phi$ has period $T=6\sqrt{2}||kv_0||$.
 \item $\Phi$ is drift-periodic if $v_0\in\cE$. 
-\item Suppose $(iii)$ is true. If $M (kv_0)=(1,0)$ or $M (kv_0)=(0,1)$ then $\Phi$ has period $T=2||kv_0||$, and $d_E(\overline{u}_t,\overline{u}_{t+T})=||kv_0||\sqrt{2}$.
+\item Suppose $\Phi$ is drift-periodic. If $M (kv_0)=(1,0)$ or $M (kv_0)=(0,1)$ then $\Phi$ has period $T=2||kv_0||$, and $d_E(\overline{u}_t,\overline{u}_{t+T})=||kv_0||\sqrt{2}$.
 \end{enumerate}
 \end{thm*}
 \compav{Remember to prove that such an M exists.}
@@ -389,16 +381,14 @@ This follows readily from the fact that geodesics are undefined on cone singular
 
 
 \subsection{Translation Surface}
-Consider the projection $\btU\rightarrow\mathbf{M}$ onto a quotient of the surface under its translational symmetries. What we obtain is the following compact translation surface belonging to the stratum $\cH(2,2,2,2):$
+Consider the projection $\btU\rightarrow\mathbf{M}$ onto a quotient of the surface under its translational symmetries of each plane (see Fig 6). What we obtain is a genus 5 finite translation surface $\bM-$ also a branched cover of $\bG$. $\bMs$ was obtained as a cover of $\bGs$ from the rotational monodromy map on $\pi_1(\bGs)$, so $\bM$ is just its metric completion by reintroducing these vertices. There are four cone singularities on this surface, as opposed to the three on $\bG$, each of cone angle $6\pi$. Keeping track of $\btU$'s compass pointing \emph{true} north, the individual sections of $\bM$, labeled $I,II,III,$ and $IV$, are rotated in such a way to \emph{trivialize} \emph{holonomy} on arbitrary paths (Fig 8). Observe that $\bM$ is really a square-tiled/origami surface constructed out of unit squares (Fig 9).
 
 \begin{figure}[H]
 \centering
 \includesvg[width=2.6in]{mtildabw}
-\caption{Compact translation surface, $\mathbf{M}$ with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify every ``copy" of $\bG$ with a direction differing from $v_0$ by rotation of some element in $\SO(2,\ZZ)$. The individual copies are then rotated so we have a canonical notion of direction }
+\caption{Compact translation surface, $\mathbf{M}$ with edges and cone singularities (1,2,3,4) identified. The Roman numerals are meant to identify every ``copy" of $\bG$ with a direction differing from $v_0$ by rotation of some element in $\SO(2,\ZZ)$. The individual copies are then rotated so every edge is identified by translation.}
 \label{fig:mtilda}
 \end{figure}
-
-We rearrange $\bM$ as such:
 
 \begin{figure}[H]
 \centering
@@ -407,16 +397,10 @@ We rearrange $\bM$ as such:
 \label{fig:staircase}
 \end{figure}
 
-\noindent We recall some basic definitions and theorems concerning $\ZZ^2$covers of translation surfaces as they apply to $\bM$. 
+\noindent We recall some basic properties of $\ZZ^2$ covers of translation surfaces as they apply to $\bM$. 
 
-\begin{Def}
-Algebraic intersection number is a non-degenerate bilinear form:
-\begin{align*}
-i:H_1(\bM,\QQ)\times H_1(\bM,\QQ)\rightarrow\QQ,
-\end{align*}
-for $[\gamma],[\beta]\in H_1(\mathbf{M},\QQ)$, $i([\beta],[\gamma])$ returns the signed intersection number of two homology classes. We say a crossing at the moment of intersection is positive if $\gamma$ makes a positive angle relative to $\beta$. 
-\end{Def}
-The set of all affine diffeomorphisms of $\bM$ form the group $\text{Aff}^+(\bM)$. The $\emph{Veech group}$ of $\bM$ is the image in the co-domain of the homomorphism $D:\text{Aff}^+(\bM)\rightarrow SL(2,\RR)$ that takes every affine map to its derivative, which we denote $V(\bM)$. $\bM$ is a square-tiled translation surface whose Veech group is a finite index subgroup of $SL(2,\ZZ)$, thereby making it a \emph{Veech surface}. We use automorphisms of the fundamental group in $\text{Aut}(\pi_1(\bM))$ induced by affine maps to prove our main results. But first, we define a group homomorphism from $\pi_1(\bM)$ to $\pi_1(\bM)/\pi_1(\btU)$ by algebraic intersection numbers over a sum of linearly independent homology classes. Consider the following cylinder core curves on $\bM$ labeled $\gamma_i$ for $0\leq i\leq 11$:
+The set of all orientation preserving affine diffeomorphisms of $\bM$ form the group $\text{Aff}^+(\bM)$. The \emph{Veech group} of $\bM$ is the image of $\text{Aff}^+(\bM)$ in $SL(2,\RR)$ under the derivative map, $D:\text{Aff}^+(\bM)\rightarrow SL(2,\RR)$. We denote this group $V(\bM)$. It is a well-known fact that square-tiled surfaces like $\bM$ are \emph{Veech} and have Veech groups of finite index in $\SL(2,\ZZ)$ [Gutkin-Judge]. We use $V(M)$ and the $\text{Aff}^+(\bM)$-induced automorphism group, $\text{Aut}(\pi_1(\bM))$, as they act on geodesics and their homotopy classes. When we reconstructed $\bM$ as a staircase, we kept track of the outer edges of the surface that were identified with one another under the projection map defined on $\btU$. These now form cylinder core curves that are divided into homology classes $u,v,z$ (Fig 10). We denote the \emph{set of all core curve homology classes} by $\Gamma=\{[\gamma_i]~:~0\leq i \leq 11\}$.
+
 \begin{figure}[H]
 \includegraphics[width=3in]{homologyclass.png}
 \centering
@@ -424,11 +408,20 @@ The set of all affine diffeomorphisms of $\bM$ form the group $\text{Aff}^+(\bM)
 \label{fig:homology}
 \end{figure}
 
-The rank of a $12\times12$ intersection matrix of these curves is 10. Therefore these curves span $H_1(\bM,\QQ)$.
-
+We assign $u,v$ classes integer weights according to what translational effect \emph{crossing} the curve would have on a loop being lifted to the cover $\btU$. For example, a path crossing $[\gamma_0]$ and making a positive angle relative to the direction $\gamma_0$ is moving in (right) corresponds to moving ``up" once on $\btU$ from whatever section in the fiber of $\bM$ under the projection map on $\btU$ the lifted path might have belonged to prior to intersecting with $\gamma_0$. We would then assign to $[\gamma_0]$ the weight $(0,+1)\in\ZZ^2$. Crossing a curve in the $z$ class really does not take a path to another element in the fiber.
 
 \begin{Def}
-The homology classes $u,v,z$ are given as the following sums of core curves:
+Algebraic intersection number is a non-degenerate bilinear form:
+\begin{align*}
+i:H_1(\bM,\QQ)\times H_1(\bM,\QQ)\rightarrow\ZZ.
+\end{align*}
+For $[\alpha],[\beta]\in H_1(\mathbf{M},\QQ)$, $i([\alpha],[\beta])$ returns the signed intersection number of two homology classes. We say a crossing at the moment of intersection is positive (+1) if $\beta$ makes a positive angle relative to the direction $\alpha$ is traveling in. A crossing is negative (-1) if $\beta$ makes a negative angle relative to $\alpha$.
+\end{Def}
+
+By observation, these signed weights are determined as follows:
+
+\begin{Def}
+The homology classes $u,v,z$ are given as the following weighted sums of elements of $\Gamma$:
 \begin{align*}
 u &= -[\gamma_2] +[\gamma_5] + [\gamma_8] - [\gamma_{11}],\\
 v &= +[\gamma_0] -[\gamma_3] -[\gamma_6] +[\gamma_9],\\
@@ -436,16 +429,27 @@ z &= +[\gamma_1] +[\gamma_4]-[\gamma_7]-[\gamma_{10}].
 \end{align*}
 \end{Def}
 
+\begin{rem}
+To be precise, we can think of $\btU$ as a $\ZZ^2$ cover only because we take 8 homology classes and apply the necessary transformations (change of sign) that agree with the deck group of the covering map from $\btUs$ to $\bGs$, $\ZZ^2\times\SO(2,\ZZ)$. Note that this group is isomorphic to $\ZZ^8$.
+\end{rem}
+
+By constructing a $12\times12$ intersection matrix and calculating its rank (rank=10), we can see that $\Gamma$ does span $H_1(\bM,\QQ)\cong\ZZ^{10}$ and does not need every cylinder curve. Certain relations can be discerned, such as $u+v=z$, to reduce the set to ten elements but the indexing scheme of $\Gamma$ here is far easier to work with, being in agreement with $\bM$'s cylinder decomposition in vertical and horizontal directions. This comes at the cost of the vector space being overdetermined and not having a coordinate basis, but it is not necessary to have one here.
+
 \begin{Def}
-Define the group homomorphism $\Omega_{u,v}:\pi_1(\bM)\rightarrow \ZZ^2$, where $\beta\mapsto(i(u,[\beta]),i(v,[\beta]))$.
+Fix $m_0\in\bM$ and let $\mtild\in\btU$ be a point in the fiber of $m_0$. Let $\Omega_{u,v}:\pi_1(\bM)\rightarrow \ZZ^2$ be the homomorphism relating an $m_0$-based loop's intersection number with homology classes $u,v$ to the terminating point of its lifted path based at $\mtild$ on $\btU$. If $\beta$ is such a loop, then 
+\begin{align*}
+\Omega_{u,v}([\beta])=(i(u,[\beta]),~i(v,[\beta]))
+\end{align*}
 \end{Def}
 
-\begin{lem}
-\compav{show somehow that u,v determine the cover}
-\end{lem}
+\begin{thm}
+The cover $\btU$ has first fundamental group $\ker\Omega_{u,v}$.
+\begin{proof}
+\end{proof}
+\end{thm}
 
 \subsection{Induced Automorphisms of $H_1(\bM,\QQ)$}
-We look at some important automorphisms induced by Affine maps on $\bM$. Observe that $\bM$ has a uniform cylinder decomposition in both horizontal and vertical directions as in figure $15$. We define the \emph{modulus}, $\mu$, of a cylinder to be the ratio of the cylinder's width to its circumference, $\frac{w}{c}$. The $\emph{Dehn-twist}$ of a cylinder is an affine diffeomorphism that skews the cylinder and sends every vertex to itself.
+We look at some important automorphisms induced by Affine maps on $\bM$. Observe that $\bM$ has a uniform cylinder decomposition in both horizontal and vertical directions (Fig 15). We define the \emph{modulus}, $\mu$, of a cylinder to be the ratio of the cylinder's width to its circumference, $\frac{w}{c}$. The $\emph{Dehn-twist}$ of a cylinder is an affine diffeomorphism that skews the cylinder and preserves edges and vertices.
 
 \begin{figure}[H]
 \centering
@@ -454,14 +458,13 @@ We look at some important automorphisms induced by Affine maps on $\bM$. Observe
 \caption{Dehn-twist of a cylinder in $\bM$'s cylinder decomposition.}
 \end{figure}
 
-Such a map has derivative $\left[~\begin{matrix}1 && \pm\mu^{-1}\\0 && 1\end{matrix}~\right]$. On $\bM$ all cylinders in both vertical and horizontal decompositions have moduli $\mu=\frac{1}{2}$. These give way to global diffeomorphisms as $\emph{multi-twists}$ of $\bM$.
+Such a map has derivative $\left[~\begin{matrix}1 && \pm\mu^{-1}\\0 && 1\end{matrix}~\right]$. On $\bM$ all cylinders in both vertical and horizontal decompositions have moduli $\mu=\frac{1}{2}$. These give up global diffeomorphisms as $\emph{multi-twists}$ of $\bM$ with the same derivative. [cite] 
 
 \begin{Def}
 We define the global affine diffeomorphisms of $\text{Aff}^+(\bM)$ obtained as \textbf{multi-twists of the surface in horizontal and vertical directions} $\psi_h$ and $\psi_v$, respectively.
 \end{Def}
 
-The \emph{derivative map} of the affine group is the homomorphism $D:\text{Aff}^+(\bM)\rightarrow \SL(2,\RR)$. The \emph{Veech group} of the surface is the image of the affine group under this map, $D(\text{Aff}^+(\bM))$, denoted $V(\bM)$.
-The twists $\psi_h$ and $\psi_v$ under $D$ are mapped to the same matrices as the Dehn-twists on its individual cylinders. i.e.
+The twists $\psi_h$ and $\psi_v$ under derivative map $D$ are mapped to the same matrices as the Dehn-twists. i.e.
 \begin{align*}
 D(\psi_h)=\psi_h'=\left[ \hspace{1mm} \begin{matrix}
 				1 &   2\\
@@ -475,35 +478,54 @@ D(\psi_h)=\psi_h'=\left[ \hspace{1mm} \begin{matrix}
 
 These are parabolic elements of $V(\bM)$ that generate a free group of rank 2. [cite].
 \begin{Def}
-We call $\XX$ the generated parabolic subgroup of $\text{Aff}^+(\bM)$, where $\XX=\<\psi_h,\psi_v \>$.
+Let $\XX$ be the generated parabolic subgroup of $\text{Aff}^+(\bM)$, where $\XX=\<\psi_h,\psi_v \>$.
 \end{Def}
 
-The image of this group under $D$ is itself a subgroup of $V(\bM)$ and denoted $D(\XX)=\XX'=\<\psi_h',\psi_v' \>$ as in the introduction. Note that when skewing the surface and piecing it back together, the cylinder curves intersect each other:
+The image of this group under $D$ is itself a subgroup of $V(\bM)$ and denoted $D(\XX)=\XX'=\<\psi_h',\psi_v' \>$ as in page 2. When skewing the surface and piecing it back together under $\psi_h$ or $\psi_v$, the cylinder curves intersect each other in pairs:
 
 \begin{figure}[H]
 \centering
 \includesvg[width=2in]{skew}
 \end{figure}
 
-By skewing in the horizontal direction, $\psi_h$ preserves the even indexed cylinder curves, but the odd indexed vertical curves $\gamma_i$ intersect the two horizontal curves (positive intersection), $\gamma_{i-1}$ and $\gamma_{i+1}$. A similar observation can be made from applying $\psi_v$ where the vertical curves are preserved, but the horizontal curves intersect with adjacent vertical curves (negative intersection). Let $i\in\ZZ/12\ZZ$. Then this convenient indexing scheme gives us the following formulas for $\psi_h$ and $\psi_v$'s counterparts in $\Aut(H_1(\bM,\QQ))$ raised to $k\in\ZZ\backslash\{0\}$:
+By skewing in the horizontal direction, $\psi_h$ preserves the even indexed cylinder curves, but the odd indexed vertical curves $\gamma_i$ intersect the two horizontal curves (positive intersection), $\gamma_{i-1}$ and $\gamma_{i+1}$. A similar observation can be made from applying $\psi_v$, where the vertical curves are preserved but the horizontal curves intersect with adjacent vertical curves (negative intersection). Let $i\in\ZZ/12\ZZ$. Then the following formulas hold for $\psi_h$ and $\psi_v$'s counterparts in $\Aut(H_1(\bM,\QQ))$ raised to $k\in\ZZ\backslash\{0\}$:
 
 \begin{align*}
 \psi^{*k}_h([\gamma_i])=&[\gamma_i] + \frac{k}{2}(1-(-1)^i)([\gamma_{i-1}]+[\gamma_{i+1}])\\
 \psi^{*k}_v([\gamma_i])=&[\gamma_i] - \frac{k}{2}(1+(-1)^i)([\gamma_{i-1}]+[\gamma_{i+1}])\\
 \end{align*}
 
-We call this generated group $\XX^*=\<\psi^{*}_h,\psi^{*}_v \>$. There are no relations between its generators since $i$ being even or odd has one act trivially and the other non-trivially. Therefore this group is also free and rank 2. Hence $\XX^*\cong\XX'\cong\XX$. Let $g\in\XX$, $g'\in\XX'$, $g^*\in\XX^*$ be isomorphic elements in their respective groups. Let $g=\prod_{j=0}^{n}\psi_h^{k_j}\circ\psi_v^{m_j}$ be a word in $\XX$ as a finite left product of multi-twist pairs with $k_j,m_j\in\ZZ$. Let $\psi_j=\psi_h^{k_j}\circ\psi_v^{m_j}$ be the $j^{th}$ word pair. Elements $g',g^*$ have identical representations. \\\\
-The $j^{th}$ element pair that is mapped into $\Aut(H_1(\bM,\QQ))$ can be expressed as 
+If $k=0$, then it's just the identity. We generate the group $\XX^*=\<\psi^{*}_h,\psi^{*}_v \>$. There are no relations between its generators since $i$, being even or odd, has one automorphism act trivially while the other acts non-trivially. Therefore this group is also a free group of rank 2. All of our related groups are free groups, so we have that $\XX^*\cong\XX'\cong\XX$. 
+
+
+Let $\tau\in\XX$. Let $D(\tau)=\tau'\in\XX'$ and $\tau^*\in\XX^*$ be isomorphic elements in their respective groups. We say $\tau=\prod_{j=0}^{n}\psi_h^{k_j}\circ\psi_v^{m_j}$ is a word in $\XX$ as a finite left concatenated product of multi-twist pairs with $k_j,m_j\in\ZZ$. Let $\psi_j=\psi_h^{k_j}\circ\psi_v^{m_j}$ be the $j^{th}$ multi-twist pair. Since $\tau',\tau^*$ are isomorphic, we can use their expressions interchangeably. \\\\
+The $j^{th}$ automorphism pair is an element $\psi_j^*\in\Aut(H_1(\bM,\QQ))$ and can be expressed as 
 
 \begin{align*}
 \psi_j^*([\gamma_i])=&[\gamma_i]+\frac{k_j(1-(-1)^i)}{2}([\gamma_{i-1}]+[\gamma_{i+1}])\\&-\frac{m_j(1+(-1)^i)}{2}(k_j(2[\gamma_i]+[\gamma_{i-2}]+[\gamma_{i+2}]) +[\gamma_{i-1}]+[\gamma_{i+1}]).
 \end{align*}
 
-\noindent Let $\sum\Gamma=\sum_{i=0}^{11}[\gamma_i]$, and denote the odd and even indexed sums as $\sum\Gamma_o$ and $\sum\Gamma_e$, respectively. We consider three kinds of closed geodesic segments on $\bM$ and don't consider initial/terminal points for the time being. These are the slope one, horizontal, and vertical loops.\\
+\noindent Similarly,
+
+\begin{align*}
+\psi_j'=\left[ \hspace{1mm} \begin{matrix}
+				1 &   2\\
+				0 & 1
+			\end{matrix}\hspace{1mm}\right]^{k_j}\left[ \hspace{1mm} \begin{matrix}
+							1 &   0\\
+							2 & 1
+						\end{matrix}\hspace{1mm}\right]^{m_j}=\left[ \hspace{1mm} \begin{matrix}
+										1+4m_jk_j &   2k_j\\
+										2m_j & 1
+									\end{matrix}\hspace{1mm}\right]
+\end{align*}
+
+
+\noindent Let $\sum\Gamma=\sum_{i=0}^{11}[\gamma_i]$, and denote the odd and even indexed sums of core curves $\sum\Gamma_o$ and $\sum\Gamma_e$, respectively. We look at three kinds of closed geodesic segments on $\bM$ and don't consider initial/terminal points for the time being. These are the geodesics in directions $\theta=0,\frac{\pi}{2},$ and $\frac{\pi}{4}$. The aim is to show that these linear automorphisms take $\sum\Gamma\mapsto c_1\sum\Gamma_e+c_2\sum\Gamma_o$ and an individual $[\gamma_i]$ to an element that maps non-trivially to $\ZZ^2$ under $\Omega_{u,v}$. \\
 
 
 
-\noindent Call the geodesic in direction $\theta=\frac{\pi}{4}$ that runs up the staircase intersecting every $\gamma_i$ once $\chi$. Denote its homotopy class by $[\chi]$. Observe from Figure 10 that $\chi$ is homologous to the sum of cylinder curves divided by 2. In Figure 1, this is the closed geodesic that lifts to a closed loop that looks like a 12-gon on $\bUs$.  
+\noindent Let $\chi$ be the geodesic segment in direction $\theta=\frac{\pi}{4}$ that runs up the staircase intersecting every $\gamma_i$ exactly once. Denote its homotopy class by $[\chi]$. Observe from Figure 10 that $\chi$ is homologous to $\frac{1}{2}\sum\Gamma$, a curve that climbs up the staircase. When lifted to $\btU$ and projected onto $\bUs$, this is a closed segment on the Necker cube surface (Fig 1).
 
 
 \begin{lem}
@@ -514,9 +536,11 @@ Similarly, $i(u,\sum\Gamma)=i([\gamma_0],[\gamma_{11}]+[\gamma_{1}]) -i([\gamma_
 \end{proof}
 \end{lem}
 
+Thus $\chi$ lifts to a closed geodesic segment on $\btU$. Now any geodesic segment in the orbit of $\chi$ under $\XX$ is taken into consideration, and we see why taking sums of gamma curves to sums of even and odd curves are so important.
+
 \begin{lem}
-Let $g$ be as above. If $\alpha=g(\chi)$, then $[\alpha]=\frac{1}{2}(c_1\sum_e+c_2\sum_o)$ for $c_1,c_2\in\ZZ$.
-\begin{proof}(By Induction on $\XX^*$).\\
+Let $\tau$ be as above. If $\alpha=\tau(\chi)$ is a closed geodesic segment on $\bM$, then $[\alpha]=\frac{1}{2}(c_1\sum_e+c_2\sum_o)$ for $c_1,c_2\in\ZZ$.
+\begin{proof}(By Induction on $\psi^*_j\in\XX^*$).\\
 Consider $\psi_0(\chi)$.\\
 $[\psi_0(\chi)]=\psi_0^*[\chi]=\frac{1}{2}\psi_0^*(\sum\Gamma)=\frac{1}{2}\psi_0^*(\sum\Gamma_e+\sum\Gamma_o)=\frac{1}{2}(\psi_0^*(\sum\Gamma_e)+\psi_0^*(\sum\Gamma_o))$. Now\\ $\psi_0^*(\sum\Gamma_e)=\sum_{i=0}^{11}\psi_0^*([\gamma_{2i}])=\sum_{i=0}^{11}( [\gamma_{2i}]-2m_0k_0[\gamma_{2i}]-m_0k_0[\gamma_{2i-2}] $\\$ -m_0k_0[\gamma_{2i+2}]-m_0[\gamma_{2i+1}]-m_0[\gamma_{2i-1}] )=(1-4m_0k_0)\sum\Gamma_e+(-2m_0)\sum\Gamma_o$.\\
 Now\\ $\psi_0^*(\sum\Gamma_o)=\sum_{i=0}^{11}\psi_0([\gamma_{2i+1}])=\sum_{i=0}^{11}([\gamma_{2i+1}] +k_0([\gamma_{2i}]+[\gamma_{2i+2}]))=\sum\Gamma_o+2k_0\sum\Gamma_e$.\\
@@ -524,26 +548,29 @@ And so $\frac{1}{2}\psi_0^*(\sum\Gamma)=\frac{1}{2}((1+2k_0-4k_0j_0)\sum\Gamma_e
 Induction: Suppose $\frac{1}{2}\psi^*_j(\sum\Gamma)=c_1\sum\Gamma_e+c_2\sum\Gamma_o$.\\
 Then $\psi^*_{j+1}(\psi^*_{j}(\sum\Gamma))=c_1\psi^*_{j+1}(\sum\Gamma_e)+c_2\psi^*_{j+1}(\sum\Gamma_o)=\\
 c_1((1-4m_{j+1}k_{j+1})\sum\Gamma_e+(-2m_{j+1})\sum\Gamma_o)+c_2(\sum\Gamma_o+2k_{j+1}\sum\Gamma_e)=\\
-(c_1(1-4m_{j+1}k_{j+1}) + 2k_{j+1}c_2)\sum\Gamma_e+(-2m_{j+1}c_1+c_2)\sum\Gamma_o$.
+(c_1(1-4m_{j+1}k_{j+1}) + 2k_{j+1}c_2)\sum\Gamma_e+(-2m_{j+1}c_1+c_2)\sum\Gamma_o$.\\
+Therefore, $[\alpha]=\frac{1}{2}(c_1'\sum_e+c_2'\sum_o)$
 
 \end{proof}
 \end{lem}
 
 \begin{thm}
-Let $g$ be as above. Suppose $\alpha=g(\chi)$. Then $\Omega_{u,v}([\alpha])=(0,0)$. 
+Let $\tau$ be as above. Suppose $\alpha=\tau(\chi)$. Then $\Omega_{u,v}([\alpha])=(0,0)$. 
 \begin{proof}
-$\Omega_{u,v}([\alpha])=\Omega_{u,v}([g(\chi)])=\Omega_{u,v}(g^{*}([\chi]))=\frac{1}{2}(i(u,g^*(\sum\Gamma)) i(v,g^*(\sum\Gamma))$.\\
-$i(u,g^*(\sum\Gamma)=c_1 i(u,\sum
-\Gamma_e)+c_2 i(u,\sum\Gamma_o)=\\ c_1(i([\gamma_5],[\gamma_{4}] - i([\gamma_{11}],[\gamma_{10}]+[\gamma_{0}]))\\+c_2(i(-[\gamma_2],[\gamma_{1}]+[\gamma_{3}]) + i([\gamma_8],[\gamma_{7}]+[\gamma_{9}]) )=\\c_1((-2)-(-2))+c_2(-2+ 2 )=0\\$
-Holds similarly for $i(v,g^*(\sum\Gamma)).$\\
+$\Omega_{u,v}([\alpha])=\Omega_{u,v}([\tau(\chi)])=\Omega_{u,v}(\tau^{*}([\chi]))=\frac{1}{2}(i(u,\tau^*(\sum\Gamma)) i(v,\tau^*(\sum\Gamma))$.\\
+First consider $i(u,\tau^*(\sum\Gamma)=c_1 i(u,\sum
+\Gamma_e)+c_2 i(u,\sum\Gamma_o)$ by previous Lemma. $\\= c_1(i([\gamma_5],[\gamma_{4}]+[\gamma_6]) - i([\gamma_{11}],[\gamma_{10}]+[\gamma_{0}]))\\+c_2(-i([\gamma_2],[\gamma_{1}]+[\gamma_{3}]) + i([\gamma_8],[\gamma_{7}]+[\gamma_{9}]) )=\\c_1((-2)-(-2))+c_2(-2+ 2 )=0\\$
+The same holds for $i(v,\tau^*(\sum\Gamma)).$\\
 $\therefore \Omega_{u,v}([\alpha])=(0,0)$.
 \end{proof}
 \end{thm}
 
+Now we know that $\chi$ serves as something of a basis for a class of lifted closed segments. To show that these are the only (rational direction) segments that lift to closed segments on $\btU$, we look at the orbit of segments in directions $\theta=0,$ and $\frac{\pi}{2}$ that are homologous to some $\gamma_i$.
+
 \begin{lem}
 $\Omega_{u,v}([\gamma_i])\neq (0,0)$.
 \begin{proof}
-every curve intersects nontrivially with exactly one of either $u$ or $v$.
+Every curve, $\gamma_i$, intersects exactly one adjacent index curve that is an element of exactly one of either $u$ or $v$, or with one of both $u$ \emph{and} $v$. Therefore, it is always taken to some non-trivial element of $\ZZ^2$ under $\Omega_{u,v}$.
 \end{proof}
 \end{lem}
 
@@ -557,13 +584,84 @@ If $i(u,g^*([\gamma_i]))=i(u,[\gamma_i]+C)=i(u,[\gamma_i])+i(u,C)=0$, then
 
 
 \section{Proof of Main Theorem}
+Knowing that geodesic segments in the orbit of $\chi$ and an element of $\Gamma$ are mapped either trivially or non-trivially, we use the fact that $\XX\cong\XX'$ to show that every rational direction is attainable from these elements. Recall that $\frac{1}{k}(x,y)\in S=\cO\cup \cE$ is a unit vector, and $(x,y)$ is an element of $\ZZ^2$ with $x,y$ relatively prime. Further partition $\cE$ into sets $\cE_1$ and $\cE_2$, where integer pairs $\frac{1}{k}(x,y)\in\cE$ are in $\cE_1$ if $x$ is odd or in $\cE_2$ if $x$ is even. These are disjoint since $x$ and $y$ cannot both be even or odd at the same time. Let $\XX'$ act on $\cS$ by linear transformations on $\ZZ^2$. We make use of Bezout's identity frequently. That is for any relatively prime $x,y$ there exist $m,n\in\ZZ$ such that $mx+ny=1~(*)$.
 
-$S=\cO\cup \cE$.
-Let $\XX'$ act on $\cS$ by linear transformations.
+\subsection{Orbit of Rational Directions}
 
 \begin{lem}
-
+$\XX'=\ker p$ where $p:M\mapsto M~(mod~2)$. [cite]
 \end{lem}
+
+\begin{lem}
+$\XX'$ acts faithfully and transitively on $\cO$.
+\begin{proof}
+Let $v_0=\begin{pmatrix}x \\ y\end{pmatrix}\in\cO$, where $x,y$ are both odd and relatively prime integers. Let $M=\begin{pmatrix}a & b \\ c & d
+\end{pmatrix}\in\XX'$. Let $u=\begin{pmatrix}1 \\ 1 \end{pmatrix}\in\cO$. It follows from the previous lemma that this action is faithful since $ax+by$ and $cx+dy$ cannot sum up to an element in $\cE$, as $a,d$ are odd and $b,c$ are even. We show that there is a matrix $M$ such that $Mu=v_0$, i.e. $a+b=x$ and $c+d=y$. We know $\det M=ad-bc=1$ and from $(*)$ that there exist $m,n\in\ZZ$ such that $1=mx+ny$. Let $a=(x-b)$, $b=n(xy-1)$, $c=m(xy-1)$, and $d=(y-c)$. Then
+\begin{align*}
+\det M&=(x-n(xy-1))(y-m(xy-1))-n(xy-1)m(xy-1)\\
+&=xy-mx(xy-1)-ny(xy-1)+mn(xy-1)^2-mn(xy-1)^2\\
+&=xy-x^2my-y^2nx+(mx+ny)=xy-xy(mx+ny)+1\\
+&=xy-xy+1=1.
+\end{align*}
+Therefore $M\in\SL(2,\ZZ)$. Now its simple to show that $a+b=(x-b)+b=x$ and $c+d=c+(y-c)=y$. Now $b=n(xy-1)$ and $c=m(xy-1)$ are even since $xy-1$ is even, and so $a=x-b$ and $d=y-c$ are odd. Hence, $M\in\ker p$ and $Mu=v_0$. $M$ is invertible, so $M^{-1}v_0=u.$ Apply the same argument for some other $v_0'\in\cO$, and obtain that $N^{-1}v_0'=u.$ We conclude then that $NM^{-1}v_0=v_0'$ for any $v_0,v_0'\in\cO$.
+\end{proof}
+\end{lem}
+
+\begin{lem}
+$\XX'$ acts faithfully and transitively on $\cE_1$ and $\cE_2$.
+\begin{proof}
+Likewise, faithfulness follows immediately from Lemma [something]. Let $v_0=\begin{pmatrix}x \\ y\end{pmatrix}\in\cE$, where $x,y$ are both odd and relatively prime integers. Let $M=\begin{pmatrix}a & b \\ c & d
+\end{pmatrix}\in\XX'$. Let $u_1=\begin{pmatrix}1 \\ 0 \end{pmatrix}\in\cE_1$ and $u_1=\begin{pmatrix}0 \\ 1 \end{pmatrix}\in\cE_2$.\\\\
+Case I: $v_0\in cE_1$. Then let $a=x$, $b=-n$, $c=y$, and $d=m$, where $mx+ny=1$ by $(*)$. Then
+\begin{align*}
+\det M &= ad-bc=xm-(-ny)=mx+ny=1.
+\end{align*}
+Hence, $Mu_1=v_0$. Repeating this argument for $u_1'\in \cE_1$, we get that $Nu_1'=v_0$ and so $u_1'=N^{-1}Mu_1$.\\\\
+Case II: $v_0\in cE_1$. The proof for this is analogous to Case I.
+\end{proof}
+\end{lem}
+
+\subsection{Directions and Orbit of Geodesic}
+We can always pullback a geodesic segment on $\bM$ by associating with it a vector in $\RR^2$ because it is a translation surface. Let $\hol:\pi_1(\bM)\rightarrow\RR^2$ be the translational holonomy map that takes a closed path to its endpoint in local coordinates on the plane starting from the origin. For example, for the slope one geodesic segment $\chi$, $\hol([\chi])=(6,6)$.
+
+\begin{lem}
+Let $\alpha=\tau(\chi)$ be a geodesic segment in the orbit of $\chi$ under $\XX$. Then $\hol([\alpha])=\tau'\cdot\hol([\chi])$ with $\tau'=D(\tau)$. 
+\end{lem}
+
+\begin{lem}
+Let $\beta_h=\tau(\gamma_0)$ and $\beta_v=\tau(\gamma_{11})$ be geodesic segments in the orbit of $\gamma_0$, $\gamma_{11}$ under $\XX$. Then $\hol([\beta_h])=\tau'\cdot\hol([\gamma_0])$ and $ \hol([\beta_v])=\tau'\cdot\hol([\gamma_{11}])$ with $\tau'=D(\tau)$. 
+\end{lem}
+
+\begin{Def}
+Let $\phi_t^\theta:\RR\rightarrow\bM$ be a unit-speed geodesic with base point $m_0$ in direction $\theta\in \RR/2\pi\ZZ$. Denote $\phi$'s geodesic lift onto $\btU$ $\tildphi_t^\theta:\RR\rightarrow\btU$, where $\tildphi^\theta(0)=\mtild$ is a fixed base point in the fiber over $m_0$ under the projection map. Let $v_\theta=(\cos\theta,\sin\theta)\in\RR^2$ be a unit-vector in direction $\theta$.
+\end{Def}
+
+\begin{thm}
+Let $\tildphi_t^\theta$ be a geodesic on $\btU$. Suppose there is some $k\in\RR$ such that $kv_\theta\in\cS$. Then $\tildphi_t^\theta$ is periodic with period $T=6\tau'\cdot (1,1)$ for some $\tau'\in\XX'$ if and only if $kv_\theta\in\cO$.
+\end{thm}
+
+
+\begin{thm}
+Let $\tildphi_t^\theta$ be a geodesic on $\btU$. Suppose there is some $k\in\RR$ such that $kv_\theta\in\cS$. Then $\tildphi_t^\theta$ is drift-periodic with period $T=2\tau'\cdot (1,0)$ or $2\tau'\cdot(0,1)$ for some $\tau'\in\XX'$ if and only if $kv_\theta\in\cE$.
+\end{thm}
+
+\subsection{Embedding the Necker Cube Surface in $\RR^3$}
+this section is about the map from $\RR^2$ to $\RR^3$ that embeds the cube surface. We finally show the relationship between euclidean distances in its embedding and $\Delta_{\varphi_1}$
+
+\subsection{Dynamical Classification Theorem}
+\begin{thm*}
+(Dynamical Classification of Geodesics on the Necker Cube Surface) \\Let $\Phi_t:\RR\rightarrow\bUs$ be a non-singular unit-speed geodesic on the Necker cube surface such that $\Phi(0)=u_0$ and $\Phi'(0)=v\in\RR^3$, isometric to $v_0\in\RR^2$. Let $\overline{u}_t\in\RR^3$ be $\Phi_t$'s coordinate in $\bUs$'s ambient space at time $t$. Let $k\in\RR$ such that $kv_0\in\cS$. Then the following is true:
+\begin{enumerate}[label=(\roman*)]
+\item $\Phi$ is periodic if $kv_0\in\cO$.
+\item Suppose $\Phi$ is periodic. If $M (kv_0)=(1,1)$ then $\Phi$ has period $T=6\sqrt{2}||kv_0||$.
+\item $\Phi$ is drift-periodic if $kv_0\in\cE$. 
+\item Suppose $\Phi$ is drift-periodic. If $M (kv_0)=(1,0)$ or $M (kv_0)=(0,1)$ then $\Phi$ has period $T=2||kv_0||$, and $d_E(\overline{u}_t,\overline{u}_{t+T})=||kv_0||\sqrt{2}$.
+\end{enumerate}
+\end{thm*}
+
+\newpage
+~
+\newpage
 
 \begin{lem}
 $\XX'$ acts faithfully and transitively on integer pairs in $\cO$, partitions $\cE$ into two sets and acts faithfully and transitively on them, and acts faithfully on $\cS$.
@@ -578,9 +676,14 @@ Now consider the orbit of $\begin{pmatrix}1\\0\end{pmatrix}$. Left multiplying b
 \end{lem}
 
 \begin{Def}
-Let $\phi_t^\theta:\RR\rightarrow\bM$ be a unit-speed geodesic on $\bM$ in direction $\theta$.
+Let $\phi_t^\theta:\RR\rightarrow\bM$ be a non-singular unit-speed geodesic on $\bM$ in direction $\theta$ based at $y_0$.
 \end{Def}
 
+Every rational direction geodesic closes so $\:\pi_1(\bM)\rightarrow\RR^2$ is well-defined for $\theta$ rational. Let $\alpha:[0,L]\rightarrow\bM$ be a closed geodesic segment of length L with image $\alpha([0,L])=\phi(\RR)$. Let $v_0=(\cos\theta,\sin\theta)$.
+
+\begin{thm}
+content...
+\end{thm}
 
 \subsection{empty}
 \noindent Consider the following families of unit squares in $\RR^3$:\\
