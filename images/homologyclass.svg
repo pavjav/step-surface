@@ -56,9 +56,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="464.65639"
-     inkscape:cy="516.72167"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="587.895"
+     inkscape:cy="449.77465"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -93,7 +93,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -268,7 +268,7 @@
        style="fill:none;stroke:#3dd353;stroke-width:3.90899992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.909, 3.909;stroke-dashoffset:0;marker-end:none" />
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="137.38075"
        y="305.85944"
        id="text4709"
@@ -276,21 +276,21 @@
          sodipodi:role="line"
          id="tspan4711"
          x="137.38075"
-         y="305.85944">[u]</tspan></text>
+         y="305.85944">u</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4713"
        y="399.19812"
        x="137.38075"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="399.19812"
          x="137.38075"
          id="tspan4715"
-         sodipodi:role="line">[v]</tspan></text>
+         sodipodi:role="line">v</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="137.38075"
        y="489.19812"
        id="text4717"
@@ -298,10 +298,10 @@
          sodipodi:role="line"
          id="tspan4719"
          x="137.38075"
-         y="489.19812">[z]</tspan></text>
+         y="489.19812">z</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="301.60538"
        y="1043.7208"
        id="text4725"
@@ -328,7 +328,7 @@
        id="text4733"
        y="784.44165"
        x="212.8979"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="784.44165"
          x="212.8979"
@@ -351,7 +351,7 @@
        id="text4741"
        y="897.17169"
        x="416.92508"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="897.17169"
          x="416.92508"
@@ -370,7 +370,7 @@
          sodipodi:role="line">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="328.21762"
        y="637.89252"
        id="text4749"
@@ -393,7 +393,7 @@
          y="585.66296">3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="532.24487"
        y="747.82867"
        id="text4757"
@@ -420,7 +420,7 @@
        id="text4765"
        y="488.5495"
        x="443.53735"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="488.5495"
          x="443.53735"
@@ -443,7 +443,7 @@
        id="text4773"
        y="604.07349"
        x="647.56451"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="604.07349"
          x="647.56451"
@@ -462,7 +462,7 @@
          sodipodi:role="line">6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="558.85699"
        y="344.79428"
        id="text4781"
@@ -485,7 +485,7 @@
          y="325.66296">7</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="762.88422"
        y="457.52438"
        id="text4789"
@@ -512,7 +512,7 @@
        id="text4797"
        y="198.24518"
        x="674.1767"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="198.24518"
          x="674.1767"
@@ -535,7 +535,7 @@
        id="text4805"
        y="310.97528"
        x="878.20392"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="310.97528"
          x="878.20392"
@@ -554,7 +554,7 @@
          sodipodi:role="line">10</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="789.4964"
        y="164.42616"
        id="text4813"
@@ -581,7 +581,7 @@
        id="text4821"
        y="928.19678"
        x="97.578217"
-       style="font-size:51.17338181px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Canonica;-inkscape-font-specification:MgOpen Canonica Bold"
+       style="font-size:51.17338180999999508px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        xml:space="preserve"><tspan
          y="928.19678"
          x="97.578217"

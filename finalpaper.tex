@@ -1,0 +1,167 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the us`e of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{svg}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage[arrow]{xy}
+\usepackage{tikz-cd}
+
+
+%%%%% Alphabets %%%%% 
+\def\cA{\mathcal{A}}\def\cB{\mathcal{B}}\def\cC{\mathcal{C}}\def\cD{\mathcal{D}}\def\cE{\mathcal{E}}\def\cF{\mathcal{F}}\def\cG{\mathcal{G}}\def\cH{\mathcal{H}}\def\cI{\mathcal{I}}\def\cJ{\mathcal{J}}\def\cK{\mathcal{K}}\def\cL{\mathcal{L}}\def\cM{\mathcal{M}}\def\cN{\mathcal{N}}\def\cO{\mathcal{O}}\def\cP{\mathcal{P}}\def\cQ{\mathcal{Q}}\def\cR{\mathcal{R}}\def\cS{\mathcal{S}}\def\cT{\mathcal{T}}\def\cU{\mathcal{U}}\def\cV{\mathcal{V}}\def\cW{\mathcal{W}}\def\cX{\mathcal{X}}\def\cY{\mathcal{Y}}\def\cZ{\mathcal{Z}}
+
+\def\AA{\mathbb{A}} \def\BB{\mathbb{B}} \def\CC{\mathbb{C}} \def\DD{\mathbb{D}} \def\EE{\mathbb{E}} \def\FF{\mathbb{F}} \def\GG{\mathbb{G}} \def\HH{\mathbb{H}} \def\II{\mathbb{I}} \def\JJ{\mathbb{J}} \def\KK{\mathbb{K}} \def\LL{\mathbb{L}} \def\MM{\mathbb{M}} \def\NN{\mathbb{N}} \def\OO{\mathbb{O}} \def\PP{\mathbb{P}} \def\QQ{\mathbb{Q}} \def\RR{\mathbb{R}} \def\SS{\mathbb{S}} \def\TT{\mathbb{T}} \def\UU{\mathbb{U}} \def\VV{\mathbb{V}} \def\WW{\mathbb{W}} \def\XX{\mathbb{X}} \def\YY{\mathbb{Y}} \def\ZZ{\mathbb{Z}}  
+
+\def\bU{\mathbf{U}} \def\btU{\tilde{\bU}} \def\bUs{\bU^\circ}
+\def\btUos{\btU_0^\circ}
+\def\bG{\mathbf{G}} \def\bGs{\mathbf{G}^\circ}
+\def\hol{\mathbf{hol}}
+\def\bM{\mathbf{M}}
+\def\bMs{\mathbf{M}^\circ}
+\def\btUs{\btU^\circ} 
+\def\xtild{\tilde{x}_0}
+\def\utild{\tilde{u}_0}
+\def\mtild{\tilde{m}_0}
+\def\gamtild{\tilde{\gamma}}
+\def\phitild{\tilde{\Phi}}
+\def\tildphi{\tilde{\phi}}
+
+\def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
+\def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
+\def\GL{\mathrm{GL}} \def\SL{\mathrm{SL}}  \def\SP{\mathrm{SL}}
+\def\SO{\mathrm{SO}}
+
+\def\<{\langle} \def\>{\rangle}
+\def\ad{\mathrm{ad}} 
+\def\Aut{\mathrm{Aut}}
+\def\dim{\mathrm{dim}} 
+\def\End{\mathrm{End}} 
+\def\ev{\mathrm{ev}} 
+\def\half{\hbox{$\frac12$}}
+\def\Hom{\mathrm{Hom}} 
+\def\qtr{\mathrm{qtr}} 
+\def\tr{\mathrm{tr}} 
+\def\Tr{\mathrm{Tr}} 
+\def\vep{\varepsilon}
+
+\def\ZZn{\ZZ/n\ZZ}
+\def\acts{\rotatebox[origin=c]{-90}{$\circlearrowright$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\newtheorem{thm}{Theorem}[]
+\newtheorem{Def}{Definition}[]
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{def*}{Definition}
+\newtheorem{lem}{Lemma}
+\newtheorem*{rem}{Remark}
+\newcommand{\shiftleft}[2]{\makebox[0pt][r]{\makebox[#1][l]{#2}}}
+\newtheorem*{conj}{Conjecture}
+\newtheorem{cor}{Corollary}[]
+
+\newcommand{\compav}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\compat}[1]{\textbf{\textcolor{red}{#1}}}
+\graphicspath{{images/}}
+\setsvg{svgpath={./images/}}
+
+% Title Page
+
+\setlength{\topmargin}{1in} %top/bot margins
+\setlength{\oddsidemargin}{\topmargin} %sidemargins
+
+\setlength{\textheight}{11in} \setlength{\textwidth}{8.5in}
+\setlength{\hoffset}{-1in} \setlength{\voffset}{-1in} \setlength{\evensidemargin}{\oddsidemargin} \addtolength{\textheight}{-2 \topmargin}\addtolength{\textwidth}{-2\oddsidemargin}
+\setlength{\headheight}{0pt} \setlength{\headsep}{20pt} \setlength{\footskip}{20pt}
+\addtolength{\textheight}{-\footskip} \addtolength{\textheight}{-\headheight} \addtolength{\textheight}{-\headsep}
+
+
+\title{On the Characterizations of Rational Geodesics on the Infinite Necker Cube Surface}
+\author{Pavel Javornik}
+\date{}
+\maketitle
+
+%\begin{center}
+%
+%\includesvg[width=4.8in]{cubecoverphoto}\\
+%\end{center}
+\begin{abstract}
+\noindent The deterministic quality of the dynamical characteristics, up to periodicity and drift periodicity, of a non-singular, rational geodesic on the infinite Euclidean cone surface obtained from the spatial edge-to-edge arrangement of infinitely many unit cubes comes down to the choice of an initial trajectory angle as a $\ZZ^2$ vector contained in the plane tangent to the surface at the geodesics initial point. Moreover these integer components give up the total period of a unit-speed geodesic, and their parities ultimately dictate whether or not it will be periodic or drift periodic. Using the surface and its translation cover's various symmetries, we prove these results and show that, when applicable, the Euclidean drift distance per period is given up by an element in the solution space of a system of $\ZZ$-linear equations.
+\end{abstract}
+\section{Introduction}
+The Necker cube has been studied extensively due to its interesting effects on human visual perception. A popular adaptation of the Necker cube is the edge-to-edge pairing of multiple solid cubes giving the illusion of a rhombile tiling of the plane when viewed from a fixed angle. (Fig \ref{fig:front}) It is most recognizable in the works of M.C. Escher \cite{Escher1}\cite{Escher2} and as the game board in the 80s cabinet arcade classic, $\text{Q}^*\text{bert}$.\cite{Qbert} The cube was named after the Swiss crystallographer Louis A. Necker for having been one of the first to study the wire-frame cube.\cite{Albert}
+\begin{figure}[H]
+\centering
+\includesvg[width=5.5in]{oddoddtrajectory}
+\caption{Periodic Geodesic on the Necker Cube Surface}
+\label{fig:front}
+\end{figure}
+We take the three visible faces of a single cube viewed from this angle and make identifications on the parallel edges by translation. (Fig \ref{fig:halfcube}) These are the outer edges that are glued to the opposite edges of other cubes. We call this half-cube $\bG$. $\bG$ has a set of three cone singularities, $\Sigma_\bG$, two with cone angle $3\pi$ and one with cone angle $\frac{3\pi}{2}$. The half-cube punctured at these points is $\bGs=\bG\backslash\Sigma_\bG$, and we call this our \emph{Necker cube}.
+\begin{figure}[H]
+\centering
+\includesvg[width=1.83in]{neckercube}\includesvg[width=2in.]{neckercubepath}
+\caption{The surface $\bGs$ with and without loops $a,b,c,d$ based at $x_0$.}
+\label{fig:halfcube}
+\end{figure}
+The set of paths labeled above generate the fundamental group of the surface, $\pi_1(\bGs,x_0)$, that is isomorphic to the free group of four generators since $\bG$ is homeomorphic to the genus 1 torus. The \emph{Necker cube surface} itself is a cover of $\bGs$ with a deck group isomorphic to $\ZZ^2$:
+
+\begin{figure}[H]
+\centering
+\includesvg[width=4.3in]{neckercubepathsurface}
+\end{figure}
+
+\begin{Def}
+Let $\varphi_1:\pi_1(\bGs)\rightarrow \ZZ^2$ be the homomorphism on the free group $\<a,b,c,d\>$ given by $c,d\mapsto(0,0)$, $a\mapsto(1,0)$, and $b\mapsto(0,1)$.
+\end{Def}
+
+The cover of $\bGs$ with fundamental group $\ker\varphi_1$ is the space $\bUs=\tilde{\mathbf{G}}^\circ/\ker\varphi_1$ where $\ker\varphi_1$ acts on $\bGs$'s universal cover,  $\widetilde{\mathbf{G}}^\circ$, by deck transformations. We can see that $\bGs$ is obtained as the quotient of the Necker cube surface by these $\ZZ^2$ symmetries. 
+
+\begin{Def}
+Let $p_1:\bUs\rightarrow\bGs$ be a projection that induces a monomorphism on the fundamental groups of these surfaces such that $p_{1*}\pi_1(\bUs)=\ker\varphi_1$.
+\end{Def}
+Fix some point $u_0$ in $\bUs$ in the fiber over $x_0$, $p_1^{-1}(x_0)$. These are both contained in smooth sections, i.e. a face of a cube.
+\begin{Def}
+Define $T_{u_0}(\bUs)$ as the vector space tangent to the surface at $u_0$. We denote the unit tangent space at this point $T^1_{u_0}(\bUs)$. Both belong to their respective tangent bundles, $T(\bUs)$ and $T^1(\bUs)$.
+\end{Def}
+
+\subsection{Discussion of Results}
+For every direction in the tangent space at $u_0$ there is a unique geodesic on $\bUs$.
+\begin{Def}
+Let $\Phi_t:\RR\rightarrow\bUs$ be the unit-speed geodesic with $\Phi(0)=u_0$ and $\frac{d}{dt}\Phi(0)=v_0\in T^1_{u_0}(\bUs)$. It is the image of the geodesic flow based at $u_0$ on the unit tangent bundle in direction $v_0$. We additionally require that at no point does the geodesic encounter a cone singularity of the surface.
+\end{Def}
+We say that $\Phi$ is \emph{periodic} if for some $T>0$, $Phi(t+T)=\Phi(t)$. Let $f$ be a non-trivial automorphism of the surface. We say that $\Phi$ is \emph{drift-periodic} if for some $T'>0$, $\Phi(t+T')=f(\Phi(t))$. The initial trajectory angle is said to be $\emph{rational}$ if there is some $k\in\RR$ such that $kv_0$'s non-zero components are relatively prime integers. Although $v_0$ is a vector of $\RR^3$, the tangent spaces are parallel to subspaces generated by exactly two standard basis vectors. For that reason, one component is always 0 and we will just treat it as an element of $\RR^2$. A rational initial trajectory angle in $\RR^2$ falls into one of two categories:
+\begin{Def}
+Let $v_0$ be a rational unit vector of the form $\frac{1}{k}(x,y)\in\RR^2$ with $x,y\in\mathbb{Z}$ and $k=\sqrt{x^2+y^2}\in\mathbb{R}$. We say $kv_0$ is an \textbf{odd-odd} vector if $x,y$ are relatively prime and both odd. We denote the \textbf{set of all odd-odd directions} $\mathcal{O}$. We say that $kv_0$ is an \textbf{even-odd} vector if $x,y$ are relatively prime and of opposite parity. We denote the \textbf{set of all even-odd directions} $\mathcal{E}$. Denote $\cS=\cO\sqcup\cE$ as the \textbf{collection of all possible rational directions}.
+\end{Def}
+
+We use $||~.~||:\RR^2\rightarrow\RR_{\geq 0}$ to denote the standard Euclidean norm in $\RR^2$.
+
+\begin{thm*} \textbf{Periodic and Drift-Periodic Geodesics on the Necker cube surface.} 
+\\Let $\Phi_t:\RR\rightarrow\bUs$ be a non-singular unit-speed geodesic on the Necker cube surface such that $\Phi(0)=u_0$ and $\Phi'(0)=v\in\RR^3$. Let $v_0\in\RR^2$ be a distance-preserving projection of $v$ onto the plane tangent to the surface at $u_0$. Let $k\in\RR$ such that $kv_0\in\cS$. Then the following is true:
+\begin{enumerate}[label=(\roman*)]
+\item $\Phi$ is periodic if $kv_0\in\cO$ with period $T=6||kv_0||$.
+\item $\Phi$ is drift-periodic if $v_0\in\cE$ with period $T=2||kv_0||$.
+\end{enumerate}
+\end{thm*}
+\newpage
+\newpage
+\begin{thebibliography}{9}
+\bibitem{Necker} 
+\bibitem{Albert} Necker, L.A., \emph{Observations on some remarkable optical phaenomena seen in Switzerland; and on an optical phaenomenon which occurs on viewing a figure of a crystal or geometrical solid.} London and Edinburgh Philosophical Magazine and Journal of Science. 1832. doi:10.1080/14786443208647909
+\bibitem{Qbert} Gottlieb., \emph{Q*bert} [Arcade], Gottlieb, 1982.
+\bibitem{Escher1} Escher, M.C., \emph{Metamorphosis I}, 1937.
+\bibitem{Escher2} Escher, M.C., \emph{Convex and Concave}, 1955.
+\bibitem{flatsurf} include github link
+\end{thebibliography}
+\end{document}       
